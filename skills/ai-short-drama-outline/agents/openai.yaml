@@ -1,0 +1,4 @@
+interface:
+  display_name: "G2 分集规划与伏笔设计"
+  short_description: "将 AI 短剧总纲拆成分集大纲，规划各集目标、变化、回报、衔接和伏笔回收"
+  default_prompt: "使用 $ai-short-drama-outline，根据现有材料完成分集规划与伏笔设计，按规范交付并列明未决项。"

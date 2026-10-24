@@ -1,0 +1,4 @@
+interface:
+  display_name: "G4 剧本审核与修订"
+  short_description: "审核 AI 短剧已有稿的因果、人物、节奏、时长、连续性及可制作性，定位问题并按请求修订复核"
+  default_prompt: "使用 $ai-short-drama-review，根据现有材料完成剧本审核与修订，按规范交付并列明未决项。"

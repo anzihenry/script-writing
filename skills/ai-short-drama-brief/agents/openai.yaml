@@ -1,0 +1,4 @@
+interface:
+  display_name: "G0 立项与项目简报"
+  short_description: "将 AI 短剧创意、IP 或业务需求整理为立项简报，明确受众、叙事承诺、规格和制作约束"
+  default_prompt: "使用 $ai-short-drama-brief，根据现有材料完成立项与项目简报，按规范交付并列明未决项。"
