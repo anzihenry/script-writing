@@ -1,0 +1,401 @@
+{
+  "schema_version": "1.0",
+  "project_id": "DEMO-RETURN",
+  "episodes": [
+    "EP001"
+  ],
+  "artifacts": {
+    "brief": {
+      "kind": "brief",
+      "scope": "project",
+      "path": "brief.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "9d61fa78a482e8818eb0801f4e9d525f8d48f612adb57a66d9d76d71d8b28e4f",
+      "depends_on": [],
+      "evidence": null
+    },
+    "bible": {
+      "kind": "bible",
+      "scope": "project",
+      "path": "bible.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0ceb40d472e5aac775525fd161793c304a22bf65c12365c8d2050e4e002236f7",
+      "depends_on": [
+        {
+          "id": "brief",
+          "revision": "v1.0",
+          "sha256": "9d61fa78a482e8818eb0801f4e9d525f8d48f612adb57a66d9d76d71d8b28e4f"
+        }
+      ],
+      "evidence": null
+    },
+    "outline": {
+      "kind": "outline",
+      "scope": "project",
+      "path": "outline.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "4a6ea4b9e5332798e853ca8fc6b9775235652be64475bcdfea2df9a81d525543",
+      "depends_on": [
+        {
+          "id": "brief",
+          "revision": "v1.0",
+          "sha256": "9d61fa78a482e8818eb0801f4e9d525f8d48f612adb57a66d9d76d71d8b28e4f"
+        },
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "0ceb40d472e5aac775525fd161793c304a22bf65c12365c8d2050e4e002236f7"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP001": {
+      "kind": "script",
+      "scope": "EP001",
+      "path": "episodes/EP001-v1.0.md",
+      "revision": "v1.0",
+      "status": "reviewed",
+      "sha256": "5e82fd2b71238a83beee54c73457c6732a4dfaf6fa204c39fef28bd8fd1f4bf4",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "0ceb40d472e5aac775525fd161793c304a22bf65c12365c8d2050e4e002236f7"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "4a6ea4b9e5332798e853ca8fc6b9775235652be64475bcdfea2df9a81d525543"
+        }
+      ],
+      "evidence": "示例作者自审：reviews/EP001-v1.0.md；仅文字预制作范围，未实测及未锁定。"
+    },
+    "continuity_EP001": {
+      "kind": "continuity",
+      "scope": "EP001",
+      "path": "continuity/EP001-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "94c7585fea452c24e96f418d2bb784276ce5b75b4667d0fc78c9b198b603e969",
+      "depends_on": [
+        {
+          "id": "script_EP001",
+          "revision": "v1.0",
+          "sha256": "5e82fd2b71238a83beee54c73457c6732a4dfaf6fa204c39fef28bd8fd1f4bf4"
+        }
+      ],
+      "evidence": null
+    },
+    "review_EP001": {
+      "kind": "review",
+      "scope": "EP001",
+      "path": "reviews/EP001-v1.0.md",
+      "revision": "v1.0",
+      "status": "reviewed",
+      "sha256": "cdaabbf72cf7d93b6570e2559c35fcebc1a49b7455e5ecbc482083da38b39a41",
+      "depends_on": [
+        {
+          "id": "script_EP001",
+          "revision": "v1.0",
+          "sha256": "5e82fd2b71238a83beee54c73457c6732a4dfaf6fa204c39fef28bd8fd1f4bf4"
+        },
+        {
+          "id": "continuity_EP001",
+          "revision": "v1.0",
+          "sha256": "94c7585fea452c24e96f418d2bb784276ce5b75b4667d0fc78c9b198b603e969"
+        }
+      ],
+      "evidence": "示例作者自审：reviews/EP001-v1.0.md；仅文字预制作范围，未实测及未锁定。"
+    },
+    "handoff_EP001": {
+      "kind": "handoff",
+      "scope": "EP001",
+      "path": "handoff/EP001-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "145744e2b89689c10c2c0578eea6c6002876ad63d1a63d83c61218d7081fd3c0",
+      "depends_on": [
+        {
+          "id": "script_EP001",
+          "revision": "v1.0",
+          "sha256": "5e82fd2b71238a83beee54c73457c6732a4dfaf6fa204c39fef28bd8fd1f4bf4"
+        },
+        {
+          "id": "review_EP001",
+          "revision": "v1.0",
+          "sha256": "cdaabbf72cf7d93b6570e2559c35fcebc1a49b7455e5ecbc482083da38b39a41"
+        },
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "0ceb40d472e5aac775525fd161793c304a22bf65c12365c8d2050e4e002236f7"
+        },
+        {
+          "id": "continuity_EP001",
+          "revision": "v1.0",
+          "sha256": "94c7585fea452c24e96f418d2bb784276ce5b75b4667d0fc78c9b198b603e969"
+        }
+      ],
+      "evidence": null
+    },
+    "export_EP001": {
+      "kind": "export",
+      "scope": "EP001",
+      "path": "handoff/EP001-v1.0.json",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "7c927a4d9ce3a8733e84eaaaa30879584841d4f7f4b1b289fa28d4bebc2bb64f",
+      "depends_on": [
+        {
+          "id": "script_EP001",
+          "revision": "v1.0",
+          "sha256": "5e82fd2b71238a83beee54c73457c6732a4dfaf6fa204c39fef28bd8fd1f4bf4"
+        },
+        {
+          "id": "handoff_EP001",
+          "revision": "v1.0",
+          "sha256": "145744e2b89689c10c2c0578eea6c6002876ad63d1a63d83c61218d7081fd3c0"
+        }
+      ],
+      "evidence": null
+    }
+  },
+  "issues": [
+    {
+      "id": "Q001",
+      "scope": "EP001",
+      "severity": "P2",
+      "status": "open",
+      "location": "EP001-SC001",
+      "summary": "实际表演时长未测，待朗读/动态分镜回填",
+      "affects": [
+        "script_EP001"
+      ],
+      "evidence": null,
+      "verified_revisions": {}
+    },
+    {
+      "id": "Q002",
+      "scope": "EP001",
+      "severity": "P2",
+      "status": "open",
+      "location": "EP001-SC001",
+      "summary": "纸片撕口可辨识性待样片验证",
+      "affects": [
+        "script_EP001"
+      ],
+      "evidence": null,
+      "verified_revisions": {}
+    }
+  ],
+  "history": [
+    {
+      "at": "2026-10-24T15:06:55.647895+00:00",
+      "id": "brief",
+      "previous": null,
+      "current": {
+        "kind": "brief",
+        "scope": "project",
+        "path": "brief.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "9d61fa78a482e8818eb0801f4e9d525f8d48f612adb57a66d9d76d71d8b28e4f",
+        "depends_on": [],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-10-24T15:06:55.648619+00:00",
+      "id": "bible",
+      "previous": null,
+      "current": {
+        "kind": "bible",
+        "scope": "project",
+        "path": "bible.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0ceb40d472e5aac775525fd161793c304a22bf65c12365c8d2050e4e002236f7",
+        "depends_on": [
+          {
+            "id": "brief",
+            "revision": "v1.0",
+            "sha256": "9d61fa78a482e8818eb0801f4e9d525f8d48f612adb57a66d9d76d71d8b28e4f"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-10-24T15:06:55.649211+00:00",
+      "id": "outline",
+      "previous": null,
+      "current": {
+        "kind": "outline",
+        "scope": "project",
+        "path": "outline.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "4a6ea4b9e5332798e853ca8fc6b9775235652be64475bcdfea2df9a81d525543",
+        "depends_on": [
+          {
+            "id": "brief",
+            "revision": "v1.0",
+            "sha256": "9d61fa78a482e8818eb0801f4e9d525f8d48f612adb57a66d9d76d71d8b28e4f"
+          },
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "0ceb40d472e5aac775525fd161793c304a22bf65c12365c8d2050e4e002236f7"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-10-24T15:06:55.650161+00:00",
+      "id": "script_EP001",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP001",
+        "path": "episodes/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "reviewed",
+        "sha256": "5e82fd2b71238a83beee54c73457c6732a4dfaf6fa204c39fef28bd8fd1f4bf4",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "0ceb40d472e5aac775525fd161793c304a22bf65c12365c8d2050e4e002236f7"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "4a6ea4b9e5332798e853ca8fc6b9775235652be64475bcdfea2df9a81d525543"
+          }
+        ],
+        "evidence": "示例作者自审：reviews/EP001-v1.0.md；仅文字预制作范围，未实测及未锁定。"
+      },
+      "note": null
+    },
+    {
+      "at": "2026-10-24T15:06:55.651130+00:00",
+      "id": "continuity_EP001",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP001",
+        "path": "continuity/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "94c7585fea452c24e96f418d2bb784276ce5b75b4667d0fc78c9b198b603e969",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "5e82fd2b71238a83beee54c73457c6732a4dfaf6fa204c39fef28bd8fd1f4bf4"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-10-24T15:06:55.652429+00:00",
+      "id": "review_EP001",
+      "previous": null,
+      "current": {
+        "kind": "review",
+        "scope": "EP001",
+        "path": "reviews/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "reviewed",
+        "sha256": "cdaabbf72cf7d93b6570e2559c35fcebc1a49b7455e5ecbc482083da38b39a41",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "5e82fd2b71238a83beee54c73457c6732a4dfaf6fa204c39fef28bd8fd1f4bf4"
+          },
+          {
+            "id": "continuity_EP001",
+            "revision": "v1.0",
+            "sha256": "94c7585fea452c24e96f418d2bb784276ce5b75b4667d0fc78c9b198b603e969"
+          }
+        ],
+        "evidence": "示例作者自审：reviews/EP001-v1.0.md；仅文字预制作范围，未实测及未锁定。"
+      },
+      "note": null
+    },
+    {
+      "at": "2026-10-24T15:06:55.656846+00:00",
+      "id": "handoff_EP001",
+      "previous": null,
+      "current": {
+        "kind": "handoff",
+        "scope": "EP001",
+        "path": "handoff/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "145744e2b89689c10c2c0578eea6c6002876ad63d1a63d83c61218d7081fd3c0",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "5e82fd2b71238a83beee54c73457c6732a4dfaf6fa204c39fef28bd8fd1f4bf4"
+          },
+          {
+            "id": "review_EP001",
+            "revision": "v1.0",
+            "sha256": "cdaabbf72cf7d93b6570e2559c35fcebc1a49b7455e5ecbc482083da38b39a41"
+          },
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "0ceb40d472e5aac775525fd161793c304a22bf65c12365c8d2050e4e002236f7"
+          },
+          {
+            "id": "continuity_EP001",
+            "revision": "v1.0",
+            "sha256": "94c7585fea452c24e96f418d2bb784276ce5b75b4667d0fc78c9b198b603e969"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-10-24T15:06:55.658104+00:00",
+      "id": "export_EP001",
+      "previous": null,
+      "current": {
+        "kind": "export",
+        "scope": "EP001",
+        "path": "handoff/EP001-v1.0.json",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "7c927a4d9ce3a8733e84eaaaa30879584841d4f7f4b1b289fa28d4bebc2bb64f",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "5e82fd2b71238a83beee54c73457c6732a4dfaf6fa204c39fef28bd8fd1f4bf4"
+          },
+          {
+            "id": "handoff_EP001",
+            "revision": "v1.0",
+            "sha256": "145744e2b89689c10c2c0578eea6c6002876ad63d1a63d83c61218d7081fd3c0"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    }
+  ]
+}

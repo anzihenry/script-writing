@@ -32,8 +32,8 @@
 | [ai-short-drama-season-arc](../../ai-short-drama-season-arc/SKILL.md) | 将总纲分配为阶段弧线和集数预算 | outline.md 的全季结构 |
 | [ai-short-drama-episode-beats](../../ai-short-drama-episode-beats/SKILL.md) | 把分季结构写成逐集行动与变化 | outline.md 的分集表 |
 | [ai-short-drama-hooks](../../ai-short-drama-hooks/SKILL.md) | 设计每集开场、结尾及观众回报 | outline.md 的开场/回报列 |
-| [ai-short-drama-foreshadow](../../ai-short-drama-foreshadow/SKILL.md) | 规划线索、误导和揭示时机 | continuity.md 的伏笔计划 |
-| [ai-short-drama-episode-bridges](../../ai-short-drama-episode-bridges/SKILL.md) | 检查分集计划的首尾状态和转场 | outline.md 的下集入口及 continuity.md 的计划状态 |
+| [ai-short-drama-foreshadow](../../ai-short-drama-foreshadow/SKILL.md) | 规划线索、误导和揭示时机 | outline.md 的伏笔计划 |
+| [ai-short-drama-episode-bridges](../../ai-short-drama-episode-bridges/SKILL.md) | 检查分集计划的首尾状态和转场 | outline.md 的下集入口及计划状态 |
 
 ## G3 正文
 
@@ -43,7 +43,7 @@
 | [ai-short-drama-action-writing](../../ai-short-drama-action-writing/SKILL.md) | 将场次目标或心理描述写成可见行动 | 剧本的动作段 |
 | [ai-short-drama-dialogue-writing](../../ai-short-drama-dialogue-writing/SKILL.md) | 撰写或润色人物对白、旁白和画外声 | 剧本的对白段 |
 | [ai-short-drama-timing](../../ai-short-drama-timing/SKILL.md) | 估算或调整剧本时长和动作对白并行关系 | 剧本时间预算 |
-| [ai-short-drama-continuity-update](../../ai-short-drama-continuity-update/SKILL.md) | 依据已写正文更新实际连续性台账 | continuity.md 的实际记录 |
+| [ai-short-drama-continuity-update](../../ai-short-drama-continuity-update/SKILL.md) | 依据已写正文更新实际连续性台账 | continuity/<集>-<版本>.md 的实际记录 |
 
 ## G4 审核
 

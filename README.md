@@ -1,8 +1,43 @@
-# AI 短剧剧本生产规范
+# AI 短剧剧本生产管线
 
 将剧本创作组织成可重复执行、可审核、可交接的生产环节。适用于 AI 真人质感短剧、2D/3D 漫剧，以及已有小说/IP 的短剧改编。
 
-当前版本：1.2，资料核对日期：2026-10-24。本仓库提出的是可调整的内部生产规范，不代表行业统一标准，也不承诺播放量或商业表现。
+当前版本：2.0，资料核对日期：2026-10-24。本仓库提出的是可调整的内部生产规范，不代表行业统一标准，也不承诺播放量或商业表现。
+
+## 从项目启动到交付
+
+这套管线将 **Skill 执行、模板内容、质量标准、版本依赖、阶段验收和反馈返工** 连在一起。创作能力仍由 Skill 执行，命令行工具管理可检查的文件与状态。
+
+| 运行环节 | 操作 | 结果 |
+| --- | --- | --- |
+| 启动 | init + 立项技能 | 工作模板和项目登记表 |
+| 开发 | 设定、拆集、正文技能 | 总纲、分集与单集内容 |
+| 记账 | 连续性技能 + register | 真实状态与上游版本快照 |
+| 审核 | 审计/修订/复核技能 + issues | 有证据的质量结论与问题状态 |
+| 验收 | check / gate / status | 缺失、版本过期、未解决问题 |
+| 交付 | 交接技能 + bundle | 带来源清单的本地 ZIP 包 |
+| 反馈 | feedback / changes / decisions | 定位返工、刷新派生物、回验 |
+
+[生产管线说明](skills/ai-short-drama-writing/references/pipeline.md)定义输入输出与阶段职责；[操作手册](skills/ai-short-drama-writing/references/operations.md)提供命令和 project.json 协议。
+
+```bash
+python3 skills/ai-short-drama-writing/scripts/pipeline.py init projects/my-drama --id MY-DRAMA --episodes 1
+python3 skills/ai-short-drama-writing/scripts/pipeline.py status projects/my-drama
+```
+
+初始化不会通过任何关口；填好模板后按操作手册登记，继续相应 Skill。已有目录不覆盖。工具仅需 Python 3.9+ 标准库，不依赖 PyYAML。
+
+可以先查看并检查已填好的[《归还》示例](examples/return-demo/brief.md)：
+
+```bash
+python3 skills/ai-short-drama-writing/scripts/pipeline.py check examples/return-demo
+python3 skills/ai-short-drama-writing/scripts/pipeline.py status examples/return-demo
+python3 skills/ai-short-drama-writing/scripts/pipeline.py validate-handoff examples/return-demo/handoff/EP001-v1.0.json
+python3 skills/ai-short-drama-writing/scripts/pipeline.py bundle examples/return-demo --scope EP001 --output /tmp/return-demo-EP001.zip
+python3 -m unittest discover -s tests -v
+```
+
+示例是 3 集故事计划中第 1 集的完整文字生产包：只有 EP001 已登记，60 秒为估算，未生成样片、未实测配音、未获制作锁定。结构就绪不代表质量自动获批。ZIP 路径已存在时工具拒绝覆盖。
 
 ## 使用入口
 
@@ -58,6 +93,8 @@
 
 | 文件 | 用途 |
 | --- | --- |
+| [生产管线](skills/ai-short-drama-writing/references/pipeline.md) | 项目/单集关口、依赖、批次恢复与返工闭环 |
+| [操作与数据协议](skills/ai-short-drama-writing/references/operations.md) | 命令、项目登记、问题状态、打包和退出码 |
 | [阶段共同约定](skills/ai-short-drama-writing/references/common.md) | 输入、稳定 ID、版本、范围与交付规则 |
 | [生产流程](skills/ai-short-drama-writing/references/workflow.md) | 阶段输入输出、职责、审核关口、版本与返工 |
 | [写作与审核标准](skills/ai-short-drama-writing/references/standards.md) | 因果、人物、节奏、时长、可制作性、问题等级 |
