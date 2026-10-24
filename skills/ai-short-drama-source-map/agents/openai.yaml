@@ -1,0 +1,4 @@
+interface:
+  display_name: "素材盘点与改编边界"
+  short_description: "针对短剧素材盘点与改编边界提供专项处理，明确输入、产物、验收和返工边界"
+  default_prompt: "使用 $ai-short-drama-source-map，根据现有材料完成素材盘点与改编边界，只处理本次指定范围。"

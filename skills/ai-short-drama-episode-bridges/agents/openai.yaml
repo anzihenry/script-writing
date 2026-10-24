@@ -1,0 +1,4 @@
+interface:
+  display_name: "跨集连接与状态计划"
+  short_description: "针对短剧跨集连接与状态计划提供专项处理，明确输入、产物、验收和返工边界"
+  default_prompt: "使用 $ai-short-drama-episode-bridges，根据现有材料完成跨集连接与状态计划，只处理本次指定范围。"

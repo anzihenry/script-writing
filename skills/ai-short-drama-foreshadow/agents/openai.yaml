@@ -1,0 +1,4 @@
+interface:
+  display_name: "伏笔投放与回收"
+  short_description: "针对短剧伏笔投放与回收提供专项处理，明确输入、产物、验收和返工边界"
+  default_prompt: "使用 $ai-short-drama-foreshadow，根据现有材料完成伏笔投放与回收，只处理本次指定范围。"

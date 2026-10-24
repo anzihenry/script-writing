@@ -1,0 +1,4 @@
+interface:
+  display_name: "开场吸引与结尾回报"
+  short_description: "针对短剧开场吸引与结尾回报提供专项处理，明确输入、产物、验收和返工边界"
+  default_prompt: "使用 $ai-short-drama-hooks，根据现有材料完成开场吸引与结尾回报，只处理本次指定范围。"

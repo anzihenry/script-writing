@@ -1,0 +1,4 @@
+interface:
+  display_name: "世界规则与时间线"
+  short_description: "针对短剧世界规则与时间线提供专项处理，明确输入、产物、验收和返工边界"
+  default_prompt: "使用 $ai-short-drama-world-rules，根据现有材料完成世界规则与时间线，只处理本次指定范围。"

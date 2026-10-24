@@ -1,0 +1,4 @@
+interface:
+  display_name: "可视行动与表演"
+  short_description: "针对短剧可视行动与表演提供专项处理，明确输入、产物、验收和返工边界"
+  default_prompt: "使用 $ai-short-drama-action-writing，根据现有材料完成可视行动与表演，只处理本次指定范围。"
