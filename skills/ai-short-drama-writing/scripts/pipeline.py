@@ -467,6 +467,96 @@ def next_steps(root, scope='project'):
             'quality': 'Not inferred from structural readiness'}
 
 
+def embedded(root, item, label):
+    text = local(Path(root), item['path']).read_text(encoding='utf-8')
+    matches = re.findall(r'^```' + re.escape(label) + r'\s*\n(.*?)^```\s*$', text, re.M | re.S)
+    require(len(matches) <= 1, f'{label}: multiple blocks are ambiguous')
+    if not matches:
+        return None
+    value = json.loads(matches[0], object_pairs_hook=unique_object,
+                       parse_constant=lambda x: (_ for _ in ()).throw(Invalid('nonfinite JSON')))
+    require(isinstance(value, dict), f'{label}: object required')
+    return value
+
+
+def continuity_index(root, through=None, object_id=None):
+    root = Path(root)
+    data = load(root)
+    through = through or data['episodes'][-1]
+    require(through in data['episodes'], 'unknown through episode')
+    episodes = data['episodes'][:data['episodes'].index(through) + 1]
+    checks = inspect(root, data)
+    unknown, conflicts, history, values, hints = [], [], [], {}, {}
+    outline = find(data, 'outline', 'project')
+    plans = None
+    if outline and not checks[outline]:
+        plans = embedded(root, data['artifacts'][outline], 'outline-json')
+    if plans is None:
+        unknown.append('outline: missing/stale structured foreshadow plan')
+        plans = {'foreshadows': []}
+    require(isinstance(plans.get('foreshadows'), list), 'foreshadows must be an array')
+    for plan in plans['foreshadows']:
+        require(isinstance(plan, dict) and nonempty(plan.get('id')), 'invalid foreshadow plan')
+        require(plan['id'] not in hints, 'duplicate foreshadow ID')
+        require(plan.get('plant') in data['episodes'] and plan.get('payoff') in data['episodes'], 'unknown planned episode')
+        require(data['episodes'].index(plan['plant']) <= data['episodes'].index(plan['payoff']), 'payoff before plant')
+        hints[plan['id']] = dict(plan, status='not_planted', history=[])
+    for ep in episodes:
+        key, script = find(data, 'continuity', ep), find(data, 'script', ep)
+        if key is None or script is None or checks.get(key) or checks.get(script):
+            unknown.append(f'{ep}: continuity/script missing or stale')
+            continue
+        payload = embedded(root, data['artifacts'][key], 'continuity-json')
+        if payload is None:
+            unknown.append(f'{ep}: no continuity-json; extraction required')
+            continue
+        source = local(root, data['artifacts'][script]['path']).read_text(encoding='utf-8')
+        require(isinstance(payload.get('states'), list) and isinstance(payload.get('foreshadows'), list), 'states/foreshadows arrays required')
+        for row in payload['states'] + payload['foreshadows']:
+            require(isinstance(row, dict) and nonempty(row.get('location')) and nonempty(row.get('quote')), 'location/quote required')
+            require(row['location'].startswith(ep + '-') and row['location'] in source and row['quote'] in source,
+                    f'{ep}: evidence not found in source')
+        for row in payload['states']:
+            require(all(nonempty(row.get(x)) for x in ['object', 'field', 'after']), 'object/field/after required')
+            require('before' in row and (row['before'] is None or nonempty(row['before'])), 'before must be string or null')
+            require(row.get('temporal') in {'current', 'flashback'}, 'temporal must be current/flashback')
+            record = dict(row, episode=ep, script_revision=data['artifacts'][script]['revision'], script_sha256=data['artifacts'][script]['sha256'])
+            history.append(record)
+            identity = (row['object'], row['field'])
+            if row['temporal'] == 'flashback':
+                continue
+            previous = values.get(identity)
+            if previous and (previous['status'] == 'CONFLICT' or row['before'] != previous['value']):
+                conflicts.append({'object': row['object'], 'field': row['field'], 'previous': previous, 'incoming': record})
+                values[identity] = {'status': 'CONFLICT', 'value': None, 'evidence': record}
+            else:
+                values[identity] = {'status': 'RECORDED', 'value': row['after'], 'evidence': record}
+        for row in payload['foreshadows']:
+            require(row.get('id') in hints, 'actual foreshadow has no plan')
+            require(row.get('status') in {'planted', 'paid', 'cancelled'}, 'invalid foreshadow status')
+            hint = hints[row['id']]
+            if row['status'] == 'cancelled':
+                require(nonempty(row.get('reason')), 'cancellation reason required')
+            if row['status'] == 'paid' and hint['status'] != 'planted':
+                conflicts.append({'foreshadow': row['id'], 'reason': 'payoff without recorded planting', 'episode': ep})
+            if hint['status'] in {'paid', 'cancelled'}:
+                conflicts.append({'foreshadow': row['id'], 'reason': 'event after terminal state', 'episode': ep})
+            hint['status'] = row['status']
+            hint['history'].append(dict(row, episode=ep))
+    for hint in hints.values():
+        due = data['episodes'].index(hint['payoff']) <= data['episodes'].index(through)
+        hint['due'] = due
+        hint['assessment'] = 'UNVERIFIED' if unknown else ('OVERDUE' if due and hint['status'] not in {'paid', 'cancelled'} else 'RECORDED')
+    overdue = any(x['assessment'] == 'OVERDUE' for x in hints.values())
+    selected = [{'object': obj, 'field': field, **v} for (obj, field), v in values.items() if object_id is None or object_id == obj]
+    if object_id and not selected:
+        unknown.append(f'{object_id}: no current state recorded')
+    return {'through': through, 'status': 'CONFLICT' if conflicts or overdue else ('UNVERIFIED' if unknown else 'RECORDED'),
+            'coverage': episodes, 'unknown': unknown, 'conflicts': conflicts, 'states': selected,
+            'history': [x for x in history if object_id is None or x['object'] == object_id],
+            'foreshadows': list(hints.values()), 'limitation': 'Evidence existence checked; semantic extraction requires review'}
+
+
 def validate_handoff(data):
     """Explicit v1 contract, including cross references; not a generic JSON Schema engine."""
     require(isinstance(data, dict) and data.get('schema_version') == '1.0', 'handoff schema must be 1.0')
@@ -575,9 +665,14 @@ def main(argv=None):
     p = sub.add_parser('next'); p.add_argument('project'); p.add_argument('--scope', default='project'); p.add_argument('--json', action='store_true')
     p = sub.add_parser('checkpoint'); p.add_argument('project'); p.add_argument('--id', required=True)
     p.add_argument('--scopes', nargs='+', required=True); p.add_argument('--next-entry', required=True); p.add_argument('--reread', required=True)
+    p = sub.add_parser('index'); p.add_argument('project'); p.add_argument('--through'); p.add_argument('--object')
     args = parser.parse_args(argv)
     try:
-        if args.command == 'next':
+        if args.command == 'index':
+            result = continuity_index(args.project, args.through, args.object)
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            return 0 if result['status'] == 'RECORDED' else 1
+        elif args.command == 'next':
             result = next_steps(args.project, args.scope)
             if args.json:
                 print(json.dumps(result, ensure_ascii=False, indent=2))
