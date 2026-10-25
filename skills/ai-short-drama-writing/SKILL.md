@@ -12,7 +12,8 @@ description: 协调 AI 短剧剧本跨阶段生产，判断当前阶段并衔接
 批量生产、项目恢复或正式交接时，先读[生产管线](references/pipeline.md)和[操作手册](references/operations.md)。本目录的 `scripts/pipeline.py` 提供初始化、产物登记、依赖检查、关口检查和本地打包；只需 Python 标准库。工具不生成内容或自动批准。
 
 - 新生产项目：在用户指定目录初始化；已有项目不可覆盖，先盘点并登记已有产物。
-- 已有 project.json：先 check/status，读取过期和缺失项，再路由到最小阶段范围。
+- 已有 project.json：先 check 与 next --scope <目标集或project> --json，读取过期、缺失、问题及检查点变化，再路由到最小阶段范围。next 不执行创作，也不以旧检查点替代当前校验。
+- 批次结束：用 checkpoint 保存覆盖集、下批入口及必读位置；追加生产集用 episodes --through，问题状态用 issue 命令维护，详见操作手册。
 - 单项润色或咨询：仍可直接使用子技能，不强制初始化工作区。
 - 阶段完成：更新问题与内容证据，登记当前产物，再运行对应 gate。结构就绪与内容审核结论分开报告。
 - 请求交接包：执行 G5 后 bundle；未经用户请求不发送、发布或自行锁定。

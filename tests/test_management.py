@@ -39,3 +39,23 @@ class ManagementTest(unittest.TestCase):
         p.issue_action(self.root, 'reopen', 'Q1')
         self.assertTrue(p.gate(self.root, p.load(self.root), 'G5', 'EP001')[0])
         self.assertEqual(len(p.load(self.root)['events']), 3)
+
+    def test_next_includes_prerequisite_episodes(self):
+        self.chain()
+        report = p.next_steps(self.root, 'EP002')
+        self.assertEqual((report['next']['stage'], report['next']['scope']), ('G3', 'EP002'))
+        (self.root / 'script_EP001-v1.0.md').write_text('changed')
+        report = p.next_steps(self.root, 'EP002')
+        self.assertEqual(report['next']['scope'], 'EP001')
+        self.assertEqual(report['next']['stage'], 'G3')
+
+    def test_checkpoint_does_not_hide_staleness(self):
+        self.chain()
+        p.checkpoint(self.root, 'B1', ['EP001'], 'Write EP002', 'EP001 ending')
+        before = (self.root / 'project.json').read_bytes()
+        self.assertEqual(p.next_steps(self.root)['changed_since_checkpoint'], [])
+        (self.root / 'script_EP001-v1.0.md').write_text('changed')
+        self.assertIn('script_EP001', p.next_steps(self.root)['changed_since_checkpoint'])
+        self.assertEqual((self.root / 'project.json').read_bytes(), before)
+        with self.assertRaises(p.Invalid):
+            p.checkpoint(self.root, 'B1', ['EP001'], 'Again', 'Again')

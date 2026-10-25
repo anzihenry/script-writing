@@ -131,3 +131,12 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py issue projects/my-dram
 ```
 
 `episodes --through` 是目标总集数，只追加，重复执行无变更；现有目标文件冲突时整批拒绝。`issue accept` 另外需要 `--actor`，不得接受 P0。修订影响已关闭问题时先 reopen，再登记新版、实际复核后 resolve。问题事件保存在 events 中，原 issues 仍是当前状态来源。
+
+### 恢复与批次检查点
+
+```bash
+python3 skills/ai-short-drama-writing/scripts/pipeline.py next projects/my-drama --scope EP003 --json
+python3 skills/ai-short-drama-writing/scripts/pipeline.py checkpoint projects/my-drama --id B001 --scopes EP001 EP002 --next-entry '从 EP003 分场开始' --reread 'EP002 末尾及未回收伏笔'
+```
+
+`next` 只读，按项目阶段及前置集顺序列出原因、所需输入和建议技能；不自动执行创作。检查点保存当时的快照与交棒提示，不代表通过；恢复结果会列出此后变化/失效的产物。重复检查点 ID 拒绝，保存新批次时使用新 ID。STRUCTURE_READY 仍不代表质量获批。

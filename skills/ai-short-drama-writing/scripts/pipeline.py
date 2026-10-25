@@ -415,6 +415,58 @@ def issue_action(root, action, key=None, scope='project', severity='P1', locatio
     return item
 
 
+def snapshots(data, keys=None):
+    return {k: copy.deepcopy(v) for k, v in data['artifacts'].items() if keys is None or k in keys}
+
+
+def checkpoint(root, key, scopes, next_entry, reread):
+    data = load(root)
+    require(nonempty(key) and nonempty(next_entry) and nonempty(reread), 'checkpoint id/next-entry/reread required')
+    require(scopes and len(set(scopes)) == len(scopes) and all(e in data['episodes'] for e in scopes), 'invalid checkpoint scopes')
+    require(not any(x.get('id') == key for x in data.get('checkpoints', [])), 'checkpoint ID already exists')
+    keys = closure(data, [k for k, v in data['artifacts'].items() if v['scope'] in scopes or v['scope'] == 'project'])
+    item = {'id': key, 'at': stamp(), 'scopes': scopes, 'snapshots': snapshots(data, keys),
+            'open_issues': [x['id'] for x in data['issues'] if x['status'] == 'open'],
+            'next_entry': next_entry, 'reread': reread}
+    data.setdefault('checkpoints', []).append(item)
+    save(root, data)
+    return item
+
+
+def next_steps(root, scope='project'):
+    root = Path(root)
+    data = load(root)
+    require(scope == 'project' or scope in data['episodes'], 'unknown scope')
+    episodes = data['episodes'] if scope == 'project' else data['episodes'][:data['episodes'].index(scope) + 1]
+    stages = [('G0', 'project'), ('G1', 'project'), ('G2', 'project')]
+    stages += [(g, ep) for ep in episodes for g in ['G3', 'G4', 'G5']]
+    skills = dict(zip(GATES, ['brief', 'bible', 'outline', 'episode', 'review', 'handoff']))
+    tasks = []
+    for stage, target in stages:
+        errors, _ = gate(root, data, stage, target)
+        if errors:
+            inputs = []
+            for kind in GATES[stage]:
+                for upstream_kind, upstream_scope in prerequisites(data, kind, target):
+                    record = {'kind': upstream_kind, 'scope': upstream_scope,
+                              'id': find(data, upstream_kind, upstream_scope)}
+                    if record not in inputs:
+                        inputs.append(record)
+            tasks.append({'stage': stage, 'scope': target, 'reasons': errors,
+                          'skill': 'ai-short-drama-' + skills[stage], 'inputs': inputs})
+    checks = inspect(root, data)
+    extras = {k: errors for k, errors in checks.items() if errors and data['artifacts'][k]['scope'] in ['project'] + episodes}
+    latest = next((x for x in reversed(data.get('checkpoints', [])) if set(x['scopes']) & set(episodes)), None)
+    changed = []
+    if latest:
+        changed = [k for k, v in latest['snapshots'].items()
+                   if data['artifacts'].get(k) != v or checks.get(k)]
+    return {'scope': scope, 'status': 'NEEDS_WORK' if tasks or extras else 'STRUCTURE_READY',
+            'next': tasks[0] if tasks else None, 'tasks': tasks, 'artifact_errors': extras,
+            'checkpoint': latest, 'changed_since_checkpoint': changed,
+            'quality': 'Not inferred from structural readiness'}
+
+
 def validate_handoff(data):
     """Explicit v1 contract, including cross references; not a generic JSON Schema engine."""
     require(isinstance(data, dict) and data.get('schema_version') == '1.0', 'handoff schema must be 1.0')
@@ -520,9 +572,27 @@ def main(argv=None):
     p = sub.add_parser('issue'); p.add_argument('project'); p.add_argument('action', choices=['add', 'list', 'resolve', 'reopen', 'accept'])
     p.add_argument('--id'); p.add_argument('--scope', default='project'); p.add_argument('--severity', choices=['P0', 'P1', 'P2'], default='P1')
     p.add_argument('--location'); p.add_argument('--summary'); p.add_argument('--affects', nargs='+'); p.add_argument('--evidence'); p.add_argument('--actor')
+    p = sub.add_parser('next'); p.add_argument('project'); p.add_argument('--scope', default='project'); p.add_argument('--json', action='store_true')
+    p = sub.add_parser('checkpoint'); p.add_argument('project'); p.add_argument('--id', required=True)
+    p.add_argument('--scopes', nargs='+', required=True); p.add_argument('--next-entry', required=True); p.add_argument('--reread', required=True)
     args = parser.parse_args(argv)
     try:
-        if args.command == 'episodes':
+        if args.command == 'next':
+            result = next_steps(args.project, args.scope)
+            if args.json:
+                print(json.dumps(result, ensure_ascii=False, indent=2))
+            else:
+                print(result['status'])
+                for task in result['tasks']:
+                    print(f"{task['stage']}/{task['scope']} -> {task['skill']}: " + '; '.join(task['reasons']))
+                if result['artifact_errors']:
+                    print('Artifact checks: ' + json.dumps(result['artifact_errors'], ensure_ascii=False))
+                if result['checkpoint']:
+                    print('Checkpoint: ' + result['checkpoint']['id'] + '; changed: ' + ', '.join(result['changed_since_checkpoint']))
+                    print('Resume: ' + result['checkpoint']['next_entry'] + '; reread: ' + result['checkpoint']['reread'])
+        elif args.command == 'checkpoint':
+            print(json.dumps(checkpoint(args.project, args.id, args.scopes, args.next_entry, args.reread), ensure_ascii=False, indent=2))
+        elif args.command == 'episodes':
             print(json.dumps({'added': append_episodes(args.project, args.through)}, ensure_ascii=False))
         elif args.command == 'issue':
             print(json.dumps(issue_action(args.project, args.action, args.id, args.scope, args.severity,
