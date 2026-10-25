@@ -76,3 +76,23 @@ class ManagementTest(unittest.TestCase):
         with self.assertRaises(p.Invalid):
             p.feedback_action(self.root, 'update', 'F1', status='closed', verification='test')
         self.assertEqual(p.feedback_action(self.root, 'list')[0]['status'], 'triage')
+
+    def test_append_rolls_back_if_manifest_write_fails(self):
+        from unittest.mock import patch
+        before = (self.root / 'project.json').read_bytes()
+        with patch.object(p, 'save', side_effect=OSError('simulated disk failure')):
+            with self.assertRaises(OSError): p.append_episodes(self.root, 3)
+        self.assertEqual((self.root / 'project.json').read_bytes(), before)
+        self.assertFalse((self.root / 'episodes/EP003-v1.0.md').exists())
+
+    def test_closed_issue_requires_reopen_before_new_revision(self):
+        self.chain()
+        p.issue_action(self.root, 'add', 'Q1', 'EP001', 'P1', 'SC1', 'Conflict', ['script_EP001'])
+        p.issue_action(self.root, 'resolve', 'Q1', evidence='Test actual check')
+        (self.root / 'new.md').write_text('changed content')
+        before = (self.root / 'project.json').read_bytes()
+        with self.assertRaises(p.Invalid):
+            p.register(self.root, 'script_EP001', 'script', 'EP001', 'new.md', 'v1.1')
+        self.assertEqual((self.root / 'project.json').read_bytes(), before)
+        p.issue_action(self.root, 'reopen', 'Q1')
+        p.register(self.root, 'script_EP001', 'script', 'EP001', 'new.md', 'v1.1')

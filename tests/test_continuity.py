@@ -67,3 +67,11 @@ class ContinuityTest(unittest.TestCase):
         (self.root / 'script_EP001-v1.0.md').write_text('changed')
         self.assertTrue(p.inspect(self.root, p.load(self.root))['season'])
         with self.assertRaises(p.Invalid): p.review_check(self.root, 'season.md')
+
+    def test_partial_coverage_never_claims_current_state(self):
+        self.build()
+        p.append_episodes(self.root, 3)
+        result = p.continuity_index(self.root)
+        self.assertEqual(result['status'], 'UNVERIFIED')
+        self.assertEqual(result['states'][0]['status'], 'UNVERIFIED')
+        self.assertEqual(result['states'][0]['evidence']['episode'], 'EP002')

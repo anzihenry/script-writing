@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "project_id": "DEMO-RETURN-SEASON",
+  "episode_id": "EP003",
+  "revision": "v1.0",
+  "status": "reviewed",
+  "source_script": "episodes/EP003-v1.0.md",
+  "bible_revision": "v1.0",
+  "timing_basis": "未实测；7 块顺序预算共 60 秒，块内动作对白并行",
+  "lock_evidence": null,
+  "target_duration_seconds": {
+    "min": 55,
+    "max": 65
+  },
+  "assets": {
+    "characters": [
+      {
+        "id": "CHAR001",
+        "name": "林夏"
+      },
+      {
+        "id": "CHAR002",
+        "name": "来访者"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC001",
+        "name": "值班室"
+      }
+    ],
+    "props": [
+      {
+        "id": "PROP001",
+        "name": "铜钥匙"
+      },
+      {
+        "id": "PROP002",
+        "name": "登记簿及页角"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "id": "EP003-SC001",
+      "location_id": "LOC001",
+      "character_ids": [
+        "CHAR001",
+        "CHAR002"
+      ],
+      "prop_ids": [
+        "PROP001",
+        "PROP002"
+      ],
+      "time": "夜",
+      "entry_state": "承接索纸，林夏看向墙面呼叫器，说明要找管理处核对。",
+      "exit_state": "钥匙压在闭合登记簿上，纸片留在簿内；呼叫仍在等待。林夏保留了证据，来访者身份待核查。",
+      "production_notes": [
+        "文字预制作；动作可切镜；未验证样片"
+      ],
+      "blocks": [
+        {
+          "id": "EP003-SC001-B001",
+          "duration_seconds": 6,
+          "action": "承接索纸，林夏看向墙面呼叫器，说明要找管理处核对。",
+          "dialogue": [
+            {
+              "id": "EP003-D001",
+              "speaker_id": "CHAR001",
+              "text": "我叫管理处来核对。",
+              "mode": "on_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP003-SC001-B002",
+          "duration_seconds": 8,
+          "action": "对方说钥匙可以留下，但要纸片。林夏按住登记簿。",
+          "dialogue": [
+            {
+              "id": "EP003-D002",
+              "speaker_id": "CHAR002",
+              "text": "钥匙你留着，纸给我就走。",
+              "mode": "off_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP003-SC001-B003",
+          "duration_seconds": 9,
+          "action": "她将纸片夹进登记簿，合上封面，钥匙压在簿上。",
+          "dialogue": [
+            {
+              "id": "EP003-D003",
+              "speaker_id": "CHAR001",
+              "text": "纸和登记簿一起留。",
+              "mode": "on_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP003-SC001-B004",
+          "duration_seconds": 8,
+          "action": "林夏走到呼叫器前。对方制止，她的手停一拍后仍按下呼叫键。",
+          "dialogue": [
+            {
+              "id": "EP003-D004",
+              "speaker_id": "CHAR002",
+              "text": "别按！",
+              "mode": "off_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP003-SC001-B005",
+          "duration_seconds": 9,
+          "action": "呼叫铃持续，尚未接通。林夏说等管理处来，靠门站定。",
+          "dialogue": [
+            {
+              "id": "EP003-D005",
+              "speaker_id": "CHAR001",
+              "text": "我等他们来。",
+              "mode": "on_screen"
+            }
+          ],
+          "sound": [
+            "呼叫铃持续，未接通"
+          ],
+          "screen_text": []
+        },
+        {
+          "id": "EP003-SC001-B006",
+          "duration_seconds": 10,
+          "action": "门外短暂静默，随后脚步远去。她没有追出，也没有开门。",
+          "dialogue": [],
+          "sound": [
+            "门外脚步远去"
+          ],
+          "screen_text": []
+        },
+        {
+          "id": "EP003-SC001-B007",
+          "duration_seconds": 10,
+          "action": "钥匙压在闭合登记簿上，纸片留在簿内；呼叫仍在等待。林夏保留了证据，来访者身份待核查。",
+          "dialogue": [],
+          "sound": [],
+          "screen_text": []
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "配音时长未实测",
+    "撕口辨识与动作未做样片"
+  ]
+}

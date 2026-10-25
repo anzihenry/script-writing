@@ -138,7 +138,61 @@ def validate_manifest(data):
     for field in ['events', 'checkpoints', 'feedback', 'deliveries', 'measurements']:
         require(isinstance(data.get(field, []), list), f'{field} must be an array')
         require(all(isinstance(x, dict) for x in data.get(field, [])), f'{field}: entries must be objects')
+    validate_extensions(data)
     return data
+
+
+def validate_extensions(data):
+    def snapshot_map(value):
+        require(isinstance(value, dict), 'snapshots must be an object')
+        for key, item in value.items():
+            require(key in data['artifacts'] and isinstance(item, dict), 'snapshot references unknown artifact')
+            require(all(nonempty(item.get(f)) for f in ['path', 'revision', 'sha256']), 'incomplete snapshot')
+            require(re.fullmatch(r'[0-9a-f]{64}', item['sha256']) is not None, 'invalid snapshot digest')
+    for field in ['checkpoints', 'deliveries', 'feedback', 'measurements']:
+        seen = set()
+        for row in data.get(field, []):
+            require(nonempty(row.get('id')) and row['id'] not in seen, f'{field}: missing/duplicate ID')
+            seen.add(row['id'])
+    for row in data.get('checkpoints', []):
+        require(isinstance(row.get('scopes'), list) and row['scopes'] and all(e in data['episodes'] for e in row['scopes']), 'invalid checkpoint scopes')
+        require(all(nonempty(row.get(f)) for f in ['at', 'next_entry', 'reread']), 'incomplete checkpoint')
+        require(isinstance(row.get('open_issues'), list), 'invalid checkpoint issues')
+        snapshot_map(row.get('snapshots'))
+    packages = {x['id']: x for x in data.get('deliveries', [])}
+    for row in packages.values():
+        require(row.get('scope') in data['episodes'], 'invalid delivery scope')
+        require(row.get('status') in {'pending', 'accepted', 'returned'}, 'invalid receipt status')
+        require(all(nonempty(row.get(f)) for f in ['at', 'path', 'sha256']), 'incomplete delivery')
+        require(re.fullmatch(r'[0-9a-f]{64}', row['sha256']) is not None, 'invalid delivery digest')
+        require(row.get('estimated_seconds') is None or number(row['estimated_seconds']), 'invalid estimate')
+        require(isinstance(row.get('parity'), dict) and row['parity'].get('status') in {'MATCH', 'UNVERIFIED'}, 'invalid delivery parity')
+        if row['status'] != 'pending':
+            require(nonempty(row.get('evidence')), 'receipt evidence required')
+        snapshot_map(row.get('files'))
+        previous = row.get('supersedes')
+        if previous:
+            require(previous in packages and previous != row['id'] and packages[previous]['scope'] == row['scope'], 'invalid replacement package')
+    issue_map = {x['id']: x for x in data['issues']}
+    for row in data.get('feedback', []):
+        require(all(nonempty(row.get(f)) for f in ['package_id', 'source', 'location', 'evidence']), 'incomplete feedback')
+        require(row.get('layer') in {'script', 'production', 'unknown'}, 'invalid feedback layer')
+        require(row.get('status') in {'triage', 'in_progress', 'awaiting_verification', 'closed'}, 'invalid feedback status')
+        require(isinstance(row.get('issues'), list) and all(nonempty(x) and x in issue_map for x in row['issues']), 'unknown feedback issue')
+        require(row['status'] == 'triage' or row['package_id'] in packages, 'unknown package must remain in triage')
+        if row['status'] == 'closed':
+            require(nonempty(row.get('verification')), 'feedback verification required')
+            require(all(issue_map[x]['status'] != 'open' for x in row['issues']), 'closed feedback references open issue')
+            require(row['layer'] != 'script' or row['issues'], 'closed script feedback needs issue')
+    for row in data.get('measurements', []):
+        require(row.get('package_id') in packages and number(row.get('seconds')), 'invalid measurement')
+        require(all(nonempty(row.get(f)) for f in ['at', 'source', 'evidence']), 'measurement provenance required')
+    for row in data.get('events', []):
+        require(all(nonempty(row.get(f)) for f in ['at', 'type', 'id']), 'incomplete management event')
+        require('before' in row and 'after' in row, 'event snapshots required')
+        if row['type'] == 'impact':
+            require(isinstance(row['after'], dict) and row['after'].get('source') in data['artifacts'], 'invalid impact event')
+            snapshot_map(row['after'].get('snapshots'))
 
 
 def load(root):
@@ -299,7 +353,7 @@ def register(root, key, kind, scope, path, revision, status='draft', evidence=No
     content = target.read_text(encoding='utf-8')
     require('<!-- TEMPLATE:UNFILLED -->' not in content, 'template not filled; remove sentinel only after writing actual content')
     if kind == 'season_review':
-        assessment = review_check(root, path)
+        assessment = review_check(root, path, revalidating=True)
         require(assessment['full_season'], 'registered season review must cover all project episodes')
         if status in {'reviewed', 'locked'}:
             require(assessment['status'] == 'PASS', 'season review has unverified/revision-needed dimensions')
@@ -406,6 +460,11 @@ def issue_action(root, action, key=None, scope='project', severity='P1', locatio
         item = old
         if action == 'reopen':
             item.update(status='open', evidence=None, verified_revisions={})
+            for feedback in data.get('feedback', []):
+                if key in feedback['issues'] and feedback['status'] == 'closed':
+                    previous = copy.deepcopy(feedback)
+                    feedback.update(status='awaiting_verification', verification=None)
+                    event(data, 'feedback', feedback['id'], previous, feedback, 'Linked issue reopened')
         else:
             require(action in {'resolve', 'accept'}, 'unknown issue action')
             require(nonempty(evidence), 'actual evidence required')
@@ -464,6 +523,13 @@ def next_steps(root, scope='project'):
                           'skill': 'ai-short-drama-' + skills[stage], 'inputs': inputs})
     checks = inspect(root, data)
     extras = {k: errors for k, errors in checks.items() if errors and data['artifacts'][k]['scope'] in ['project'] + episodes}
+    if not tasks:
+        for key, errors in extras.items():
+            item = data['artifacts'][key]
+            kind = item['kind']
+            tasks.append({'stage': 'G4' if kind == 'season_review' else 'G5', 'scope': item['scope'],
+                          'reasons': errors, 'skill': 'ai-short-drama-review' if kind == 'season_review' else 'ai-short-drama-handoff',
+                          'inputs': [{'id': dep['id']} for dep in item['depends_on']]})
     latest = next((x for x in reversed(data.get('checkpoints', [])) if set(x['scopes']) & set(episodes)), None)
     changed = []
     if latest:
@@ -557,6 +623,10 @@ def continuity_index(root, through=None, object_id=None):
         hint['assessment'] = 'UNVERIFIED' if unknown else ('OVERDUE' if due and hint['status'] not in {'paid', 'cancelled'} else 'RECORDED')
     overdue = any(x['assessment'] == 'OVERDUE' for x in hints.values())
     selected = [{'object': obj, 'field': field, **v} for (obj, field), v in values.items() if object_id is None or object_id == obj]
+    if unknown:
+        for value in selected:
+            if value['status'] != 'CONFLICT':
+                value['status'] = 'UNVERIFIED'
     if object_id and not selected:
         unknown.append(f'{object_id}: no current state recorded')
     return {'through': through, 'status': 'CONFLICT' if conflicts or overdue else ('UNVERIFIED' if unknown else 'RECORDED'),
@@ -568,17 +638,21 @@ def continuity_index(root, through=None, object_id=None):
 REVIEW_DIMENSIONS = {'character_arc', 'escalation', 'repetition', 'information', 'foreshadows', 'ending'}
 
 
-def review_check(root, path):
+def review_check(root, path, revalidating=False):
     data = load(root)
     payload = embedded(root, {'path': path}, 'review-json')
     require(payload is not None, 'review-json required')
     episodes = payload.get('episodes')
-    require(isinstance(episodes, list) and episodes and len(episodes) == len(set(episodes)), 'unique review episodes required')
+    require(isinstance(episodes, list) and episodes and all(nonempty(e) for e in episodes) and len(episodes) == len(set(episodes)), 'unique review episodes required')
     require(all(ep in data['episodes'] for ep in episodes), 'unknown reviewed episode')
     require(nonempty(payload.get('method')), 'actual review method required')
     dimensions = payload.get('dimensions')
     require(isinstance(dimensions, dict) and set(dimensions) == REVIEW_DIMENSIONS, 'all six season dimensions required')
     checks = inspect(Path(root), data)
+    if not revalidating:
+        for key, item in data['artifacts'].items():
+            if item['kind'] == 'season_review' and local(Path(root), item['path']) == local(Path(root), path):
+                require(not checks[key], 'registered season report is stale; perform and register revalidation')
     for ep in episodes:
         for kind in ['script', 'continuity']:
             key = find(data, kind, ep)
@@ -586,9 +660,13 @@ def review_check(root, path):
     for name, result in dimensions.items():
         require(isinstance(result, dict) and result.get('status') in {'pass', 'revise', 'unverified'}, f'{name}: invalid conclusion')
         require(nonempty(result.get('evidence')), f'{name}: evidence/limitation required')
-    status = 'PASS' if all(x['status'] == 'pass' for x in dimensions.values()) else 'NEEDS_WORK'
+    affected = closure(data, [find(data, kind, ep) for ep in episodes for kind in ['script', 'continuity']])
+    blockers = [x['id'] for x in data['issues'] if x['status'] == 'open' and x['severity'] in {'P0', 'P1'}
+                and (x['scope'] in ['project'] + episodes or set(x['affects']) & affected)]
+    status = 'PASS' if not blockers and all(x['status'] == 'pass' for x in dimensions.values()) else 'NEEDS_WORK'
     return {'status': status, 'full_season': episodes == data['episodes'], 'episodes': episodes,
-            'method': payload['method'], 'dimensions': dimensions, 'limitation': 'Coverage declared by reviewer; semantic truth not machine-certified'}
+            'method': payload['method'], 'dimensions': dimensions, 'blocking_issues': blockers,
+            'limitation': 'Coverage declared by reviewer; semantic truth not machine-certified'}
 
 
 def impact(root, key):
@@ -844,13 +922,14 @@ def bundle(root, scope, output, delivery_id=None, supersedes=None):
         require(payload['project_id'] == data['project_id'] and payload['episode_id'] == scope, 'export project/episode mismatch')
         require(payload['source_script'] == script['path'] and payload['revision'] == script['revision'] and payload['bible_revision'] == bible['revision'], 'export source/version mismatch')
         require(payload['status'] == script['status'], 'export/script status mismatch')
-    require(not output.exists(), 'bundle destination exists; refusing overwrite')
+    require(not output.exists() and not output.is_symlink(), 'bundle destination exists; refusing overwrite')
     require(output.parent.is_dir(), 'bundle parent directory must exist')
     # Keep project dependencies in the package. No filesystem paths outside root are archived.
     manifest = {'schema_version': '1.0', 'delivery_id': delivery_id, 'supersedes': supersedes, 'parity': parity_result, 'project_id': data['project_id'], 'scope': scope,
                 'created_at': stamp(), 'purpose': 'script-preproduction-handoff',
                 'files': {key: data['artifacts'][key] for key in sorted(selected)},
                 'issues': data['issues'], 'limitation': 'Structural checks only; no claim of creative approval or recipient acceptance.'}
+    require(all(data['artifacts'][key]['path'] != 'delivery-manifest.json' for key in selected), 'artifact collides with package manifest')
     created = False
     try:
         with zipfile.ZipFile(output, 'x', compression=zipfile.ZIP_DEFLATED) as archive:

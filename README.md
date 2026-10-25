@@ -2,7 +2,7 @@
 
 将剧本创作组织成可重复执行、可审核、可交接的生产环节。适用于 AI 真人质感短剧、2D/3D 漫剧，以及已有小说/IP 的短剧改编。
 
-发布版本：0.1.0，见 [VERSION](VERSION) 与[版本记录](CHANGELOG.md)。资料核对日期：2026-10-24。本仓库提出的是可调整的内部生产规范，不代表行业统一标准，也不承诺播放量或商业表现。
+发布版本：0.2.0，见 [VERSION](VERSION) 与[版本记录](CHANGELOG.md)。资料核对日期：2026-10-24。本仓库提出的是可调整的内部生产规范，不代表行业统一标准，也不承诺播放量或商业表现。
 
 仓库发布版本与内部协议版本分别管理：项目登记及结构化交接协议仍为 1.0，生产管线规范修订版仍为 v2。
 
@@ -29,7 +29,7 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py status projects/my-dra
 
 初始化不会通过任何关口；填好模板后按操作手册登记，继续相应 Skill。已有目录不覆盖。工具仅需 Python 3.9+ 标准库，不依赖 PyYAML。
 
-可以先查看并检查已填好的[《归还》示例](examples/return-demo/brief.md)：
+可以先查看并检查原 0.1.0 的[《归还》示例](examples/return-demo/brief.md)：
 
 ```bash
 python3 skills/ai-short-drama-writing/scripts/pipeline.py check examples/return-demo
@@ -106,3 +106,20 @@ python3 -m unittest discover -s tests -v
 | [来源与设计依据](skills/ai-short-drama-writing/references/sources.md) | 已核对的公开资料与本地规范的区别 |
 
 实际项目建议放在 `projects/<项目名>/`，目录按模板生成；没有具体创作任务时不创建空项目。交付终点是供导演、分镜、美术和声音部门使用的剧本包；生成图片、视频及发布由下游另行执行。
+
+## 0.2.0 多集持续生产
+
+本版本增加追加集数、问题操作、下一步建议、批次检查点、连续性索引、伏笔对照、全季审核、返工影响记录、反馈闭环与交付核对。37 个 Skill 保持原有职责，继续使用 Python 3.9+ 标准库和单写入者模型。
+
+完整案例见[《归还》三集演练](examples/return-season/walkthrough.md)，覆盖第一集检查点、三集正文、实际连续性、全季作者自审和可核对交接。现有 0.1.0 项目无需强制迁移：缺少新格式时 index/parity 返回 UNVERIFIED，不编造结构化数据或审核结论。
+
+```bash
+python3 skills/ai-short-drama-writing/scripts/pipeline.py next examples/return-season --json
+python3 skills/ai-short-drama-writing/scripts/pipeline.py index examples/return-season --through EP003
+python3 skills/ai-short-drama-writing/scripts/pipeline.py parity examples/return-season --scope EP003
+python3 -m unittest discover -s tests -v
+```
+
+写操作前复制示例到自己的项目目录。bundle 现在会保存包身份和来源快照；默认待接收，旧稿和旧包不覆盖。脚本新命令详见[操作手册](skills/ai-short-drama-writing/references/operations.md)，创作数据格式见[结构化记录](skills/ai-short-drama-writing/references/structured-records.md)，能力边界和验收证据见[验证记录](docs/validation/0.2.0-review.md)。
+
+实施背景：[落地计划](docs/plans/0.2.0.md)与[数据契约](docs/design/0.2.0-contract.md)。

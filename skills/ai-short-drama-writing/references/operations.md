@@ -68,8 +68,8 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py register projects/my-d
 
 | 字段 | 规则 |
 | --- | --- |
-| kind | brief / bible / outline / script / continuity / review / handoff / export |
-| scope | 前三类是 project，其余是已登记集ID |
+| kind | brief / bible / outline / script / continuity / review / handoff / export / season_review |
+| scope | brief/bible/outline/season_review 是 project，其余是已登记集ID |
 | path | 项目内的相对路径；拒绝越界路径与指向外部的符号链接 |
 | revision | 非空修订号；内容或依赖改变时必须更新 |
 | status | draft / reviewed / locked / superseded |
@@ -166,3 +166,5 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py measure projects/my-dr
 核对格式见[结构化记录](structured-records.md)。每次 bundle 保存交付 ID、文件快照、ZIP 哈希和核对结果，默认状态 pending。未指定 ID 时自动生成；supersedes 必须引用同集已存在包。拒绝覆盖原 ZIP，保存登记失败时删除本次新包。包不发送，接收不自动填写。
 
 receipt 的 pending/accepted/returned 只记录实际接收情况，与正文 locked 分开。measure 不生成音频，数值由实际测量者提供；绑定包内正文版本，已登记导出存在时返回与包内时间预算的偏差，无预算时为 null。模拟数据必须明确标模拟，不代表实测。
+
+全季报告格式见[范围与全季审核](season-review.md)。season_review 依赖全部已登记集的 script/continuity；局部范围报告可以 review-check，但不能登记成全季报告。新管理字段 events/checkpoints/feedback/deliveries/measurements 缺省为空；旧项目读取时不自动写入或迁移。

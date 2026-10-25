@@ -88,3 +88,7 @@ flowchart LR
 原 continuity.md 可继续作为阅读索引，但进入自动管线应拆出各集实际状态文件，计划伏笔迁到 outline.md；不要把同一整季文件注册为多个独立集的产物。原 review/handoff 文件名可保持不变。
 
 从仓库复制技能时，运行工具和模板都在总入口目录内；按原有套件依赖一起分发，不依赖本机绝对路径。
+
+## 0.2.0 多集控制
+
+恢复先 next，批次末 checkpoint，扩展集数用 episodes；问题和反馈用 CLI 维护唯一状态。连续性记录按[结构化记录](structured-records.md)随正文证据登记，索引按需重建。范围/全季审查见[审核方法](season-review.md)。改稿先 impact，真实复核后刷新版本；交接先 parity，bundle 保存包身份，receipt/measure 仅登记实际收到的证据。详见[操作手册](operations.md)。
