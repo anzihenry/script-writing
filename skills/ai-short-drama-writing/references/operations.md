@@ -117,3 +117,17 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py register projects/my-d
 - 2：参数、数据格式、文件读取或写入错误。
 
 运行仓库测试：`python3 -m unittest discover -s tests -v`。不调用外部服务，不生成付费资产。
+
+## 0.2.0 项目续作与问题操作
+
+新增操作兼容原 schema_version 1.0；管理记录使用可选扩展字段。继续单写入者串行运行。
+
+```bash
+python3 skills/ai-short-drama-writing/scripts/pipeline.py episodes projects/my-drama --through 3
+python3 skills/ai-short-drama-writing/scripts/pipeline.py issue projects/my-drama add --id Q001 --scope EP001 --severity P1 --location EP001-SC001 --summary '实际发现的问题' --affects script_EP001
+python3 skills/ai-short-drama-writing/scripts/pipeline.py issue projects/my-drama list
+python3 skills/ai-short-drama-writing/scripts/pipeline.py issue projects/my-drama resolve --id Q001 --evidence '实际复核报告与结论'
+python3 skills/ai-short-drama-writing/scripts/pipeline.py issue projects/my-drama reopen --id Q001
+```
+
+`episodes --through` 是目标总集数，只追加，重复执行无变更；现有目标文件冲突时整批拒绝。`issue accept` 另外需要 `--actor`，不得接受 P0。修订影响已关闭问题时先 reopen，再登记新版、实际复核后 resolve。问题事件保存在 events 中，原 issues 仍是当前状态来源。

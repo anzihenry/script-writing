@@ -134,6 +134,9 @@ def validate_manifest(data):
             require(issue.get('verified_revisions') == {a: data['artifacts'][a]['revision'] for a in issue['affects']},
                     f"{issue['id']}: resolution/acceptance must be rechecked against current revisions")
         require(not (issue['severity'] == 'P0' and issue['status'] == 'accepted'), 'P0 cannot be waived')
+    for field in ['events', 'checkpoints', 'feedback', 'deliveries', 'measurements']:
+        require(isinstance(data.get(field, []), list), f'{field} must be an array')
+        require(all(isinstance(x, dict) for x in data.get(field, [])), f'{field}: entries must be objects')
     return data
 
 
@@ -330,6 +333,88 @@ def register(root, key, kind, scope, path, revision, status='draft', evidence=No
     write_json(root / 'project.json', data)
 
 
+def event(data, kind, key, before, after, note=None):
+    data.setdefault('events', []).append({'at': stamp(), 'type': kind, 'id': key,
+        'before': copy.deepcopy(before), 'after': copy.deepcopy(after), 'note': note})
+
+
+def save(root, data):
+    validate_manifest(data)
+    write_json(Path(root) / 'project.json', data)
+
+
+def append_episodes(root, through):
+    root = Path(root)
+    data = load(root)
+    require(type(through) is int and len(data['episodes']) <= through <= 999,
+            'through must be current episode count..999; removal is unsupported')
+    require(data['episodes'] == [f'EP{i:03}' for i in range(1, len(data['episodes']) + 1)],
+            'append requires sequential EP001.. IDs; custom ordering is unsupported')
+    added = [f'EP{i:03}' for i in range(len(data['episodes']) + 1, through + 1)]
+    files = []
+    for ep in added:
+        for template, folder in [('episode', 'episodes'), ('continuity', 'continuity'),
+                                 ('review', 'reviews'), ('handoff', 'handoff')]:
+            target = local(root, f'{folder}/{ep}-v1.0.md')
+            require(not target.exists() and not target.is_symlink(), f'target exists: {target}')
+            require(target.parent.is_dir(), f'missing directory: {target.parent}')
+            content = (HOME / 'assets' / 'project-template' / f'{template}.md').read_text(encoding='utf-8')
+            files.append((target, content.replace('{{project_id}}', data['project_id']).replace('{{episode_id}}', ep)))
+    if not added:
+        return []
+    before = list(data['episodes'])
+    data['episodes'].extend(added)
+    event(data, 'episodes', 'episodes', before, data['episodes'])
+    validate_manifest(data)
+    written = []
+    try:
+        for path, content in files:
+            with path.open('x', encoding='utf-8') as handle:
+                written.append(path)
+                handle.write(content)
+        save(root, data)
+    except Exception:
+        for path in written:
+            path.unlink()
+        raise
+    return added
+
+
+def issue_action(root, action, key=None, scope='project', severity='P1', location=None,
+                 summary=None, affects=None, evidence=None, actor=None):
+    data = load(root)
+    if action == 'list':
+        return data['issues']
+    old = next((x for x in data['issues'] if x['id'] == key), None)
+    before = copy.deepcopy(old)
+    if action == 'add':
+        require(old is None, 'issue already exists')
+        item = {'id': key, 'scope': scope, 'severity': severity, 'status': 'open',
+                'location': location, 'summary': summary, 'affects': affects or [],
+                'evidence': None, 'verified_revisions': {}}
+        data['issues'].append(item)
+    else:
+        require(old is not None, 'unknown issue')
+        item = old
+        if action == 'reopen':
+            item.update(status='open', evidence=None, verified_revisions={})
+        else:
+            require(action in {'resolve', 'accept'}, 'unknown issue action')
+            require(nonempty(evidence), 'actual evidence required')
+            checks = inspect(Path(root), data)
+            require(all(not checks[a] for a in item['affects']), 'affected artifacts need revalidation')
+            if action == 'accept':
+                require(nonempty(actor), 'acceptance requires responsible actor')
+                require(item['severity'] != 'P0', 'P0 cannot be waived')
+            item.update(status='resolved' if action == 'resolve' else 'accepted', evidence=evidence,
+                        verified_revisions={a: data['artifacts'][a]['revision'] for a in item['affects']})
+            if actor:
+                item['actor'] = actor
+    event(data, 'issue', key, before, item, evidence)
+    save(root, data)
+    return item
+
+
 def validate_handoff(data):
     """Explicit v1 contract, including cross references; not a generic JSON Schema engine."""
     require(isinstance(data, dict) and data.get('schema_version') == '1.0', 'handoff schema must be 1.0')
@@ -431,9 +516,18 @@ def main(argv=None):
     p = sub.add_parser('gate'); p.add_argument('project'); p.add_argument('--stage', choices=list(GATES), required=True); p.add_argument('--scope', default='project')
     p = sub.add_parser('bundle'); p.add_argument('project'); p.add_argument('--scope', required=True); p.add_argument('--output', required=True)
     p = sub.add_parser('validate-handoff'); p.add_argument('file')
+    p = sub.add_parser('episodes'); p.add_argument('project'); p.add_argument('--through', type=int, required=True)
+    p = sub.add_parser('issue'); p.add_argument('project'); p.add_argument('action', choices=['add', 'list', 'resolve', 'reopen', 'accept'])
+    p.add_argument('--id'); p.add_argument('--scope', default='project'); p.add_argument('--severity', choices=['P0', 'P1', 'P2'], default='P1')
+    p.add_argument('--location'); p.add_argument('--summary'); p.add_argument('--affects', nargs='+'); p.add_argument('--evidence'); p.add_argument('--actor')
     args = parser.parse_args(argv)
     try:
-        if args.command == 'init':
+        if args.command == 'episodes':
+            print(json.dumps({'added': append_episodes(args.project, args.through)}, ensure_ascii=False))
+        elif args.command == 'issue':
+            print(json.dumps(issue_action(args.project, args.action, args.id, args.scope, args.severity,
+                args.location, args.summary, args.affects, args.evidence, args.actor), ensure_ascii=False, indent=2))
+        elif args.command == 'init':
             init_project(args.project, args.id, args.episodes)
             print('INITIALIZED: blank templates only; no stage passed')
         elif args.command == 'register':
