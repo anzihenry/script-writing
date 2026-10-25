@@ -779,6 +779,97 @@ def scene_projection(payload, scope, exported=False):
     return scenes
 
 
+def markdown_cells(line):
+    """Parse the supported three-column table; only escaped pipes are decoded."""
+    require(line.startswith('|') and line.endswith('|'), 'dialogue table row must start/end with |')
+    cells, current = [], []
+    text = line[1:-1]
+    i = 0
+    while i < len(text):
+        if text[i:i + 2] == '\\|':
+            current.append('|')
+            i += 2
+        elif text[i] == '|':
+            cells.append(''.join(current).strip())
+            current = []
+            i += 1
+        else:
+            current.append(text[i])
+            i += 1
+    cells.append(''.join(current).strip())
+    require(len(cells) == 3, 'dialogue table needs exactly three columns')
+    return cells
+
+
+def markdown_scenes(text):
+    marker = '<!-- drama-table:v1 -->'
+    if marker not in text:
+        return None
+    require(text.count(marker) == 1, 'duplicate readable-format marker')
+    result, current, table, separator, completed = {'scenes': []}, None, False, False, set()
+    for raw in text.splitlines():
+        line = raw.strip()
+        if line.startswith('正文来源版本：'):
+            require('source_revision' not in result, 'duplicate source revision')
+            result['source_revision'] = line.split('：', 1)[1].strip()
+        match = re.fullmatch(r'## 场次 (EP\d{3,}-SC\d{3,})', line)
+        if match:
+            current = {'id': match.group(1), 'dialogue': []}
+            result['scenes'].append(current)
+            table = separator = False
+            continue
+        if current is None:
+            continue
+        labels = {'地点：': 'location_id', '人物：': 'character_ids', '道具：': 'prop_ids'}
+        found = False
+        for prefix, field in labels.items():
+            if line.startswith(prefix):
+                require(field not in current, 'duplicate scene metadata: ' + field)
+                value = line[len(prefix):].strip()
+                current[field] = value if field == 'location_id' else ([] if value == '-' else [x.strip() for x in value.split(',')])
+                found = True
+                break
+        if found:
+            continue
+        if line.startswith('|'):
+            if not table:
+                # Other action/timing tables are not dialogue; only this explicit header starts one.
+                if markdown_header(line) != ['对白ID', '说话者', '原文']:
+                    header = markdown_header(line)
+                    require(not any(x in {'对白ID', '说话者', '原文'} or re.fullmatch(r'EP\d{3,}-D\d{3,}', x) for x in header), 'dialogue row/header outside supported table')
+                    continue
+                require(current['id'] not in completed, 'multiple dialogue tables in a scene')
+                table = True
+                separator = False
+                continue
+            cells = markdown_cells(line)
+            if not separator:
+                require(all(re.fullmatch(r':?-{3,}:?', x) for x in cells), 'Markdown separator required after dialogue header')
+                separator = True
+                completed.add(current['id'])
+                continue
+            require(not all(re.fullmatch(r':?-{3,}:?', x) for x in cells), 'unexpected table separator')
+            current['dialogue'].append(dict(zip(['id', 'speaker_id', 'text'], cells)))
+        elif table:
+            require(separator, 'incomplete dialogue table')
+            table = False
+    require(result['scenes'] and all(x['id'] in completed for x in result['scenes']), 'every scene needs a complete dialogue table')
+    return result
+
+
+def markdown_header(line):
+    # Ignore unrelated tables without imposing the dialogue table's column count.
+    return [x.strip() for x in line.strip('|').split('|')]
+
+
+def scene_document(root, item, label):
+    structured = embedded(root, item, label)
+    text = local(Path(root), item['path']).read_text(encoding='utf-8')
+    readable = markdown_scenes(text)
+    require(structured is None or readable is None, 'ambiguous dialogue source: choose JSON block or readable table, not both')
+    return (readable, 'markdown-table-v1') if readable is not None else (structured, label if structured else 'unsupported')
+
+
 def parity(root, scope):
     data = load(root)
     require(scope in data['episodes'], 'unknown episode')
@@ -789,10 +880,10 @@ def parity(root, scope):
     if missing or stale:
         return {'status': 'UNVERIFIED', 'reasons': ['missing: ' + ','.join(missing), 'stale: ' + ','.join(stale)]}
     script = data['artifacts'][records['script']]
-    source = embedded(root, script, 'script-json')
-    target = embedded(root, data['artifacts'][records['handoff']], 'handoff-json')
+    source, source_format = scene_document(root, script, 'script-json')
+    target, target_format = scene_document(root, data['artifacts'][records['handoff']], 'handoff-json')
     if source is None or target is None:
-        return {'status': 'UNVERIFIED', 'reasons': ['script-json/handoff-json absent; legacy text requires manual review']}
+        return {'status': 'UNVERIFIED', 'reasons': ['supported readable table/JSON block absent; legacy text requires manual review']}
     expected = scene_projection(source, scope)
     actual = scene_projection(target, scope)
     differences = []
@@ -808,6 +899,7 @@ def parity(root, scope):
         if scene_projection(export, scope, True) != expected:
             differences.append('export scene/dialogue/speaker/asset coverage differs from script')
     return {'status': 'MISMATCH' if differences else 'MATCH', 'reasons': differences,
+            'formats': {'script': source_format, 'handoff': target_format},
             'coverage': ['scene order', 'scene locations', 'character/prop references', 'dialogue order/IDs', 'speaker', 'exact text'],
             'unverified': ['action semantics', 'performance', 'unstructured prose consistency'],
             'source': {'id': records['script'], 'revision': script['revision'], 'sha256': script['sha256']}}

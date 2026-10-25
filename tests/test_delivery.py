@@ -57,3 +57,40 @@ class DeliveryTest(unittest.TestCase):
         with patch.object(p, 'save', side_effect=OSError('disk failure')):
             with self.assertRaises(OSError): p.bundle(self.root, 'EP001', output)
         self.assertFalse(output.exists())
+
+    def table(self, line='| EP001-D001 | CHAR001 | 谁？ |', revision='v1.0'):
+        return ('<!-- drama-table:v1 -->\n正文来源版本：' + revision + '\n'
+                '## 场次 EP001-SC001\n地点：LOC001\n人物：CHAR001, CHAR002\n道具：PROP001\n\n'
+                '| 对白ID | 说话者 | 原文 |\n| --- | --- | --- |\n' + line + '\n')
+
+    def test_readable_table_to_json_handoff(self):
+        self.add('brief'); self.add('bible'); self.add('outline')
+        self.add('script', 'EP001', status='reviewed', content=self.table())
+        self.add('continuity', 'EP001'); self.add('review', 'EP001', status='reviewed')
+        self.add('handoff', 'EP001', content=self.table())
+        result = p.parity(self.root, 'EP001')
+        self.assertEqual(result['status'], 'MATCH')
+        self.assertEqual(result['formats']['script'], 'markdown-table-v1')
+        target = p.markdown_scenes(self.table())
+        self.add('handoff', 'EP001', revision='v2', content='```handoff-json\n' + json.dumps(target) + '\n```')
+        self.assertEqual(p.parity(self.root, 'EP001')['status'], 'MATCH')
+
+    def test_readable_differences_and_ambiguous_sources(self):
+        self.build()
+        for number, content in enumerate([self.table(''), self.table('| EP001-D001 | CHAR002 | 谁？ |'), self.table(revision='v0')]):
+            self.add('handoff', 'EP001', revision=f't{number}', content=content)
+            self.assertEqual(p.parity(self.root, 'EP001')['status'], 'MISMATCH')
+        content = self.table() + '\n```handoff-json\n' + json.dumps(self.target) + '\n```'
+        self.add('handoff', 'EP001', revision='ambiguous', content=content)
+        with self.assertRaises(p.Invalid): p.parity(self.root, 'EP001')
+
+    def test_readable_multiple_scenes_and_escaped_pipe(self):
+        text = self.table('| EP001-D001 | CHAR001 | 左邊 \\| 右边 |')
+        text += ('\n## 场次 EP001-SC002\n地点：LOC002\n人物：CHAR001\n道具：-\n\n'
+                 '| 对白ID | 说话者 | 原文 |\n| --- | --- | --- |\n| EP001-D002 | CHAR001 | 走。 |\n')
+        parsed = p.scene_projection(p.markdown_scenes(text), 'EP001')
+        self.assertEqual(len(parsed), 2)
+        self.assertEqual(parsed[0]['dialogue'][0]['text'], '左邊 | 右边')
+        self.assertEqual(parsed[1]['prop_ids'], [])
+        with self.assertRaises(p.Invalid): p.markdown_scenes(self.table().replace('| --- | --- | --- |', '| -- | -- | -- |'))
+        with self.assertRaises(p.Invalid): p.markdown_scenes(self.table().replace('| 对白ID | 说话者 | 原文 |', '| ID | 角色 | 文本 |'))

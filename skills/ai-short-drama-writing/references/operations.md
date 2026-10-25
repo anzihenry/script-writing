@@ -163,7 +163,7 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py receipt projects/my-dr
 python3 skills/ai-short-drama-writing/scripts/pipeline.py measure projects/my-drama --id T001 --package-id PKG002 --seconds 63.2 --source '实际配音文件或样片位置' --evidence '实际测量口径与方法'
 ```
 
-核对格式见[结构化记录](structured-records.md)。每次 bundle 保存交付 ID、文件快照、ZIP 哈希和核对结果，默认状态 pending。未指定 ID 时自动生成；supersedes 必须引用同集已存在包。拒绝覆盖原 ZIP，保存登记失败时删除本次新包。包不发送，接收不自动填写。
+核对格式见[结构化记录](structured-records.md)，支持 init 的可读 Markdown 场次/对白表和已有 JSON 块，均无需另行创建导出 JSON。每次 bundle 保存交付 ID、文件快照、ZIP 哈希和核对结果，默认状态 pending。未指定 ID 时自动生成；supersedes 必须引用同集已存在包。拒绝覆盖原 ZIP，保存登记失败时删除本次新包。包不发送，接收不自动填写。
 
 receipt 的 pending/accepted/returned 只记录实际接收情况，与正文 locked 分开。measure 不生成音频，数值由实际测量者提供；绑定包内正文版本，已登记导出存在时返回与包内时间预算的偏差，无预算时为 null。模拟数据必须明确标模拟，不代表实测。
 
