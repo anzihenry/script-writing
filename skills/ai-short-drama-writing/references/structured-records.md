@@ -21,3 +21,15 @@ outline 文件中的计划与实际记录分开。plant/payoff 是已纳入项�
 ```
 
 运行 `pipeline.py index PROJECT --through EP002 --object PROP001` 查询状态历史；不传 object 则返回所有对象。索引按需构建，缺覆盖或过期时为 UNVERIFIED，冲突/到期漏收为 CONFLICT。RECORDED 表示结构与记录可用，不是语义审核通过。未写到回收集不能按漏收处理。
+
+## 正文与交接核对
+
+使用新格式时，script-json 是正文的权威场次/对白/资产引用清单；对白原文只在此维护，动作、入出场状态、时间块仍用可读文字。不要复制一份不同的散文台词再期待工具判断哪份为准。handoff-json 是从该清单提取的交接记录，额外必填 source_revision。每份文档每种标签只放一个块。
+
+```script-json
+{"scenes":[{"id":"EP001-SC001","location_id":"LOC001","character_ids":["CHAR001"],"prop_ids":[],"dialogue":[{"id":"EP001-D001","speaker_id":"CHAR001","text":"谁？"}]}]}
+```
+
+将相同 scenes 提取到 handoff-json，顶层增加 `"source_revision":"v1.0"`。运行 `parity PROJECT --scope EP001`。MATCH 仅覆盖场次顺序、地点、角色/道具引用、对白 ID/顺序/说话者/原文。仅归一化 CRLF 换行；不忽略删词、标点或空格。已登记 export 也参与比较。动作语义、表演和散文一致性仍需审稿。
+
+旧格式缺少任一块返回 UNVERIFIED；显式不一致返回 MISMATCH 并阻止 bundle。旧格式可打预制作包，但包内明确保留未验证结论，不冒称已逐句核对。

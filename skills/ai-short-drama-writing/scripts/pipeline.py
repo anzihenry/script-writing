@@ -9,6 +9,7 @@ import re
 import sys
 import tempfile
 import zipfile
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -671,6 +672,95 @@ def feedback_action(root, action, key=None, package_id=None, source=None, locati
     return item
 
 
+def scene_projection(payload, scope, exported=False):
+    require(isinstance(payload.get('scenes'), list) and payload['scenes'], 'nonempty scenes required')
+    scenes, seen_scenes, seen_dialogue = [], set(), set()
+    for scene in payload['scenes']:
+        require(isinstance(scene, dict) and nonempty(scene.get('id')), 'scene ID required')
+        require(scene['id'].startswith(scope + '-') and scene['id'] not in seen_scenes, 'duplicate/wrong-scope scene ID')
+        seen_scenes.add(scene['id'])
+        require(nonempty(scene.get('location_id')), 'location ID required')
+        for field in ['character_ids', 'prop_ids']:
+            value = scene.get(field)
+            require(isinstance(value, list) and all(nonempty(x) for x in value) and len(value) == len(set(value)), f'invalid {field}')
+        if exported:
+            require(isinstance(scene.get('blocks'), list), 'blocks required')
+            dialogue = [line for block in scene['blocks'] for line in block['dialogue']]
+        else:
+            dialogue = scene.get('dialogue')
+        require(isinstance(dialogue, list), 'dialogue array required')
+        lines = []
+        for line in dialogue:
+            require(isinstance(line, dict) and all(nonempty(line.get(x)) for x in ['id', 'speaker_id', 'text']), 'dialogue id/speaker/text required')
+            require(line['id'].startswith(scope + '-') and line['id'] not in seen_dialogue, 'duplicate/wrong-scope dialogue ID')
+            seen_dialogue.add(line['id'])
+            require(line['speaker_id'] in scene['character_ids'], 'speaker absent from scene characters')
+            lines.append({k: line[k].replace('\r\n', '\n') for k in ['id', 'speaker_id', 'text']})
+        scenes.append({'id': scene['id'], 'location_id': scene['location_id'],
+                       'character_ids': sorted(scene['character_ids']), 'prop_ids': sorted(scene['prop_ids']), 'dialogue': lines})
+    return scenes
+
+
+def parity(root, scope):
+    data = load(root)
+    require(scope in data['episodes'], 'unknown episode')
+    checks = inspect(Path(root), data)
+    records = {kind: find(data, kind, scope) for kind in ['script', 'handoff', 'export']}
+    missing = [kind for kind in ['script', 'handoff'] if records[kind] is None]
+    stale = [kind for kind, key in records.items() if key and checks[key]]
+    if missing or stale:
+        return {'status': 'UNVERIFIED', 'reasons': ['missing: ' + ','.join(missing), 'stale: ' + ','.join(stale)]}
+    script = data['artifacts'][records['script']]
+    source = embedded(root, script, 'script-json')
+    target = embedded(root, data['artifacts'][records['handoff']], 'handoff-json')
+    if source is None or target is None:
+        return {'status': 'UNVERIFIED', 'reasons': ['script-json/handoff-json absent; legacy text requires manual review']}
+    expected = scene_projection(source, scope)
+    actual = scene_projection(target, scope)
+    differences = []
+    if target.get('source_revision') != script['revision']:
+        differences.append('handoff source_revision differs from script')
+    if expected != actual:
+        differences.append('handoff scene/dialogue/speaker/asset coverage differs from script')
+    if records['export']:
+        export = read_json(local(Path(root), data['artifacts'][records['export']]['path']))
+        validate_handoff(export)
+        if export['project_id'] != data['project_id'] or export['episode_id'] != scope or export['revision'] != script['revision'] or export['source_script'] != script['path'] or export['status'] != script['status']:
+            differences.append('export source identity/version/status differs from script')
+        if scene_projection(export, scope, True) != expected:
+            differences.append('export scene/dialogue/speaker/asset coverage differs from script')
+    return {'status': 'MISMATCH' if differences else 'MATCH', 'reasons': differences,
+            'coverage': ['scene order', 'scene locations', 'character/prop references', 'dialogue order/IDs', 'speaker', 'exact text'],
+            'unverified': ['action semantics', 'performance', 'unstructured prose consistency'],
+            'source': {'id': records['script'], 'revision': script['revision'], 'sha256': script['sha256']}}
+
+
+def receipt(root, key, status, evidence):
+    data = load(root)
+    item = next((x for x in data.get('deliveries', []) if x['id'] == key), None)
+    require(item is not None, 'unknown delivery')
+    require(status in {'pending', 'accepted', 'returned'} and nonempty(evidence), 'status and actual receipt evidence required')
+    before = copy.deepcopy(item)
+    item.update(status=status, evidence=evidence)
+    event(data, 'receipt', key, before, item, evidence)
+    save(root, data)
+    return item
+
+
+def measure(root, key, package_id, seconds, source, evidence):
+    data = load(root)
+    require(nonempty(key) and not any(x['id'] == key for x in data.get('measurements', [])), 'unique measurement ID required')
+    package = next((x for x in data.get('deliveries', []) if x['id'] == package_id), None)
+    require(package is not None, 'unknown delivery')
+    require(number(seconds) and nonempty(source) and nonempty(evidence), 'positive measured seconds/source/evidence required')
+    estimate = package.get('estimated_seconds')
+    item = {'id': key, 'package_id': package_id, 'seconds': seconds, 'source': source, 'evidence': evidence,
+            'at': stamp(), 'estimated_seconds': estimate, 'delta_seconds': seconds - estimate if estimate is not None else None}
+    data.setdefault('measurements', []).append(item)
+    save(root, data)
+    return item
+
+
 def validate_handoff(data):
     """Explicit v1 contract, including cross references; not a generic JSON Schema engine."""
     require(isinstance(data, dict) and data.get('schema_version') == '1.0', 'handoff schema must be 1.0')
@@ -731,17 +821,24 @@ def validate_handoff(data):
     return total
 
 
-def bundle(root, scope, output):
+def bundle(root, scope, output, delivery_id=None, supersedes=None):
     root, output = Path(root), Path(output)
     data = load(root)
     errors, selected = gate(root, data, 'G5', scope)
     require(not errors, '; '.join(errors))
+    parity_result = parity(root, scope)
+    require(parity_result['status'] != 'MISMATCH', 'handoff parity mismatch: ' + '; '.join(parity_result['reasons']))
+    delivery_id = delivery_id or 'PKG-' + uuid.uuid4().hex[:16]
+    require(nonempty(delivery_id) and not any(x['id'] == delivery_id for x in data.get('deliveries', [])), 'delivery ID already exists/invalid')
+    if supersedes:
+        require(any(x['id'] == supersedes and x['scope'] == scope for x in data.get('deliveries', [])), 'supersedes must name an existing delivery of this episode')
+    estimated_seconds = None
     export = find(data, 'export', scope)
     if export:
         require(not inspect(root, data)[export], 'export is stale/invalid')
         selected |= closure(data, [export])
         payload = read_json(local(root, data['artifacts'][export]['path']))
-        validate_handoff(payload)
+        estimated_seconds = validate_handoff(payload)
         script = data['artifacts'][find(data, 'script', scope)]
         bible = data['artifacts'][find(data, 'bible', 'project')]
         require(payload['project_id'] == data['project_id'] and payload['episode_id'] == scope, 'export project/episode mismatch')
@@ -750,15 +847,27 @@ def bundle(root, scope, output):
     require(not output.exists(), 'bundle destination exists; refusing overwrite')
     require(output.parent.is_dir(), 'bundle parent directory must exist')
     # Keep project dependencies in the package. No filesystem paths outside root are archived.
-    manifest = {'schema_version': '1.0', 'project_id': data['project_id'], 'scope': scope,
+    manifest = {'schema_version': '1.0', 'delivery_id': delivery_id, 'supersedes': supersedes, 'parity': parity_result, 'project_id': data['project_id'], 'scope': scope,
                 'created_at': stamp(), 'purpose': 'script-preproduction-handoff',
                 'files': {key: data['artifacts'][key] for key in sorted(selected)},
                 'issues': data['issues'], 'limitation': 'Structural checks only; no claim of creative approval or recipient acceptance.'}
-    with zipfile.ZipFile(output, 'x', compression=zipfile.ZIP_DEFLATED) as archive:
-        archive.writestr('delivery-manifest.json', json.dumps(manifest, ensure_ascii=False, indent=2))
-        for key in sorted(selected):
-            item = data['artifacts'][key]
-            archive.write(local(root, item['path']), item['path'])
+    created = False
+    try:
+        with zipfile.ZipFile(output, 'x', compression=zipfile.ZIP_DEFLATED) as archive:
+            created = True
+            archive.writestr('delivery-manifest.json', json.dumps(manifest, ensure_ascii=False, indent=2))
+            for key in sorted(selected):
+                item = data['artifacts'][key]
+                archive.write(local(root, item['path']), item['path'])
+        data.setdefault('deliveries', []).append({'id': delivery_id, 'scope': scope, 'at': stamp(),
+            'files': snapshots(data, selected), 'sha256': sha(output), 'path': str(output.resolve()),
+            'supersedes': supersedes, 'status': 'pending', 'evidence': None, 'parity': parity_result,
+            'estimated_seconds': estimated_seconds})
+        save(root, data)
+    except Exception:
+        if created:
+            output.unlink()
+        raise
     return len(selected)
 
 
@@ -770,7 +879,7 @@ def main(argv=None):
     for cmd in ['check', 'status']:
         p = sub.add_parser(cmd); p.add_argument('project')
     p = sub.add_parser('gate'); p.add_argument('project'); p.add_argument('--stage', choices=list(GATES), required=True); p.add_argument('--scope', default='project')
-    p = sub.add_parser('bundle'); p.add_argument('project'); p.add_argument('--scope', required=True); p.add_argument('--output', required=True)
+    p = sub.add_parser('bundle'); p.add_argument('project'); p.add_argument('--scope', required=True); p.add_argument('--output', required=True); p.add_argument('--delivery-id'); p.add_argument('--supersedes')
     p = sub.add_parser('validate-handoff'); p.add_argument('file')
     p = sub.add_parser('episodes'); p.add_argument('project'); p.add_argument('--through', type=int, required=True)
     p = sub.add_parser('issue'); p.add_argument('project'); p.add_argument('action', choices=['add', 'list', 'resolve', 'reopen', 'accept'])
@@ -788,9 +897,22 @@ def main(argv=None):
     for flag in ['id', 'package-id', 'source', 'location', 'evidence', 'layer', 'status', 'verification']:
         p.add_argument('--' + flag)
     p.add_argument('--issues', nargs='*')
+    p = sub.add_parser('parity'); p.add_argument('project'); p.add_argument('--scope', required=True)
+    p = sub.add_parser('receipt'); p.add_argument('project'); p.add_argument('--id', required=True)
+    p.add_argument('--status', choices=['pending', 'accepted', 'returned'], required=True); p.add_argument('--evidence', required=True)
+    p = sub.add_parser('measure'); p.add_argument('project'); p.add_argument('--id', required=True); p.add_argument('--package-id', required=True)
+    p.add_argument('--seconds', type=float, required=True); p.add_argument('--source', required=True); p.add_argument('--evidence', required=True)
     args = parser.parse_args(argv)
     try:
-        if args.command == 'impact':
+        if args.command == 'parity':
+            result = parity(args.project, args.scope)
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            return 0 if result['status'] == 'MATCH' else 1
+        elif args.command == 'receipt':
+            print(json.dumps(receipt(args.project, args.id, args.status, args.evidence), ensure_ascii=False, indent=2))
+        elif args.command == 'measure':
+            print(json.dumps(measure(args.project, args.id, args.package_id, args.seconds, args.source, args.evidence), ensure_ascii=False, indent=2))
+        elif args.command == 'impact':
             print(json.dumps(impact(args.project, args.id), ensure_ascii=False, indent=2))
         elif args.command == 'impact-note':
             print(json.dumps(impact_note(args.project, args.source, args.target, args.decision, args.evidence), ensure_ascii=False, indent=2))
@@ -834,7 +956,7 @@ def main(argv=None):
         elif args.command == 'validate-handoff':
             print(f'STRUCTURE_OK: {validate_handoff(read_json(args.file))} seconds; text parity requires review')
         elif args.command == 'bundle':
-            print(f'BUNDLED: {bundle(args.project, args.scope, args.output)} artifacts; not sent to recipient')
+            print(f'BUNDLED: {bundle(args.project, args.scope, args.output, args.delivery_id, args.supersedes)} artifacts; not sent to recipient')
         else:
             root = Path(args.project)
             data = load(root)

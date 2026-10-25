@@ -153,3 +153,16 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py feedback projects/my-d
 impact 按依赖顺序列直接/间接影响，不声称已经理解情节差异。impact-note 的 rewrite/reviewed_unchanged/pending 绑定当前快照，不能清除文件失效；真实复核后仍需 register 新修订。非锁定稿建议使用新文件路径保存历史；只有快照不能恢复旧正文。
 
 feedback 的 layer 为 script/production/unknown；状态为 triage/in_progress/awaiting_verification/closed。未知包只能停留 triage。关闭需 `--verification` 实际回验证据且关联问题已处理；剧本反馈必须关联问题。记录保存在 project.json，feedback.md 可作阅读说明，不维护另一套状态。生成包或修改剧本不会自动关闭反馈。
+
+### 交付核对、接收与实测
+
+```bash
+python3 skills/ai-short-drama-writing/scripts/pipeline.py parity projects/my-drama --scope EP001
+python3 skills/ai-short-drama-writing/scripts/pipeline.py bundle projects/my-drama --scope EP001 --output /tmp/EP001-new.zip --delivery-id PKG002 --supersedes PKG001
+python3 skills/ai-short-drama-writing/scripts/pipeline.py receipt projects/my-drama --id PKG002 --status accepted --evidence '实际接收方确认依据'
+python3 skills/ai-short-drama-writing/scripts/pipeline.py measure projects/my-drama --id T001 --package-id PKG002 --seconds 63.2 --source '实际配音文件或样片位置' --evidence '实际测量口径与方法'
+```
+
+核对格式见[结构化记录](structured-records.md)。每次 bundle 保存交付 ID、文件快照、ZIP 哈希和核对结果，默认状态 pending。未指定 ID 时自动生成；supersedes 必须引用同集已存在包。拒绝覆盖原 ZIP，保存登记失败时删除本次新包。包不发送，接收不自动填写。
+
+receipt 的 pending/accepted/returned 只记录实际接收情况，与正文 locked 分开。measure 不生成音频，数值由实际测量者提供；绑定包内正文版本，已登记导出存在时返回与包内时间预算的偏差，无预算时为 null。模拟数据必须明确标模拟，不代表实测。

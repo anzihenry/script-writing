@@ -30,3 +30,7 @@ handoff/<集>-<版本>.md 的清单：文件、来源版本、用途、状态、
 多个基线冲突无法消解时不拼接正文，等待必要选择。
 
 本步骤完成后停止，除非用户已要求后续步骤。可通过[阶段入口](../ai-short-drama-handoff/SKILL.md)衔接；直接调用无需先执行阶段入口。共享资料与父入口需要保留相邻目录。
+
+## 可核对交付
+
+需要逐句机器核对时读取[结构化记录](../ai-short-drama-writing/references/structured-records.md)，按[操作手册](../ai-short-drama-writing/references/operations.md)执行 parity/bundle。MATCH 仅表示列明字段一致；接收、配音实测与语义审查分别保留真实依据，缺少时标未验证。
