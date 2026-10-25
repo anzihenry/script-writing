@@ -140,3 +140,16 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py checkpoint projects/my
 ```
 
 `next` 只读，按项目阶段及前置集顺序列出原因、所需输入和建议技能；不自动执行创作。检查点保存当时的快照与交棒提示，不代表通过；恢复结果会列出此后变化/失效的产物。重复检查点 ID 拒绝，保存新批次时使用新 ID。STRUCTURE_READY 仍不代表质量获批。
+
+### 返工影响与反馈
+
+```bash
+python3 skills/ai-short-drama-writing/scripts/pipeline.py impact projects/my-drama --id script_EP001
+python3 skills/ai-short-drama-writing/scripts/pipeline.py impact-note projects/my-drama --source script_EP001 --target script_EP002 --decision reviewed_unchanged --evidence '实际复核范围与结果'
+python3 skills/ai-short-drama-writing/scripts/pipeline.py feedback projects/my-drama add --id FB001 --package-id PKG001 --source '接收方' --location EP001-SC001 --evidence '实际观察' --layer script --issues Q001
+python3 skills/ai-short-drama-writing/scripts/pipeline.py feedback projects/my-drama update --id FB001 --status awaiting_verification
+```
+
+impact 按依赖顺序列直接/间接影响，不声称已经理解情节差异。impact-note 的 rewrite/reviewed_unchanged/pending 绑定当前快照，不能清除文件失效；真实复核后仍需 register 新修订。非锁定稿建议使用新文件路径保存历史；只有快照不能恢复旧正文。
+
+feedback 的 layer 为 script/production/unknown；状态为 triage/in_progress/awaiting_verification/closed。未知包只能停留 triage。关闭需 `--verification` 实际回验证据且关联问题已处理；剧本反馈必须关联问题。记录保存在 project.json，feedback.md 可作阅读说明，不维护另一套状态。生成包或修改剧本不会自动关闭反馈。

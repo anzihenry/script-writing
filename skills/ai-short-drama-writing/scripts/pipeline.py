@@ -590,6 +590,87 @@ def review_check(root, path):
             'method': payload['method'], 'dimensions': dimensions, 'limitation': 'Coverage declared by reviewer; semantic truth not machine-certified'}
 
 
+def impact(root, key):
+    data = load(root)
+    require(key in data['artifacts'], 'unknown artifact')
+    ordered, seen = [], set()
+    def visit(current):
+        if current in seen:
+            return
+        seen.add(current)
+        for dep in data['artifacts'][current]['depends_on']:
+            if dep['id'] in data['artifacts']:
+                visit(dep['id'])
+        ordered.append(current)
+    for current in data['artifacts']:
+        visit(current)
+    checks = inspect(Path(root), data)
+    affected = {key}
+    rows = []
+    for current in ordered:
+        dependencies = {x['id'] for x in data['artifacts'][current]['depends_on']}
+        if current != key and not dependencies & affected:
+            continue
+        affected.add(current)
+        item = data['artifacts'][current]
+        notes = [e['after'] for e in data.get('events', []) if e.get('type') == 'impact' and e.get('id') == current
+                 and e['after'].get('source') == key and e['after'].get('snapshots') == snapshots(data, {key, current})]
+        rows.append({'id': current, 'scope': item['scope'], 'kind': item['kind'],
+                     'relation': 'source' if current == key else ('direct' if key in dependencies else 'transitive'),
+                     'errors': checks[current], 'disposition': notes[-1] if notes else {'decision': 'pending'},
+                     'content_diff': 'Use retained old/new files; registry snapshots are not content backups'})
+    return {'source': key, 'order': rows, 'limitation': 'File-level dependency impact; semantic review still required'}
+
+
+def impact_note(root, source, target, decision, evidence):
+    report = impact(root, source)
+    require(target in [x['id'] for x in report['order']], 'target is outside affected dependency closure')
+    require(decision in {'rewrite', 'reviewed_unchanged', 'pending'} and nonempty(evidence), 'decision and evidence required')
+    data = load(root)
+    item = {'source': source, 'decision': decision, 'evidence': evidence, 'snapshots': snapshots(data, {source, target})}
+    event(data, 'impact', target, None, item, evidence)
+    save(root, data)
+    return item
+
+
+def feedback_action(root, action, key=None, package_id=None, source=None, location=None,
+                    evidence=None, layer=None, issues=None, status=None, verification=None):
+    data = load(root)
+    if action == 'list':
+        return data.get('feedback', [])
+    old = next((x for x in data.get('feedback', []) if x['id'] == key), None)
+    before = copy.deepcopy(old)
+    require(nonempty(key), 'feedback ID required')
+    if action == 'add':
+        require(old is None, 'feedback ID already exists')
+        item = {'id': key, 'package_id': package_id, 'source': source, 'location': location,
+                'evidence': evidence, 'layer': layer, 'issues': issues or [], 'status': 'triage', 'verification': None}
+        data.setdefault('feedback', []).append(item)
+    else:
+        require(action == 'update' and old is not None, 'unknown feedback')
+        item = old
+        for field, value in [('package_id', package_id), ('source', source), ('location', location),
+                             ('evidence', evidence), ('layer', layer), ('issues', issues), ('status', status), ('verification', verification)]:
+            if value is not None:
+                item[field] = value
+    require(all(nonempty(item.get(f)) for f in ['package_id', 'source', 'location', 'evidence', 'layer']), 'feedback source/package/location/evidence/layer required')
+    require(item['layer'] in {'script', 'production', 'unknown'}, 'invalid feedback layer')
+    require(item['status'] in {'triage', 'in_progress', 'awaiting_verification', 'closed'}, 'invalid feedback status')
+    require(isinstance(item['issues'], list) and len(set(item['issues'])) == len(item['issues']), 'unique issue IDs required')
+    known_issues = {x['id']: x for x in data['issues']}
+    require(all(x in known_issues for x in item['issues']), 'unknown linked issue')
+    known_package = any(x.get('id') == item['package_id'] for x in data.get('deliveries', []))
+    require(known_package or item['status'] == 'triage', 'unknown package must remain in triage')
+    if item['status'] == 'closed':
+        require(nonempty(item.get('verification')), 'actual verification evidence required')
+        require(all(known_issues[x]['status'] != 'open' for x in item['issues']), 'linked issues still open')
+        if item['layer'] == 'script':
+            require(item['issues'], 'script feedback requires linked issue before closing')
+    event(data, 'feedback', key, before, item, verification or evidence)
+    save(root, data)
+    return item
+
+
 def validate_handoff(data):
     """Explicit v1 contract, including cross references; not a generic JSON Schema engine."""
     require(isinstance(data, dict) and data.get('schema_version') == '1.0', 'handoff schema must be 1.0')
@@ -700,9 +781,23 @@ def main(argv=None):
     p.add_argument('--scopes', nargs='+', required=True); p.add_argument('--next-entry', required=True); p.add_argument('--reread', required=True)
     p = sub.add_parser('index'); p.add_argument('project'); p.add_argument('--through'); p.add_argument('--object')
     p = sub.add_parser('review-check'); p.add_argument('project'); p.add_argument('--file', required=True)
+    p = sub.add_parser('impact'); p.add_argument('project'); p.add_argument('--id', required=True)
+    p = sub.add_parser('impact-note'); p.add_argument('project'); p.add_argument('--source', required=True); p.add_argument('--target', required=True)
+    p.add_argument('--decision', choices=['rewrite', 'reviewed_unchanged', 'pending'], required=True); p.add_argument('--evidence', required=True)
+    p = sub.add_parser('feedback'); p.add_argument('project'); p.add_argument('action', choices=['add', 'update', 'list'])
+    for flag in ['id', 'package-id', 'source', 'location', 'evidence', 'layer', 'status', 'verification']:
+        p.add_argument('--' + flag)
+    p.add_argument('--issues', nargs='*')
     args = parser.parse_args(argv)
     try:
-        if args.command == 'review-check':
+        if args.command == 'impact':
+            print(json.dumps(impact(args.project, args.id), ensure_ascii=False, indent=2))
+        elif args.command == 'impact-note':
+            print(json.dumps(impact_note(args.project, args.source, args.target, args.decision, args.evidence), ensure_ascii=False, indent=2))
+        elif args.command == 'feedback':
+            print(json.dumps(feedback_action(args.project, args.action, args.id, args.package_id, args.source,
+                args.location, args.evidence, args.layer, args.issues, args.status, args.verification), ensure_ascii=False, indent=2))
+        elif args.command == 'review-check':
             result = review_check(args.project, args.file)
             print(json.dumps(result, ensure_ascii=False, indent=2))
             return 0 if result['status'] == 'PASS' else 1

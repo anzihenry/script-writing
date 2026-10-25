@@ -59,3 +59,20 @@ class ManagementTest(unittest.TestCase):
         self.assertEqual((self.root / 'project.json').read_bytes(), before)
         with self.assertRaises(p.Invalid):
             p.checkpoint(self.root, 'B1', ['EP001'], 'Again', 'Again')
+
+    def test_impact_orders_and_does_not_clear_staleness(self):
+        self.chain(); self.chain('EP002')
+        (self.root / 'script_EP001-v1.0.md').write_text('changed')
+        report = p.impact(self.root, 'script_EP001')
+        ids = [x['id'] for x in report['order']]
+        self.assertLess(ids.index('continuity_EP001'), ids.index('script_EP002'))
+        self.assertNotIn('bible', ids)
+        p.impact_note(self.root, 'script_EP001', 'script_EP002', 'reviewed_unchanged', 'Test review')
+        self.assertTrue(p.inspect(self.root, p.load(self.root))['script_EP002'])
+
+    def test_feedback_unknown_package_and_missing_verification(self):
+        self.chain()
+        p.feedback_action(self.root, 'add', 'F1', 'unknown', 'Test recipient', 'EP001-SC001', 'Test finding', 'production')
+        with self.assertRaises(p.Invalid):
+            p.feedback_action(self.root, 'update', 'F1', status='closed', verification='test')
+        self.assertEqual(p.feedback_action(self.root, 'list')[0]['status'], 'triage')
