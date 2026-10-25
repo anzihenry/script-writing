@@ -52,3 +52,18 @@ class ContinuityTest(unittest.TestCase):
         path.write_text(path.read_text().replace('Evidence moved', 'Invented evidence'))
         p.register(self.root, 'continuity_EP002', 'continuity', 'EP002', path.name, 'v1.1')
         with self.assertRaises(p.Invalid): p.continuity_index(self.root)
+
+    def test_review_coverage_and_stale_dependencies(self):
+        self.build()
+        payload = {'episodes': ['EP001'], 'method': 'test-only self review',
+                   'dimensions': {k: {'status': 'pass', 'evidence': 'Test source inspected'} for k in p.REVIEW_DIMENSIONS}}
+        report = self.root / 'season.md'
+        report.write_text('```review-json\n' + json.dumps(payload) + '\n```')
+        self.assertFalse(p.review_check(self.root, 'season.md')['full_season'])
+        with self.assertRaises(p.Invalid): p.register(self.root, 'season', 'season_review', 'project', 'season.md', 'v1')
+        payload['episodes'].append('EP002')
+        report.write_text('```review-json\n' + json.dumps(payload) + '\n```')
+        p.register(self.root, 'season', 'season_review', 'project', 'season.md', 'v1', 'reviewed', 'Test review')
+        (self.root / 'script_EP001-v1.0.md').write_text('changed')
+        self.assertTrue(p.inspect(self.root, p.load(self.root))['season'])
+        with self.assertRaises(p.Invalid): p.review_check(self.root, 'season.md')

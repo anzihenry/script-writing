@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 HOME = Path(__file__).resolve().parents[1]
-KINDS = {'brief', 'bible', 'outline', 'script', 'continuity', 'review', 'handoff', 'export'}
+KINDS = {'brief', 'bible', 'outline', 'script', 'continuity', 'review', 'handoff', 'export', 'season_review'}
 STATES = {'draft', 'reviewed', 'locked', 'superseded'}
 GATES = {'G0': ['brief'], 'G1': ['bible'], 'G2': ['outline'],
          'G3': ['script', 'continuity'], 'G4': ['review'], 'G5': ['handoff']}
@@ -99,7 +99,7 @@ def validate_manifest(data):
         require(isinstance(item, dict), f'{key}: artifact must be object')
         require(item.get('kind') in KINDS, f'{key}: invalid kind')
         require(item.get('scope') in ['project'] + data['episodes'], f'{key}: invalid scope')
-        require((item['scope'] == 'project') == (item['kind'] in {'brief', 'bible', 'outline'}), f'{key}: kind/scope mismatch')
+        require((item['scope'] == 'project') == (item['kind'] in {'brief', 'bible', 'outline', 'season_review'}), f'{key}: kind/scope mismatch')
         pair = (item['kind'], item['scope'])
         require(pair not in occupied, f'duplicate active kind/scope: {pair}')
         occupied.add(pair)
@@ -152,6 +152,8 @@ def find(data, kind, scope):
 
 
 def prerequisites(data, kind, scope):
+    if kind == 'season_review':
+        return [(k, ep) for ep in data['episodes'] for k in ['script', 'continuity']]
     needs = {'brief': [], 'bible': [('brief', 'project')],
              'outline': [('brief', 'project'), ('bible', 'project')],
              'script': [('bible', 'project'), ('outline', 'project')],
@@ -288,13 +290,18 @@ def register(root, key, kind, scope, path, revision, status='draft', evidence=No
     data = load(root)
     require(kind in KINDS and status in STATES, 'invalid kind/status')
     require(scope in ['project'] + data['episodes'], 'unknown scope')
-    require((scope == 'project') == (kind in {'brief', 'bible', 'outline'}), 'kind/scope mismatch')
+    require((scope == 'project') == (kind in {'brief', 'bible', 'outline', 'season_review'}), 'kind/scope mismatch')
     target = local(root, path)
     require(target.is_file(), f'file missing: {path}')
     # Canonical identity prevents ./ aliases or internal symlinks bypassing baseline preservation.
     path = target.relative_to(root.resolve()).as_posix()
     content = target.read_text(encoding='utf-8')
     require('<!-- TEMPLATE:UNFILLED -->' not in content, 'template not filled; remove sentinel only after writing actual content')
+    if kind == 'season_review':
+        assessment = review_check(root, path)
+        require(assessment['full_season'], 'registered season review must cover all project episodes')
+        if status in {'reviewed', 'locked'}:
+            require(assessment['status'] == 'PASS', 'season review has unverified/revision-needed dimensions')
     digest = sha(target)
     old = data['artifacts'].get(key)
     require(find(data, kind, scope) in {None, key}, 'another artifact owns this kind/scope; update its stable ID')
@@ -557,6 +564,32 @@ def continuity_index(root, through=None, object_id=None):
             'foreshadows': list(hints.values()), 'limitation': 'Evidence existence checked; semantic extraction requires review'}
 
 
+REVIEW_DIMENSIONS = {'character_arc', 'escalation', 'repetition', 'information', 'foreshadows', 'ending'}
+
+
+def review_check(root, path):
+    data = load(root)
+    payload = embedded(root, {'path': path}, 'review-json')
+    require(payload is not None, 'review-json required')
+    episodes = payload.get('episodes')
+    require(isinstance(episodes, list) and episodes and len(episodes) == len(set(episodes)), 'unique review episodes required')
+    require(all(ep in data['episodes'] for ep in episodes), 'unknown reviewed episode')
+    require(nonempty(payload.get('method')), 'actual review method required')
+    dimensions = payload.get('dimensions')
+    require(isinstance(dimensions, dict) and set(dimensions) == REVIEW_DIMENSIONS, 'all six season dimensions required')
+    checks = inspect(Path(root), data)
+    for ep in episodes:
+        for kind in ['script', 'continuity']:
+            key = find(data, kind, ep)
+            require(key is not None and not checks[key], f'{ep}: review source missing/stale: {kind}')
+    for name, result in dimensions.items():
+        require(isinstance(result, dict) and result.get('status') in {'pass', 'revise', 'unverified'}, f'{name}: invalid conclusion')
+        require(nonempty(result.get('evidence')), f'{name}: evidence/limitation required')
+    status = 'PASS' if all(x['status'] == 'pass' for x in dimensions.values()) else 'NEEDS_WORK'
+    return {'status': status, 'full_season': episodes == data['episodes'], 'episodes': episodes,
+            'method': payload['method'], 'dimensions': dimensions, 'limitation': 'Coverage declared by reviewer; semantic truth not machine-certified'}
+
+
 def validate_handoff(data):
     """Explicit v1 contract, including cross references; not a generic JSON Schema engine."""
     require(isinstance(data, dict) and data.get('schema_version') == '1.0', 'handoff schema must be 1.0')
@@ -666,9 +699,14 @@ def main(argv=None):
     p = sub.add_parser('checkpoint'); p.add_argument('project'); p.add_argument('--id', required=True)
     p.add_argument('--scopes', nargs='+', required=True); p.add_argument('--next-entry', required=True); p.add_argument('--reread', required=True)
     p = sub.add_parser('index'); p.add_argument('project'); p.add_argument('--through'); p.add_argument('--object')
+    p = sub.add_parser('review-check'); p.add_argument('project'); p.add_argument('--file', required=True)
     args = parser.parse_args(argv)
     try:
-        if args.command == 'index':
+        if args.command == 'review-check':
+            result = review_check(args.project, args.file)
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            return 0 if result['status'] == 'PASS' else 1
+        elif args.command == 'index':
             result = continuity_index(args.project, args.through, args.object)
             print(json.dumps(result, ensure_ascii=False, indent=2))
             return 0 if result['status'] == 'RECORDED' else 1
