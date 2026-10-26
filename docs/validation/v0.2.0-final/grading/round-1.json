@@ -1,0 +1,648 @@
+{
+  "round": "round-1",
+  "graded_at": "2026-10-26",
+  "grader": "parent AI executor; semantic comparison against precommitted oracle, not human review",
+  "oracle_sha256": "510087d1e747a3bbdeda25c3dbacbd414e6eeea49ae11f30cd505c06347ca7f7",
+  "outputs_sha256": "024f1044d7f24e583b2fc45a94d3f237fc2e2edd26ede18d3e5c229ae48abe44",
+  "cases": [
+    {
+      "case_id": "F01-tide-radio",
+      "kind": "positive",
+      "result": "PASS",
+      "expected_finding_ids": [
+        "F01-KNOW"
+      ],
+      "matched_finding_indices": [
+        0
+      ],
+      "missed_findings": [],
+      "false_major_findings": [],
+      "severity_deviations": [],
+      "required_facts": [
+        {
+          "oracle_fact_index": 0,
+          "expected": "许岑和观众知道七号涵洞南壁；林峤获得船位的来源不存在，不能记录为已获告知。",
+          "result": "PASS",
+          "output_fact_indices": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            {
+              "index": 0,
+              "value": "知道老孟在七号涵洞南壁；传讯未完成",
+              "location": "EP001/S02/D02-D03,A03"
+            },
+            {
+              "index": 1,
+              "value": "知道受托寻找老孟；没有正文证据获知船的精确位置",
+              "location": "EP001/S01/A01;S02/A02-A03"
+            },
+            {
+              "index": 2,
+              "value": "知道船位、设备中断及许岑出发",
+              "location": "EP001/S02/D02,A03"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 1,
+          "expected": "林峤实际说出了船位并引导凿口，知情来源冲突，应保留对白事实与来源缺失。",
+          "result": "PASS",
+          "output_fact_indices": [
+            5,
+            7
+          ],
+          "support": [
+            {
+              "index": 5,
+              "value": "正文表现已知准确船位；与此前无渠道获知冲突，不能补记来源",
+              "location": "EP002/S01/D01,A02;S02/A03"
+            },
+            {
+              "index": 7,
+              "value": "灯光照出船头，老孟在场说话；尚未上堤",
+              "location": "EP002/S02/A03,D02"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 2,
+          "expected": "手电由许岑交给林峤。",
+          "result": "PASS",
+          "output_fact_indices": [
+            6
+          ],
+          "support": [
+            {
+              "index": 6,
+              "value": "许岑已交给林峤",
+              "location": "EP002/S01/A02"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 3,
+          "expected": "老孟上堤，船系于石桩，手电已交回许岑。",
+          "result": "PASS",
+          "output_fact_indices": [
+            8,
+            9,
+            10
+          ],
+          "support": [
+            {
+              "index": 8,
+              "value": "已获扶上堤，坐下，由许岑陪伴并裹紧雨衣",
+              "location": "EP003/S01/A01-A02"
+            },
+            {
+              "index": 9,
+              "value": "系在涵洞出口堤上石桩",
+              "location": "EP003/S01/A01"
+            },
+            {
+              "index": 10,
+              "value": "林峤递回许岑",
+              "location": "EP003/S01/A01"
+            }
+          ]
+        }
+      ],
+      "forbidden_assertion_violations": [],
+      "reason": "明确保留林峤说出船位与来源缺失的矛盾；观众/许岑知情未转记给林峤。"
+    },
+    {
+      "case_id": "F02-porcelain-mold",
+      "kind": "positive",
+      "result": "PASS",
+      "expected_finding_ids": [
+        "F02-PROP"
+      ],
+      "matched_finding_indices": [
+        0
+      ],
+      "missed_findings": [],
+      "false_major_findings": [],
+      "severity_deviations": [],
+      "required_facts": [
+        {
+          "oracle_fact_index": 0,
+          "expected": "M01 已毁，全部碎块在废料池中被覆盖，不能继续使用。",
+          "result": "PASS",
+          "output_fact_indices": [
+            0,
+            1
+          ],
+          "support": [
+            {
+              "index": 0,
+              "value": "师傅手雕的唯一石膏母模，本订单必须使用，无复制/扫描/替代",
+              "location": "正文开头设定"
+            },
+            {
+              "index": 1,
+              "value": "工作面全毁，全部碎块进入废石膏池，被浆料覆盖",
+              "location": "EP001/S01/A02-D02;S02/A03"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 1,
+          "expected": "正文又呈现完整 M01 被使用并放回红色台架；与已毁记录冲突。",
+          "result": "PASS",
+          "output_fact_indices": [
+            4,
+            5
+          ],
+          "support": [
+            {
+              "index": 4,
+              "value": "正文又呈现同一缺口、完整鹤纹并实际使用，末放红色台架；与 EP001 冲突",
+              "location": "EP002/S01/A01-D01,A02;S02/A03"
+            },
+            {
+              "index": 5,
+              "value": "正文呈现两人用完整 M01 灌浆；恢复缘由没有证据",
+              "location": "EP002/S01/A01-A02"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 2,
+          "expected": "正文显示样品烧成且客户确认，完整 M01 仍在台架；应保留这些呈现并标记母模连续性未解决。",
+          "result": "PASS",
+          "output_fact_indices": [
+            7,
+            8,
+            9
+          ],
+          "support": [
+            {
+              "index": 7,
+              "value": "出窑完好，向客户视频展示；此结果上游因果受母模冲突影响",
+              "location": "EP003/S01/A01"
+            },
+            {
+              "index": 8,
+              "value": "正文称仍完整在红色台架；不代表已证明从碎块恢复",
+              "location": "EP003/S02/A02"
+            },
+            {
+              "index": 9,
+              "value": "沈梨贴在红色台架旁",
+              "location": "EP003/S02/A02"
+            }
+          ]
+        }
+      ],
+      "forbidden_assertion_violations": [],
+      "reason": "同时保留毁弃和再现，不用交样成功掩盖矛盾；客户确认由确认单事实支持。"
+    },
+    {
+      "case_id": "F03-final-curtain",
+      "kind": "positive",
+      "result": "PASS",
+      "expected_finding_ids": [
+        "F03-PAYOFF"
+      ],
+      "matched_finding_indices": [
+        0
+      ],
+      "missed_findings": [],
+      "false_major_findings": [],
+      "severity_deviations": [],
+      "required_facts": [
+        {
+          "oracle_fact_index": 0,
+          "expected": "F-RED 实际投放；白露和观众知道父亲缝红线，线内有未识别硬物，尚未知道内容。",
+          "result": "PASS",
+          "output_fact_indices": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            {
+              "index": 0,
+              "value": "已投放：红线与线内硬物被看见/触摸；未拆开",
+              "location": "EP001/S01/A02"
+            },
+            {
+              "index": 1,
+              "value": "听到父亲亲手缝线，看到硬物；先救设备，承诺封场前拆",
+              "location": "EP001/S01/D01,A02,D02"
+            },
+            {
+              "index": 2,
+              "value": "知道周叔关于父亲缝线的说法和硬物存在，不知道内容",
+              "location": "EP001/S01/D01,A02"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 1,
+          "expected": "白露仍不理解卖团原因，红线及硬物未拆；承诺封场前查看。",
+          "result": "PASS",
+          "output_fact_indices": [
+            3,
+            4,
+            5
+          ],
+          "support": [
+            {
+              "index": 3,
+              "value": "白露收进工具袋",
+              "location": "EP002/S01/A01"
+            },
+            {
+              "index": 4,
+              "value": "想知道父亲留下什么但害怕被劝别唱戏；尚未知道硬物内容",
+              "location": "EP002/S01/D02"
+            },
+            {
+              "index": 5,
+              "value": "幕布挂保留纸牌，硬物仍隔布被触摸，未取出",
+              "location": "EP002/S02/A02"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 2,
+          "expected": "F-RED 已投放、到期未回收，幕布留在剧场；父女误会未见实际解决。",
+          "result": "PASS",
+          "output_fact_indices": [
+            7,
+            8,
+            9
+          ],
+          "support": [
+            {
+              "index": 7,
+              "value": "已投放、未回收；红线完整，硬物留在幕布内，未取消",
+              "location": "EP003/S01/A01;S02/A03"
+            },
+            {
+              "index": 8,
+              "value": "离开剧场；未展示拆线或阅读，未发生计划和解",
+              "location": "EP003/S01/A02;S02/A03"
+            },
+            {
+              "index": 9,
+              "value": "仍未获知硬物内容或父亲卖团原因，看到全剧结束",
+              "location": "EP003/S02/A03"
+            }
+          ]
+        }
+      ],
+      "forbidden_assertion_violations": [],
+      "reason": "识别全剧终到期未回收，未将计划中的信件和和解写成已发生。"
+    },
+    {
+      "case_id": "F04-lying-baker",
+      "kind": "negative",
+      "result": "PASS",
+      "expected_finding_ids": [],
+      "matched_finding_indices": [],
+      "missed_findings": [],
+      "false_major_findings": [],
+      "severity_deviations": [],
+      "required_facts": [
+        {
+          "oracle_fact_index": 0,
+          "expected": "桑宁已买戒指并把戒指盒藏于 P01 饼干下，P01 封口置冷柜顶；桑宁和观众知道。",
+          "result": "PASS",
+          "output_fact_indices": [
+            0,
+            1
+          ],
+          "support": [
+            {
+              "index": 0,
+              "value": "封口纸袋内有装戒指的盒子及饼干，藏于冷柜顶",
+              "location": "EP001/S01/A01"
+            },
+            {
+              "index": 1,
+              "value": "知道戒指在袋中，打算下班给阿策并隐瞒惊喜",
+              "location": "EP001/S01/A01,D01;S02/A03"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 1,
+          "expected": "桑宁对阿策否认买戒指是有意隐瞒，不是戒指不存在；阿策有怀疑，但尚无确知戒指的证据。",
+          "result": "PASS",
+          "output_fact_indices": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "support": [
+            {
+              "index": 1,
+              "value": "知道戒指在袋中，打算下班给阿策并隐瞒惊喜",
+              "location": "EP001/S01/A01,D01;S02/A03"
+            },
+            {
+              "index": 2,
+              "value": "声称袋内只是剩饼干且没买戒指，属于角色隐瞒而非客观事实",
+              "location": "EP001/S02/D03"
+            },
+            {
+              "index": 3,
+              "value": "见袖口糖霜与纸袋，注意到主动提戒指；未展示看见袋内物",
+              "location": "EP001/S02/A02-A03,D04"
+            },
+            {
+              "index": 4,
+              "value": "先于阿策看到戒指入袋，能识别桑宁在隐瞒",
+              "location": "EP001/S01/A01-D01;S02/D03"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 2,
+          "expected": "阿策亲自拆袋见戒指后确知礼物，戴上戒指；空盒回袋，P01 被桑宁放柜台下。",
+          "result": "PASS",
+          "output_fact_indices": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "support": [
+            {
+              "index": 5,
+              "value": "当面开袋开盒得知礼物是戒指，后来称此前猜到礼物但没猜到这一件",
+              "location": "EP002/S01/A01,D01,D03"
+            },
+            {
+              "index": 6,
+              "value": "桑宁承认隐瞒，送出周年礼物，阿策戴上戒指；未额外推定订婚",
+              "location": "EP002/S01/D02,A02"
+            },
+            {
+              "index": 7,
+              "value": "阿策手上",
+              "location": "EP002/S01/A02-A03"
+            },
+            {
+              "index": 8,
+              "value": "空盒放回纸袋，桑宁接过纸袋放柜台下",
+              "location": "EP002/S01/A02"
+            }
+          ]
+        }
+      ],
+      "forbidden_assertion_violations": [],
+      "reason": "把否认识别为隐瞒；阿策从怀疑到亲见戒指的边界及道具流转正确。"
+    },
+    {
+      "case_id": "F05-flashback-compass",
+      "kind": "negative",
+      "result": "PASS",
+      "expected_finding_ids": [],
+      "matched_finding_indices": [],
+      "missed_findings": [],
+      "false_major_findings": [],
+      "severity_deviations": [],
+      "required_facts": [
+        {
+          "oracle_fact_index": 0,
+          "expected": "2026-10-08 下午 C01 从江遥转移给周远，系在其背包红绳。",
+          "result": "PASS",
+          "output_fact_indices": [
+            1,
+            2,
+            3
+          ],
+          "support": [
+            {
+              "index": 1,
+              "value": "交给周远并系在其背包红绳上",
+              "location": "EP001/S01/A01"
+            },
+            {
+              "index": 2,
+              "value": "知道保管权交给周远、次日他带队，江遥留营",
+              "location": "EP001/S01/D01-A02"
+            },
+            {
+              "index": 3,
+              "value": "手中只剩地图，未持 C01",
+              "location": "EP001/S01/A02"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 1,
+          "expected": "2019-07 C01 从许山交给江遥，江遥放胸袋；属于历史事实，不能覆盖 2026 当前归属。",
+          "result": "PASS",
+          "output_fact_indices": [
+            4,
+            5,
+            6
+          ],
+          "support": [
+            {
+              "index": 4,
+              "value": "许山交江遥，江遥放胸袋；这是过去状态",
+              "location": "EP002/S01/A01-A02"
+            },
+            {
+              "index": 5,
+              "value": "江遥受许山指导；观众通过闪回获知这一经历",
+              "location": "EP002/S01/A01-D01"
+            },
+            {
+              "index": 6,
+              "value": "不在 2019 现场，不能据观众看过闪回推定他听过许山的话",
+              "location": "EP002/S01/A01"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 2,
+          "expected": "2026-10-08 傍晚 C01 仍由周远保管，校准后重新系回红绳；江遥无罗盘。",
+          "result": "PASS",
+          "output_fact_indices": [
+            7,
+            8
+          ],
+          "support": [
+            {
+              "index": 7,
+              "value": "周远取下校准后重新系回背包红绳",
+              "location": "EP002/S02/A03"
+            },
+            {
+              "index": 8,
+              "value": "营灯旁看地图，不持罗盘",
+              "location": "EP002/S02/A03"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 3,
+          "expected": "2026-10-09 清晨周远将 C01 放入自己胸袋并带走，江遥留营。",
+          "result": "PASS",
+          "output_fact_indices": [
+            10,
+            12
+          ],
+          "support": [
+            {
+              "index": 10,
+              "value": "周远读取后放自己胸袋，随队离营",
+              "location": "EP003/S01/A01-A02"
+            },
+            {
+              "index": 12,
+              "value": "见周远读取收起罗盘离开；江遥留在营地",
+              "location": "EP003/S01/A01-A02"
+            }
+          ]
+        }
+      ],
+      "forbidden_assertion_violations": [],
+      "reason": "2019历史与2026当前归属分层，未将观众知道的历史扩展给周远。"
+    },
+    {
+      "case_id": "F06-pending-envelope",
+      "kind": "negative",
+      "result": "PASS",
+      "expected_finding_ids": [],
+      "matched_finding_indices": [],
+      "missed_findings": [],
+      "false_major_findings": [],
+      "severity_deviations": [],
+      "required_facts": [
+        {
+          "oracle_fact_index": 0,
+          "expected": "E01 内部未展示，由宁海收进帆布包带走；宁可知道存在待看的信封，约定周五同看。",
+          "result": "PASS",
+          "output_fact_indices": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            {
+              "index": 0,
+              "value": "未封口蓝信封由宁海从餐桌收入帆布包，随宁海出门；内部未展示",
+              "location": "EP001/S01/A01-A02"
+            },
+            {
+              "index": 1,
+              "value": "见信封在桌上，未拿起、未读取；答应周五一起看",
+              "location": "EP001/S01/A01,D02"
+            },
+            {
+              "index": 2,
+              "value": "轮休时一起看，宁可提议周五；尚未兑现",
+              "location": "EP001/S01/D01-D02"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 1,
+          "expected": "新的联名表原件由方晴受理并留桌，宁可取得盖章复印件；线路恢复尚未获准。",
+          "result": "PASS",
+          "output_fact_indices": [
+            4,
+            5,
+            6
+          ],
+          "support": [
+            {
+              "index": 4,
+              "value": "方晴盖收件章后留在她桌上，与 E01 无关",
+              "location": "EP002/S01/A01-A02"
+            },
+            {
+              "index": 5,
+              "value": "方晴交给宁可",
+              "location": "EP002/S01/A02"
+            },
+            {
+              "index": 6,
+              "value": "申请被受理，尚未承诺恢复末班班次",
+              "location": "EP002/S01/D01-D02,A02"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 2,
+          "expected": "宁海读到联名表复印件并放餐桌；E01 仍在宁海帆布包，包在其椅背。",
+          "result": "PASS",
+          "output_fact_indices": [
+            8,
+            9,
+            10
+          ],
+          "support": [
+            {
+              "index": 8,
+              "value": "宁可交给宁海，宁海读后放餐桌",
+              "location": "EP003/S01/A01"
+            },
+            {
+              "index": 9,
+              "value": "已读复印件并听到申请尚无结果；确认 E01 仍在包中，不等于正文展示他读过内容",
+              "location": "EP003/S01/A01,D02,A02"
+            },
+            {
+              "index": 10,
+              "value": "仍在宁海拉好拉链的帆布包中，包挂他椅背；未展示拆读，未回收",
+              "location": "EP003/S01/A02-A03"
+            }
+          ]
+        },
+        {
+          "oracle_fact_index": 3,
+          "expected": "F-BLUE 已投放未回收，计划 EP005 尚未进入已写范围；计划内容不是已证实剧情。",
+          "result": "PASS",
+          "output_fact_indices": [
+            3,
+            10,
+            14
+          ],
+          "support": [
+            {
+              "index": 3,
+              "value": "蓝信封已出现，内容未揭示；只完成投放",
+              "location": "EP001/S01/A01-A02"
+            },
+            {
+              "index": 10,
+              "value": "仍在宁海拉好拉链的帆布包中，包挂他椅背；未展示拆读，未回收",
+              "location": "EP003/S01/A02-A03"
+            },
+            {
+              "index": 14,
+              "value": "知道信封仍在、共同查看约定继续，尚不知道内部；EP005 内容仅是计划",
+              "location": "计划条目;EP003/S01/A02-D04"
+            }
+          ]
+        }
+      ],
+      "forbidden_assertion_violations": [],
+      "reason": "已写范围与EP005计划分开；信封内容未知，受理未误记成线路获准。"
+    }
+  ],
+  "metrics": {
+    "positive_findings_detected": 3,
+    "positive_findings_expected": 3,
+    "missed": 0,
+    "normal_cases": 3,
+    "false_major_findings": 0,
+    "required_facts_passed": 21,
+    "required_facts_total": 21,
+    "forbidden_assertion_violations": 0
+  },
+  "result": "PASS",
+  "scope": "Six fixed cases only; no claim of population-level accuracy or production stability"
+}
