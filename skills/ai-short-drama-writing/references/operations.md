@@ -168,3 +168,5 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py measure projects/my-dr
 receipt 的 pending/accepted/returned 只记录实际接收情况，与正文 locked 分开。measure 不生成音频，数值由实际测量者提供；绑定包内正文版本，已登记导出存在时返回与包内时间预算的偏差，无预算时为 null。模拟数据必须明确标模拟，不代表实测。
 
 全季报告格式见[范围与全季审核](season-review.md)。season_review 依赖全部已登记集的 script/continuity；局部范围报告可以 review-check，但不能登记成全季报告。新管理字段 events/checkpoints/feedback/deliveries/measurements 缺省为空；旧项目读取时不自动写入或迁移。
+
+impact 的 `source_change` 会在旧/新文件均保留且哈希与登记一致时给出真实文本差异、变更行范围以及候选场次/对象引用。各下游条目的 `candidate_locations` 来自场次或连续性记录中的实际引用，仅辅助定位，不能证明语义受影响，也不能豁免文件级复核。旧稿缺失、被覆盖或当前稿尚未登记时明确返回 UNAVAILABLE；不会从历史快照编造旧正文。长差异正文最多显示200行，并给 diff_truncated；变更行范围仍完整。

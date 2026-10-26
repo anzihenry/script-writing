@@ -1,0 +1,26 @@
+{
+  "adjudicator": {"type": "independent_ai", "human": false},
+  "source_version": "draft-1",
+  "read_scope": [
+    "docs/validation/v0.2.0-final/fixtures/F02-porcelain-mold/source.md",
+    "skills/ai-short-drama-writing/references/standards.md"
+  ],
+  "oracle_or_other_evaluation_results_read": false,
+  "classification": "supported_necessary_information_gap",
+  "severity": "P1",
+  "finding_supported": true,
+  "hard_contradiction_proven": false,
+  "evidence": [
+    {"location": "EP001/S01/D01", "quote": "今晚交样", "meaning": "初始期限"},
+    {"location": "EP001/S02/D03", "quote": "我去跟客户说延期。", "meaning": "沟通意图，不明确证明结果或新期限"},
+    {"location": "EP002/S02/A03", "quote": "推进电窑", "meaning": "当夜入窑"},
+    {"location": "EP003/S01 场头、A01", "quote": "次日清晨；将样品放到镜头前", "meaning": "正文成品展示在次晨"},
+    {"location": "EP003/S01/D01", "quote": "没有迟到。", "meaning": "明确的准时结论"},
+    {"location": "EP003/S02/A02", "quote": "客户确认单", "meaning": "确认范围未知，不能直接证明改期"}
+  ],
+  "reasonable_omission": "可以省略沟通过程；有延期意图使场外获准成为合理可能，因此不能断言必然迟到。但新期限或其他足以支持准时的依据仍未明确。",
+  "severity_basis": "标准将必要信息不足与关键状态不连续列为P1；本处关系到结尾准时完成的结果，不只是措辞优化。",
+  "recommended_action": "核实交样定义、实际时间及改期情况，以最小必要信息统一期限与结尾判断；不要求展示完整沟通过程。",
+  "must_not_infer_as_fact": "延期已经获得客户批准",
+  "scope_limit": "仅裁定指定发现，不评价其他问题或整体审核结果。"
+}

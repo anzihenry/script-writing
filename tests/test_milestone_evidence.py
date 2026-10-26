@@ -1,4 +1,4 @@
-"""Replay immutable acceptance artifacts; semantic judgments remain in signed-off reports."""
+"""Replay immutable acceptance artifacts; semantic judgments remain in separate review reports."""
 import hashlib
 import json
 import unittest
@@ -52,3 +52,40 @@ class MilestoneEvidenceTest(unittest.TestCase):
         newer = [x for x in data['deliveries'] if x['supersedes']]
         self.assertEqual(len(newer), 3)
         self.assertTrue(all(x['status'] == 'accepted' and '模拟' in x['evidence'] for x in newer))
+
+    def test_two_round_grading_is_bound_to_raw_outputs(self):
+        oracle_path = EVIDENCE / 'oracle.json'
+        oracle = json.loads(oracle_path.read_text())
+        expected = {x['case_id']: x for x in oracle['cases']}
+        for round_name in ['round-1', 'round-2']:
+            output_path = EVIDENCE / 'runs' / round_name / 'outputs.json'
+            outputs = {x['case_id']: x for x in json.loads(output_path.read_text())}
+            grade = json.loads((EVIDENCE / 'grading' / (round_name + '.json')).read_text())
+            self.assertEqual(grade['oracle_sha256'], p.sha(oracle_path))
+            self.assertEqual(grade['outputs_sha256'], p.sha(output_path))
+            self.assertEqual(set(outputs), set(expected))
+            self.assertEqual({x['case_id'] for x in grade['cases']}, set(expected))
+            for row in grade['cases']:
+                out, source = outputs[row['case_id']], expected[row['case_id']]
+                if source['kind'] == 'negative':
+                    self.assertFalse([x for x in out['findings'] if x['severity'] in {'P0', 'P1'}])
+                self.assertEqual(len(row['matched_finding_indices']), len(source['expected_findings']))
+                for i in row['matched_finding_indices']:
+                    self.assertIn(out['findings'][i]['severity'], ['P0', 'P1'])
+                    self.assertTrue(out['findings'][i]['evidence'])
+                self.assertEqual([x['oracle_fact_index'] for x in row['required_facts']], list(range(len(source['required_state_facts']))))
+                for fact in row['required_facts']:
+                    self.assertTrue(fact['support'])
+                    for support in fact['support']:
+                        self.assertEqual(support['value'], out['facts'][support['index']]['value'])
+                        self.assertEqual(support['location'], out['facts'][support['index']]['location'])
+                self.assertEqual(row['result'], 'PASS')
+
+    def test_independent_review_and_official_validation_are_present(self):
+        review = json.loads((EVIDENCE / 'revision-independent-review.json').read_text())
+        self.assertEqual(review['unresolved_p0'], 0)
+        self.assertEqual(review['unresolved_p1'], 0)
+        self.assertFalse(review['unresolved_blocking_or_major'])
+        official = json.loads((EVIDENCE / 'official-skill-validation.json').read_text())
+        self.assertEqual({x['skill'] for x in official['results']}, {x.parent.name for x in (ROOT / 'skills').glob('*/SKILL.md')})
+        self.assertTrue(all(x['exit_code'] == 0 for x in official['results']))

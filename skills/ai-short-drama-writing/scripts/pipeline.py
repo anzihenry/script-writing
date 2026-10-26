@@ -2,6 +2,7 @@
 """Local, standard-library-only controls for the script production pipeline."""
 import argparse
 import copy
+import difflib
 import hashlib
 import json
 import math
@@ -669,6 +670,91 @@ def review_check(root, path, revalidating=False):
             'limitation': 'Coverage declared by reviewer; semantic truth not machine-certified'}
 
 
+def source_change(root, data, key):
+    """Diff retained, hash-verified versions; never reconstruct missing history."""
+    current = data['artifacts'][key]
+    prior = next((e['previous'] for e in reversed(data['history']) if e['id'] == key and e.get('previous')
+                  and (e['previous']['revision'], e['previous']['sha256']) != (current['revision'], current['sha256'])), None)
+    result = {'status': 'UNAVAILABLE', 'old': prior, 'new': current, 'scene_ids': [], 'object_ids': [], 'changes': []}
+    if prior is None:
+        result['reason'] = 'No retained prior registration; registry is not a content backup'
+        return result
+    try:
+        old_path, new_path = local(Path(root), prior['path']), local(Path(root), current['path'])
+        require(old_path.is_file() and sha(old_path) == prior['sha256'], 'old file missing or changed')
+        require(new_path.is_file() and sha(new_path) == current['sha256'], 'current file missing or changed')
+        old, new = old_path.read_text(encoding='utf-8'), new_path.read_text(encoding='utf-8')
+    except (Invalid, OSError, UnicodeError) as error:
+        result['reason'] = str(error)
+        return result
+    scenes, objects = set(), set()
+    before, after = old.splitlines(), new.splitlines()
+    for tag, a, b, c, d in difflib.SequenceMatcher(None, before, after, autojunk=False).get_opcodes():
+        if tag == 'equal':
+            continue
+        result['changes'].append({'operation': tag, 'old_start': a + 1, 'old_count': b - a, 'new_start': c + 1, 'new_count': d - c})
+        for lines, start, stop in [(before, a, b), (after, c, d)]:
+            context = '\n'.join(lines[max(0, start - 3):stop + 3])
+            objects.update(re.findall(r'\b(?:CHAR|PROP|LOC)\d{3,}\b', context))
+            scenes.update(re.findall(r'\bEP\d{3,}-SC\d{3,}\b', context))
+            # Nearest prior explicit scene is a candidate, not a semantic impact verdict.
+            for line in reversed(lines[:start]):
+                ids = re.findall(r'\bEP\d{3,}-SC\d{3,}\b', line)
+                if ids:
+                    scenes.update(ids)
+                    break
+    if current['kind'] == 'script':
+        try:
+            old_doc, _ = scene_document(root, prior, 'script-json')
+            new_doc, _ = scene_document(root, current, 'script-json')
+            if old_doc and new_doc:
+                old_scenes = {x['id']: x for x in old_doc['scenes']}
+                new_scenes = {x['id']: x for x in new_doc['scenes']}
+                for scene_id in old_scenes.keys() | new_scenes.keys():
+                    if old_scenes.get(scene_id) != new_scenes.get(scene_id) or scene_id in scenes:
+                        scenes.add(scene_id)
+                        for scene in [old_scenes.get(scene_id, {}), new_scenes.get(scene_id, {})]:
+                            objects.update(scene.get('character_ids', []))
+                            objects.update(scene.get('prop_ids', []))
+                            if scene.get('location_id'):
+                                objects.add(scene['location_id'])
+        except (Invalid, ValueError, KeyError, TypeError):
+            result['reference_limitation'] = 'Structured references unavailable; retained text diff only'
+    diff = list(difflib.unified_diff(before, after, fromfile=prior['path'], tofile=current['path'], lineterm=''))
+    result.update(status='AVAILABLE', scene_ids=sorted(scenes), object_ids=sorted(objects),
+                  diff='\n'.join(diff[:200]), diff_truncated=len(diff) > 200,
+                  reference_basis='Candidate references near changed lines or in changed scenes; review before deciding actual impact')
+    return result
+
+
+def impact_locations(root, item, change):
+    if change['status'] != 'AVAILABLE':
+        return []
+    scenes, objects = set(change['scene_ids']), set(change['object_ids'])
+    locations = []
+    try:
+        if item['kind'] in {'script', 'handoff', 'export'}:
+            if item['kind'] == 'export':
+                payload = read_json(local(Path(root), item['path']))
+            else:
+                payload, _ = scene_document(root, item, item['kind'] + '-json')
+            if payload:
+                for scene in payload['scenes']:
+                    mentions = set(scene['character_ids'] + scene['prop_ids'] + [scene['location_id']]) & objects
+                    if scene['id'] in scenes or mentions:
+                        locations.append({'location': scene['id'], 'objects': sorted(mentions), 'basis': 'registered scene references'})
+        elif item['kind'] == 'continuity':
+            payload = embedded(root, item, 'continuity-json')
+            if payload:
+                for row in payload['states']:
+                    if row['object'] in objects or row['location'] in scenes:
+                        locations.append({'location': row['location'], 'objects': [row['object']], 'basis': 'continuity evidence reference', 'quote': row['quote']})
+    except (Invalid, OSError, ValueError, KeyError, TypeError):
+        # Impact ordering remains useful even for incomplete or stale drafts.
+        return []
+    return locations
+
+
 def impact(root, key):
     data = load(root)
     require(key in data['artifacts'], 'unknown artifact')
@@ -685,6 +771,7 @@ def impact(root, key):
         visit(current)
     checks = inspect(Path(root), data)
     affected = {key}
+    change = source_change(root, data, key)
     rows = []
     for current in ordered:
         dependencies = {x['id'] for x in data['artifacts'][current]['depends_on']}
@@ -697,8 +784,9 @@ def impact(root, key):
         rows.append({'id': current, 'scope': item['scope'], 'kind': item['kind'],
                      'relation': 'source' if current == key else ('direct' if key in dependencies else 'transitive'),
                      'errors': checks[current], 'disposition': notes[-1] if notes else {'decision': 'pending'},
-                     'content_diff': 'Use retained old/new files; registry snapshots are not content backups'})
-    return {'source': key, 'order': rows, 'limitation': 'File-level dependency impact; semantic review still required'}
+                     'candidate_locations': impact_locations(root, item, change),
+                     'content_diff': 'See source_change; candidates do not waive file-level revalidation'})
+    return {'source': key, 'source_change': change, 'order': rows, 'limitation': 'File-level dependency impact remains authoritative; candidate locations require semantic review'}
 
 
 def impact_note(root, source, target, decision, evidence):

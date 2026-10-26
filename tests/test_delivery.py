@@ -100,3 +100,20 @@ class DeliveryTest(unittest.TestCase):
         for text in [self.table() + '\n' + orphan,
                      '<!-- drama-table:v1 -->\n' + orphan + self.table().replace('<!-- drama-table:v1 -->\n', '')]:
             with self.assertRaises(p.Invalid): p.markdown_scenes(text)
+
+    def test_impact_exposes_retained_content_and_candidate_references(self):
+        self.build()
+        new = copy.deepcopy(self.source)
+        new['scenes'][0]['dialogue'][0]['text'] = '谁在门外？'
+        self.add('script', 'EP001', revision='v1.1', content='```script-json\n' + json.dumps(new, ensure_ascii=False, indent=2) + '\n```')
+        report = p.impact(self.root, 'script_EP001')
+        self.assertEqual(report['source_change']['status'], 'AVAILABLE')
+        self.assertIn('谁在门外？', report['source_change']['diff'])
+        self.assertIn('CHAR001', report['source_change']['object_ids'])
+        handoff = next(x for x in report['order'] if x['id'] == 'handoff_EP001')
+        self.assertEqual(handoff['candidate_locations'][0]['location'], 'EP001-SC001')
+        self.assertTrue(handoff['errors'])
+        (self.root / 'script_EP001-v1.0.md').unlink()
+        unavailable = p.impact(self.root, 'script_EP001')['source_change']
+        self.assertEqual(unavailable['status'], 'UNAVAILABLE')
+        self.assertNotIn('diff', unavailable)
