@@ -1,0 +1,322 @@
+[
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "episodes",
+      "/tmp/script-writing-new-user-3NVCgh/legacy",
+      "--through",
+      "3"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"added\": [\"EP002\", \"EP003\"]}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "next",
+      "/tmp/script-writing-new-user-3NVCgh/legacy",
+      "--scope",
+      "EP003",
+      "--json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"scope\": \"EP003\",\n  \"status\": \"NEEDS_WORK\",\n  \"next\": {\n    \"stage\": \"G3\",\n    \"scope\": \"EP002\",\n    \"reasons\": [\n      \"missing output: continuity/EP002\",\n      \"missing output: script/EP002\"\n    ],\n    \"skill\": \"ai-short-drama-episode\",\n    \"inputs\": [\n      {\n        \"kind\": \"bible\",\n        \"scope\": \"project\",\n        \"id\": \"bible\"\n      },\n      {\n        \"kind\": \"outline\",\n        \"scope\": \"project\",\n        \"id\": \"outline\"\n      },\n      {\n        \"kind\": \"continuity\",\n        \"scope\": \"EP001\",\n        \"id\": \"continuity_EP001\"\n      },\n      {\n        \"kind\": \"script\",\n        \"scope\": \"EP002\",\n        \"id\": null\n      }\n    ]\n  },\n  \"tasks\": [\n    {\n      \"stage\": \"G3\",\n      \"scope\": \"EP002\",\n      \"reasons\": [\n        \"missing output: continuity/EP002\",\n        \"missing output: script/EP002\"\n      ],\n      \"skill\": \"ai-short-drama-episode\",\n      \"inputs\": [\n        {\n          \"kind\": \"bible\",\n          \"scope\": \"project\",\n          \"id\": \"bible\"\n        },\n        {\n          \"kind\": \"outline\",\n          \"scope\": \"project\",\n          \"id\": \"outline\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP001\",\n          \"id\": \"continuity_EP001\"\n        },\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP002\",\n          \"id\": null\n        }\n      ]\n    },\n    {\n      \"stage\": \"G4\",\n      \"scope\": \"EP002\",\n      \"reasons\": [\n        \"missing output: review/EP002\"\n      ],\n      \"skill\": \"ai-short-drama-review\",\n      \"inputs\": [\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP002\",\n          \"id\": null\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP002\",\n          \"id\": null\n        }\n      ]\n    },\n    {\n      \"stage\": \"G5\",\n      \"scope\": \"EP002\",\n      \"reasons\": [\n        \"missing output: handoff/EP002\"\n      ],\n      \"skill\": \"ai-short-drama-handoff\",\n      \"inputs\": [\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP002\",\n          \"id\": null\n        },\n        {\n          \"kind\": \"review\",\n          \"scope\": \"EP002\",\n          \"id\": null\n        },\n        {\n          \"kind\": \"bible\",\n          \"scope\": \"project\",\n          \"id\": \"bible\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP002\",\n          \"id\": null\n        }\n      ]\n    },\n    {\n      \"stage\": \"G3\",\n      \"scope\": \"EP003\",\n      \"reasons\": [\n        \"missing output: continuity/EP003\",\n        \"missing output: script/EP003\"\n      ],\n      \"skill\": \"ai-short-drama-episode\",\n      \"inputs\": [\n        {\n          \"kind\": \"bible\",\n          \"scope\": \"project\",\n          \"id\": \"bible\"\n        },\n        {\n          \"kind\": \"outline\",\n          \"scope\": \"project\",\n          \"id\": \"outline\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP002\",\n          \"id\": null\n        },\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP003\",\n          \"id\": null\n        }\n      ]\n    },\n    {\n      \"stage\": \"G4\",\n      \"scope\": \"EP003\",\n      \"reasons\": [\n        \"missing output: review/EP003\"\n      ],\n      \"skill\": \"ai-short-drama-review\",\n      \"inputs\": [\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP003\",\n          \"id\": null\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP003\",\n          \"id\": null\n        }\n      ]\n    },\n    {\n      \"stage\": \"G5\",\n      \"scope\": \"EP003\",\n      \"reasons\": [\n        \"missing output: handoff/EP003\"\n      ],\n      \"skill\": \"ai-short-drama-handoff\",\n      \"inputs\": [\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP003\",\n          \"id\": null\n        },\n        {\n          \"kind\": \"review\",\n          \"scope\": \"EP003\",\n          \"id\": null\n        },\n        {\n          \"kind\": \"bible\",\n          \"scope\": \"project\",\n          \"id\": \"bible\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP003\",\n          \"id\": null\n        }\n      ]\n    }\n  ],\n  \"artifact_errors\": {},\n  \"checkpoint\": null,\n  \"changed_since_checkpoint\": [],\n  \"quality\": \"Not inferred from structural readiness\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "checkpoint",
+      "/tmp/script-writing-new-user-3NVCgh/season",
+      "--id",
+      "NEWUSER-B001",
+      "--scopes",
+      "EP001",
+      "EP002",
+      "EP003",
+      "--next-entry",
+      "恢复 EP003 交接",
+      "--reread",
+      "简报与三集正文"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"id\": \"NEWUSER-B001\",\n  \"at\": \"2026-10-25T12:31:50.115450+00:00\",\n  \"scopes\": [\n    \"EP001\",\n    \"EP002\",\n    \"EP003\"\n  ],\n  \"snapshots\": {\n    \"brief\": {\n      \"kind\": \"brief\",\n      \"scope\": \"project\",\n      \"path\": \"brief.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea\",\n      \"depends_on\": [],\n      \"evidence\": null\n    },\n    \"bible\": {\n      \"kind\": \"bible\",\n      \"scope\": \"project\",\n      \"path\": \"bible.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\",\n      \"depends_on\": [\n        {\n          \"id\": \"brief\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea\"\n        }\n      ],\n      \"evidence\": null\n    },\n    \"outline\": {\n      \"kind\": \"outline\",\n      \"scope\": \"project\",\n      \"path\": \"outline.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9\",\n      \"depends_on\": [\n        {\n          \"id\": \"brief\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea\"\n        },\n        {\n          \"id\": \"bible\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n        }\n      ],\n      \"evidence\": null\n    },\n    \"script_EP001\": {\n      \"kind\": \"script\",\n      \"scope\": \"EP001\",\n      \"path\": \"episodes/EP001-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"reviewed\",\n      \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\",\n      \"depends_on\": [\n        {\n          \"id\": \"bible\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n        },\n        {\n          \"id\": \"outline\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9\"\n        }\n      ],\n      \"evidence\": \"作者自审：reviews/EP001-v1.0.md，仅文字预制作范围。\"\n    },\n    \"continuity_EP001\": {\n      \"kind\": \"continuity\",\n      \"scope\": \"EP001\",\n      \"path\": \"continuity/EP001-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP001\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\"\n        }\n      ],\n      \"evidence\": null\n    },\n    \"review_EP001\": {\n      \"kind\": \"review\",\n      \"scope\": \"EP001\",\n      \"path\": \"reviews/EP001-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"reviewed\",\n      \"sha256\": \"c71f7b1b0004646627f6a334b5e449eaae566d453c72bd6be8a6bd3ce568fee2\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP001\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\"\n        },\n        {\n          \"id\": \"continuity_EP001\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99\"\n        }\n      ],\n      \"evidence\": \"作者自审；见同范围 reviews 报告；文字预制作，未实测、未锁定。\"\n    },\n    \"handoff_EP001\": {\n      \"kind\": \"handoff\",\n      \"scope\": \"EP001\",\n      \"path\": \"handoff/EP001-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"9a5553c75f1dac0d3d6b0ac215e0419a430e179360ec04194b85f401ce22c3ea\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP001\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\"\n        },\n        {\n          \"id\": \"review_EP001\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"c71f7b1b0004646627f6a334b5e449eaae566d453c72bd6be8a6bd3ce568fee2\"\n        },\n        {\n          \"id\": \"bible\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n        },\n        {\n          \"id\": \"continuity_EP001\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99\"\n        }\n      ],\n      \"evidence\": null\n    },\n    \"export_EP001\": {\n      \"kind\": \"export\",\n      \"scope\": \"EP001\",\n      \"path\": \"handoff/EP001-v1.0.json\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"f33017387e0dd04398b290875271c77b12b0772966a93a19fecfe36975e04812\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP001\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\"\n        },\n        {\n          \"id\": \"handoff_EP001\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"9a5553c75f1dac0d3d6b0ac215e0419a430e179360ec04194b85f401ce22c3ea\"\n        }\n      ],\n      \"evidence\": null\n    },\n    \"script_EP002\": {\n      \"kind\": \"script\",\n      \"scope\": \"EP002\",\n      \"path\": \"episodes/EP002-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"reviewed\",\n      \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\",\n      \"depends_on\": [\n        {\n          \"id\": \"bible\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n        },\n        {\n          \"id\": \"outline\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9\"\n        },\n        {\n          \"id\": \"continuity_EP001\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99\"\n        }\n      ],\n      \"evidence\": \"作者自审：reviews/EP002-v1.0.md，仅文字预制作范围。\"\n    },\n    \"continuity_EP002\": {\n      \"kind\": \"continuity\",\n      \"scope\": \"EP002\",\n      \"path\": \"continuity/EP002-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP002\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\"\n        }\n      ],\n      \"evidence\": null\n    },\n    \"review_EP002\": {\n      \"kind\": \"review\",\n      \"scope\": \"EP002\",\n      \"path\": \"reviews/EP002-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"reviewed\",\n      \"sha256\": \"793009b0b8ec8ef4b9f15a01b1ab88ef2dbdfdbc585e8882ff0cc75484e6cf19\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP002\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\"\n        },\n        {\n          \"id\": \"continuity_EP002\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d\"\n        }\n      ],\n      \"evidence\": \"作者自审；见同范围 reviews 报告；文字预制作，未实测、未锁定。\"\n    },\n    \"handoff_EP002\": {\n      \"kind\": \"handoff\",\n      \"scope\": \"EP002\",\n      \"path\": \"handoff/EP002-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"ec5e6079ab0bd31f0dfe6a4c7ac9038730a932765e08fbae4b60c525e022d841\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP002\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\"\n        },\n        {\n          \"id\": \"review_EP002\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"793009b0b8ec8ef4b9f15a01b1ab88ef2dbdfdbc585e8882ff0cc75484e6cf19\"\n        },\n        {\n          \"id\": \"bible\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n        },\n        {\n          \"id\": \"continuity_EP002\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d\"\n        }\n      ],\n      \"evidence\": null\n    },\n    \"export_EP002\": {\n      \"kind\": \"export\",\n      \"scope\": \"EP002\",\n      \"path\": \"handoff/EP002-v1.0.json\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"0bbf748ec43383cd264a5fec9207428cfc8b19dc7772feec075cc7cbd705980d\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP002\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\"\n        },\n        {\n          \"id\": \"handoff_EP002\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"ec5e6079ab0bd31f0dfe6a4c7ac9038730a932765e08fbae4b60c525e022d841\"\n        }\n      ],\n      \"evidence\": null\n    },\n    \"script_EP003\": {\n      \"kind\": \"script\",\n      \"scope\": \"EP003\",\n      \"path\": \"episodes/EP003-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"reviewed\",\n      \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\",\n      \"depends_on\": [\n        {\n          \"id\": \"bible\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n        },\n        {\n          \"id\": \"outline\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9\"\n        },\n        {\n          \"id\": \"continuity_EP002\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d\"\n        }\n      ],\n      \"evidence\": \"作者自审：reviews/EP003-v1.0.md，仅文字预制作范围。\"\n    },\n    \"continuity_EP003\": {\n      \"kind\": \"continuity\",\n      \"scope\": \"EP003\",\n      \"path\": \"continuity/EP003-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"26475d74923f762fc5a4df965bdd115d7af0d02ecded7bc945b5a1745e2a1bf5\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP003\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\"\n        }\n      ],\n      \"evidence\": null\n    },\n    \"review_EP003\": {\n      \"kind\": \"review\",\n      \"scope\": \"EP003\",\n      \"path\": \"reviews/EP003-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"reviewed\",\n      \"sha256\": \"4e39da3d4f6bdfd3a302db9293820ef319877d39a5d35324cfc79854a9120354\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP003\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\"\n        },\n        {\n          \"id\": \"continuity_EP003\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"26475d74923f762fc5a4df965bdd115d7af0d02ecded7bc945b5a1745e2a1bf5\"\n        }\n      ],\n      \"evidence\": \"作者自审；见同范围 reviews 报告；文字预制作，未实测、未锁定。\"\n    },\n    \"handoff_EP003\": {\n      \"kind\": \"handoff\",\n      \"scope\": \"EP003\",\n      \"path\": \"handoff/EP003-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"46a6066d5fbf81164db4381e4cec7a75b105e7bdc9546fc8b8e80c558673ffd9\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP003\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\"\n        },\n        {\n          \"id\": \"review_EP003\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"4e39da3d4f6bdfd3a302db9293820ef319877d39a5d35324cfc79854a9120354\"\n        },\n        {\n          \"id\": \"bible\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n        },\n        {\n          \"id\": \"continuity_EP003\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"26475d74923f762fc5a4df965bdd115d7af0d02ecded7bc945b5a1745e2a1bf5\"\n        }\n      ],\n      \"evidence\": null\n    },\n    \"export_EP003\": {\n      \"kind\": \"export\",\n      \"scope\": \"EP003\",\n      \"path\": \"handoff/EP003-v1.0.json\",\n      \"revision\": \"v1.0\",\n      \"status\": \"draft\",\n      \"sha256\": \"b5f7345752718eb69e182fbc3c01ecc5fcd3d612c87c632d9ff617a5bc4aa339\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP003\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\"\n        },\n        {\n          \"id\": \"handoff_EP003\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"46a6066d5fbf81164db4381e4cec7a75b105e7bdc9546fc8b8e80c558673ffd9\"\n        }\n      ],\n      \"evidence\": null\n    },\n    \"season_review\": {\n      \"kind\": \"season_review\",\n      \"scope\": \"project\",\n      \"path\": \"reviews/season-v1.0.md\",\n      \"revision\": \"v1.0\",\n      \"status\": \"reviewed\",\n      \"sha256\": \"7c1f6a5da0c2c95054ec7b246bc32dddcf95133e29fcfea90010164f5b0cc8ee\",\n      \"depends_on\": [\n        {\n          \"id\": \"script_EP001\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\"\n        },\n        {\n          \"id\": \"continuity_EP001\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99\"\n        },\n        {\n          \"id\": \"script_EP002\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\"\n        },\n        {\n          \"id\": \"continuity_EP002\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d\"\n        },\n        {\n          \"id\": \"script_EP003\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\"\n        },\n        {\n          \"id\": \"continuity_EP003\",\n          \"revision\": \"v1.0\",\n          \"sha256\": \"26475d74923f762fc5a4df965bdd115d7af0d02ecded7bc945b5a1745e2a1bf5\"\n        }\n      ],\n      \"evidence\": \"作者自审；见同范围 reviews 报告；文字预制作，未实测、未锁定。\"\n    }\n  },\n  \"open_issues\": [\n    \"TIME-EP001\",\n    \"TIME-EP002\",\n    \"TIME-EP003\",\n    \"VISUAL\"\n  ],\n  \"next_entry\": \"恢复 EP003 交接\",\n  \"reread\": \"简报与三集正文\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "next",
+      "/tmp/script-writing-new-user-3NVCgh/season",
+      "--scope",
+      "EP003",
+      "--json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"scope\": \"EP003\",\n  \"status\": \"NEEDS_WORK\",\n  \"next\": {\n    \"stage\": \"G0\",\n    \"scope\": \"project\",\n    \"reasons\": [\n      \"brief: file changed since registration (STALE)\"\n    ],\n    \"skill\": \"ai-short-drama-brief\",\n    \"inputs\": []\n  },\n  \"tasks\": [\n    {\n      \"stage\": \"G0\",\n      \"scope\": \"project\",\n      \"reasons\": [\n        \"brief: file changed since registration (STALE)\"\n      ],\n      \"skill\": \"ai-short-drama-brief\",\n      \"inputs\": []\n    },\n    {\n      \"stage\": \"G1\",\n      \"scope\": \"project\",\n      \"reasons\": [\n        \"bible: dependency unusable: brief\"\n      ],\n      \"skill\": \"ai-short-drama-bible\",\n      \"inputs\": [\n        {\n          \"kind\": \"brief\",\n          \"scope\": \"project\",\n          \"id\": \"brief\"\n        }\n      ]\n    },\n    {\n      \"stage\": \"G2\",\n      \"scope\": \"project\",\n      \"reasons\": [\n        \"outline: dependency unusable: bible\",\n        \"outline: dependency unusable: brief\"\n      ],\n      \"skill\": \"ai-short-drama-outline\",\n      \"inputs\": [\n        {\n          \"kind\": \"brief\",\n          \"scope\": \"project\",\n          \"id\": \"brief\"\n        },\n        {\n          \"kind\": \"bible\",\n          \"scope\": \"project\",\n          \"id\": \"bible\"\n        }\n      ]\n    },\n    {\n      \"stage\": \"G3\",\n      \"scope\": \"EP001\",\n      \"reasons\": [\n        \"continuity_EP001: dependency unusable: script_EP001\",\n        \"script_EP001: dependency unusable: bible\",\n        \"script_EP001: dependency unusable: outline\"\n      ],\n      \"skill\": \"ai-short-drama-episode\",\n      \"inputs\": [\n        {\n          \"kind\": \"bible\",\n          \"scope\": \"project\",\n          \"id\": \"bible\"\n        },\n        {\n          \"kind\": \"outline\",\n          \"scope\": \"project\",\n          \"id\": \"outline\"\n        },\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP001\",\n          \"id\": \"script_EP001\"\n        }\n      ]\n    },\n    {\n      \"stage\": \"G4\",\n      \"scope\": \"EP001\",\n      \"reasons\": [\n        \"review_EP001: dependency unusable: continuity_EP001\",\n        \"review_EP001: dependency unusable: script_EP001\"\n      ],\n      \"skill\": \"ai-short-drama-review\",\n      \"inputs\": [\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP001\",\n          \"id\": \"script_EP001\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP001\",\n          \"id\": \"continuity_EP001\"\n        }\n      ]\n    },\n    {\n      \"stage\": \"G5\",\n      \"scope\": \"EP001\",\n      \"reasons\": [\n        \"handoff_EP001: dependency unusable: bible\",\n        \"handoff_EP001: dependency unusable: continuity_EP001\",\n        \"handoff_EP001: dependency unusable: review_EP001\",\n        \"handoff_EP001: dependency unusable: script_EP001\"\n      ],\n      \"skill\": \"ai-short-drama-handoff\",\n      \"inputs\": [\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP001\",\n          \"id\": \"script_EP001\"\n        },\n        {\n          \"kind\": \"review\",\n          \"scope\": \"EP001\",\n          \"id\": \"review_EP001\"\n        },\n        {\n          \"kind\": \"bible\",\n          \"scope\": \"project\",\n          \"id\": \"bible\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP001\",\n          \"id\": \"continuity_EP001\"\n        }\n      ]\n    },\n    {\n      \"stage\": \"G3\",\n      \"scope\": \"EP002\",\n      \"reasons\": [\n        \"continuity_EP002: dependency unusable: script_EP002\",\n        \"script_EP002: dependency unusable: bible\",\n        \"script_EP002: dependency unusable: continuity_EP001\",\n        \"script_EP002: dependency unusable: outline\"\n      ],\n      \"skill\": \"ai-short-drama-episode\",\n      \"inputs\": [\n        {\n          \"kind\": \"bible\",\n          \"scope\": \"project\",\n          \"id\": \"bible\"\n        },\n        {\n          \"kind\": \"outline\",\n          \"scope\": \"project\",\n          \"id\": \"outline\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP001\",\n          \"id\": \"continuity_EP001\"\n        },\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP002\",\n          \"id\": \"script_EP002\"\n        }\n      ]\n    },\n    {\n      \"stage\": \"G4\",\n      \"scope\": \"EP002\",\n      \"reasons\": [\n        \"review_EP002: dependency unusable: continuity_EP002\",\n        \"review_EP002: dependency unusable: script_EP002\"\n      ],\n      \"skill\": \"ai-short-drama-review\",\n      \"inputs\": [\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP002\",\n          \"id\": \"script_EP002\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP002\",\n          \"id\": \"continuity_EP002\"\n        }\n      ]\n    },\n    {\n      \"stage\": \"G5\",\n      \"scope\": \"EP002\",\n      \"reasons\": [\n        \"handoff_EP002: dependency unusable: bible\",\n        \"handoff_EP002: dependency unusable: continuity_EP002\",\n        \"handoff_EP002: dependency unusable: review_EP002\",\n        \"handoff_EP002: dependency unusable: script_EP002\"\n      ],\n      \"skill\": \"ai-short-drama-handoff\",\n      \"inputs\": [\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP002\",\n          \"id\": \"script_EP002\"\n        },\n        {\n          \"kind\": \"review\",\n          \"scope\": \"EP002\",\n          \"id\": \"review_EP002\"\n        },\n        {\n          \"kind\": \"bible\",\n          \"scope\": \"project\",\n          \"id\": \"bible\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP002\",\n          \"id\": \"continuity_EP002\"\n        }\n      ]\n    },\n    {\n      \"stage\": \"G3\",\n      \"scope\": \"EP003\",\n      \"reasons\": [\n        \"continuity_EP003: dependency unusable: script_EP003\",\n        \"script_EP003: dependency unusable: bible\",\n        \"script_EP003: dependency unusable: continuity_EP002\",\n        \"script_EP003: dependency unusable: outline\"\n      ],\n      \"skill\": \"ai-short-drama-episode\",\n      \"inputs\": [\n        {\n          \"kind\": \"bible\",\n          \"scope\": \"project\",\n          \"id\": \"bible\"\n        },\n        {\n          \"kind\": \"outline\",\n          \"scope\": \"project\",\n          \"id\": \"outline\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP002\",\n          \"id\": \"continuity_EP002\"\n        },\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP003\",\n          \"id\": \"script_EP003\"\n        }\n      ]\n    },\n    {\n      \"stage\": \"G4\",\n      \"scope\": \"EP003\",\n      \"reasons\": [\n        \"review_EP003: dependency unusable: continuity_EP003\",\n        \"review_EP003: dependency unusable: script_EP003\"\n      ],\n      \"skill\": \"ai-short-drama-review\",\n      \"inputs\": [\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP003\",\n          \"id\": \"script_EP003\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP003\",\n          \"id\": \"continuity_EP003\"\n        }\n      ]\n    },\n    {\n      \"stage\": \"G5\",\n      \"scope\": \"EP003\",\n      \"reasons\": [\n        \"handoff_EP003: dependency unusable: bible\",\n        \"handoff_EP003: dependency unusable: continuity_EP003\",\n        \"handoff_EP003: dependency unusable: review_EP003\",\n        \"handoff_EP003: dependency unusable: script_EP003\"\n      ],\n      \"skill\": \"ai-short-drama-handoff\",\n      \"inputs\": [\n        {\n          \"kind\": \"script\",\n          \"scope\": \"EP003\",\n          \"id\": \"script_EP003\"\n        },\n        {\n          \"kind\": \"review\",\n          \"scope\": \"EP003\",\n          \"id\": \"review_EP003\"\n        },\n        {\n          \"kind\": \"bible\",\n          \"scope\": \"project\",\n          \"id\": \"bible\"\n        },\n        {\n          \"kind\": \"continuity\",\n          \"scope\": \"EP003\",\n          \"id\": \"continuity_EP003\"\n        }\n      ]\n    }\n  ],\n  \"artifact_errors\": {\n    \"brief\": [\n      \"file changed since registration (STALE)\"\n    ],\n    \"bible\": [\n      \"dependency unusable: brief\"\n    ],\n    \"outline\": [\n      \"dependency unusable: brief\",\n      \"dependency unusable: bible\"\n    ],\n    \"script_EP001\": [\n      \"dependency unusable: bible\",\n      \"dependency unusable: outline\"\n    ],\n    \"continuity_EP001\": [\n      \"dependency unusable: script_EP001\"\n    ],\n    \"review_EP001\": [\n      \"dependency unusable: script_EP001\",\n      \"dependency unusable: continuity_EP001\"\n    ],\n    \"handoff_EP001\": [\n      \"dependency unusable: script_EP001\",\n      \"dependency unusable: review_EP001\",\n      \"dependency unusable: bible\",\n      \"dependency unusable: continuity_EP001\"\n    ],\n    \"export_EP001\": [\n      \"dependency unusable: script_EP001\",\n      \"dependency unusable: handoff_EP001\"\n    ],\n    \"script_EP002\": [\n      \"dependency unusable: bible\",\n      \"dependency unusable: outline\",\n      \"dependency unusable: continuity_EP001\"\n    ],\n    \"continuity_EP002\": [\n      \"dependency unusable: script_EP002\"\n    ],\n    \"review_EP002\": [\n      \"dependency unusable: script_EP002\",\n      \"dependency unusable: continuity_EP002\"\n    ],\n    \"handoff_EP002\": [\n      \"dependency unusable: script_EP002\",\n      \"dependency unusable: review_EP002\",\n      \"dependency unusable: bible\",\n      \"dependency unusable: continuity_EP002\"\n    ],\n    \"export_EP002\": [\n      \"dependency unusable: script_EP002\",\n      \"dependency unusable: handoff_EP002\"\n    ],\n    \"script_EP003\": [\n      \"dependency unusable: bible\",\n      \"dependency unusable: outline\",\n      \"dependency unusable: continuity_EP002\"\n    ],\n    \"continuity_EP003\": [\n      \"dependency unusable: script_EP003\"\n    ],\n    \"review_EP003\": [\n      \"dependency unusable: script_EP003\",\n      \"dependency unusable: continuity_EP003\"\n    ],\n    \"handoff_EP003\": [\n      \"dependency unusable: script_EP003\",\n      \"dependency unusable: review_EP003\",\n      \"dependency unusable: bible\",\n      \"dependency unusable: continuity_EP003\"\n    ],\n    \"export_EP003\": [\n      \"dependency unusable: script_EP003\",\n      \"dependency unusable: handoff_EP003\"\n    ],\n    \"season_review\": [\n      \"dependency unusable: script_EP001\",\n      \"dependency unusable: continuity_EP001\",\n      \"dependency unusable: script_EP002\",\n      \"dependency unusable: continuity_EP002\",\n      \"dependency unusable: script_EP003\",\n      \"dependency unusable: continuity_EP003\"\n    ]\n  },\n  \"checkpoint\": {\n    \"id\": \"NEWUSER-B001\",\n    \"at\": \"2026-10-25T12:31:50.115450+00:00\",\n    \"scopes\": [\n      \"EP001\",\n      \"EP002\",\n      \"EP003\"\n    ],\n    \"snapshots\": {\n      \"brief\": {\n        \"kind\": \"brief\",\n        \"scope\": \"project\",\n        \"path\": \"brief.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea\",\n        \"depends_on\": [],\n        \"evidence\": null\n      },\n      \"bible\": {\n        \"kind\": \"bible\",\n        \"scope\": \"project\",\n        \"path\": \"bible.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\",\n        \"depends_on\": [\n          {\n            \"id\": \"brief\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea\"\n          }\n        ],\n        \"evidence\": null\n      },\n      \"outline\": {\n        \"kind\": \"outline\",\n        \"scope\": \"project\",\n        \"path\": \"outline.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9\",\n        \"depends_on\": [\n          {\n            \"id\": \"brief\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea\"\n          },\n          {\n            \"id\": \"bible\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n          }\n        ],\n        \"evidence\": null\n      },\n      \"script_EP001\": {\n        \"kind\": \"script\",\n        \"scope\": \"EP001\",\n        \"path\": \"episodes/EP001-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"reviewed\",\n        \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\",\n        \"depends_on\": [\n          {\n            \"id\": \"bible\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n          },\n          {\n            \"id\": \"outline\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9\"\n          }\n        ],\n        \"evidence\": \"作者自审：reviews/EP001-v1.0.md，仅文字预制作范围。\"\n      },\n      \"continuity_EP001\": {\n        \"kind\": \"continuity\",\n        \"scope\": \"EP001\",\n        \"path\": \"continuity/EP001-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP001\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\"\n          }\n        ],\n        \"evidence\": null\n      },\n      \"review_EP001\": {\n        \"kind\": \"review\",\n        \"scope\": \"EP001\",\n        \"path\": \"reviews/EP001-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"reviewed\",\n        \"sha256\": \"c71f7b1b0004646627f6a334b5e449eaae566d453c72bd6be8a6bd3ce568fee2\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP001\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\"\n          },\n          {\n            \"id\": \"continuity_EP001\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99\"\n          }\n        ],\n        \"evidence\": \"作者自审；见同范围 reviews 报告；文字预制作，未实测、未锁定。\"\n      },\n      \"handoff_EP001\": {\n        \"kind\": \"handoff\",\n        \"scope\": \"EP001\",\n        \"path\": \"handoff/EP001-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"9a5553c75f1dac0d3d6b0ac215e0419a430e179360ec04194b85f401ce22c3ea\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP001\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\"\n          },\n          {\n            \"id\": \"review_EP001\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"c71f7b1b0004646627f6a334b5e449eaae566d453c72bd6be8a6bd3ce568fee2\"\n          },\n          {\n            \"id\": \"bible\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n          },\n          {\n            \"id\": \"continuity_EP001\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99\"\n          }\n        ],\n        \"evidence\": null\n      },\n      \"export_EP001\": {\n        \"kind\": \"export\",\n        \"scope\": \"EP001\",\n        \"path\": \"handoff/EP001-v1.0.json\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"f33017387e0dd04398b290875271c77b12b0772966a93a19fecfe36975e04812\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP001\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\"\n          },\n          {\n            \"id\": \"handoff_EP001\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"9a5553c75f1dac0d3d6b0ac215e0419a430e179360ec04194b85f401ce22c3ea\"\n          }\n        ],\n        \"evidence\": null\n      },\n      \"script_EP002\": {\n        \"kind\": \"script\",\n        \"scope\": \"EP002\",\n        \"path\": \"episodes/EP002-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"reviewed\",\n        \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\",\n        \"depends_on\": [\n          {\n            \"id\": \"bible\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n          },\n          {\n            \"id\": \"outline\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9\"\n          },\n          {\n            \"id\": \"continuity_EP001\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99\"\n          }\n        ],\n        \"evidence\": \"作者自审：reviews/EP002-v1.0.md，仅文字预制作范围。\"\n      },\n      \"continuity_EP002\": {\n        \"kind\": \"continuity\",\n        \"scope\": \"EP002\",\n        \"path\": \"continuity/EP002-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP002\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\"\n          }\n        ],\n        \"evidence\": null\n      },\n      \"review_EP002\": {\n        \"kind\": \"review\",\n        \"scope\": \"EP002\",\n        \"path\": \"reviews/EP002-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"reviewed\",\n        \"sha256\": \"793009b0b8ec8ef4b9f15a01b1ab88ef2dbdfdbc585e8882ff0cc75484e6cf19\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP002\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\"\n          },\n          {\n            \"id\": \"continuity_EP002\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d\"\n          }\n        ],\n        \"evidence\": \"作者自审；见同范围 reviews 报告；文字预制作，未实测、未锁定。\"\n      },\n      \"handoff_EP002\": {\n        \"kind\": \"handoff\",\n        \"scope\": \"EP002\",\n        \"path\": \"handoff/EP002-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"ec5e6079ab0bd31f0dfe6a4c7ac9038730a932765e08fbae4b60c525e022d841\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP002\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\"\n          },\n          {\n            \"id\": \"review_EP002\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"793009b0b8ec8ef4b9f15a01b1ab88ef2dbdfdbc585e8882ff0cc75484e6cf19\"\n          },\n          {\n            \"id\": \"bible\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n          },\n          {\n            \"id\": \"continuity_EP002\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d\"\n          }\n        ],\n        \"evidence\": null\n      },\n      \"export_EP002\": {\n        \"kind\": \"export\",\n        \"scope\": \"EP002\",\n        \"path\": \"handoff/EP002-v1.0.json\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"0bbf748ec43383cd264a5fec9207428cfc8b19dc7772feec075cc7cbd705980d\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP002\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\"\n          },\n          {\n            \"id\": \"handoff_EP002\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"ec5e6079ab0bd31f0dfe6a4c7ac9038730a932765e08fbae4b60c525e022d841\"\n          }\n        ],\n        \"evidence\": null\n      },\n      \"script_EP003\": {\n        \"kind\": \"script\",\n        \"scope\": \"EP003\",\n        \"path\": \"episodes/EP003-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"reviewed\",\n        \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\",\n        \"depends_on\": [\n          {\n            \"id\": \"bible\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n          },\n          {\n            \"id\": \"outline\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9\"\n          },\n          {\n            \"id\": \"continuity_EP002\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d\"\n          }\n        ],\n        \"evidence\": \"作者自审：reviews/EP003-v1.0.md，仅文字预制作范围。\"\n      },\n      \"continuity_EP003\": {\n        \"kind\": \"continuity\",\n        \"scope\": \"EP003\",\n        \"path\": \"continuity/EP003-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"26475d74923f762fc5a4df965bdd115d7af0d02ecded7bc945b5a1745e2a1bf5\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP003\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\"\n          }\n        ],\n        \"evidence\": null\n      },\n      \"review_EP003\": {\n        \"kind\": \"review\",\n        \"scope\": \"EP003\",\n        \"path\": \"reviews/EP003-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"reviewed\",\n        \"sha256\": \"4e39da3d4f6bdfd3a302db9293820ef319877d39a5d35324cfc79854a9120354\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP003\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\"\n          },\n          {\n            \"id\": \"continuity_EP003\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"26475d74923f762fc5a4df965bdd115d7af0d02ecded7bc945b5a1745e2a1bf5\"\n          }\n        ],\n        \"evidence\": \"作者自审；见同范围 reviews 报告；文字预制作，未实测、未锁定。\"\n      },\n      \"handoff_EP003\": {\n        \"kind\": \"handoff\",\n        \"scope\": \"EP003\",\n        \"path\": \"handoff/EP003-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"46a6066d5fbf81164db4381e4cec7a75b105e7bdc9546fc8b8e80c558673ffd9\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP003\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\"\n          },\n          {\n            \"id\": \"review_EP003\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"4e39da3d4f6bdfd3a302db9293820ef319877d39a5d35324cfc79854a9120354\"\n          },\n          {\n            \"id\": \"bible\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514\"\n          },\n          {\n            \"id\": \"continuity_EP003\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"26475d74923f762fc5a4df965bdd115d7af0d02ecded7bc945b5a1745e2a1bf5\"\n          }\n        ],\n        \"evidence\": null\n      },\n      \"export_EP003\": {\n        \"kind\": \"export\",\n        \"scope\": \"EP003\",\n        \"path\": \"handoff/EP003-v1.0.json\",\n        \"revision\": \"v1.0\",\n        \"status\": \"draft\",\n        \"sha256\": \"b5f7345752718eb69e182fbc3c01ecc5fcd3d612c87c632d9ff617a5bc4aa339\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP003\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\"\n          },\n          {\n            \"id\": \"handoff_EP003\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"46a6066d5fbf81164db4381e4cec7a75b105e7bdc9546fc8b8e80c558673ffd9\"\n          }\n        ],\n        \"evidence\": null\n      },\n      \"season_review\": {\n        \"kind\": \"season_review\",\n        \"scope\": \"project\",\n        \"path\": \"reviews/season-v1.0.md\",\n        \"revision\": \"v1.0\",\n        \"status\": \"reviewed\",\n        \"sha256\": \"7c1f6a5da0c2c95054ec7b246bc32dddcf95133e29fcfea90010164f5b0cc8ee\",\n        \"depends_on\": [\n          {\n            \"id\": \"script_EP001\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9\"\n          },\n          {\n            \"id\": \"continuity_EP001\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99\"\n          },\n          {\n            \"id\": \"script_EP002\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e\"\n          },\n          {\n            \"id\": \"continuity_EP002\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d\"\n          },\n          {\n            \"id\": \"script_EP003\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd\"\n          },\n          {\n            \"id\": \"continuity_EP003\",\n            \"revision\": \"v1.0\",\n            \"sha256\": \"26475d74923f762fc5a4df965bdd115d7af0d02ecded7bc945b5a1745e2a1bf5\"\n          }\n        ],\n        \"evidence\": \"作者自审；见同范围 reviews 报告；文字预制作，未实测、未锁定。\"\n      }\n    },\n    \"open_issues\": [\n      \"TIME-EP001\",\n      \"TIME-EP002\",\n      \"TIME-EP003\",\n      \"VISUAL\"\n    ],\n    \"next_entry\": \"恢复 EP003 交接\",\n    \"reread\": \"简报与三集正文\"\n  },\n  \"changed_since_checkpoint\": [\n    \"brief\",\n    \"bible\",\n    \"outline\",\n    \"script_EP001\",\n    \"continuity_EP001\",\n    \"review_EP001\",\n    \"handoff_EP001\",\n    \"export_EP001\",\n    \"script_EP002\",\n    \"continuity_EP002\",\n    \"review_EP002\",\n    \"handoff_EP002\",\n    \"export_EP002\",\n    \"script_EP003\",\n    \"continuity_EP003\",\n    \"review_EP003\",\n    \"handoff_EP003\",\n    \"export_EP003\",\n    \"season_review\"\n  ],\n  \"quality\": \"Not inferred from structural readiness\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "init",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--id",
+      "NEW-USER-ONE",
+      "--episodes",
+      "1"
+    ],
+    "exit_code": 0,
+    "stdout": "INITIALIZED: blank templates only; no stage passed\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "register",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--id",
+      "brief",
+      "--kind",
+      "brief",
+      "--path",
+      "brief.md",
+      "--revision",
+      "v1.0"
+    ],
+    "exit_code": 0,
+    "stdout": "REGISTERED: metadata recorded; creative quality not inferred\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "register",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--id",
+      "bible",
+      "--kind",
+      "bible",
+      "--path",
+      "bible.md",
+      "--revision",
+      "v1.0"
+    ],
+    "exit_code": 0,
+    "stdout": "REGISTERED: metadata recorded; creative quality not inferred\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "register",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--id",
+      "outline",
+      "--kind",
+      "outline",
+      "--path",
+      "outline.md",
+      "--revision",
+      "v1.0"
+    ],
+    "exit_code": 0,
+    "stdout": "REGISTERED: metadata recorded; creative quality not inferred\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "register",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--id",
+      "script_EP001",
+      "--kind",
+      "script",
+      "--path",
+      "episodes/EP001-v1.0.md",
+      "--revision",
+      "v1.0",
+      "--scope",
+      "EP001"
+    ],
+    "exit_code": 0,
+    "stdout": "REGISTERED: metadata recorded; creative quality not inferred\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "register",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--id",
+      "continuity_EP001",
+      "--kind",
+      "continuity",
+      "--path",
+      "continuity/EP001-v1.0.md",
+      "--revision",
+      "v1.0",
+      "--scope",
+      "EP001"
+    ],
+    "exit_code": 0,
+    "stdout": "REGISTERED: metadata recorded; creative quality not inferred\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "register",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--id",
+      "review_EP001",
+      "--kind",
+      "review",
+      "--path",
+      "reviews/EP001-v1.0.md",
+      "--revision",
+      "v1.0",
+      "--scope",
+      "EP001",
+      "--status",
+      "reviewed",
+      "--evidence",
+      "作者自审；reviews/EP001-v1.0.md 全文，文字预制作通过；未实测、未锁定。"
+    ],
+    "exit_code": 0,
+    "stdout": "REGISTERED: metadata recorded; creative quality not inferred\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "register",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--id",
+      "script_EP001",
+      "--kind",
+      "script",
+      "--path",
+      "episodes/EP001-v1.0.md",
+      "--revision",
+      "v1.0",
+      "--scope",
+      "EP001",
+      "--status",
+      "reviewed",
+      "--evidence",
+      "作者自审；reviews/EP001-v1.0.md 全文，文字预制作通过；未实测、未锁定。"
+    ],
+    "exit_code": 0,
+    "stdout": "REGISTERED: metadata recorded; creative quality not inferred\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "register",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--id",
+      "handoff_EP001",
+      "--kind",
+      "handoff",
+      "--path",
+      "handoff/EP001-v1.0.md",
+      "--revision",
+      "v1.0",
+      "--scope",
+      "EP001"
+    ],
+    "exit_code": 0,
+    "stdout": "REGISTERED: metadata recorded; creative quality not inferred\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "check",
+      "/tmp/script-writing-new-user-3NVCgh/fresh"
+    ],
+    "exit_code": 0,
+    "stdout": "STRUCTURE_OK: registered artifacts consistent; use gate for completeness\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "gate",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--stage",
+      "G5",
+      "--scope",
+      "EP001"
+    ],
+    "exit_code": 0,
+    "stdout": "STRUCTURE_READY: perform/document the human quality gate; no status auto-promotion\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "parity",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--scope",
+      "EP001"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"MATCH\",\n  \"reasons\": [],\n  \"formats\": {\n    \"script\": \"markdown-table-v1\",\n    \"handoff\": \"markdown-table-v1\"\n  },\n  \"coverage\": [\n    \"scene order\",\n    \"scene locations\",\n    \"character/prop references\",\n    \"dialogue order/IDs\",\n    \"speaker\",\n    \"exact text\"\n  ],\n  \"unverified\": [\n    \"action semantics\",\n    \"performance\",\n    \"unstructured prose consistency\"\n  ],\n  \"source\": {\n    \"id\": \"script_EP001\",\n    \"revision\": \"v1.0\",\n    \"sha256\": \"b77bba0b6e5eeea4e4e45b2bc9e1275f8cab9074a53362f2821c05c3ea58da48\"\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "bundle",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--scope",
+      "EP001",
+      "--output",
+      "/tmp/script-writing-new-user-3NVCgh/fresh-EP001-v1.0.zip",
+      "--delivery-id",
+      "NEWUSER-PKG001"
+    ],
+    "exit_code": 0,
+    "stdout": "BUNDLED: 7 artifacts; not sent to recipient\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/Users/xiejinheng/Coding/script-writing/skills/ai-short-drama-writing/scripts/pipeline.py",
+      "bundle",
+      "/tmp/script-writing-new-user-3NVCgh/fresh",
+      "--scope",
+      "EP001",
+      "--output",
+      "/tmp/script-writing-new-user-3NVCgh/fresh-EP001-v1.0.zip",
+      "--delivery-id",
+      "NEWUSER-PKG002"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "ERROR: bundle destination exists; refusing overwrite\n"
+  }
+]

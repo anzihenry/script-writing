@@ -819,6 +819,8 @@ def markdown_scenes(text):
             table = separator = False
             continue
         if current is None:
+            if line.startswith('|'):
+                require(not any(x in {'对白ID', '说话者', '原文'} or re.fullmatch(r'EP\d{3,}-D\d{3,}', x) for x in markdown_header(line)), 'dialogue table must belong to a scene')
             continue
         labels = {'地点：': 'location_id', '人物：': 'character_ids', '道具：': 'prop_ids'}
         found = False

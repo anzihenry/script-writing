@@ -94,3 +94,9 @@ class DeliveryTest(unittest.TestCase):
         self.assertEqual(parsed[1]['prop_ids'], [])
         with self.assertRaises(p.Invalid): p.markdown_scenes(self.table().replace('| --- | --- | --- |', '| -- | -- | -- |'))
         with self.assertRaises(p.Invalid): p.markdown_scenes(self.table().replace('| 对白ID | 说话者 | 原文 |', '| ID | 角色 | 文本 |'))
+
+    def test_readable_orphan_dialogue_is_not_silently_ignored(self):
+        orphan = '| EP001-D002 | CHAR001 | 不得漏掉。 |\n'
+        for text in [self.table() + '\n' + orphan,
+                     '<!-- drama-table:v1 -->\n' + orphan + self.table().replace('<!-- drama-table:v1 -->\n', '')]:
+            with self.assertRaises(p.Invalid): p.markdown_scenes(text)

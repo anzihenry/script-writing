@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-25",
+  "temp_dir": "/tmp/script-writing-new-user-3NVCgh",
+  "read_sources": [
+    "README.md",
+    "skills/ai-short-drama-writing/references/operations.md",
+    "skills/ai-short-drama-writing/references/structured-records.md",
+    "fresh init-generated Markdown templates"
+  ],
+  "implementation_or_tests_read": false,
+  "legacy_append": {
+    "added": [
+      "EP002",
+      "EP003"
+    ],
+    "next_stage": "G3",
+    "next_scope": "EP002"
+  },
+  "checkpoint_recovery": {
+    "id": "NEWUSER-B001",
+    "changed_file": "brief.md",
+    "next": {
+      "stage": "G0",
+      "scope": "project",
+      "reasons": [
+        "brief: file changed since registration (STALE)"
+      ],
+      "skill": "ai-short-drama-brief",
+      "inputs": []
+    },
+    "changed_count": 19
+  },
+  "fresh_markdown": {
+    "parity": "MATCH",
+    "formats": {
+      "script": "markdown-table-v1",
+      "handoff": "markdown-table-v1"
+    },
+    "registered_artifacts": 7,
+    "bundle_exit": 0,
+    "overwrite_exit": 2,
+    "zip_unchanged": true,
+    "zip_sha256": "c04ba9cff17bf776ac0c72c1e18664dbfcd62c4852cfff8c19183859d8919493",
+    "delivery_count": 1
+  },
+  "blocking_documentation_gaps": [],
+  "result": "PASS_WITH_SCOPE_LIMITS",
+  "full_command_log": "/tmp/script-writing-new-user-3NVCgh/commands.json"
+}
