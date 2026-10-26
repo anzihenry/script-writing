@@ -1,0 +1,28 @@
+{
+  "status": "MATCH",
+  "reasons": [],
+  "formats": {
+    "script": "script-json",
+    "handoff": "handoff-json"
+  },
+  "coverage": [
+    "scene order",
+    "scene locations",
+    "character/prop references",
+    "dialogue order/IDs",
+    "speaker",
+    "exact text"
+  ],
+  "unverified": [
+    "action semantics",
+    "performance",
+    "unstructured prose consistency"
+  ],
+  "source": {
+    "id": "script_EP003",
+    "revision": "v2.0",
+    "sha256": "94893eb8d930aa4ef86e3361c4d2b136227cfef254627200766fc4b428d6107a"
+  }
+}
+
+exit=0

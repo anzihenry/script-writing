@@ -1,0 +1,182 @@
+{
+  "scope": "project",
+  "status": "STRUCTURE_READY",
+  "next": null,
+  "tasks": [],
+  "artifact_errors": {},
+  "checkpoint": {
+    "id": "B001",
+    "at": "2026-10-25T06:57:38.999462+00:00",
+    "scopes": [
+      "EP001"
+    ],
+    "snapshots": {
+      "brief": {
+        "kind": "brief",
+        "scope": "project",
+        "path": "brief.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea",
+        "depends_on": [],
+        "evidence": null
+      },
+      "bible": {
+        "kind": "bible",
+        "scope": "project",
+        "path": "bible.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514",
+        "depends_on": [
+          {
+            "id": "brief",
+            "revision": "v1.0",
+            "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+          }
+        ],
+        "evidence": null
+      },
+      "outline": {
+        "kind": "outline",
+        "scope": "project",
+        "path": "outline.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9",
+        "depends_on": [
+          {
+            "id": "brief",
+            "revision": "v1.0",
+            "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+          },
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+          }
+        ],
+        "evidence": null
+      },
+      "script_EP001": {
+        "kind": "script",
+        "scope": "EP001",
+        "path": "episodes/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "reviewed",
+        "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9"
+          }
+        ],
+        "evidence": "作者自审：reviews/EP001-v1.0.md，仅文字预制作范围。"
+      },
+      "continuity_EP001": {
+        "kind": "continuity",
+        "scope": "EP001",
+        "path": "continuity/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9"
+          }
+        ],
+        "evidence": null
+      },
+      "review_EP001": {
+        "kind": "review",
+        "scope": "EP001",
+        "path": "reviews/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "reviewed",
+        "sha256": "c71f7b1b0004646627f6a334b5e449eaae566d453c72bd6be8a6bd3ce568fee2",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9"
+          },
+          {
+            "id": "continuity_EP001",
+            "revision": "v1.0",
+            "sha256": "466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99"
+          }
+        ],
+        "evidence": "作者自审；见同范围 reviews 报告；文字预制作，未实测、未锁定。"
+      },
+      "handoff_EP001": {
+        "kind": "handoff",
+        "scope": "EP001",
+        "path": "handoff/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "9a5553c75f1dac0d3d6b0ac215e0419a430e179360ec04194b85f401ce22c3ea",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9"
+          },
+          {
+            "id": "review_EP001",
+            "revision": "v1.0",
+            "sha256": "c71f7b1b0004646627f6a334b5e449eaae566d453c72bd6be8a6bd3ce568fee2"
+          },
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+          },
+          {
+            "id": "continuity_EP001",
+            "revision": "v1.0",
+            "sha256": "466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99"
+          }
+        ],
+        "evidence": null
+      },
+      "export_EP001": {
+        "kind": "export",
+        "scope": "EP001",
+        "path": "handoff/EP001-v1.0.json",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "f33017387e0dd04398b290875271c77b12b0772966a93a19fecfe36975e04812",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9"
+          },
+          {
+            "id": "handoff_EP001",
+            "revision": "v1.0",
+            "sha256": "9a5553c75f1dac0d3d6b0ac215e0419a430e179360ec04194b85f401ce22c3ea"
+          }
+        ],
+        "evidence": null
+      }
+    },
+    "open_issues": [
+      "TIME-EP001"
+    ],
+    "next_entry": "继续 EP002 错编号试探",
+    "reread": "EP001-SC001-B007；钥匙右手、纸片桌面；CHAR001 不知对方身份"
+  },
+  "changed_since_checkpoint": [],
+  "quality": "Not inferred from structural readiness"
+}
+
+exit=0

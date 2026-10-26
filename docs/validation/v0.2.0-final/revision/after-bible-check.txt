@@ -1,0 +1,44 @@
+outline: dependency snapshot outdated: bible
+script_EP001: dependency snapshot outdated: bible
+script_EP001: dependency unusable: outline
+continuity_EP001: dependency unusable: script_EP001
+review_EP001: dependency unusable: script_EP001
+review_EP001: dependency unusable: continuity_EP001
+handoff_EP001: dependency unusable: script_EP001
+handoff_EP001: dependency unusable: review_EP001
+handoff_EP001: dependency snapshot outdated: bible
+handoff_EP001: dependency unusable: continuity_EP001
+export_EP001: dependency unusable: script_EP001
+export_EP001: dependency unusable: handoff_EP001
+script_EP002: dependency snapshot outdated: bible
+script_EP002: dependency unusable: outline
+script_EP002: dependency unusable: continuity_EP001
+continuity_EP002: dependency unusable: script_EP002
+review_EP002: dependency unusable: script_EP002
+review_EP002: dependency unusable: continuity_EP002
+handoff_EP002: dependency unusable: script_EP002
+handoff_EP002: dependency unusable: review_EP002
+handoff_EP002: dependency snapshot outdated: bible
+handoff_EP002: dependency unusable: continuity_EP002
+export_EP002: dependency unusable: script_EP002
+export_EP002: dependency unusable: handoff_EP002
+script_EP003: dependency snapshot outdated: bible
+script_EP003: dependency unusable: outline
+script_EP003: dependency unusable: continuity_EP002
+continuity_EP003: dependency unusable: script_EP003
+review_EP003: dependency unusable: script_EP003
+review_EP003: dependency unusable: continuity_EP003
+handoff_EP003: dependency unusable: script_EP003
+handoff_EP003: dependency unusable: review_EP003
+handoff_EP003: dependency snapshot outdated: bible
+handoff_EP003: dependency unusable: continuity_EP003
+export_EP003: dependency unusable: script_EP003
+export_EP003: dependency unusable: handoff_EP003
+season_review: dependency unusable: script_EP001
+season_review: dependency unusable: continuity_EP001
+season_review: dependency unusable: script_EP002
+season_review: dependency unusable: continuity_EP002
+season_review: dependency unusable: script_EP003
+season_review: dependency unusable: continuity_EP003
+
+exit=1

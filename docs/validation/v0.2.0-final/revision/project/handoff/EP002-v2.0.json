@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "project_id": "DEMO-RETURN-SEASON",
+  "episode_id": "EP002",
+  "revision": "v2.0",
+  "status": "reviewed",
+  "source_script": "episodes/EP002-v2.0.md",
+  "bible_revision": "v2.0",
+  "timing_basis": "未实测；7 块顺序预算共 60 秒，块内动作对白并行",
+  "lock_evidence": null,
+  "target_duration_seconds": {
+    "min": 55,
+    "max": 65
+  },
+  "assets": {
+    "characters": [
+      {
+        "id": "CHAR001",
+        "name": "林夏"
+      },
+      {
+        "id": "CHAR002",
+        "name": "来访者"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC001",
+        "name": "值班室"
+      }
+    ],
+    "props": [
+      {
+        "id": "PROP001",
+        "name": "铜钥匙"
+      },
+      {
+        "id": "PROP002",
+        "name": "登记簿及页角"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "id": "EP002-SC001",
+      "location_id": "LOC001",
+      "character_ids": [
+        "CHAR001",
+        "CHAR002"
+      ],
+      "prop_ids": [
+        "PROP001",
+        "PROP002"
+      ],
+      "time": "夜",
+      "entry_state": "承接沉默，门外终于回答来源。林夏仍拿着钥匙，盯着桌上纸片。",
+      "exit_state": "钥匙和纸片都在桌面登记簿旁。林夏确认对方主动提及登记簿，来源与身份待核查。她将纸片移回撕口旁，护在手下。",
+      "production_notes": [
+        "文字预制作；无当班前完整页记忆；不能补拍含正确编号的回忆镜头。",
+        "同夜值班室，CHAR002 仅画外；两静帧展示撕口关联，手部动作可切镜；未做样片。"
+      ],
+      "blocks": [
+        {
+          "id": "EP002-SC001-B001",
+          "duration_seconds": 6,
+          "action": "承接沉默，门外终于回答来源。林夏仍拿着钥匙，盯着桌上纸片。",
+          "dialogue": [
+            {
+              "id": "EP002-D001",
+              "speaker_id": "CHAR002",
+              "text": "楼梯口。都还你了，开门吧。",
+              "mode": "off_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B002",
+          "duration_seconds": 8,
+          "action": "她把无刻字钥匙放在登记簿旁，手指压住纸片，只问索纸缘由，不提纸片出处。",
+          "dialogue": [
+            {
+              "id": "EP002-D002",
+              "speaker_id": "CHAR001",
+              "text": "就一张纸，你急什么？",
+              "mode": "on_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B003",
+          "duration_seconds": 9,
+          "action": "门外脱口索要登记簿里剩下的纸。林夏看向缺页，再转向始终关闭的不透明门。",
+          "dialogue": [
+            {
+              "id": "EP002-D003",
+              "speaker_id": "CHAR002",
+              "text": "登记簿里剩下的，也给我。",
+              "mode": "off_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B004",
+          "duration_seconds": 8,
+          "action": "她抬眼看不透明门，没有开门，也没有说出对方身份。",
+          "dialogue": [],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B005",
+          "duration_seconds": 9,
+          "action": "她指出自己没有提过登记簿；说完停住，留出四秒等解释。",
+          "dialogue": [
+            {
+              "id": "EP002-D004",
+              "speaker_id": "CHAR001",
+              "text": "我没提登记簿。你怎么知道？",
+              "mode": "on_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B006",
+          "duration_seconds": 10,
+          "action": "对方撤回说法却再次索纸；林夏收拢纸片，不把撤回当作解释。",
+          "dialogue": [
+            {
+              "id": "EP002-D005",
+              "speaker_id": "CHAR002",
+              "text": "我说错了。纸先给我。",
+              "mode": "off_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B007",
+          "duration_seconds": 10,
+          "action": "钥匙和纸片都在桌面登记簿旁。林夏确认对方主动提及登记簿，来源与身份待核查。她将纸片移回撕口旁，护在手下。",
+          "dialogue": [],
+          "sound": [],
+          "screen_text": []
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "配音时长未实测",
+    "撕口辨识与动作未做样片"
+  ]
+}

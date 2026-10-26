@@ -1,0 +1,585 @@
+{
+  "scope": "project",
+  "status": "NEEDS_WORK",
+  "next": {
+    "stage": "G0",
+    "scope": "project",
+    "reasons": [
+      "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联"
+    ],
+    "skill": "ai-short-drama-brief",
+    "inputs": []
+  },
+  "tasks": [
+    {
+      "stage": "G0",
+      "scope": "project",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联"
+      ],
+      "skill": "ai-short-drama-brief",
+      "inputs": []
+    },
+    {
+      "stage": "G1",
+      "scope": "project",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联"
+      ],
+      "skill": "ai-short-drama-bible",
+      "inputs": [
+        {
+          "kind": "brief",
+          "scope": "project",
+          "id": "brief"
+        }
+      ]
+    },
+    {
+      "stage": "G2",
+      "scope": "project",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联",
+        "outline: dependency snapshot outdated: bible"
+      ],
+      "skill": "ai-short-drama-outline",
+      "inputs": [
+        {
+          "kind": "brief",
+          "scope": "project",
+          "id": "brief"
+        },
+        {
+          "kind": "bible",
+          "scope": "project",
+          "id": "bible"
+        }
+      ]
+    },
+    {
+      "stage": "G3",
+      "scope": "EP001",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联",
+        "continuity_EP001: dependency unusable: script_EP001",
+        "script_EP001: dependency snapshot outdated: bible",
+        "script_EP001: dependency unusable: outline"
+      ],
+      "skill": "ai-short-drama-episode",
+      "inputs": [
+        {
+          "kind": "bible",
+          "scope": "project",
+          "id": "bible"
+        },
+        {
+          "kind": "outline",
+          "scope": "project",
+          "id": "outline"
+        },
+        {
+          "kind": "script",
+          "scope": "EP001",
+          "id": "script_EP001"
+        }
+      ]
+    },
+    {
+      "stage": "G4",
+      "scope": "EP001",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联",
+        "review_EP001: dependency unusable: continuity_EP001",
+        "review_EP001: dependency unusable: script_EP001"
+      ],
+      "skill": "ai-short-drama-review",
+      "inputs": [
+        {
+          "kind": "script",
+          "scope": "EP001",
+          "id": "script_EP001"
+        },
+        {
+          "kind": "continuity",
+          "scope": "EP001",
+          "id": "continuity_EP001"
+        }
+      ]
+    },
+    {
+      "stage": "G5",
+      "scope": "EP001",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联",
+        "handoff_EP001: dependency snapshot outdated: bible",
+        "handoff_EP001: dependency unusable: continuity_EP001",
+        "handoff_EP001: dependency unusable: review_EP001",
+        "handoff_EP001: dependency unusable: script_EP001"
+      ],
+      "skill": "ai-short-drama-handoff",
+      "inputs": [
+        {
+          "kind": "script",
+          "scope": "EP001",
+          "id": "script_EP001"
+        },
+        {
+          "kind": "review",
+          "scope": "EP001",
+          "id": "review_EP001"
+        },
+        {
+          "kind": "bible",
+          "scope": "project",
+          "id": "bible"
+        },
+        {
+          "kind": "continuity",
+          "scope": "EP001",
+          "id": "continuity_EP001"
+        }
+      ]
+    },
+    {
+      "stage": "G3",
+      "scope": "EP002",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联",
+        "continuity_EP002: dependency unusable: script_EP002",
+        "script_EP002: dependency snapshot outdated: bible",
+        "script_EP002: dependency unusable: continuity_EP001",
+        "script_EP002: dependency unusable: outline"
+      ],
+      "skill": "ai-short-drama-episode",
+      "inputs": [
+        {
+          "kind": "bible",
+          "scope": "project",
+          "id": "bible"
+        },
+        {
+          "kind": "outline",
+          "scope": "project",
+          "id": "outline"
+        },
+        {
+          "kind": "continuity",
+          "scope": "EP001",
+          "id": "continuity_EP001"
+        },
+        {
+          "kind": "script",
+          "scope": "EP002",
+          "id": "script_EP002"
+        }
+      ]
+    },
+    {
+      "stage": "G4",
+      "scope": "EP002",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联",
+        "review_EP002: dependency unusable: continuity_EP002",
+        "review_EP002: dependency unusable: script_EP002"
+      ],
+      "skill": "ai-short-drama-review",
+      "inputs": [
+        {
+          "kind": "script",
+          "scope": "EP002",
+          "id": "script_EP002"
+        },
+        {
+          "kind": "continuity",
+          "scope": "EP002",
+          "id": "continuity_EP002"
+        }
+      ]
+    },
+    {
+      "stage": "G5",
+      "scope": "EP002",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联",
+        "handoff_EP002: dependency snapshot outdated: bible",
+        "handoff_EP002: dependency unusable: continuity_EP002",
+        "handoff_EP002: dependency unusable: review_EP002",
+        "handoff_EP002: dependency unusable: script_EP002"
+      ],
+      "skill": "ai-short-drama-handoff",
+      "inputs": [
+        {
+          "kind": "script",
+          "scope": "EP002",
+          "id": "script_EP002"
+        },
+        {
+          "kind": "review",
+          "scope": "EP002",
+          "id": "review_EP002"
+        },
+        {
+          "kind": "bible",
+          "scope": "project",
+          "id": "bible"
+        },
+        {
+          "kind": "continuity",
+          "scope": "EP002",
+          "id": "continuity_EP002"
+        }
+      ]
+    },
+    {
+      "stage": "G3",
+      "scope": "EP003",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联",
+        "continuity_EP003: dependency unusable: script_EP003",
+        "script_EP003: dependency snapshot outdated: bible",
+        "script_EP003: dependency unusable: continuity_EP002",
+        "script_EP003: dependency unusable: outline"
+      ],
+      "skill": "ai-short-drama-episode",
+      "inputs": [
+        {
+          "kind": "bible",
+          "scope": "project",
+          "id": "bible"
+        },
+        {
+          "kind": "outline",
+          "scope": "project",
+          "id": "outline"
+        },
+        {
+          "kind": "continuity",
+          "scope": "EP002",
+          "id": "continuity_EP002"
+        },
+        {
+          "kind": "script",
+          "scope": "EP003",
+          "id": "script_EP003"
+        }
+      ]
+    },
+    {
+      "stage": "G4",
+      "scope": "EP003",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联",
+        "review_EP003: dependency unusable: continuity_EP003",
+        "review_EP003: dependency unusable: script_EP003"
+      ],
+      "skill": "ai-short-drama-review",
+      "inputs": [
+        {
+          "kind": "script",
+          "scope": "EP003",
+          "id": "script_EP003"
+        },
+        {
+          "kind": "continuity",
+          "scope": "EP003",
+          "id": "continuity_EP003"
+        }
+      ]
+    },
+    {
+      "stage": "G5",
+      "scope": "EP003",
+      "reasons": [
+        "Q-NEW-001: unresolved P1: 新要求取消完整登记页先验，故意报错与知情确认失去依据；须实质重建来访者缺页关联",
+        "handoff_EP003: dependency snapshot outdated: bible",
+        "handoff_EP003: dependency unusable: continuity_EP003",
+        "handoff_EP003: dependency unusable: review_EP003",
+        "handoff_EP003: dependency unusable: script_EP003"
+      ],
+      "skill": "ai-short-drama-handoff",
+      "inputs": [
+        {
+          "kind": "script",
+          "scope": "EP003",
+          "id": "script_EP003"
+        },
+        {
+          "kind": "review",
+          "scope": "EP003",
+          "id": "review_EP003"
+        },
+        {
+          "kind": "bible",
+          "scope": "project",
+          "id": "bible"
+        },
+        {
+          "kind": "continuity",
+          "scope": "EP003",
+          "id": "continuity_EP003"
+        }
+      ]
+    }
+  ],
+  "artifact_errors": {
+    "outline": [
+      "dependency snapshot outdated: bible"
+    ],
+    "script_EP001": [
+      "dependency snapshot outdated: bible",
+      "dependency unusable: outline"
+    ],
+    "continuity_EP001": [
+      "dependency unusable: script_EP001"
+    ],
+    "review_EP001": [
+      "dependency unusable: script_EP001",
+      "dependency unusable: continuity_EP001"
+    ],
+    "handoff_EP001": [
+      "dependency unusable: script_EP001",
+      "dependency unusable: review_EP001",
+      "dependency snapshot outdated: bible",
+      "dependency unusable: continuity_EP001"
+    ],
+    "export_EP001": [
+      "dependency unusable: script_EP001",
+      "dependency unusable: handoff_EP001"
+    ],
+    "script_EP002": [
+      "dependency snapshot outdated: bible",
+      "dependency unusable: outline",
+      "dependency unusable: continuity_EP001"
+    ],
+    "continuity_EP002": [
+      "dependency unusable: script_EP002"
+    ],
+    "review_EP002": [
+      "dependency unusable: script_EP002",
+      "dependency unusable: continuity_EP002"
+    ],
+    "handoff_EP002": [
+      "dependency unusable: script_EP002",
+      "dependency unusable: review_EP002",
+      "dependency snapshot outdated: bible",
+      "dependency unusable: continuity_EP002"
+    ],
+    "export_EP002": [
+      "dependency unusable: script_EP002",
+      "dependency unusable: handoff_EP002"
+    ],
+    "script_EP003": [
+      "dependency snapshot outdated: bible",
+      "dependency unusable: outline",
+      "dependency unusable: continuity_EP002"
+    ],
+    "continuity_EP003": [
+      "dependency unusable: script_EP003"
+    ],
+    "review_EP003": [
+      "dependency unusable: script_EP003",
+      "dependency unusable: continuity_EP003"
+    ],
+    "handoff_EP003": [
+      "dependency unusable: script_EP003",
+      "dependency unusable: review_EP003",
+      "dependency snapshot outdated: bible",
+      "dependency unusable: continuity_EP003"
+    ],
+    "export_EP003": [
+      "dependency unusable: script_EP003",
+      "dependency unusable: handoff_EP003"
+    ],
+    "season_review": [
+      "dependency unusable: script_EP001",
+      "dependency unusable: continuity_EP001",
+      "dependency unusable: script_EP002",
+      "dependency unusable: continuity_EP002",
+      "dependency unusable: script_EP003",
+      "dependency unusable: continuity_EP003"
+    ]
+  },
+  "checkpoint": {
+    "id": "B001",
+    "at": "2026-10-25T06:57:38.999462+00:00",
+    "scopes": [
+      "EP001"
+    ],
+    "snapshots": {
+      "brief": {
+        "kind": "brief",
+        "scope": "project",
+        "path": "brief.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea",
+        "depends_on": [],
+        "evidence": null
+      },
+      "bible": {
+        "kind": "bible",
+        "scope": "project",
+        "path": "bible.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514",
+        "depends_on": [
+          {
+            "id": "brief",
+            "revision": "v1.0",
+            "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+          }
+        ],
+        "evidence": null
+      },
+      "outline": {
+        "kind": "outline",
+        "scope": "project",
+        "path": "outline.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9",
+        "depends_on": [
+          {
+            "id": "brief",
+            "revision": "v1.0",
+            "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+          },
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+          }
+        ],
+        "evidence": null
+      },
+      "script_EP001": {
+        "kind": "script",
+        "scope": "EP001",
+        "path": "episodes/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "reviewed",
+        "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9"
+          }
+        ],
+        "evidence": "作者自审：reviews/EP001-v1.0.md，仅文字预制作范围。"
+      },
+      "continuity_EP001": {
+        "kind": "continuity",
+        "scope": "EP001",
+        "path": "continuity/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9"
+          }
+        ],
+        "evidence": null
+      },
+      "review_EP001": {
+        "kind": "review",
+        "scope": "EP001",
+        "path": "reviews/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "reviewed",
+        "sha256": "c71f7b1b0004646627f6a334b5e449eaae566d453c72bd6be8a6bd3ce568fee2",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9"
+          },
+          {
+            "id": "continuity_EP001",
+            "revision": "v1.0",
+            "sha256": "466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99"
+          }
+        ],
+        "evidence": "作者自审；见同范围 reviews 报告；文字预制作，未实测、未锁定。"
+      },
+      "handoff_EP001": {
+        "kind": "handoff",
+        "scope": "EP001",
+        "path": "handoff/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "9a5553c75f1dac0d3d6b0ac215e0419a430e179360ec04194b85f401ce22c3ea",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9"
+          },
+          {
+            "id": "review_EP001",
+            "revision": "v1.0",
+            "sha256": "c71f7b1b0004646627f6a334b5e449eaae566d453c72bd6be8a6bd3ce568fee2"
+          },
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+          },
+          {
+            "id": "continuity_EP001",
+            "revision": "v1.0",
+            "sha256": "466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99"
+          }
+        ],
+        "evidence": null
+      },
+      "export_EP001": {
+        "kind": "export",
+        "scope": "EP001",
+        "path": "handoff/EP001-v1.0.json",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "f33017387e0dd04398b290875271c77b12b0772966a93a19fecfe36975e04812",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9"
+          },
+          {
+            "id": "handoff_EP001",
+            "revision": "v1.0",
+            "sha256": "9a5553c75f1dac0d3d6b0ac215e0419a430e179360ec04194b85f401ce22c3ea"
+          }
+        ],
+        "evidence": null
+      }
+    },
+    "open_issues": [
+      "TIME-EP001"
+    ],
+    "next_entry": "继续 EP002 错编号试探",
+    "reread": "EP001-SC001-B007；钥匙右手、纸片桌面；CHAR001 不知对方身份"
+  },
+  "changed_since_checkpoint": [
+    "bible",
+    "outline",
+    "script_EP001",
+    "continuity_EP001",
+    "review_EP001",
+    "handoff_EP001",
+    "export_EP001"
+  ],
+  "quality": "Not inferred from structural readiness"
+}
+
+exit=0

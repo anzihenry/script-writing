@@ -1,0 +1,117 @@
+{
+  "outline.md": {
+    "source_sha256": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9",
+    "copy_path": "project/outline.md",
+    "copy_sha256": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9"
+  },
+  "bible.md": {
+    "source_sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514",
+    "copy_path": "project/bible.md",
+    "copy_sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+  },
+  "changes.md": {
+    "source_sha256": "89e31576db69afe7ed5e8d5e5a07306334a063740305da5dd0cba589135978e4",
+    "copy_path": "project/changes-v1.0.md",
+    "copy_sha256": "89e31576db69afe7ed5e8d5e5a07306334a063740305da5dd0cba589135978e4"
+  },
+  "walkthrough.md": {
+    "source_sha256": "00e2e7efc6b9edf09387986e321e6364a23ae98bd882db55afb05ab466aaad36",
+    "copy_path": "project/walkthrough.md",
+    "copy_sha256": "00e2e7efc6b9edf09387986e321e6364a23ae98bd882db55afb05ab466aaad36"
+  },
+  "brief.md": {
+    "source_sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea",
+    "copy_path": "project/brief.md",
+    "copy_sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+  },
+  "feedback.md": {
+    "source_sha256": "6028f059edc0d1ac28a9b8cdc3ee201d2fd48f019e570179c27f5face5c2e3c1",
+    "copy_path": "project/feedback-v1.0.md",
+    "copy_sha256": "6028f059edc0d1ac28a9b8cdc3ee201d2fd48f019e570179c27f5face5c2e3c1"
+  },
+  "decisions.md": {
+    "source_sha256": "0af1b9ccf0191b22c83ce15d32b472ed01c9f032726f52a34fc9d1b0a31f6df2",
+    "copy_path": "project/decisions-v1.0.md",
+    "copy_sha256": "0af1b9ccf0191b22c83ce15d32b472ed01c9f032726f52a34fc9d1b0a31f6df2"
+  },
+  "continuity/EP001-v1.0.md": {
+    "source_sha256": "466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99",
+    "copy_path": "project/continuity/EP001-v1.0.md",
+    "copy_sha256": "466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99"
+  },
+  "continuity/EP003-v1.0.md": {
+    "source_sha256": "26475d74923f762fc5a4df965bdd115d7af0d02ecded7bc945b5a1745e2a1bf5",
+    "copy_path": "project/continuity/EP003-v1.0.md",
+    "copy_sha256": "26475d74923f762fc5a4df965bdd115d7af0d02ecded7bc945b5a1745e2a1bf5"
+  },
+  "continuity/EP002-v1.0.md": {
+    "source_sha256": "43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d",
+    "copy_path": "project/continuity/EP002-v1.0.md",
+    "copy_sha256": "43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d"
+  },
+  "handoff/EP001-v1.0.json": {
+    "source_sha256": "f33017387e0dd04398b290875271c77b12b0772966a93a19fecfe36975e04812",
+    "copy_path": "project/handoff/EP001-v1.0.json",
+    "copy_sha256": "f33017387e0dd04398b290875271c77b12b0772966a93a19fecfe36975e04812"
+  },
+  "handoff/EP001-v1.0.md": {
+    "source_sha256": "9a5553c75f1dac0d3d6b0ac215e0419a430e179360ec04194b85f401ce22c3ea",
+    "copy_path": "project/handoff/EP001-v1.0.md",
+    "copy_sha256": "9a5553c75f1dac0d3d6b0ac215e0419a430e179360ec04194b85f401ce22c3ea"
+  },
+  "handoff/EP003-v1.0.json": {
+    "source_sha256": "b5f7345752718eb69e182fbc3c01ecc5fcd3d612c87c632d9ff617a5bc4aa339",
+    "copy_path": "project/handoff/EP003-v1.0.json",
+    "copy_sha256": "b5f7345752718eb69e182fbc3c01ecc5fcd3d612c87c632d9ff617a5bc4aa339"
+  },
+  "handoff/EP003-v1.0.md": {
+    "source_sha256": "46a6066d5fbf81164db4381e4cec7a75b105e7bdc9546fc8b8e80c558673ffd9",
+    "copy_path": "project/handoff/EP003-v1.0.md",
+    "copy_sha256": "46a6066d5fbf81164db4381e4cec7a75b105e7bdc9546fc8b8e80c558673ffd9"
+  },
+  "handoff/EP002-v1.0.md": {
+    "source_sha256": "ec5e6079ab0bd31f0dfe6a4c7ac9038730a932765e08fbae4b60c525e022d841",
+    "copy_path": "project/handoff/EP002-v1.0.md",
+    "copy_sha256": "ec5e6079ab0bd31f0dfe6a4c7ac9038730a932765e08fbae4b60c525e022d841"
+  },
+  "handoff/EP002-v1.0.json": {
+    "source_sha256": "0bbf748ec43383cd264a5fec9207428cfc8b19dc7772feec075cc7cbd705980d",
+    "copy_path": "project/handoff/EP002-v1.0.json",
+    "copy_sha256": "0bbf748ec43383cd264a5fec9207428cfc8b19dc7772feec075cc7cbd705980d"
+  },
+  "episodes/EP001-v1.0.md": {
+    "source_sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9",
+    "copy_path": "project/episodes/EP001-v1.0.md",
+    "copy_sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9"
+  },
+  "episodes/EP003-v1.0.md": {
+    "source_sha256": "17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd",
+    "copy_path": "project/episodes/EP003-v1.0.md",
+    "copy_sha256": "17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd"
+  },
+  "episodes/EP002-v1.0.md": {
+    "source_sha256": "13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e",
+    "copy_path": "project/episodes/EP002-v1.0.md",
+    "copy_sha256": "13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e"
+  },
+  "reviews/EP001-v1.0.md": {
+    "source_sha256": "c71f7b1b0004646627f6a334b5e449eaae566d453c72bd6be8a6bd3ce568fee2",
+    "copy_path": "project/reviews/EP001-v1.0.md",
+    "copy_sha256": "c71f7b1b0004646627f6a334b5e449eaae566d453c72bd6be8a6bd3ce568fee2"
+  },
+  "reviews/season-v1.0.md": {
+    "source_sha256": "7c1f6a5da0c2c95054ec7b246bc32dddcf95133e29fcfea90010164f5b0cc8ee",
+    "copy_path": "project/reviews/season-v1.0.md",
+    "copy_sha256": "7c1f6a5da0c2c95054ec7b246bc32dddcf95133e29fcfea90010164f5b0cc8ee"
+  },
+  "reviews/EP003-v1.0.md": {
+    "source_sha256": "4e39da3d4f6bdfd3a302db9293820ef319877d39a5d35324cfc79854a9120354",
+    "copy_path": "project/reviews/EP003-v1.0.md",
+    "copy_sha256": "4e39da3d4f6bdfd3a302db9293820ef319877d39a5d35324cfc79854a9120354"
+  },
+  "reviews/EP002-v1.0.md": {
+    "source_sha256": "793009b0b8ec8ef4b9f15a01b1ab88ef2dbdfdbc585e8882ff0cc75484e6cf19",
+    "copy_path": "project/reviews/EP002-v1.0.md",
+    "copy_sha256": "793009b0b8ec8ef4b9f15a01b1ab88ef2dbdfdbc585e8882ff0cc75484e6cf19"
+  }
+}

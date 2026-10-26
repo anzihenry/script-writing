@@ -1,0 +1,248 @@
+{
+  "through": "EP003",
+  "status": "RECORDED",
+  "coverage": [
+    "EP001",
+    "EP002",
+    "EP003"
+  ],
+  "unknown": [],
+  "conflicts": [],
+  "states": [
+    {
+      "object": "PROP001",
+      "field": "holder",
+      "status": "RECORDED",
+      "value": "登记簿封面",
+      "evidence": {
+        "object": "PROP001",
+        "field": "holder",
+        "before": "桌面",
+        "after": "登记簿封面",
+        "location": "EP003-SC001",
+        "quote": "钥匙压在闭合登记簿上",
+        "temporal": "current",
+        "episode": "EP003",
+        "script_revision": "v2.0",
+        "script_sha256": "94893eb8d930aa4ef86e3361c4d2b136227cfef254627200766fc4b428d6107a"
+      }
+    },
+    {
+      "object": "PROP002",
+      "field": "page",
+      "status": "RECORDED",
+      "value": "簿内",
+      "evidence": {
+        "object": "PROP002",
+        "field": "page",
+        "before": "桌面",
+        "after": "簿内",
+        "location": "EP003-SC001",
+        "quote": "纸片留在簿内",
+        "temporal": "current",
+        "episode": "EP003",
+        "script_revision": "v2.0",
+        "script_sha256": "94893eb8d930aa4ef86e3361c4d2b136227cfef254627200766fc4b428d6107a"
+      }
+    },
+    {
+      "object": "CHAR001",
+      "field": "knows_record",
+      "status": "RECORDED",
+      "value": "确认对方主动提及登记簿，来源与身份待核查",
+      "evidence": {
+        "object": "CHAR001",
+        "field": "knows_record",
+        "before": "只确认撕口关联",
+        "after": "确认对方主动提及登记簿，来源与身份待核查",
+        "location": "EP002-SC001",
+        "quote": "林夏确认对方主动提及登记簿，来源与身份待核查",
+        "temporal": "current",
+        "episode": "EP002",
+        "script_revision": "v2.0",
+        "script_sha256": "c7b90b01f2ed06c477f8583e47c2a07ab7ae732eb06d90e2453558240d24156f"
+      }
+    },
+    {
+      "object": "AUDIENCE",
+      "field": "visitor_intent",
+      "status": "RECORDED",
+      "value": "索纸为首要目的",
+      "evidence": {
+        "object": "AUDIENCE",
+        "field": "visitor_intent",
+        "before": "异常索纸",
+        "after": "索纸为首要目的",
+        "location": "EP003-SC001",
+        "quote": "钥匙你留着，纸给我就走。",
+        "temporal": "current",
+        "episode": "EP003",
+        "script_revision": "v2.0",
+        "script_sha256": "94893eb8d930aa4ef86e3361c4d2b136227cfef254627200766fc4b428d6107a"
+      }
+    }
+  ],
+  "history": [
+    {
+      "object": "PROP001",
+      "field": "holder",
+      "before": null,
+      "after": "CHAR001",
+      "location": "EP001-SC001",
+      "quote": "钥匙在林夏右手",
+      "temporal": "current",
+      "episode": "EP001",
+      "script_revision": "v2.0",
+      "script_sha256": "d2568d0f324882d26a2eb90b3493e5b6dd8ebaa706046af2afddc99f912def2d"
+    },
+    {
+      "object": "PROP002",
+      "field": "page",
+      "before": null,
+      "after": "桌面",
+      "location": "EP001-SC001",
+      "quote": "登记簿和纸片在桌面",
+      "temporal": "current",
+      "episode": "EP001",
+      "script_revision": "v2.0",
+      "script_sha256": "d2568d0f324882d26a2eb90b3493e5b6dd8ebaa706046af2afddc99f912def2d"
+    },
+    {
+      "object": "CHAR001",
+      "field": "knows_record",
+      "before": null,
+      "after": "只确认撕口关联",
+      "location": "EP001-SC001",
+      "quote": "两者吻合",
+      "temporal": "current",
+      "episode": "EP001",
+      "script_revision": "v2.0",
+      "script_sha256": "d2568d0f324882d26a2eb90b3493e5b6dd8ebaa706046af2afddc99f912def2d"
+    },
+    {
+      "object": "AUDIENCE",
+      "field": "visitor_intent",
+      "before": null,
+      "after": "异常索纸",
+      "location": "EP001-SC001",
+      "quote": "纸也还我，别弄丢了。",
+      "temporal": "current",
+      "episode": "EP001",
+      "script_revision": "v2.0",
+      "script_sha256": "d2568d0f324882d26a2eb90b3493e5b6dd8ebaa706046af2afddc99f912def2d"
+    },
+    {
+      "object": "PROP001",
+      "field": "holder",
+      "before": "CHAR001",
+      "after": "桌面",
+      "location": "EP002-SC001",
+      "quote": "钥匙和纸片都在桌面",
+      "temporal": "current",
+      "episode": "EP002",
+      "script_revision": "v2.0",
+      "script_sha256": "c7b90b01f2ed06c477f8583e47c2a07ab7ae732eb06d90e2453558240d24156f"
+    },
+    {
+      "object": "CHAR001",
+      "field": "knows_record",
+      "before": "只确认撕口关联",
+      "after": "确认对方主动提及登记簿，来源与身份待核查",
+      "location": "EP002-SC001",
+      "quote": "林夏确认对方主动提及登记簿，来源与身份待核查",
+      "temporal": "current",
+      "episode": "EP002",
+      "script_revision": "v2.0",
+      "script_sha256": "c7b90b01f2ed06c477f8583e47c2a07ab7ae732eb06d90e2453558240d24156f"
+    },
+    {
+      "object": "PROP001",
+      "field": "holder",
+      "before": "桌面",
+      "after": "登记簿封面",
+      "location": "EP003-SC001",
+      "quote": "钥匙压在闭合登记簿上",
+      "temporal": "current",
+      "episode": "EP003",
+      "script_revision": "v2.0",
+      "script_sha256": "94893eb8d930aa4ef86e3361c4d2b136227cfef254627200766fc4b428d6107a"
+    },
+    {
+      "object": "PROP002",
+      "field": "page",
+      "before": "桌面",
+      "after": "簿内",
+      "location": "EP003-SC001",
+      "quote": "纸片留在簿内",
+      "temporal": "current",
+      "episode": "EP003",
+      "script_revision": "v2.0",
+      "script_sha256": "94893eb8d930aa4ef86e3361c4d2b136227cfef254627200766fc4b428d6107a"
+    },
+    {
+      "object": "AUDIENCE",
+      "field": "visitor_intent",
+      "before": "异常索纸",
+      "after": "索纸为首要目的",
+      "location": "EP003-SC001",
+      "quote": "钥匙你留着，纸给我就走。",
+      "temporal": "current",
+      "episode": "EP003",
+      "script_revision": "v2.0",
+      "script_sha256": "94893eb8d930aa4ef86e3361c4d2b136227cfef254627200766fc4b428d6107a"
+    }
+  ],
+  "foreshadows": [
+    {
+      "id": "F001",
+      "plant": "EP001",
+      "payoff": "EP002",
+      "status": "paid",
+      "history": [
+        {
+          "id": "F001",
+          "status": "planted",
+          "location": "EP001-SC001",
+          "quote": "两者吻合",
+          "episode": "EP001"
+        },
+        {
+          "id": "F001",
+          "status": "paid",
+          "location": "EP002-SC001",
+          "quote": "登记簿里剩下的，也给我。",
+          "episode": "EP002"
+        }
+      ],
+      "due": true,
+      "assessment": "RECORDED"
+    },
+    {
+      "id": "F002",
+      "plant": "EP001",
+      "payoff": "EP003",
+      "status": "paid",
+      "history": [
+        {
+          "id": "F002",
+          "status": "planted",
+          "location": "EP001-SC001",
+          "quote": "纸也还我，别弄丢了。",
+          "episode": "EP001"
+        },
+        {
+          "id": "F002",
+          "status": "paid",
+          "location": "EP003-SC001",
+          "quote": "钥匙你留着，纸给我就走。",
+          "episode": "EP003"
+        }
+      ],
+      "due": true,
+      "assessment": "RECORDED"
+    }
+  ],
+  "limitation": "Evidence existence checked; semantic extraction requires review"
+}
+
+exit=0

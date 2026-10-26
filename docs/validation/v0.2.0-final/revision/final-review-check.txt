@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "full_season": true,
+  "episodes": [
+    "EP001",
+    "EP002",
+    "EP003"
+  ],
+  "method": "执行作者 Codex 自审；逐集逐块新旧对照、设定/规划/连续性/交接复核；非独立审稿，未实测",
+  "dimensions": {
+    "character_arc": {
+      "status": "pass",
+      "evidence": "EP001 隔门收物→EP002-D002 主动问索纸动机、D004 当面指出说漏→EP003-B004 不顾制止按键；从谨慎转为守证据。"
+    },
+    "escalation": {
+      "status": "pass",
+      "evidence": "EP001-D005 索纸→EP002-D003 进一步索登记簿里剩下的纸，来源关联暴露→EP003-D002 放弃钥匙仍索纸；损失从不开门延伸到拒交证据。"
+    },
+    "repetition": {
+      "status": "pass",
+      "evidence": "EP001 比对物理撕口，EP002 通过开放问话触发信息泄露，EP003 拒交并呼叫；同室重复但行动、证据和结果各不同。"
+    },
+    "information": {
+      "status": "pass",
+      "evidence": "林夏无完整页先验；EP001 只对合撕口。EP002-D003 对方首先说登记簿，D004 才质问；两集此前林夏未说出处，门未开。B007 仅确认主动提及，不知道编号或真实身份。"
+    },
+    "foreshadows": {
+      "status": "pass",
+      "evidence": "F001 EP001-B006 对合撕口，在 EP002-D003 未经提示索取登记簿剩纸得到关联回报；F002 EP001-D005 索纸，在 EP003-D002 放弃钥匙只要纸兑现。"
+    },
+    "ending": {
+      "status": "pass",
+      "evidence": "EP003-B003 留纸在簿内钥匙压封面、B004 按原有固定呼叫器、B005 未接通；保住证据的承诺完成，身份责任待核查，没有新救援或第三人。"
+    }
+  },
+  "blocking_issues": [],
+  "limitation": "Coverage declared by reviewer; semantic truth not machine-certified"
+}
+
+exit=0

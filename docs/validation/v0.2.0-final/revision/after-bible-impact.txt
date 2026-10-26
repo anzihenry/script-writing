@@ -1,0 +1,265 @@
+{
+  "source": "bible",
+  "order": [
+    {
+      "id": "bible",
+      "scope": "project",
+      "kind": "bible",
+      "relation": "source",
+      "errors": [],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "outline",
+      "scope": "project",
+      "kind": "outline",
+      "relation": "direct",
+      "errors": [
+        "dependency snapshot outdated: bible"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "script_EP001",
+      "scope": "EP001",
+      "kind": "script",
+      "relation": "direct",
+      "errors": [
+        "dependency snapshot outdated: bible",
+        "dependency unusable: outline"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "continuity_EP001",
+      "scope": "EP001",
+      "kind": "continuity",
+      "relation": "transitive",
+      "errors": [
+        "dependency unusable: script_EP001"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "review_EP001",
+      "scope": "EP001",
+      "kind": "review",
+      "relation": "transitive",
+      "errors": [
+        "dependency unusable: script_EP001",
+        "dependency unusable: continuity_EP001"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "handoff_EP001",
+      "scope": "EP001",
+      "kind": "handoff",
+      "relation": "direct",
+      "errors": [
+        "dependency unusable: script_EP001",
+        "dependency unusable: review_EP001",
+        "dependency snapshot outdated: bible",
+        "dependency unusable: continuity_EP001"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "export_EP001",
+      "scope": "EP001",
+      "kind": "export",
+      "relation": "transitive",
+      "errors": [
+        "dependency unusable: script_EP001",
+        "dependency unusable: handoff_EP001"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "script_EP002",
+      "scope": "EP002",
+      "kind": "script",
+      "relation": "direct",
+      "errors": [
+        "dependency snapshot outdated: bible",
+        "dependency unusable: outline",
+        "dependency unusable: continuity_EP001"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "continuity_EP002",
+      "scope": "EP002",
+      "kind": "continuity",
+      "relation": "transitive",
+      "errors": [
+        "dependency unusable: script_EP002"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "review_EP002",
+      "scope": "EP002",
+      "kind": "review",
+      "relation": "transitive",
+      "errors": [
+        "dependency unusable: script_EP002",
+        "dependency unusable: continuity_EP002"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "handoff_EP002",
+      "scope": "EP002",
+      "kind": "handoff",
+      "relation": "direct",
+      "errors": [
+        "dependency unusable: script_EP002",
+        "dependency unusable: review_EP002",
+        "dependency snapshot outdated: bible",
+        "dependency unusable: continuity_EP002"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "export_EP002",
+      "scope": "EP002",
+      "kind": "export",
+      "relation": "transitive",
+      "errors": [
+        "dependency unusable: script_EP002",
+        "dependency unusable: handoff_EP002"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "script_EP003",
+      "scope": "EP003",
+      "kind": "script",
+      "relation": "direct",
+      "errors": [
+        "dependency snapshot outdated: bible",
+        "dependency unusable: outline",
+        "dependency unusable: continuity_EP002"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "continuity_EP003",
+      "scope": "EP003",
+      "kind": "continuity",
+      "relation": "transitive",
+      "errors": [
+        "dependency unusable: script_EP003"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "review_EP003",
+      "scope": "EP003",
+      "kind": "review",
+      "relation": "transitive",
+      "errors": [
+        "dependency unusable: script_EP003",
+        "dependency unusable: continuity_EP003"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "handoff_EP003",
+      "scope": "EP003",
+      "kind": "handoff",
+      "relation": "direct",
+      "errors": [
+        "dependency unusable: script_EP003",
+        "dependency unusable: review_EP003",
+        "dependency snapshot outdated: bible",
+        "dependency unusable: continuity_EP003"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "export_EP003",
+      "scope": "EP003",
+      "kind": "export",
+      "relation": "transitive",
+      "errors": [
+        "dependency unusable: script_EP003",
+        "dependency unusable: handoff_EP003"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    },
+    {
+      "id": "season_review",
+      "scope": "project",
+      "kind": "season_review",
+      "relation": "transitive",
+      "errors": [
+        "dependency unusable: script_EP001",
+        "dependency unusable: continuity_EP001",
+        "dependency unusable: script_EP002",
+        "dependency unusable: continuity_EP002",
+        "dependency unusable: script_EP003",
+        "dependency unusable: continuity_EP003"
+      ],
+      "disposition": {
+        "decision": "pending"
+      },
+      "content_diff": "Use retained old/new files; registry snapshots are not content backups"
+    }
+  ],
+  "limitation": "File-level dependency impact; semantic review still required"
+}
+
+exit=0

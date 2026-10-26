@@ -1,0 +1,142 @@
+{
+  "review_id": "revision-independent-review",
+  "date": "2026-10-26",
+  "reviewer": "Codex revision_independent_review",
+  "method": "独立AI文本评审；非执行作者自审、非真人评审、非录音/样片实测。先读正文形成语义判断，再作只读结构辅助。",
+  "scope": "REQ-NEW-001 三集v1.0→v2.0实质返工及指定交接/包/依赖",
+  "read_files": [
+    "revision/request.md",
+    "revision/project/brief.md",
+    "revision/project/bible.md",
+    "revision/project/bible-v2.0.md",
+    "revision/project/outline.md",
+    "revision/project/outline-v2.0.md",
+    "revision/project/project.json",
+    "revision/project/episodes/EP001-v1.0.md",
+    "revision/project/episodes/EP001-v2.0.md",
+    "revision/project/episodes/EP002-v1.0.md",
+    "revision/project/episodes/EP002-v2.0.md",
+    "revision/project/episodes/EP003-v1.0.md",
+    "revision/project/episodes/EP003-v2.0.md",
+    "revision/project/continuity/EP001-v1.0.md",
+    "revision/project/continuity/EP001-v2.0.md",
+    "revision/project/continuity/EP002-v1.0.md",
+    "revision/project/continuity/EP002-v2.0.md",
+    "revision/project/continuity/EP003-v1.0.md",
+    "revision/project/continuity/EP003-v2.0.md",
+    "revision/project/handoff/EP001-v1.0.md",
+    "revision/project/handoff/EP001-v2.0.md",
+    "revision/project/handoff/EP002-v1.0.md",
+    "revision/project/handoff/EP002-v2.0.md",
+    "revision/project/handoff/EP003-v1.0.md",
+    "revision/project/handoff/EP003-v2.0.md",
+    "revision/project/handoff/EP001-v1.0.json",
+    "revision/project/handoff/EP001-v2.0.json",
+    "revision/project/handoff/EP002-v1.0.json",
+    "revision/project/handoff/EP002-v2.0.json",
+    "revision/project/handoff/EP003-v1.0.json",
+    "revision/project/handoff/EP003-v2.0.json",
+    "revision/packages/EP001-v1.0.zip (目录、manifest 元数据及非 review 内容/字节比对)",
+    "revision/packages/EP001-v2.0.zip (目录、manifest 元数据及非 review 内容/字节比对)",
+    "revision/packages/EP002-v1.0.zip (目录、manifest 元数据及非 review 内容/字节比对)",
+    "revision/packages/EP002-v2.0.zip (目录、manifest 元数据及非 review 内容/字节比对)",
+    "revision/packages/EP003-v1.0.zip (目录、manifest 元数据及非 review 内容/字节比对)",
+    "revision/packages/EP003-v2.0.zip (目录、manifest 元数据及非 review 内容/字节比对)"
+  ],
+  "skills": [
+    "ai-short-drama-review",
+    "ai-short-drama-continuity-audit",
+    "ai-short-drama-production-audit"
+  ],
+  "references": [
+    "common.md",
+    "standards.md",
+    "workflow.md",
+    "season-review.md",
+    "assets/templates.md",
+    "assets/project-template/review.md",
+    "assets/project-template/changes.md"
+  ],
+  "excluded": [
+    "执行者reviews报告（含zip内报告）",
+    "summary.json",
+    "execution.md",
+    "content.diff",
+    "其他评测结论",
+    "源examples及工具实现"
+  ],
+  "independence_note": "允许读取的project.json和handoff中含作者自审状态/摘要，读取元数据时可见；未将这些状态/摘要用作语义通过依据，未打开任何review报告。",
+  "dimensions": {
+    "narrative": {
+      "status": "pass",
+      "evidence": "EP001 B006 撕口吻合 → EP002 D003 主动索取登记簿剩纸/D004 追问 → EP003 B003/B004 收证并呼叫；关联建立，未把关联推定为盗窃责任。"
+    },
+    "character": {
+      "status": "pass",
+      "evidence": "bible-v2.0 取消完整页先验；林夏 EP002 D002 追问索纸、D004 针对刚听到的登记簿发问，EP003 主动保存。来访者索纸与撤回解释体现焦急。"
+    },
+    "duration": {
+      "status": "pass",
+      "scope": "仅文字预算",
+      "evidence": "各集 6+8+9+8+9+10+10=60 秒；新对白发音汉字分别39/47/33字，按3–4字/秒约9.75–13/11.75–15.67/8.25–11秒，动作停顿并行；EP002 B005 11字约2.75–3.67秒加4秒等待小于9秒。",
+      "unverified": "没有录音或动态分镜，不能确认成片55–65秒。"
+    },
+    "continuity": {
+      "status": "pass",
+      "evidence": "EP001 钥匙右手、纸片桌面；EP002 B002 钥匙移桌面、B007 纸片撕口旁；EP003 B003 纸片入簿钥匙压封面。三集同夜同室门关闭，呼叫未接通、身份待查。"
+    },
+    "producibility": {
+      "status": "pass",
+      "scope": "文字资产预算与方案",
+      "evidence": "两说话角色，CHAR002画外；LOC001；PROP001/PROP002及固定呼叫器；灰外套无新增变体。撕口用静帧、手部可切镜，无必读屏幕文字。",
+      "unverified": "撕口辨识和关键手部动作尚无样片验证。"
+    },
+    "handoff_completeness": {
+      "status": "pass",
+      "scope": "指定非review材料",
+      "evidence": "六份导出对白逐条与正文相同，42个动作块内容/时间对应；新版交接指向v2.0，声音不增第三角色。当前依赖版本和哈希一致，六包非review成员均与对应本地文件/manifest哈希一致。"
+    }
+  },
+  "issues": [
+    {
+      "id": "IR-P2-001",
+      "severity": "P2",
+      "status": "open",
+      "location": "episodes/EP002-v2.0.md EP002-SC001-B003/B004；同版handoff md/json",
+      "evidence": "B003 已写“看向缺页，再转向始终关闭的不透明门”；紧接8秒B004再次“抬眼看不透明门”。",
+      "impact": "第二集约17秒相邻预算中重复转门反应，可能稀释说漏后追问的推进；不破坏因果或硬约束。",
+      "recommendation": "分镜时让B004承担新的可见反应/抉择，或重新分配反应时间；若改正文同步交接并重新计时。"
+    },
+    {
+      "id": "IR-P2-002",
+      "severity": "P2",
+      "status": "unverified",
+      "location": "三集v2.0计时末段；brief.md；handoff/*.json timing_basis",
+      "evidence": "全部明确未实际朗读或制作样片；只有60秒块预算。",
+      "impact": "无法确认表演与动作落地后仍为55–65秒；不是已经超时的证据。",
+      "recommendation": "进入声音/动态分镜环节后按原速度与停顿试读并计时，保留估算/实测差异。"
+    },
+    {
+      "id": "IR-P2-003",
+      "severity": "P2",
+      "status": "unverified",
+      "location": "EP001-SC001-B004–B006，EP003-SC001-B003；bible-v2.0生产段",
+      "evidence": "关键证据依靠独特撕口吻合；纸片展开、对合及夹入登记簿均未提供实际样片。",
+      "impact": "文字方案可行但观众能否辨清吻合与手部连续性未经验证。",
+      "recommendation": "用两静帧验证撕口识别，再测试手部切镜；不靠新增可读编号修补。"
+    }
+  ],
+  "unresolved_p0": 0,
+  "unresolved_p1": 0,
+  "unresolved_blocking_or_major": false,
+  "verdict": "指定文字预制作范围满足REQ-NEW-001；有P2优化/待实测项，非正式制作批准。",
+  "retention": {
+    "status": "pass_with_scope_limit",
+    "evidence": "所有指定v1.0正文/台账/交接、旧bible/outline仍存在且与旧包对应成员一致；三个旧包created_at为2026-10-25T12:30:17.277957/.338400/.399978+00:00，均先于Q-NEW-001首次登记12:30:17.455868+00:00。新包supersedes分别指向OLD-EP001/002/003。",
+    "limitation": "未读取examples源目录及工具代码；不能独立证明源目录完全未修改或全部源文件完整复制。记录时间是项目自记元数据，不是外部可信时间戳。"
+  },
+  "dependencies": {
+    "status": "pass",
+    "evidence": "brief保留v1.0；bible/outline以及三集script/continuity/handoff/export为v2.0。EP002依赖continuity_EP001 v2.0，EP003依赖continuity_EP002 v2.0；连续性依赖本集正文；未见反向环。非review文件当前哈希和依赖快照匹配。review登记节点只核对元数据，未读取报告。"
+  }
+}
