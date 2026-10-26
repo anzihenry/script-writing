@@ -120,6 +120,8 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py parity examples/return
 python3 -m unittest discover -s tests -v
 ```
 
-写操作前复制示例到自己的项目目录。bundle 现在会保存包身份和来源快照；默认待接收，旧稿和旧包不覆盖。脚本新命令详见[操作手册](skills/ai-short-drama-writing/references/operations.md)，创作数据格式见[结构化记录](skills/ai-short-drama-writing/references/structured-records.md)，能力边界和验收证据见[验证记录](docs/validation/0.2.0-review.md)。
+写操作前复制示例到自己的项目目录。bundle 现在会保存包身份和来源快照；默认待接收，旧稿和旧包不覆盖。脚本新命令详见[操作手册](skills/ai-short-drama-writing/references/operations.md)，创作数据格式见[结构化记录](skills/ai-short-drama-writing/references/structured-records.md)，能力边界和完整里程碑验收证据见[最终验收](docs/validation/v0.2.0-final/README.md)。
 
 实施背景：[落地计划](docs/plans/0.2.0.md)与[数据契约](docs/design/0.2.0-contract.md)。
+
+2026-10-26 补充验收已完成：可读 Markdown 模板可直接核对，impact 可对保留旧稿提供真实差异与候选场次；52 项自动测试、37 项官方 Skill 校验通过。两轮独立 AI 技能执行、一次实质性剧情返工及独立审查的原始产物和评分均已保存。具体检出率只适用于固定样本，不等于任意剧本的质量保证；真实配音、样片和外部接收仍未验证。

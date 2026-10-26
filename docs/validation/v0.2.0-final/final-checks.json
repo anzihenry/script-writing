@@ -1,0 +1,69 @@
+{
+  "client_date": "2026-10-26",
+  "code_commit": "fd4b273e7965aca682fd5dd155fb5cf535500f20",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "----------------------------------------------------------------------\nRan 52 tests in 0.976s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "skills/ai-short-drama-writing/scripts/pipeline.py",
+        "check",
+        "examples/return-demo"
+      ],
+      "exit_code": 0,
+      "stdout": "STRUCTURE_OK: registered artifacts consistent; use gate for completeness\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "skills/ai-short-drama-writing/scripts/pipeline.py",
+        "check",
+        "examples/return-season"
+      ],
+      "exit_code": 0,
+      "stdout": "STRUCTURE_OK: registered artifacts consistent; use gate for completeness\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "skills/ai-short-drama-writing/scripts/pipeline.py",
+        "check",
+        "docs/validation/v0.2.0-final/revision/project"
+      ],
+      "exit_code": 0,
+      "stdout": "STRUCTURE_OK: registered artifacts consistent; use gate for completeness\n",
+      "stderr": ""
+    }
+  ],
+  "official_skills": {
+    "passed": 37,
+    "total": 37
+  },
+  "documentation_missing_links": [],
+  "input_sha256": {
+    "skills/ai-short-drama-writing/scripts/pipeline.py": "bd906bd83f5f6694deb90a3e19998a343a74d86b280ed8051956e4a5999cb289",
+    "tests/test_acceptance.py": "4486ed5b54301aa7d0605abf2f990ffc1ee7d61ca0c886d8c032bcd62f63c4cd",
+    "tests/test_continuity.py": "1084ec59382a51b1deb3b3ba81d7e49a5e1a1fcad9c756dc92c509cdb6ed8935",
+    "tests/test_delivery.py": "8aeb5f57d7b9c4962bb5c48e2fc17cfef92ba2aba994616d4077b71042fb4028",
+    "tests/test_management.py": "49fba07d8b074853d92a5b97c27131d3534d5bc5e3f2f41a26f169bcaa0cd17d",
+    "tests/test_milestone_evidence.py": "009464299eac3e386867dc2f4555d1d855a650c6778dcb0ad98c028e431e313d",
+    "tests/test_pipeline.py": "b1095c2f4f5e15aa89c782464239a725f9d20fea5d05ef5bf6a7945d94fff93f"
+  },
+  "result": "PASS",
+  "scope": "Unit/integration/artifact integrity checks plus actual official skill validation; semantic decisions are in separate independent execution and grading reports."
+}
