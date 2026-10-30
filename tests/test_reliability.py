@@ -14,7 +14,6 @@ class ReliabilityTest(unittest.TestCase):
         self.root = Path(self.temp.name) / 'project'
         shutil.copytree(ROOT / 'examples/return-season', self.root)
 
-    @unittest.expectedFailure
     def test_incomplete_location_is_rejected(self):
         key = p.find(p.load(self.root), 'continuity', 'EP003')
         item = p.load(self.root)['artifacts'][key]

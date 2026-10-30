@@ -13,7 +13,10 @@ class ContinuityTest(unittest.TestCase):
         self.add('brief'); self.add('bible')
         self.add('outline', content='```outline-json\n' + json.dumps({'foreshadows': [{'id': 'F1', 'plant': 'EP001', 'payoff': 'EP002'}]}) + '\n```')
         for ep, old, new, time in [('EP001', None, 'room', 'current'), ('EP002', before, 'safe', temporal)]:
-            self.add('script', ep, content=f'{ep}-SC001 Evidence moved')
+            script = {'scenes': [{'id': f'{ep}-SC001', 'location_id': 'LOC001',
+                      'character_ids': ['CHAR001'], 'prop_ids': [],
+                      'dialogue': [{'id': f'{ep}-D001', 'speaker_id': 'CHAR001', 'text': 'Evidence moved'}]}]}
+            self.add('script', ep, content='```script-json\n' + json.dumps(script) + '\n```')
             states = [{'object': 'PROP001', 'field': 'place', 'before': old, 'after': new,
                        'location': f'{ep}-SC001', 'quote': 'Evidence moved', 'temporal': time}]
             hints = [{'id': 'F1', 'status': 'planted' if ep == 'EP001' else 'paid', 'location': f'{ep}-SC001', 'quote': 'Evidence moved'}]

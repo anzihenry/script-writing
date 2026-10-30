@@ -544,6 +544,10 @@ def next_steps(root, scope='project'):
 
 def embedded(root, item, label):
     text = local(Path(root), item['path']).read_text(encoding='utf-8')
+    return embedded_text(text, label)
+
+
+def embedded_text(text, label):
     matches = re.findall(r'^```' + re.escape(label) + r'\s*\n(.*?)^```\s*$', text, re.M | re.S)
     require(len(matches) <= 1, f'{label}: multiple blocks are ambiguous')
     if not matches:
@@ -552,6 +556,73 @@ def embedded(root, item, label):
                        parse_constant=lambda x: (_ for _ in ()).throw(Invalid('nonfinite JSON')))
     require(isinstance(value, dict), f'{label}: object required')
     return value
+
+
+def evidence_locations(root, item, scope):
+    """Map supported definitions to separate quote-bearing spans, never mentions."""
+    text = local(Path(root), item['path']).read_text(encoding='utf-8')
+    # Examples in fences and HTML comments are not scene/action definitions.
+    clean = re.sub(r'<!--(?! drama-table:v1 -->).*?-->', '\n', text, flags=re.S)
+    lines, fence, block, blocks = [], None, None, []
+    for line in clean.splitlines():
+        opening = re.match(r'^\s*(`{3,}|~{3,})(.*)$', line)
+        if fence:
+            if re.fullmatch(r'\s*' + re.escape(fence[0]) + '{' + str(len(fence)) + r',}\s*', line):
+                if block is not None:
+                    blocks.append('\n'.join(block))
+                block = None
+                fence = None
+            elif block is not None:
+                block.append(line)
+            continue
+        if opening:
+            fence = opening[1]
+            block = [] if opening[2].strip() == 'script-json' else None
+            continue
+        lines.append(line)
+    clean = '\n'.join(lines)
+    require(block is None, 'unclosed script-json block')
+    require(len(blocks) <= 1, 'script-json: multiple blocks are ambiguous')
+    structured = embedded_text('```script-json\n' + blocks[0] + '\n```', 'script-json') if blocks else None
+    readable = markdown_scenes(clean)
+    require(structured is None or readable is None, 'ambiguous dialogue source: choose JSON block or readable table, not both')
+    payload = readable if readable is not None else structured
+    if payload is None:
+        return None
+    scenes = scene_projection(payload, scope)
+    result = {}
+    for scene in scenes:
+        require(re.fullmatch(re.escape(scope) + r'-SC\d{3,}', scene['id']), 'invalid scene definition')
+        result[scene['id']] = [row['text'] for row in scene['dialogue']]
+        for row in scene['dialogue']:
+            require(re.fullmatch(re.escape(scope) + r'-D\d{3,}', row['id']), 'invalid dialogue definition')
+            result[row['id']] = [row['text']]
+    if readable is not None:
+        current = None
+        for line in lines:
+            if re.match(r'^#{1,2}\s', line):
+                match = re.fullmatch(r'## 场次 (EP\d{3,}-SC\d{3,})', line)
+                current = match[1] if match else None
+                continue
+            if current and not line.lstrip().startswith('|'):
+                result[current].append(line)
+    # Legacy JSON scripts bind prose actions using the explicit time-block table.
+    action_column, width, seen_blocks = None, None, set()
+    for line in lines:
+        if not line.strip().startswith('|'):
+            action_column = width = None
+            continue
+        cells = [x.strip().replace('\\|', '|') for x in re.split(r'(?<!\\)\|', line.strip()[1:-1])]
+        if cells[0] == '时间块' and cells.count('动作') == 1:
+            action_column, width = cells.index('动作'), len(cells)
+            continue
+        block = re.fullmatch(r'(EP\d{3,}-SC\d{3,})-B\d{3,}', cells[0])
+        if action_column is not None and block:
+            require(len(cells) == width, 'invalid action table row')
+            require(block[1] in result and cells[0] not in seen_blocks, 'unknown scene or duplicate action block')
+            seen_blocks.add(cells[0])
+            result[block[1]].append(cells[action_column])
+    return result
 
 
 def continuity_index(root, through=None, object_id=None):
@@ -585,12 +656,18 @@ def continuity_index(root, through=None, object_id=None):
         if payload is None:
             unknown.append(f'{ep}: no continuity-json; extraction required')
             continue
-        source = local(root, data['artifacts'][script]['path']).read_text(encoding='utf-8')
+        locations = evidence_locations(root, data['artifacts'][script], ep)
         require(isinstance(payload.get('states'), list) and isinstance(payload.get('foreshadows'), list), 'states/foreshadows arrays required')
         for row in payload['states'] + payload['foreshadows']:
             require(isinstance(row, dict) and nonempty(row.get('location')) and nonempty(row.get('quote')), 'location/quote required')
-            require(row['location'].startswith(ep + '-') and row['location'] in source and row['quote'] in source,
-                    f'{ep}: evidence not found in source')
+            require(re.fullmatch(re.escape(ep) + r'-(?:SC|D)\d{3,}', row['location']),
+                    f'{ep}: invalid evidence location: {row["location"]}')
+            if locations is not None:
+                require(row['location'] in locations and any(row['quote'].replace('\r\n', '\n') in span for span in locations[row['location']]),
+                        f'{ep}: evidence not found at location: {row["location"]}')
+        if locations is None:
+            unknown.append(f'{ep}: unsupported source locations; extraction/adaptation required')
+            continue
         for row in payload['states']:
             require(all(nonempty(row.get(x)) for x in ['object', 'field', 'after']), 'object/field/after required')
             require('before' in row and (row['before'] is None or nonempty(row['before'])), 'before must be string or null')
