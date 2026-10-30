@@ -1,0 +1,29 @@
+{
+  "round": 1,
+  "order": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12"
+  ],
+  "source_sha256": "219b5ce9c47d409710e1b95ce0058cd1975f2b4c87b7bafea3aaa65ccccbe5c9",
+  "rules": [
+    "skills/ai-short-drama-continuity-audit/SKILL.md",
+    "skills/ai-short-drama-story-audit/SKILL.md",
+    "skills/ai-short-drama-writing/references/common.md",
+    "skills/ai-short-drama-writing/references/standards.md",
+    "skills/ai-short-drama-writing/references/workflow.md",
+    "skills/ai-short-drama-writing/references/season-review.md",
+    "skills/ai-short-drama-writing/references/structured-records.md",
+    "skills/ai-short-drama-writing/assets/templates.md"
+  ],
+  "isolation": "Prepared without oracle or other-round outputs; runner must use a fresh context."
+}

@@ -1,0 +1,13 @@
+{
+  "cases.json": "c3bed156a6683e76434779f34e08eff44045e3cdf9be4c3e56ef6dad7fd98589",
+  "request.md": "e960c6ef032331e988ab5e698d827195d616b99b8fe68710ab07d6906fb5641e",
+  "manifest.json": "ad99191b268ebdd8ac3c09bfdf7146454fa8520aa34dc45116486e9a06686daf",
+  "skills/ai-short-drama-continuity-audit/SKILL.md": "3fe74daa88ca30db74196934eb3ba27495a7d68c51180204726a28cd7eff4bb7",
+  "skills/ai-short-drama-story-audit/SKILL.md": "82379d317dcaca76d42ca415837b65b82e139432b53e848f9ceabcc5a045be5b",
+  "skills/ai-short-drama-writing/references/common.md": "76ab65cbcb4a1c92e80e5f5b3d06a1b062b8e502f1b96f17670ee1c2aa3a51df",
+  "skills/ai-short-drama-writing/references/standards.md": "66f5f28f05653a78a081af6fbf4f65be9385aecf46aafab943bf6660790cae43",
+  "skills/ai-short-drama-writing/references/workflow.md": "61b87e8c68779215126ba17e6d2ce023e85152efa67e3f06ecc403d4d874cd87",
+  "skills/ai-short-drama-writing/references/season-review.md": "97cb22db89c2bef5c4f0c041cd49b9a1cafd93efe9292b66e83398a4f5566064",
+  "skills/ai-short-drama-writing/references/structured-records.md": "6823a83184984540396f6b51860306c5aa514d4d1cd40e18f29539c663a12784",
+  "skills/ai-short-drama-writing/assets/templates.md": "35e224783ca11cf413f57ecc315e32dcb3638b90c4797363b60d6695c7b5f642"
+}

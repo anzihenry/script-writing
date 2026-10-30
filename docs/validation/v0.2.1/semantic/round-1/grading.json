@@ -1,0 +1,302 @@
+{
+  "round": 1,
+  "frozen_commit": "e745b72",
+  "grader": "Parent AI implementation agent; explicit semantic comparison with frozen oracle, not human or independent grading",
+  "outputs_sha256": "3d7a71b0e296182a78d563364256c488420217a2e088b39e65cf158d50bdbb94",
+  "oracle_sha256": "f216f667ad7be9fa844bccddaba635d2bf68bea8ae0d21229c0f35e3277cb4da",
+  "cases_sha256": "219b5ce9c47d409710e1b95ce0058cd1975f2b4c87b7bafea3aaa65ccccbe5c9",
+  "cases": [
+    {
+      "case_id": "C01",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "识别来源明确区分面前人的身份与搬箱者身份；未把观众姓名卡当成林岑已知。P1定位首集未见脸和末集真实断言，匹配预置问题。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C02",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "按陶宁→许婧→陈伯→陶宁的交接链确认持有人，引用拆封交还动作；未对正常转移报错。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C03",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "把三年前闪回与当前碎片分开，识别无修复却导航的道具冲突；修订建议为未来改稿方案，不冒充已发生修复。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C04",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "区分观众目击、叶晴怀疑和有意诈唬，没有把齐安沉默当成身份确认。正常对照无重大误报。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C05",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "以仍有效的v1与已完成EP006判断到期未回收，未用未提供的后两集掩盖当前漏收。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C06",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "分别保留A门关闭、B门打开，正确核对SC002的台账引用，不因相同台词混同场次。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C07",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "明确确认来源为EP005亲眼看过的备用录像，未回写成EP001已识别；正常对照无重大误报。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C08",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "保留最后可追溯的抽屉封存状态，并指出EP006取钥匙与无转移断言的冲突；未补记现实交还。建议增加交接明确为返工方案。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C09",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "历史完整不覆盖当前损坏，当前地图与航标使用成立，未误报罗盘复原。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C10",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "重大问题定位旁白将诈唬变成核实目击；没有把人物说谎本身当错误，也未把观众信息转给叶晴。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C11",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "遵循EP003明确生效的v2延期记录，判断未到期且未回收；不沿用v1误报。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C12",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "同时识别台账对象与场次错配，保留正文A关B开的状态，仅建议修正台账。",
+      "result": "PASS"
+    }
+  ],
+  "summary": {
+    "preset_major_detected": 6,
+    "preset_major_total": 6,
+    "normal_cases": 6,
+    "major_false_positives": 0,
+    "complete_facts": 12,
+    "total_facts": 12,
+    "literal_evidence_references": 54,
+    "forbidden_inference_violations": 0,
+    "additional_findings": 0
+  },
+  "limitations": [
+    "Fixed synthetic six-episode excerpts; not production scripts.",
+    "Separate execution context does not establish a different model family.",
+    "Literal citation checks do not independently prove semantic scoring."
+  ]
+}
