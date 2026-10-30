@@ -210,7 +210,13 @@ def load(root):
     return validate_manifest(read_json(Path(root) / 'project.json'))
 
 
-def find(data, kind, scope):
+def artifact_index(data):
+    return {(item['kind'], item['scope']): key for key, item in data['artifacts'].items()}
+
+
+def find(data, kind, scope, lookup=None):
+    if lookup is not None:
+        return lookup.get((kind, scope))
     for key, item in data['artifacts'].items():
         if item['kind'] == kind and item['scope'] == scope:
             return key
@@ -237,6 +243,14 @@ def prerequisites(data, kind, scope):
 def inspect(root, data):
     """Return per-artifact errors, propagating stale dependencies transitively."""
     result, active = {}, set()
+    lookup, histories, digests = artifact_index(data), {}, {}
+    for entry in data['history']:
+        histories.setdefault(entry['id'], []).append(entry)
+
+    def digest(path):
+        if path not in digests:
+            digests[path] = sha(path)
+        return digests[path]
 
     def visit(key):
         if key in result:
@@ -250,24 +264,24 @@ def inspect(root, data):
             path = local(root, item['path'])
             if not path.is_file():
                 errors.append('file missing')
-            elif sha(path) != item['sha256']:
+            elif digest(path) != item['sha256']:
                 errors.append('file changed since registration (STALE)')
         except Invalid as error:
             errors.append(str(error))
         if item['status'] == 'superseded':
             errors.append('superseded artifact is not a usable current input')
-        for entry in data['history']:
+        for entry in histories.get(key, []):
             previous = entry.get('previous') or {}
             if entry['id'] == key and previous.get('status') == 'locked':
                 try:
                     baseline = local(root, previous['path'])
-                    if not baseline.is_file() or sha(baseline) != previous['sha256']:
+                    if not baseline.is_file() or digest(baseline) != previous['sha256']:
                         errors.append(f"archived locked baseline changed/missing: {previous['path']}")
                 except Invalid as error:
                     errors.append(str(error))
         declared = {d['id'] for d in item['depends_on']}
         for kind, scope in prerequisites(data, item['kind'], item['scope']):
-            dep_id = find(data, kind, scope)
+            dep_id = find(data, kind, scope, lookup)
             if dep_id is None or dep_id not in declared:
                 errors.append(f'missing required dependency: {kind}/{scope}')
         for dep in item['depends_on']:
@@ -301,14 +315,15 @@ def closure(data, keys):
     return found
 
 
-def gate(root, data, stage, scope):
+def gate(root, data, stage, scope, checks=None, lookup=None):
     require(stage in GATES, 'unknown gate')
     require((scope == 'project') == (stage in {'G0', 'G1', 'G2'}), 'gate/scope mismatch')
     require(scope in ['project'] + data['episodes'], 'unknown scope')
     errors, keys = [], []
-    freshness = inspect(root, data)
+    freshness = inspect(root, data) if checks is None else checks
+    lookup = artifact_index(data) if lookup is None else lookup
     for kind in GATES[stage]:
-        key = find(data, kind, scope)
+        key = find(data, kind, scope, lookup)
         if key is None:
             errors.append(f'missing output: {kind}/{scope}')
         else:
@@ -515,24 +530,24 @@ def next_steps(root, scope='project'):
     root = Path(root)
     data = load(root)
     require(scope == 'project' or scope in data['episodes'], 'unknown scope')
+    checks, lookup = inspect(root, data), artifact_index(data)
     episodes = data['episodes'] if scope == 'project' else data['episodes'][:data['episodes'].index(scope) + 1]
     stages = [('G0', 'project'), ('G1', 'project'), ('G2', 'project')]
     stages += [(g, ep) for ep in episodes for g in ['G3', 'G4', 'G5']]
     skills = dict(zip(GATES, ['brief', 'bible', 'outline', 'episode', 'review', 'handoff']))
     tasks = []
     for stage, target in stages:
-        errors, _ = gate(root, data, stage, target)
+        errors, _ = gate(root, data, stage, target, checks, lookup)
         if errors:
             inputs = []
             for kind in GATES[stage]:
                 for upstream_kind, upstream_scope in prerequisites(data, kind, target):
                     record = {'kind': upstream_kind, 'scope': upstream_scope,
-                              'id': find(data, upstream_kind, upstream_scope)}
+                              'id': find(data, upstream_kind, upstream_scope, lookup)}
                     if record not in inputs:
                         inputs.append(record)
             tasks.append({'stage': stage, 'scope': target, 'reasons': errors,
                           'skill': 'ai-short-drama-' + skills[stage], 'inputs': inputs})
-    checks = inspect(root, data)
     extras = {k: errors for k, errors in checks.items() if errors and data['artifacts'][k]['scope'] in ['project'] + episodes}
     if not tasks:
         for key, errors in extras.items():
@@ -1348,10 +1363,11 @@ def main(argv=None):
                 errors, _ = gate(root, data, args.stage, args.scope)
                 print('\n'.join(errors) if errors else 'STRUCTURE_READY: perform/document the human quality gate; no status auto-promotion')
                 return 1 if errors else 0
+            checks, lookup = inspect(root, data), artifact_index(data)
             for stage in GATES:
                 scopes = ['project'] if stage in {'G0', 'G1', 'G2'} else data['episodes']
                 for scope in scopes:
-                    errors, _ = gate(root, data, stage, scope)
+                    errors, _ = gate(root, data, stage, scope, checks, lookup)
                     print(f'{stage}/{scope}: ' + ('NEEDS_WORK: ' + '; '.join(errors) if errors else 'STRUCTURE_READY'))
         return 0
     except (Invalid, OSError, json.JSONDecodeError, UnicodeError, TypeError) as error:

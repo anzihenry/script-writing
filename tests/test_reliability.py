@@ -33,7 +33,6 @@ class ReliabilityTest(unittest.TestCase):
             p.receipt(self.root, 'AUDIT-PKG', 'accepted', 'Simulated receipt')
         self.assertEqual(before, (self.root / 'project.json').read_bytes())
 
-    @unittest.expectedFailure
     def test_next_checks_each_file_once(self):
         with patch.object(p, 'inspect', wraps=p.inspect) as inspections, patch.object(p, 'sha', wraps=p.sha) as hashes:
             self.assertEqual(p.next_steps(self.root)['status'], 'STRUCTURE_READY')
