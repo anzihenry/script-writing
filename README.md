@@ -140,3 +140,5 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py verify-package project
 前三条只在临时目录写入测试项目。包核验命令只读，包移动后可传 `--file` 指定候选文件。接收登记和哈希完整性分别记录；旧散文无法定位到具体场次或对白时，连续性索引保留 UNVERIFIED。详见[操作手册](skills/ai-short-drama-writing/references/operations.md)和[引用格式](skills/ai-short-drama-writing/references/structured-records.md)。
 
 GitHub Actions 配置在 push/PR 时运行标准库测试、规模测量和新旧示例演练；无需模型服务或项目密钥。配置存在不等于远端任务已经通过。
+
+2026-10-30 本地验证：Python 3.9、3.14、3.15 各通过 78 项测试。新增 12 个六集短文本案例已完成两轮串行隔离审读，每轮六个预置重大问题全部检出、六例正常对照无重大误报，原始输出和逐项评分见[评测汇总](docs/validation/v0.2.1/semantic/summary.md)。这是固定样本上的 AI 评测，不是真人审核或通用准确率保证。

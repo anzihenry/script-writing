@@ -1,0 +1,306 @@
+{
+  "round": 2,
+  "frozen_commit": "e745b72",
+  "grader": "Parent AI implementation agent; explicit semantic comparison with frozen oracle, not human or independent grading",
+  "outputs_sha256": "90e87ce1dc94b2aecbc7d860d5daa27e156813febb216483cbcb55b61b98e843",
+  "oracle_sha256": "f216f667ad7be9fa844bccddaba635d2bf68bea8ae0d21229c0f35e3277cb4da",
+  "cases_sha256": "219b5ce9c47d409710e1b95ce0058cd1975f2b4c87b7bafea3aaa65ccccbe5c9",
+  "cases": [
+    {
+      "case_id": "C12",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "将错误限定在台账，明确对象A/场次SC001与实际B/SC002双重错配，正文A关B开不变，匹配预置P1。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C11",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "引用v2替代v1的真实记录判断EP008尚未到期，同时保留未回收，不虚构兑现。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C10",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "分别保留角色怀疑、观众目击及旁白矛盾；预置P1定位旁白确证而非角色谎言。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C09",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "按当前时间保持碎片与地图导航，未用闪回覆盖当前，正常对照无误报。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C08",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "完整引用转交、封存及未交还链，指出收条不代表归还钥匙；EP006取钥匙缺前提的P1成立。补入交接仅列作待授权改稿建议，不记成已发生。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C07",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "识别备用录像为新增知识来源，明确首集姓名卡仅观众可见，正常识别链成立。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C06",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "正确分开两门对象和场次，台账与B门动作一致，不以相同台词产生误报。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C05",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "有效计划v1仍要求已完成EP006回收，未来未提供集数不构成延期；P1与事实问答均准确。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C04",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "观众已知与角色怀疑分离，有意诈唬及沉默未构成知情确认，正常对照无误报。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C03",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "同时引用当前损毁、三年前闪回、未修复与当前导航，准确识别无因恢复；地图方案是明确的修改建议。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C02",
+      "oracle_kind": "negative",
+      "matched_finding_indices": [],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "保留全部交接链并引用EP005拆封交还，确认陶宁开门有来源，无重大误报。",
+      "result": "PASS"
+    },
+    {
+      "case_id": "C01",
+      "oracle_kind": "positive",
+      "matched_finding_indices": [
+        0
+      ],
+      "major_false_positive_indices": [],
+      "additional_finding_indices": [],
+      "facts": [
+        {
+          "output_fact_index": 0,
+          "oracle_fact_index": 0,
+          "assessment": "complete",
+          "evidence_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "forbidden_inference_violations": [],
+      "semantic_assessment": "不仅引用未见脸与末集断言，还覆盖模糊监控和邻居无目击，明确认识周原不同于确认搬箱者；P1成立且未借观众信息补知情。",
+      "result": "PASS"
+    }
+  ],
+  "summary": {
+    "preset_major_detected": 6,
+    "preset_major_total": 6,
+    "normal_cases": 6,
+    "major_false_positives": 0,
+    "complete_facts": 12,
+    "total_facts": 12,
+    "literal_evidence_references": 62,
+    "forbidden_inference_violations": 0,
+    "additional_findings": 0
+  },
+  "limitations": [
+    "Fixed synthetic six-episode excerpts; not production scripts.",
+    "Separate execution context does not establish a different model family.",
+    "Literal citation checks do not independently prove semantic scoring."
+  ]
+}

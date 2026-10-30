@@ -56,3 +56,39 @@ class SemanticProtocolTest(unittest.TestCase):
         rows[0]['facts'][0]['evidence'][0]['location'] = 'EP002-SC001'
         with self.assertRaises(ValueError):
             validate({'cases': rows})
+
+    def test_archived_rounds_bind_grading_to_original_outputs(self):
+        folder = ROOT / 'docs/validation/v0.2.1/semantic'
+        oracle_hash = hashlib.sha256((folder / 'oracle.json').read_bytes()).hexdigest()
+        public_hash = hashlib.sha256((ROOT / 'tests/fixtures/semantic-long-range/cases.json').read_bytes()).hexdigest()
+        expected = {x['case_id']: x for x in json.loads((folder / 'oracle.json').read_text())['cases']}
+        validate = module('validate_semantic_output').validate
+        for number in [1, 2]:
+            with self.subTest(round=number):
+                run = folder / ('round-' + str(number))
+                output_bytes = (run / 'outputs.json').read_bytes()
+                outputs = json.loads(output_bytes)
+                grade = json.loads((run / 'grading.json').read_text())
+                manifest = json.loads((run / 'manifest.json').read_text())
+                self.assertEqual(grade['outputs_sha256'], hashlib.sha256(output_bytes).hexdigest())
+                self.assertEqual(grade['oracle_sha256'], oracle_hash)
+                self.assertEqual(grade['cases_sha256'], public_hash)
+                self.assertEqual([x['case_id'] for x in outputs['cases']], manifest['order'])
+                self.assertEqual(validate(outputs), json.loads((run / 'structure-check.json').read_text()))
+                self.assertEqual({x['case_id'] for x in grade['cases']}, set(expected))
+                by_id = {x['case_id']: x for x in outputs['cases']}
+                for row in grade['cases']:
+                    out = by_id[row['case_id']]
+                    for index in row['matched_finding_indices']:
+                        self.assertIn(out['findings'][index]['severity'], ['P0', 'P1'])
+                    for fact in row['facts']:
+                        original = out['facts'][fact['output_fact_index']]
+                        answer = expected[row['case_id']]['required_facts'][fact['oracle_fact_index']]
+                        self.assertEqual(original['question'], answer['question'])
+                        for index in fact['evidence_indices']:
+                            self.assertTrue(original['evidence'][index]['quote'])
+                summary = grade['summary']
+                self.assertEqual(summary['preset_major_detected'], sum(len(x['matched_finding_indices']) for x in grade['cases']))
+                self.assertEqual(summary['major_false_positives'], sum(len(x['major_false_positive_indices']) for x in grade['cases']))
+                self.assertEqual(summary['complete_facts'], sum(f['assessment'] == 'complete' for x in grade['cases'] for f in x['facts']))
+                self.assertEqual(summary['additional_findings'], sum(len(x['additional_finding_indices']) for x in grade['cases']))
