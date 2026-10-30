@@ -4,6 +4,8 @@
 
 发布版本：0.2.0，见 [VERSION](VERSION) 与[版本记录](CHANGELOG.md)。资料核对日期：2026-10-24。本仓库提出的是可调整的内部生产规范，不代表行业统一标准，也不承诺播放量或商业表现。
 
+当前开发中的 0.2.1 已加入场次/对白证据绑定、交付 ZIP 完整性核验及 next/status 单次检查复用；发布状态、兼容边界和本地验证结果见 [0.2.1 验收记录](docs/validation/v0.2.1/README.md)。远端 CI 未运行前不视为发布验收完成。
+
 仓库发布版本与内部协议版本分别管理：项目登记及结构化交接协议仍为 1.0，生产管线规范修订版仍为 v2。
 
 ## 从项目启动到交付
@@ -125,3 +127,16 @@ python3 -m unittest discover -s tests -v
 实施背景：[落地计划](docs/plans/0.2.0.md)与[数据契约](docs/design/0.2.0-contract.md)。
 
 2026-10-26 补充验收已完成：可读 Markdown 模板可直接核对，impact 可对保留旧稿提供真实差异与候选场次；52 项自动测试、37 项官方 Skill 校验通过。两轮独立 AI 技能执行、一次实质性剧情返工及独立审查的原始产物和评分均已保存。具体检出率只适用于固定样本，不等于任意剧本的质量保证；真实配音、样片和外部接收仍未验证。
+
+## 0.2.1 开发验证
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 scripts/benchmark_pipeline.py
+python3 scripts/validate_examples.py
+python3 skills/ai-short-drama-writing/scripts/pipeline.py verify-package projects/my-drama --id PKG-ID
+```
+
+前三条只在临时目录写入测试项目。包核验命令只读，包移动后可传 `--file` 指定候选文件。接收登记和哈希完整性分别记录；旧散文无法定位到具体场次或对白时，连续性索引保留 UNVERIFIED。详见[操作手册](skills/ai-short-drama-writing/references/operations.md)和[引用格式](skills/ai-short-drama-writing/references/structured-records.md)。
+
+GitHub Actions 配置在 push/PR 时运行标准库测试、规模测量和新旧示例演练；无需模型服务或项目密钥。配置存在不等于远端任务已经通过。

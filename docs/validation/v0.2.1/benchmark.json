@@ -1,0 +1,60 @@
+{
+  "python": "3.15.2",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "results": [
+    {
+      "episodes": 3,
+      "artifacts": 15,
+      "command": "next",
+      "exit_code": 0,
+      "inspect_calls": 1,
+      "sha_calls": 15,
+      "seconds": 0.009768
+    },
+    {
+      "episodes": 3,
+      "artifacts": 15,
+      "command": "status",
+      "exit_code": 0,
+      "inspect_calls": 1,
+      "sha_calls": 15,
+      "seconds": 0.007776
+    },
+    {
+      "episodes": 30,
+      "artifacts": 123,
+      "command": "next",
+      "exit_code": 0,
+      "inspect_calls": 1,
+      "sha_calls": 123,
+      "seconds": 0.042807
+    },
+    {
+      "episodes": 30,
+      "artifacts": 123,
+      "command": "status",
+      "exit_code": 0,
+      "inspect_calls": 1,
+      "sha_calls": 123,
+      "seconds": 0.045598
+    },
+    {
+      "episodes": 100,
+      "artifacts": 403,
+      "command": "next",
+      "exit_code": 0,
+      "inspect_calls": 1,
+      "sha_calls": 403,
+      "seconds": 0.198854
+    },
+    {
+      "episodes": 100,
+      "artifacts": 403,
+      "command": "status",
+      "exit_code": 0,
+      "inspect_calls": 1,
+      "sha_calls": 403,
+      "seconds": 0.197575
+    }
+  ]
+}
