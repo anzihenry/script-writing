@@ -1,6 +1,6 @@
 # 0.2.1 本地验收记录
 
-日期：2026-10-30。状态：M0–M5 的实现、配置、隔离评测及本地验证完成；远端 CI 尚未运行，未发布 0.2.1。VERSION 保持 0.2.0。M5 的语义判断与确定性测试分别报告。
+日期：2026-10-30。状态：M0–M5 的实现、配置、隔离评测、本地及远端验证完成，发布版本 0.2.1。M5 的语义判断与确定性测试分别报告。
 
 执行环境为 macOS arm64。本报告记录 AI 实现者的自动验证，不是真人审稿或实际下游接收。
 
@@ -40,7 +40,7 @@
 
 ## CI 与复现
 
-[工作流](../../../.github/workflows/tests.yml)配置 Linux Python 3.9 / 3.15 和 macOS Python 3.15，push/PR 时运行测试、规模测量和示例回放。使用只读仓库权限，关闭 checkout 凭据持久化，不依赖项目密钥或模型服务。Actions 用法核对自 [checkout](https://github.com/actions/checkout) 与 [setup-python](https://github.com/actions/setup-python) 官方文档。
+[工作流](../../../.github/workflows/tests.yml)配置 Ubuntu 24.04 Python 3.9、Ubuntu latest Python 3.15 和 macOS latest Python 3.15，push/PR 时运行测试、规模测量和示例回放。使用只读仓库权限，关闭 checkout 凭据持久化，不依赖项目密钥或模型服务。Actions 用法核对自 [checkout](https://github.com/actions/checkout) 与 [setup-python](https://github.com/actions/setup-python) 官方文档。
 
 ```bash
 python3 -m unittest discover -s tests -v
@@ -48,10 +48,14 @@ python3 scripts/benchmark_pipeline.py
 python3 scripts/validate_examples.py
 ```
 
-本轮没有推送提交，因此不能声称 GitHub Actions 或 Linux 运行通过。本地三个 Python 版本均已实际执行。既有测试验证 37 个 Skill 的名称、元数据文件及本地链接；本轮未重新执行官方 Skill 验证器，不将这些检查称为官方复验。
+发布时已推送并完成[远端 CI](https://github.com/anzihenry/script-writing/actions/runs/41063920064)，提交为 `0a2dccd76dac6228ee43992759109231366eecdd`；三个矩阵任务均通过 78 项测试、规模测量及示例回放。[运行与任务证据](remote-ci.json)保留原始结果。后续发布记录提交仅更新文档，并在创建版本标签前再次确认其 CI。
 
-## 发布保留项
+[首次运行](https://github.com/anzihenry/script-writing/actions/runs/41063067427)中 Python 3.9 安装失败，原因是 ubuntu-latest 已指向 Ubuntu 26.04，而官方未提供该平台的 Python 3.9 构建；两个 Python 3.15 任务通过。修复为官方构建清单支持的 Ubuntu 24.04 后全部通过，没有删除最低 Python 版本的验证。
 
-1. 在获准推送后确认远端 CI，记录运行链接，再完成版本号和 CHANGELOG 更新；本轮不打标签或发布。
+本地三个 Python 版本也均已实际执行。既有测试验证 37 个 Skill 的名称、元数据文件及本地链接；本轮未重新执行官方 Skill 验证器，不将这些检查称为官方复验。
+
+## 保留边界
+
+1. 版本号和 CHANGELOG 已更新；发布沿用 GitHub Release 及自动生成的源码包，不另外生成制作资产。
 2. M5 已完成的结果只覆盖冻结的六集短文本案例；完整制作级长剧、未见保留集与真人审稿仍未验证，不能将样本得分外推为通用准确率。
 3. 定位正确不能证明提取语义正确；哈希匹配不能证明接收依据真实；没有真实配音、样片或真人审核。
