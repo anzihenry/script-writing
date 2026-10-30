@@ -24,7 +24,6 @@ class ReliabilityTest(unittest.TestCase):
         with self.assertRaises(p.Invalid):
             p.continuity_index(self.root)
 
-    @unittest.expectedFailure
     def test_corrupted_package_cannot_be_accepted(self):
         package = self.root.parent / 'package.zip'
         p.bundle(self.root, 'EP001', package, 'AUDIT-PKG')

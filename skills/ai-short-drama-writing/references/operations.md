@@ -112,6 +112,22 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py register projects/my-d
 
 ## 返回值与验证
 
+### 交付包完整性与接收
+
+```bash
+python3 skills/ai-short-drama-writing/scripts/pipeline.py verify-package projects/my-drama --id PKG-ID
+python3 skills/ai-short-drama-writing/scripts/pipeline.py verify-package projects/my-drama --id PKG-ID --file /tmp/moved-package.zip
+python3 skills/ai-short-drama-writing/scripts/pipeline.py receipt projects/my-drama --id PKG-ID --status accepted --evidence '实际接收依据' --file /tmp/moved-package.zip
+```
+
+verify-package 每次读取实际文件并核验已登记的完整包 SHA-256，不修改项目或候选文件。VERIFIED 退出 0；MISMATCH 或文件缺失/不可读的 UNVERIFIED 退出 1；未知 ID 或非法输入退出 2。`--file` 可核验移动后的包，但不会改写登记的原路径或哈希。
+
+receipt 返回并保存可选 integrity 观察（检查时间、路径、期望/实际哈希、状态和原因），事件记录保留前后快照。accepted 遇明确哈希不符时拒绝且不写入；本地文件不可用时仍可登记有依据的外部接收，但 integrity 为 UNVERIFIED。损坏包可登记 pending/returned。旧记录无需补字段。
+
+接收事实和完整性不同：accepted 不代表当前本地文件有效；保存的 integrity 也只表示当时检查结果，需重新运行 verify-package 获取当前结果。工具不能证明接收依据的真实性。
+
+### 通用返回值
+
 - 0：命令成功；结构就绪不等于创意批准。
 - 1：check/gate 发现缺失、过期或未解决问题。
 - 2：参数、数据格式、文件读取或写入错误。

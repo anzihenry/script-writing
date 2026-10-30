@@ -171,6 +171,16 @@ def validate_extensions(data):
         if row['status'] != 'pending':
             require(nonempty(row.get('evidence')), 'receipt evidence required')
         snapshot_map(row.get('files'))
+        if 'integrity' in row:
+            check = row['integrity']
+            require(isinstance(check, dict) and check.get('status') in {'VERIFIED', 'MISMATCH', 'UNVERIFIED'}, 'invalid package integrity')
+            require(check.get('delivery_id') == row['id'] and check.get('expected_sha256') == row['sha256'], 'integrity identity mismatch')
+            require(all(nonempty(check.get(f)) for f in ['at', 'path']), 'incomplete integrity observation')
+            require(isinstance(check.get('reasons'), list) and all(nonempty(x) for x in check['reasons']), 'invalid integrity reasons')
+            actual = check.get('actual_sha256')
+            require(actual is None or (isinstance(actual, str) and re.fullmatch(r'[0-9a-f]{64}', actual)), 'invalid actual package digest')
+            expected_status = 'UNVERIFIED' if actual is None else ('VERIFIED' if actual == row['sha256'] else 'MISMATCH')
+            require(check['status'] == expected_status, 'inconsistent package integrity observation')
         previous = row.get('supersedes')
         if previous:
             require(previous in packages and previous != row['id'] and packages[previous]['scope'] == row['scope'], 'invalid replacement package')
@@ -1072,13 +1082,38 @@ def parity(root, scope):
             'source': {'id': records['script'], 'revision': script['revision'], 'sha256': script['sha256']}}
 
 
-def receipt(root, key, status, evidence):
+def package_integrity(item, package_file=None):
+    path = Path(package_file) if package_file is not None else Path(item['path'])
+    result = {'delivery_id': item['id'], 'status': 'UNVERIFIED', 'at': stamp(),
+              'path': str(path.absolute()), 'expected_sha256': item['sha256'],
+              'actual_sha256': None, 'reasons': []}
+    try:
+        result['actual_sha256'] = sha(path)
+    except OSError as error:
+        result['reasons'].append(f'package unavailable: {error}')
+        return result
+    result['status'] = 'VERIFIED' if result['actual_sha256'] == item['sha256'] else 'MISMATCH'
+    if result['status'] == 'MISMATCH':
+        result['reasons'].append('package bytes differ from registered SHA-256')
+    return result
+
+
+def verify_package(root, key, package_file=None):
+    data = load(root)
+    item = next((x for x in data.get('deliveries', []) if x['id'] == key), None)
+    require(item is not None, 'unknown delivery')
+    return package_integrity(item, package_file)
+
+
+def receipt(root, key, status, evidence, package_file=None):
     data = load(root)
     item = next((x for x in data.get('deliveries', []) if x['id'] == key), None)
     require(item is not None, 'unknown delivery')
     require(status in {'pending', 'accepted', 'returned'} and nonempty(evidence), 'status and actual receipt evidence required')
+    integrity = package_integrity(item, package_file)
+    require(status != 'accepted' or integrity['status'] != 'MISMATCH', 'package SHA-256 mismatch; cannot record accepted')
     before = copy.deepcopy(item)
-    item.update(status=status, evidence=evidence)
+    item.update(status=status, evidence=evidence, integrity=integrity)
     event(data, 'receipt', key, before, item, evidence)
     save(root, data)
     return item
@@ -1238,6 +1273,8 @@ def main(argv=None):
     p = sub.add_parser('parity'); p.add_argument('project'); p.add_argument('--scope', required=True)
     p = sub.add_parser('receipt'); p.add_argument('project'); p.add_argument('--id', required=True)
     p.add_argument('--status', choices=['pending', 'accepted', 'returned'], required=True); p.add_argument('--evidence', required=True)
+    p.add_argument('--file', help='optional moved package to verify; does not rewrite the registered path')
+    p = sub.add_parser('verify-package'); p.add_argument('project'); p.add_argument('--id', required=True); p.add_argument('--file')
     p = sub.add_parser('measure'); p.add_argument('project'); p.add_argument('--id', required=True); p.add_argument('--package-id', required=True)
     p.add_argument('--seconds', type=float, required=True); p.add_argument('--source', required=True); p.add_argument('--evidence', required=True)
     args = parser.parse_args(argv)
@@ -1246,8 +1283,12 @@ def main(argv=None):
             result = parity(args.project, args.scope)
             print(json.dumps(result, ensure_ascii=False, indent=2))
             return 0 if result['status'] == 'MATCH' else 1
+        elif args.command == 'verify-package':
+            result = verify_package(args.project, args.id, args.file)
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            return 0 if result['status'] == 'VERIFIED' else 1
         elif args.command == 'receipt':
-            print(json.dumps(receipt(args.project, args.id, args.status, args.evidence), ensure_ascii=False, indent=2))
+            print(json.dumps(receipt(args.project, args.id, args.status, args.evidence, args.file), ensure_ascii=False, indent=2))
         elif args.command == 'measure':
             print(json.dumps(measure(args.project, args.id, args.package_id, args.seconds, args.source, args.evidence), ensure_ascii=False, indent=2))
         elif args.command == 'impact':
