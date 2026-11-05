@@ -8,8 +8,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def validate(output):
-    cases = json.loads((ROOT / 'tests/fixtures/semantic-long-range/cases.json').read_text(encoding='utf-8'))['cases']
+def validate(output, cases_path=None):
+    cases_path = Path(cases_path) if cases_path is not None else ROOT / 'tests/fixtures/semantic-long-range/cases.json'
+    cases = json.loads(cases_path.read_text(encoding='utf-8'))['cases']
     sources = {x['case_id']: x for x in cases}
     if not isinstance(output, dict) or not isinstance(output.get('cases'), list):
         raise ValueError('cases array required')
@@ -60,8 +61,9 @@ def validate(output):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output', type=Path)
+    parser.add_argument('--cases', type=Path, help='Explicit public dataset; defaults to legacy cases')
     args = parser.parse_args()
     try:
-        print(json.dumps(validate(json.loads(args.output.read_text(encoding='utf-8'))), indent=2))
+        print(json.dumps(validate(json.loads(args.output.read_text(encoding='utf-8')), args.cases), indent=2))
     except (ValueError, OSError, TypeError) as error:
         parser.exit(2, 'ERROR: ' + str(error) + '\n')

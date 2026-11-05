@@ -6,6 +6,8 @@ import unittest
 from pathlib import Path
 from test_pipeline import ROOT
 
+ARCHIVE = ROOT / 'docs/validation/v0.3.0/archive/v0.2.1/files'
+
 
 def module(name):
     spec = importlib.util.spec_from_file_location(name, ROOT / 'scripts' / (name + '.py'))
@@ -19,8 +21,8 @@ class SemanticProtocolTest(unittest.TestCase):
         folder = ROOT / 'docs/validation/v0.2.1/semantic'
         frozen = json.loads((folder / 'freeze.json').read_text())
         for name, digest in frozen['files'].items():
-            self.assertEqual(hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), digest, name)
-        cases = json.loads((ROOT / 'tests/fixtures/semantic-long-range/cases.json').read_text())['cases']
+            self.assertEqual(hashlib.sha256((ARCHIVE / name).read_bytes()).hexdigest(), digest, name)
+        cases = json.loads((ARCHIVE / 'tests/fixtures/semantic-long-range/cases.json').read_text())['cases']
         oracle = json.loads((folder / 'oracle.json').read_text())['cases']
         self.assertEqual(len(cases), 12)
         self.assertEqual({x['case_id'] for x in cases}, {x['case_id'] for x in oracle})
@@ -60,7 +62,8 @@ class SemanticProtocolTest(unittest.TestCase):
     def test_archived_rounds_bind_grading_to_original_outputs(self):
         folder = ROOT / 'docs/validation/v0.2.1/semantic'
         oracle_hash = hashlib.sha256((folder / 'oracle.json').read_bytes()).hexdigest()
-        public_hash = hashlib.sha256((ROOT / 'tests/fixtures/semantic-long-range/cases.json').read_bytes()).hexdigest()
+        cases_path = ARCHIVE / 'tests/fixtures/semantic-long-range/cases.json'
+        public_hash = hashlib.sha256(cases_path.read_bytes()).hexdigest()
         expected = {x['case_id']: x for x in json.loads((folder / 'oracle.json').read_text())['cases']}
         validate = module('validate_semantic_output').validate
         for number in [1, 2]:
@@ -74,7 +77,7 @@ class SemanticProtocolTest(unittest.TestCase):
                 self.assertEqual(grade['oracle_sha256'], oracle_hash)
                 self.assertEqual(grade['cases_sha256'], public_hash)
                 self.assertEqual([x['case_id'] for x in outputs['cases']], manifest['order'])
-                self.assertEqual(validate(outputs), json.loads((run / 'structure-check.json').read_text()))
+                self.assertEqual(validate(outputs, cases_path), json.loads((run / 'structure-check.json').read_text()))
                 self.assertEqual({x['case_id'] for x in grade['cases']}, set(expected))
                 by_id = {x['case_id']: x for x in outputs['cases']}
                 for row in grade['cases']:

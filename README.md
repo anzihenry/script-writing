@@ -4,6 +4,8 @@
 
 发布版本：0.2.1，见 [VERSION](VERSION) 与[版本记录](CHANGELOG.md)。资料核对日期：2026-10-24。本仓库提出的是可调整的内部生产规范，不代表行业统一标准，也不承诺播放量或商业表现。
 
+0.3.0 正在按[落实计划](docs/plans/0.3.0.md)分阶段实施，实际进度见[阶段验收](docs/validation/v0.3.0/README.md)。历史语义评测已独立保存规则快照；默认 `prepare_semantic_round.py` 复现历史输入，当前审稿候选使用 `--mode current --cases PATH --rule skills/.../SKILL.md`。当前包携带本地链接依赖以防缺文件，执行时只从 entry_rules 按需读取；携带依赖不表示要求读取全部文件。`validate_semantic_output.py --cases PATH` 可校验指定审稿数据集，不代替语义评分。
+
 0.2.1 加入场次/对白证据绑定、交付 ZIP 完整性核验及 next/status 单次检查复用；兼容边界和验证结果见 [0.2.1 验收记录](docs/validation/v0.2.1/README.md)。
 
 仓库发布版本与内部协议版本分别管理：项目登记及结构化交接协议仍为 1.0，生产管线规范修订版仍为 v2。

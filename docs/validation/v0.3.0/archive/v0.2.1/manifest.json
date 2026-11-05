@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "source_freeze": "docs/validation/v0.2.1/semantic/freeze.json",
+  "files": {
+    "tests/fixtures/semantic-long-range/cases.json": {
+      "sha256": "219b5ce9c47d409710e1b95ce0058cd1975f2b4c87b7bafea3aaa65ccccbe5c9",
+      "source_commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+      "snapshot": "files/tests/fixtures/semantic-long-range/cases.json"
+    },
+    "skills/ai-short-drama-continuity-audit/SKILL.md": {
+      "sha256": "3fe74daa88ca30db74196934eb3ba27495a7d68c51180204726a28cd7eff4bb7",
+      "source_commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+      "snapshot": "files/skills/ai-short-drama-continuity-audit/SKILL.md"
+    },
+    "skills/ai-short-drama-story-audit/SKILL.md": {
+      "sha256": "82379d317dcaca76d42ca415837b65b82e139432b53e848f9ceabcc5a045be5b",
+      "source_commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+      "snapshot": "files/skills/ai-short-drama-story-audit/SKILL.md"
+    },
+    "skills/ai-short-drama-writing/references/common.md": {
+      "sha256": "76ab65cbcb4a1c92e80e5f5b3d06a1b062b8e502f1b96f17670ee1c2aa3a51df",
+      "source_commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+      "snapshot": "files/skills/ai-short-drama-writing/references/common.md"
+    },
+    "skills/ai-short-drama-writing/references/standards.md": {
+      "sha256": "66f5f28f05653a78a081af6fbf4f65be9385aecf46aafab943bf6660790cae43",
+      "source_commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+      "snapshot": "files/skills/ai-short-drama-writing/references/standards.md"
+    },
+    "skills/ai-short-drama-writing/references/workflow.md": {
+      "sha256": "61b87e8c68779215126ba17e6d2ce023e85152efa67e3f06ecc403d4d874cd87",
+      "source_commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+      "snapshot": "files/skills/ai-short-drama-writing/references/workflow.md"
+    },
+    "skills/ai-short-drama-writing/references/season-review.md": {
+      "sha256": "97cb22db89c2bef5c4f0c041cd49b9a1cafd93efe9292b66e83398a4f5566064",
+      "source_commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+      "snapshot": "files/skills/ai-short-drama-writing/references/season-review.md"
+    },
+    "skills/ai-short-drama-writing/references/structured-records.md": {
+      "sha256": "6823a83184984540396f6b51860306c5aa514d4d1cd40e18f29539c663a12784",
+      "source_commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+      "snapshot": "files/skills/ai-short-drama-writing/references/structured-records.md"
+    },
+    "skills/ai-short-drama-writing/assets/templates.md": {
+      "sha256": "35e224783ca11cf413f57ecc315e32dcb3638b90c4797363b60d6695c7b5f642",
+      "source_commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+      "snapshot": "files/skills/ai-short-drama-writing/assets/templates.md"
+    },
+    "docs/validation/v0.2.1/semantic/oracle.json": {
+      "sha256": "f216f667ad7be9fa844bccddaba635d2bf68bea8ae0d21229c0f35e3277cb4da",
+      "source_commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+      "snapshot": "files/docs/validation/v0.2.1/semantic/oracle.json"
+    }
+  }
+}

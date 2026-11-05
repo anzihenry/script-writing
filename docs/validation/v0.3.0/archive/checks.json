@@ -1,0 +1,31 @@
+[
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "output": "tests.txt"
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "scripts/benchmark_pipeline.py"
+    ],
+    "exit_code": 0,
+    "output": "benchmark.json"
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "scripts/validate_examples.py"
+    ],
+    "exit_code": 0,
+    "output": "examples.json"
+  }
+]

@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "case_id": "C01",
+      "kind": "positive",
+      "expected_findings": [
+        {
+          "severity": "P1",
+          "summary": "角色在没有识别来源时把周原认作搬箱者，且与首集未见脸冲突。",
+          "locations": [
+            "EP001-SC001",
+            "EP006-SC001"
+          ],
+          "minimum_fix": "将真实断言改成有表演依据的试探，或在授权修订中增加实际识别事件。"
+        }
+      ],
+      "required_facts": [
+        {
+          "question": "到 EP006，林岑是否有足够来源确认搬箱者身份？",
+          "answer": "没有；观众看过姓名卡，林岑未见脸且未获身份信息。",
+          "locations": [
+            "EP001-SC001",
+            "EP005-SC001",
+            "EP006-SC001"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    },
+    {
+      "case_id": "C02",
+      "kind": "negative",
+      "expected_findings": [],
+      "required_facts": [
+        {
+          "question": "EP006 开库房前，甲钥匙的持有人及来源是什么？",
+          "answer": "陶宁；EP005 陈伯拆封后当面交还，转移链完整。",
+          "locations": [
+            "EP002-SC001",
+            "EP003-SC001",
+            "EP004-SC001",
+            "EP005-SC001",
+            "EP006-SC001"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    },
+    {
+      "case_id": "C03",
+      "kind": "positive",
+      "expected_findings": [
+        {
+          "severity": "P1",
+          "summary": "当前已损坏罗盘无修复过程恢复功能，不能用三年前闪回解释。",
+          "locations": [
+            "EP001-SC001",
+            "EP004-SC001",
+            "EP006-SC001"
+          ],
+          "minimum_fix": "当前改用已建立的地图，或增加合理修复与时间成本。"
+        }
+      ],
+      "required_facts": [
+        {
+          "question": "EP004 的完整罗盘能否证明 EP006 当前罗盘已恢复？",
+          "answer": "不能；EP004 是三年前闪回，当前最后证据仍为未修复碎片。",
+          "locations": [
+            "EP001-SC001",
+            "EP004-SC001",
+            "EP005-SC001",
+            "EP006-SC001"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    },
+    {
+      "case_id": "C04",
+      "kind": "negative",
+      "expected_findings": [],
+      "required_facts": [
+        {
+          "question": "EP006 后叶晴与观众分别知道什么？",
+          "answer": "观众通过 EP001 知道齐安拿走账本；叶晴只有怀疑，EP006 是明确诈唬，沉默不构成确认。",
+          "locations": [
+            "EP001-SC001",
+            "EP005-SC001",
+            "EP006-SC001"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    },
+    {
+      "case_id": "C05",
+      "kind": "positive",
+      "expected_findings": [
+        {
+          "severity": "P1",
+          "summary": "F001 计划 EP006 回收，但完成范围内未兑现且没有延期记录。",
+          "locations": [
+            "EP001-SC001",
+            "EP003-SC001",
+            "EP006-SC001"
+          ],
+          "minimum_fix": "在授权范围补足回收，或明确修订计划及依赖，不能把未回收记成完成。"
+        }
+      ],
+      "required_facts": [
+        {
+          "question": "截至已完成的 EP006，F001 是否到期、是否已回收？",
+          "answer": "按仍有效的 v1 计划已到期，正文尚未回收；后两集未提供不改变本次到期判断。",
+          "locations": [
+            "EP001-SC001",
+            "EP003-SC001",
+            "EP006-SC001"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    },
+    {
+      "case_id": "C06",
+      "kind": "negative",
+      "expected_findings": [],
+      "required_facts": [
+        {
+          "question": "EP006 末 A 门与 B 门各是什么状态，台账引用是否支持所记对象？",
+          "answer": "A 门关闭、钥匙在抽屉；B 门由周青打开。台账正确引用 SC002 的 B 门动作，相同台词不能混淆场次。",
+          "locations": [
+            "EP006-SC001",
+            "EP006-SC002"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    },
+    {
+      "case_id": "C07",
+      "kind": "negative",
+      "expected_findings": [],
+      "required_facts": [
+        {
+          "question": "到 EP006，林岑是否有足够来源确认搬箱者身份？",
+          "answer": "有，来源为 EP005 亲眼看过的备用机连续录像，不是 EP001 的观察。",
+          "locations": [
+            "EP005-SC001",
+            "EP006-SC001"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    },
+    {
+      "case_id": "C08",
+      "kind": "positive",
+      "expected_findings": [
+        {
+          "severity": "P1",
+          "summary": "同一钥匙从未解除的封存状态直接出现在陶宁口袋，缺乏转移且被正文明确排除。",
+          "locations": [
+            "EP004-SC001",
+            "EP005-SC001",
+            "EP006-SC001"
+          ],
+          "minimum_fix": "修正开门动作，或明确增加拆封交接并复核后续持物。"
+        }
+      ],
+      "required_facts": [
+        {
+          "question": "EP006 开库房前，甲钥匙的持有人及来源是什么？",
+          "answer": "最后可追溯位置是陈伯的上锁抽屉；EP006 陶宁持有与封存链冲突，不能补记交还。",
+          "locations": [
+            "EP004-SC001",
+            "EP005-SC001",
+            "EP006-SC001"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    },
+    {
+      "case_id": "C09",
+      "kind": "negative",
+      "expected_findings": [],
+      "required_facts": [
+        {
+          "question": "EP004 的完整罗盘能否证明 EP006 当前罗盘已恢复？",
+          "answer": "不能，也没有恢复；完整罗盘只在闪回出现，当前使用地图，碎片仍在工作台。",
+          "locations": [
+            "EP004-SC001",
+            "EP005-SC001",
+            "EP006-SC001"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    },
+    {
+      "case_id": "C10",
+      "kind": "positive",
+      "expected_findings": [
+        {
+          "severity": "P1",
+          "summary": "问题在旁白把明确诈唬写成已核实亲眼事实，不是人物说谎本身。",
+          "locations": [
+            "EP001-SC001",
+            "EP005-SC001",
+            "EP006-SC001"
+          ],
+          "minimum_fix": "删除或修正旁白的确证，保留试探与未知；检查后续知情状态。"
+        }
+      ],
+      "required_facts": [
+        {
+          "question": "EP006 后叶晴与观众分别知道什么？",
+          "answer": "观众知道；叶晴先前只怀疑并计划诈唬，旁白把谎言变成已核实观察，与既定来源冲突。",
+          "locations": [
+            "EP001-SC001",
+            "EP005-SC001",
+            "EP006-SC001"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    },
+    {
+      "case_id": "C11",
+      "kind": "negative",
+      "expected_findings": [],
+      "required_facts": [
+        {
+          "question": "截至已完成的 EP006，F001 是否到期、是否已回收？",
+          "answer": "尚未到期，EP003 已明确将计划改为 EP008；仍未回收，不能写成完成，也不能按旧 v1 判逾期。",
+          "locations": [
+            "EP001-SC001",
+            "EP003-SC001",
+            "EP006-SC001"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    },
+    {
+      "case_id": "C12",
+      "kind": "positive",
+      "expected_findings": [
+        {
+          "severity": "P1",
+          "summary": "相同台词不能让另一场的开 B 门动作证明 A 门已开，台账对象与引用错配。",
+          "locations": [
+            "EP006-SC001",
+            "EP006-SC002"
+          ],
+          "minimum_fix": "修正台账对象/位置，保留 A 门关闭，不改正文配合错误记录。"
+        }
+      ],
+      "required_facts": [
+        {
+          "question": "EP006 末 A 门与 B 门各是什么状态，台账引用是否支持所记对象？",
+          "answer": "A 门仍关闭，B 门打开。台账把 SC002 的 B 门动作错引到 SC001 并写成 A 门打开，引用和对象均错。",
+          "locations": [
+            "EP006-SC001",
+            "EP006-SC002"
+          ]
+        }
+      ],
+      "forbidden_inferences": [
+        "不得补写未提供的通知、转交、修复、识别或批准；缺证据应保留未知。"
+      ]
+    }
+  ]
+}
