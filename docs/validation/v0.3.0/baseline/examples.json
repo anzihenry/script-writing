@@ -1,0 +1,87 @@
+{
+  "python": "3.15.2",
+  "results": [
+    {
+      "example": "return-demo",
+      "command": "check",
+      "exit_code": 0
+    },
+    {
+      "example": "return-demo",
+      "command": "next",
+      "exit_code": 0,
+      "status": "STRUCTURE_READY"
+    },
+    {
+      "example": "return-demo",
+      "command": "index",
+      "exit_code": 1,
+      "status": "UNVERIFIED"
+    },
+    {
+      "example": "return-demo",
+      "command": "parity",
+      "exit_code": 1,
+      "status": "UNVERIFIED"
+    },
+    {
+      "example": "return-demo",
+      "command": "bundle",
+      "exit_code": 0
+    },
+    {
+      "example": "return-demo",
+      "command": "verify-package",
+      "exit_code": 0,
+      "status": "VERIFIED"
+    },
+    {
+      "example": "return-demo",
+      "command": "receipt",
+      "exit_code": 0,
+      "status": "accepted",
+      "integrity": "VERIFIED"
+    },
+    {
+      "example": "return-season",
+      "command": "check",
+      "exit_code": 0
+    },
+    {
+      "example": "return-season",
+      "command": "next",
+      "exit_code": 0,
+      "status": "STRUCTURE_READY"
+    },
+    {
+      "example": "return-season",
+      "command": "index",
+      "exit_code": 0,
+      "status": "RECORDED"
+    },
+    {
+      "example": "return-season",
+      "command": "parity",
+      "exit_code": 0,
+      "status": "MATCH"
+    },
+    {
+      "example": "return-season",
+      "command": "bundle",
+      "exit_code": 0
+    },
+    {
+      "example": "return-season",
+      "command": "verify-package",
+      "exit_code": 0,
+      "status": "VERIFIED"
+    },
+    {
+      "example": "return-season",
+      "command": "receipt",
+      "exit_code": 0,
+      "status": "accepted",
+      "integrity": "VERIFIED"
+    }
+  ]
+}

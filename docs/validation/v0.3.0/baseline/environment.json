@@ -1,0 +1,45 @@
+{
+  "python": "3.15.2",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+  "initial_status": "?? docs/design/0.3.0-contract.md\n?? docs/plans/0.3.0.md\n?? docs/validation/v0.3.0/\n?? scripts/measure_harness_baseline.py\n",
+  "commands": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "tests.txt"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/benchmark_pipeline.py"
+      ],
+      "exit_code": 0,
+      "output": "benchmark.json"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/validate_examples.py"
+      ],
+      "exit_code": 0,
+      "output": "examples.json"
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.15/bin/python3.15",
+        "scripts/measure_harness_baseline.py"
+      ],
+      "exit_code": 0,
+      "output": "observations.json"
+    }
+  ]
+}

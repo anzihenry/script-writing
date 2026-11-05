@@ -1,0 +1,91 @@
+{
+  "commit": "9e679468853506bd2f676da083a5a56fe3be9c8d",
+  "python": "3.15.2",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "coupling": {
+    "path": "skills/ai-short-drama-continuity-audit/SKILL.md",
+    "original_matches_freeze": true,
+    "changed_matches_freeze": false,
+    "historical_guard": "tests/test_semantic_protocol.py:test_frozen_inputs_and_answer_coverage"
+  },
+  "recovery": {
+    "next": {
+      "stage": "G3",
+      "scope": "EP004",
+      "reasons": [
+        "missing output: continuity/EP004",
+        "missing output: script/EP004"
+      ],
+      "skill": "ai-short-drama-episode",
+      "inputs": [
+        {
+          "kind": "bible",
+          "scope": "project",
+          "id": "bible"
+        },
+        {
+          "kind": "outline",
+          "scope": "project",
+          "id": "outline"
+        },
+        {
+          "kind": "continuity",
+          "scope": "EP003",
+          "id": "continuity_EP003"
+        },
+        {
+          "kind": "script",
+          "scope": "EP004",
+          "id": null
+        }
+      ]
+    },
+    "additional_manifest_lookups": [
+      {
+        "id": "bible",
+        "path": "bible.md",
+        "revision": "v1.0"
+      },
+      {
+        "id": "outline",
+        "path": "outline.md",
+        "revision": "v1.0"
+      },
+      {
+        "id": "continuity_EP003",
+        "path": "continuity/EP003-v1.0.md",
+        "revision": "v1.0"
+      }
+    ],
+    "not_in_next": [
+      "input file paths and hashes",
+      "rule reading set",
+      "source excerpts",
+      "completion commands"
+    ]
+  },
+  "impact": {
+    "change": "EP001-D006: delete redundant demonstrative; no event or state change",
+    "stale_artifacts": [
+      "script_EP001",
+      "continuity_EP001",
+      "review_EP001",
+      "handoff_EP001",
+      "export_EP001",
+      "script_EP002",
+      "continuity_EP002",
+      "review_EP002",
+      "handoff_EP002",
+      "export_EP002",
+      "script_EP003",
+      "continuity_EP003",
+      "review_EP003",
+      "handoff_EP003",
+      "export_EP003",
+      "season_review"
+    ],
+    "stale_count": 16,
+    "downstream_count": 15,
+    "classification": "Conservative file-level revalidation, not an incorrect gate result"
+  }
+}
