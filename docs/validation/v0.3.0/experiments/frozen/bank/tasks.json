@@ -1,0 +1,373 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "tasks": [
+    {
+      "case_id": "R01",
+      "category": "routing",
+      "split": "dev",
+      "family": "R01",
+      "request": "只诊断所给一场戏的连续性，交付问题报告；不要修订，不要扩展全季。",
+      "files": [
+        "source.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-writing/SKILL.md"
+      ],
+      "source_characters": 79,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "R02",
+      "category": "routing",
+      "split": "dev",
+      "family": "R02",
+      "request": "只估算对白能否放进30秒，指出假设；不要润色，不要做立项。",
+      "files": [
+        "source.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-writing/SKILL.md"
+      ],
+      "source_characters": 179,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "R03",
+      "category": "routing",
+      "split": "holdout",
+      "family": "R03",
+      "request": "只从这段戏提取道具需求，不要续写或重做人物设定。",
+      "files": [
+        "source.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-writing/SKILL.md"
+      ],
+      "source_characters": 178,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "R04",
+      "category": "routing",
+      "split": "holdout",
+      "family": "R04",
+      "request": "只有一句创意：徒弟发现师傅每晚丢掉第一炉面包。先给一句故事概念和三条暂定前提，不要写全季。",
+      "files": [
+        "source.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-writing/SKILL.md"
+      ],
+      "source_characters": 179,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "W01",
+      "category": "writing",
+      "split": "dev",
+      "family": "W01",
+      "request": "为《旧照相馆》写一集60–90秒分场戏。店主想取回底片，顾客拒绝先付款。只用两人、一个常驻场景、最多三件主要道具。主角必须以可见行动作出有代价的选择，结尾改变局面。保留稳定集场/对白ID，给分段时长估算；交付正文，不需要全季策划。",
+      "files": [
+        "brief.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-episode/SKILL.md"
+      ],
+      "source_characters": 60,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "W02",
+      "category": "writing",
+      "split": "dev",
+      "family": "W02",
+      "request": "为《冷藏室》写一集60–90秒分场戏。学徒想断电清理，师傅要先保护唯一一箱菌种。只用两人、一个常驻场景、最多三件主要道具。主角必须以可见行动作出有代价的选择，结尾改变局面。保留稳定集场/对白ID，给分段时长估算；交付正文，不需要全季策划。",
+      "files": [
+        "brief.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-episode/SKILL.md"
+      ],
+      "source_characters": 59,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "W03",
+      "category": "writing",
+      "split": "holdout",
+      "family": "W03",
+      "request": "为《渡船票房》写一集60–90秒分场戏。售票员要关窗，旅客想找回误盖作废章的票。只用两人、一个常驻场景、最多三件主要道具。主角必须以可见行动作出有代价的选择，结尾改变局面。保留稳定集场/对白ID，给分段时长估算；交付正文，不需要全季策划。",
+      "files": [
+        "brief.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-episode/SKILL.md"
+      ],
+      "source_characters": 60,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "W04",
+      "category": "writing",
+      "split": "holdout",
+      "family": "W04",
+      "request": "为《灯具店》写一集60–90秒分场戏。修理工想拆灯，物主坚持保留父亲缠的旧胶带。只用两人、一个常驻场景、最多三件主要道具。主角必须以可见行动作出有代价的选择，结尾改变局面。保留稳定集场/对白ID，给分段时长估算；交付正文，不需要全季策划。",
+      "files": [
+        "brief.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-episode/SKILL.md"
+      ],
+      "source_characters": 59,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "C01",
+      "category": "continuity",
+      "split": "dev",
+      "family": "C01",
+      "request": "只审核这十二集的持物连续性，尤其核对结尾说法；给前后原文引用、最小修改建议和影响范围，不改正文。",
+      "files": [
+        "season.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-continuity-audit/SKILL.md"
+      ],
+      "source_characters": 8727,
+      "long_form_episodes": 12
+    },
+    {
+      "case_id": "C02",
+      "category": "continuity",
+      "split": "dev",
+      "family": "C02",
+      "request": "审核这段时间线是否存在知情穿帮；只报告有据问题，不修改。",
+      "files": [
+        "source.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-continuity-audit/SKILL.md"
+      ],
+      "source_characters": 123,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "C03",
+      "category": "continuity",
+      "split": "holdout",
+      "family": "C03",
+      "request": "只审核十二集人物知情来源，判断第十一集的断言是否有依据；列引用，不改正文。",
+      "files": [
+        "season.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-continuity-audit/SKILL.md"
+      ],
+      "source_characters": 8697,
+      "long_form_episodes": 12
+    },
+    {
+      "case_id": "C04",
+      "category": "continuity",
+      "split": "holdout",
+      "family": "C04",
+      "request": "只核对这三场的道具状态，报告具体冲突和最小修改，不重写整场。",
+      "files": [
+        "source.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-continuity-audit/SKILL.md"
+      ],
+      "source_characters": 133,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "V01",
+      "category": "revision",
+      "split": "dev",
+      "family": "V01",
+      "request": "只修订EP002-D002及确有必要的相邻动作，保留其余逐字原文与稳定ID。用最小改动解决事实冲突，交付完整修订文件和变更说明；不要编造补发生的事件。",
+      "files": [
+        "script.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-revision/SKILL.md"
+      ],
+      "source_characters": 153,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "V02",
+      "category": "revision",
+      "split": "dev",
+      "family": "V02",
+      "request": "只修订EP002-D002及确有必要的相邻动作，保留其余逐字原文与稳定ID。用最小改动解决事实冲突，交付完整修订文件和变更说明；不要编造补发生的事件。",
+      "files": [
+        "script.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-revision/SKILL.md"
+      ],
+      "source_characters": 157,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "V03",
+      "category": "revision",
+      "split": "holdout",
+      "family": "V03",
+      "request": "只修订EP002-D002及确有必要的相邻动作，保留其余逐字原文与稳定ID。用最小改动解决事实冲突，交付完整修订文件和变更说明；不要编造补发生的事件。",
+      "files": [
+        "script.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-revision/SKILL.md"
+      ],
+      "source_characters": 152,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "V04",
+      "category": "revision",
+      "split": "holdout",
+      "family": "V04",
+      "request": "只修订EP002-D002及确有必要的相邻动作，保留其余逐字原文与稳定ID。用最小改动解决事实冲突，交付完整修订文件和变更说明；不要编造补发生的事件。",
+      "files": [
+        "script.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-revision/SKILL.md"
+      ],
+      "source_characters": 150,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "S01",
+      "category": "recovery",
+      "split": "dev",
+      "family": "S01",
+      "request": "已中断到第十二集末。请基于实际正文写第十三集的首场（约60秒）：杜衡来交班，商宁应处理工具箱钥匙和待复测事项。先列必须继承的状态及来源，再写正文；不要重写前十二集或宣称复测已完成。",
+      "files": [
+        "season.md",
+        "checkpoint.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-episode/SKILL.md"
+      ],
+      "source_characters": 8666,
+      "long_form_episodes": 12
+    },
+    {
+      "case_id": "S02",
+      "category": "recovery",
+      "split": "dev",
+      "family": "S02",
+      "request": "恢复局部工作：只判断下一步和需要补读的材料，不实际续写。当前收到bible v2.0，旧检查点写“可交接”；正文和审核仍依赖bible v1.0。请给最小复核顺序，不能把旧检查点视为通过。",
+      "files": [
+        "status.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-writing/SKILL.md"
+      ],
+      "source_characters": 140,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "S03",
+      "category": "recovery",
+      "split": "holdout",
+      "family": "S03",
+      "request": "请从第十二集末恢复，写第十三集首场约60秒：唐越需要剪线后归还剪刀。先列实际持物及待验证事项的来源，不重写旧集、不编造雨测或班次确认。",
+      "files": [
+        "season.md",
+        "checkpoint.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-episode/SKILL.md"
+      ],
+      "source_characters": 8665,
+      "long_form_episodes": 12
+    },
+    {
+      "case_id": "S04",
+      "category": "recovery",
+      "split": "holdout",
+      "family": "S04",
+      "request": "仅恢复审核任务：前五集正文缺失，只收到第六集和一段未经核实摘要。请给本次能下的结论与必须补读清单，不补造前情、不批准全季。",
+      "files": [
+        "episode.md",
+        "summary.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-continuity-audit/SKILL.md"
+      ],
+      "source_characters": 73,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "H01",
+      "category": "handoff",
+      "split": "dev",
+      "family": "wet-door",
+      "request": "仅从指定v1.2提取场次、逐字对白、声音方式、资产与末状态；制作一份草稿预览交接单，不改剧情、不标锁定。另有旧v1.0备忘录，不能混用。",
+      "files": [
+        "script.md",
+        "old-notes.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-handoff/SKILL.md"
+      ],
+      "source_characters": 236,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "H02",
+      "category": "handoff",
+      "split": "dev",
+      "family": "wet-door",
+      "request": "仅从指定v1.2提取场次、逐字对白、声音方式、资产与末状态；制作一份草稿预览交接单，不改剧情、不标锁定。另有旧v1.0备忘录，不能混用。",
+      "files": [
+        "script.md",
+        "old-notes.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-handoff/SKILL.md"
+      ],
+      "source_characters": 236,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "H03",
+      "category": "handoff",
+      "split": "holdout",
+      "family": "H03",
+      "request": "仅从指定v1.2提取场次、逐字对白、声音方式、资产与末状态；制作一份草稿预览交接单，不改剧情、不标锁定。另有旧v1.0备忘录，不能混用。",
+      "files": [
+        "script.md",
+        "old-notes.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-handoff/SKILL.md"
+      ],
+      "source_characters": 252,
+      "long_form_episodes": 0
+    },
+    {
+      "case_id": "H04",
+      "category": "handoff",
+      "split": "holdout",
+      "family": "H04",
+      "request": "仅从指定v1.2提取场次、逐字对白、声音方式、资产与末状态；制作一份草稿预览交接单，不改剧情、不标锁定。另有旧v1.0备忘录，不能混用。",
+      "files": [
+        "script.md",
+        "old-notes.md"
+      ],
+      "entry_rules": [
+        "skills/ai-short-drama-handoff/SKILL.md"
+      ],
+      "source_characters": 267,
+      "long_form_episodes": 0
+    }
+  ]
+}

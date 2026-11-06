@@ -1,0 +1,14 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/minimal.md",
+    "input/source.md",
+    "input/cli-help.txt"
+  ],
+  "tool_calls": null,
+  "token_usage": null,
+  "limitations": [
+    "仅依据提供的三场文本；找到信后的实际持有人未交代。"
+  ]
+}

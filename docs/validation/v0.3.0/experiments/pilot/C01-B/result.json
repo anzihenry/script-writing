@@ -1,0 +1,19 @@
+{
+  "task_id": "C01",
+  "condition": "B",
+  "replicate": 1,
+  "status": "completed",
+  "errors": [],
+  "agent_id": "/root/pilot_c01_b",
+  "started_at": "2026-11-05T06:30:40+00:00",
+  "finished_at": "2026-11-05T06:32:15.684969+00:00",
+  "output_hashes": {
+    "answer.md": "74ed447e6b2236be36a1b72a55a349a479a624e1fc2b784bea9f3706b662fff6",
+    "execution.json": "428f9e20f1e147695b8882b4d572088bac486be55355571c11c6224bbebd88b8"
+  },
+  "manifest_sha256": "563f52fa33f7aa5d36aa74e7043d9a57ee11f1da7956f39993a432b052cdf5a9",
+  "input_unchanged": true,
+  "self_reported_unique_read_bytes": 19166,
+  "actual_token_usage": null,
+  "telemetry_source": "executor self-report; not instrumented trace"
+}

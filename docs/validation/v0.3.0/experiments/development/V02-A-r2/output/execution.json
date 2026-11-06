@@ -1,0 +1,11 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/script.md",
+    "input/cli-help.txt"
+  ],
+  "tool_calls": 5,
+  "token_usage": null,
+  "limitations": []
+}

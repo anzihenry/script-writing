@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "task_id": "S02",
+  "condition": "B",
+  "replicate": 2,
+  "pilot": false,
+  "split": "dev",
+  "category": "recovery",
+  "prepared_at": "2026-11-05T06:35:03.694603+00:00",
+  "status": "prepared",
+  "model": null,
+  "budget": {
+    "tool_calls": 12,
+    "answer_hanzi": 1500,
+    "enforcement": "instruction-only"
+  },
+  "host_limitations": [
+    "shared skill catalog/tool descriptions remain visible",
+    "directory isolation is instruction-only",
+    "no provider token telemetry"
+  ],
+  "input_hashes": {
+    "cli-help.txt": "6b648d8663b7898baeeae71d2167fd0971f912717ee6f4bbfbadddd30125182b",
+    "minimal.md": "1765822d7e8ceb153461e5ce7deb124cd37c0d682f8c3e878b214876aeb9177f",
+    "request.md": "b2ff9d9fe2a18b1121bc61d1b313dcd8d3a1e31861d3d7426f66bfaa45b00066",
+    "status.md": "b2b3e1e468daf81cc5387dd9a8494e64efac5bccd7b22297ead5357d2fc73dbf"
+  },
+  "request_sha256": "33e89bd2615a062576b968433160565d2aa6cc512b20173edaa7a01e104a2f9c",
+  "entry_rules": []
+}

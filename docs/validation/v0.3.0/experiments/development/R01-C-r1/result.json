@@ -1,0 +1,19 @@
+{
+  "task_id": "R01",
+  "condition": "C",
+  "replicate": 1,
+  "status": "completed",
+  "errors": [],
+  "agent_id": "/root/m2_serial_coordinator/m2_run_03",
+  "started_at": "2026-11-05T06:37:56Z",
+  "finished_at": "2026-11-05T06:39:21.989491+00:00",
+  "output_hashes": {
+    "answer.md": "5663f572f8acdfc0869bb831e7e20d954bded8ea577ba0e6d4db43261de75cae",
+    "execution.json": "5e0a664a7f6bd906d703a5dface124f0724c4f4b4a6b1baee8c38d25646fed38"
+  },
+  "manifest_sha256": "2c2e2f7fd5f09a76cc758b5e70dfb4d76ccc667c839536537cb054846c620c55",
+  "input_unchanged": true,
+  "self_reported_unique_read_bytes": 28552,
+  "actual_token_usage": null,
+  "telemetry_source": "executor self-report; not instrumented trace"
+}

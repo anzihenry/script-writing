@@ -1,0 +1,15 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-revision/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/script.md"
+  ],
+  "tool_calls": 5,
+  "token_usage": null,
+  "limitations": [
+    "未提供项目登记及派生文件；未执行项目登记或派生文件更新。",
+    "仅对指定对白及必要相邻内容进行局部自检。"
+  ]
+}

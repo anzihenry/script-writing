@@ -1,0 +1,11 @@
+{
+  "observed_input_hashes": {
+    "minimal.md": "cad689e800843c97189d99f361374b08bf3e40e9fff105b7ed2595cdc7308db0",
+    "source.md": "0fc6f1867b9c5e96e597c52e3107911f0e345829c7e4c7a821ad3632305fea7e",
+    "cli-help.txt": "6b648d8663b7898baeeae71d2167fd0971f912717ee6f4bbfbadddd30125182b",
+    "request.md": "4ece5e934a156e8e86da6f1223489a2a1d3ff03f1c4bf13e353f6815a53fb76f"
+  },
+  "shared_frozen_rules": [],
+  "observed_request_sha256": "33e89bd2615a062576b968433160565d2aa6cc512b20173edaa7a01e104a2f9c",
+  "note": "Input mutations, if present at finalization, are preserved as failure evidence."
+}

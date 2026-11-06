@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "pilot": "C01-B",
+      "checked_files": 4,
+      "all_match": true
+    },
+    {
+      "pilot": "R01-A",
+      "checked_files": 3,
+      "all_match": true
+    },
+    {
+      "pilot": "S01-C",
+      "checked_files": 101,
+      "all_match": true
+    }
+  ],
+  "note": "Input provenance only; pilot outputs remain excluded from formal scores."
+}

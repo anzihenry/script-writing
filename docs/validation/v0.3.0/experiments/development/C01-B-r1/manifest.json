@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "task_id": "C01",
+  "condition": "B",
+  "replicate": 1,
+  "pilot": false,
+  "split": "dev",
+  "category": "continuity",
+  "prepared_at": "2026-11-05T06:35:02.082346+00:00",
+  "status": "prepared",
+  "model": null,
+  "budget": {
+    "tool_calls": 12,
+    "answer_hanzi": 1500,
+    "enforcement": "instruction-only"
+  },
+  "host_limitations": [
+    "shared skill catalog/tool descriptions remain visible",
+    "directory isolation is instruction-only",
+    "no provider token telemetry"
+  ],
+  "input_hashes": {
+    "cli-help.txt": "6b648d8663b7898baeeae71d2167fd0971f912717ee6f4bbfbadddd30125182b",
+    "minimal.md": "cad689e800843c97189d99f361374b08bf3e40e9fff105b7ed2595cdc7308db0",
+    "request.md": "7693e503a748488004c3f251c3131698aa9f6068bce33ea5bddb7d215a46e179",
+    "season.md": "e0b9bcde723e74508c48fd1241268d63e24e2ab81b9860c9b087f5131dd841ad"
+  },
+  "request_sha256": "33e89bd2615a062576b968433160565d2aa6cc512b20173edaa7a01e104a2f9c",
+  "entry_rules": []
+}

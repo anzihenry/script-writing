@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "agent_id": "/root/m2_serial_coordinator/m2_run_23",
+  "status": "infrastructure_failed",
+  "reason": "usage limit before any output",
+  "started_at": "2026-11-05T16:44:26Z",
+  "finished_at": null,
+  "failure_recorded_at": "2026-11-05T23:44:01.628116+00:00",
+  "outputs_present": false,
+  "resumption": "user requested continuation; retry with fresh context"
+}

@@ -1,0 +1,82 @@
+{
+  "tasks": {
+    "W01": {
+      "required": [
+        "满足两人一场景及道具预算",
+        "有可见选择、代价及新局面",
+        "集场和对白ID可对应",
+        "估时合计60–90秒且标未实测"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    },
+    "W02": {
+      "required": [
+        "满足两人一场景及道具预算",
+        "有可见选择、代价及新局面",
+        "集场和对白ID可对应",
+        "估时合计60–90秒且标未实测"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-00c164b8d0",
+      "task_id": "W02"
+    },
+    {
+      "id": "run-067c762b85",
+      "task_id": "W02"
+    },
+    {
+      "id": "run-09342c94df",
+      "task_id": "W01"
+    },
+    {
+      "id": "run-2b6226d6ee",
+      "task_id": "W01"
+    },
+    {
+      "id": "run-362054c755",
+      "task_id": "W01"
+    },
+    {
+      "id": "run-38271bb93b",
+      "task_id": "W01"
+    },
+    {
+      "id": "run-4c946f3b6b",
+      "task_id": "W01"
+    },
+    {
+      "id": "run-50f6f28f45",
+      "task_id": "W02"
+    },
+    {
+      "id": "run-55105b72a7",
+      "task_id": "W02"
+    },
+    {
+      "id": "run-a8992ab8d8",
+      "task_id": "W01"
+    },
+    {
+      "id": "run-c722f4aa6e",
+      "task_id": "W02"
+    },
+    {
+      "id": "run-cb2fc56bab",
+      "task_id": "W02"
+    }
+  ]
+}

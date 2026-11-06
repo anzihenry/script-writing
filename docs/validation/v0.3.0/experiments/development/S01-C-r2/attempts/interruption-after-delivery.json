@@ -1,0 +1,19 @@
+{
+  "attempt": 1,
+  "agent_id": "/root/m2_serial_resume/m2_run_63",
+  "runner_status": "infrastructure_failed",
+  "reason": "usage limit after answer.md and execution.json were written",
+  "started_at": "2026-11-06T11:38:58Z",
+  "agent_finished_at": null,
+  "observed_at": "2026-11-06T16:23:19Z",
+  "output_files_present": [
+    "answer.md",
+    "execution.json"
+  ],
+  "output_mtimes_utc": {
+    "answer.md": "2026-11-06T11:40:23.119690+00:00",
+    "execution.json": "2026-11-06T11:40:23.121891+00:00"
+  },
+  "last_output_mtime_utc": "2026-11-06T11:40:23.121891+00:00",
+  "disposition": "retain delivered files without rerun; completion refers to required file delivery, semantic quality ungraded"
+}

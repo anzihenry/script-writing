@@ -1,0 +1,1 @@
+{"read_files":["request.md","input/request.md","input/status.md","input/cli-help.txt"],"tool_calls":4,"token_usage":null,"limitations":["仅有状态摘要，未提供 bible、EP004、review、handoff、checkpoint 完整材料，尚不能完成实质复核。","按要求只判断下一步及补读材料，未续写或修改工作材料；未联网，未执行项目控制命令。"]}

@@ -1,0 +1,222 @@
+{
+  "runs": [
+    {
+      "run_id": "R01-A-r1"
+    },
+    {
+      "run_id": "R01-B-r1"
+    },
+    {
+      "run_id": "R01-C-r1"
+    },
+    {
+      "run_id": "R02-B-r1"
+    },
+    {
+      "run_id": "R02-C-r1"
+    },
+    {
+      "run_id": "R02-A-r1"
+    },
+    {
+      "run_id": "W01-C-r1"
+    },
+    {
+      "run_id": "W01-A-r1"
+    },
+    {
+      "run_id": "W01-B-r1"
+    },
+    {
+      "run_id": "W02-A-r1"
+    },
+    {
+      "run_id": "W02-B-r1"
+    },
+    {
+      "run_id": "W02-C-r1"
+    },
+    {
+      "run_id": "C01-B-r1"
+    },
+    {
+      "run_id": "C01-C-r1"
+    },
+    {
+      "run_id": "C01-A-r1"
+    },
+    {
+      "run_id": "C02-C-r1"
+    },
+    {
+      "run_id": "C02-A-r1"
+    },
+    {
+      "run_id": "C02-B-r1"
+    },
+    {
+      "run_id": "V01-A-r1"
+    },
+    {
+      "run_id": "V01-B-r1"
+    },
+    {
+      "run_id": "V01-C-r1"
+    },
+    {
+      "run_id": "V02-B-r1"
+    },
+    {
+      "run_id": "V02-C-r1"
+    },
+    {
+      "run_id": "V02-A-r1"
+    },
+    {
+      "run_id": "S01-C-r1"
+    },
+    {
+      "run_id": "S01-A-r1"
+    },
+    {
+      "run_id": "S01-B-r1"
+    },
+    {
+      "run_id": "S02-A-r1"
+    },
+    {
+      "run_id": "S02-B-r1"
+    },
+    {
+      "run_id": "S02-C-r1"
+    },
+    {
+      "run_id": "H01-B-r1"
+    },
+    {
+      "run_id": "H01-C-r1"
+    },
+    {
+      "run_id": "H01-A-r1"
+    },
+    {
+      "run_id": "H02-C-r1"
+    },
+    {
+      "run_id": "H02-A-r1"
+    },
+    {
+      "run_id": "H02-B-r1"
+    },
+    {
+      "run_id": "R01-C-r2"
+    },
+    {
+      "run_id": "R01-B-r2"
+    },
+    {
+      "run_id": "R01-A-r2"
+    },
+    {
+      "run_id": "R02-A-r2"
+    },
+    {
+      "run_id": "R02-C-r2"
+    },
+    {
+      "run_id": "R02-B-r2"
+    },
+    {
+      "run_id": "W01-B-r2"
+    },
+    {
+      "run_id": "W01-A-r2"
+    },
+    {
+      "run_id": "W01-C-r2"
+    },
+    {
+      "run_id": "W02-C-r2"
+    },
+    {
+      "run_id": "W02-B-r2"
+    },
+    {
+      "run_id": "W02-A-r2"
+    },
+    {
+      "run_id": "C01-A-r2"
+    },
+    {
+      "run_id": "C01-C-r2"
+    },
+    {
+      "run_id": "C01-B-r2"
+    },
+    {
+      "run_id": "C02-B-r2"
+    },
+    {
+      "run_id": "C02-A-r2"
+    },
+    {
+      "run_id": "C02-C-r2"
+    },
+    {
+      "run_id": "V01-C-r2"
+    },
+    {
+      "run_id": "V01-B-r2"
+    },
+    {
+      "run_id": "V01-A-r2"
+    },
+    {
+      "run_id": "V02-A-r2"
+    },
+    {
+      "run_id": "V02-C-r2"
+    },
+    {
+      "run_id": "V02-B-r2"
+    },
+    {
+      "run_id": "S01-B-r2"
+    },
+    {
+      "run_id": "S01-A-r2"
+    },
+    {
+      "run_id": "S01-C-r2"
+    },
+    {
+      "run_id": "S02-C-r2"
+    },
+    {
+      "run_id": "S02-B-r2"
+    },
+    {
+      "run_id": "S02-A-r2"
+    },
+    {
+      "run_id": "H01-A-r2"
+    },
+    {
+      "run_id": "H01-C-r2"
+    },
+    {
+      "run_id": "H01-B-r2"
+    },
+    {
+      "run_id": "H02-B-r2"
+    },
+    {
+      "run_id": "H02-A-r2"
+    },
+    {
+      "run_id": "H02-C-r2"
+    }
+  ],
+  "policy": "serial fresh contexts; no selective reruns",
+  "original_schedule_sha256": "45f1b8a0c740070bb94016c22b4160b6ec0617b409f4ffee6c48d969216d6f3a"
+}

@@ -1,0 +1,1 @@
+{"read_files": ["request.md", "input/request.md", "input/minimal.md", "input/status.md", "input/cli-help.txt"], "tool_calls": 6, "token_usage": null, "limitations": ["仅提供登记摘要，未提供 bible、EP004、review、handoff 实际正文或相关前文，不能完成实质复核。", "按任务仅判断下一步与补读材料，未续写、修订或执行项目控制命令。"]}

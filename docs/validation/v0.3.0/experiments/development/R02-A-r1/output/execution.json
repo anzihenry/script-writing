@@ -1,0 +1,13 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/source.md",
+    "input/cli-help.txt"
+  ],
+  "tool_calls": null,
+  "token_usage": null,
+  "limitations": [
+    "仅文本估时，未实测朗读；动作与对白是否重叠未明确。"
+  ]
+}

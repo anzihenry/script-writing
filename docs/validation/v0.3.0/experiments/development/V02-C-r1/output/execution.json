@@ -1,0 +1,14 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-revision/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/script.md"
+  ],
+  "tool_calls": 5,
+  "token_usage": null,
+  "limitations": [
+    "仅依据当前任务输入进行局部修订与自审；未提供项目登记文件及派生产物，未执行管线登记或更新未提供文件。"
+  ]
+}

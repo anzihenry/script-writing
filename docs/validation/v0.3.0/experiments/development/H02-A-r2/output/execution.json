@@ -1,0 +1,6 @@
+{
+  "read_files": ["request.md", "input/request.md", "input/script.md", "input/cli-help.txt"],
+  "tool_calls": 4,
+  "token_usage": null,
+  "limitations": ["仅依据所给 v1.2 草稿提取；该版本未审核，45 秒为未实测估时。"]
+}

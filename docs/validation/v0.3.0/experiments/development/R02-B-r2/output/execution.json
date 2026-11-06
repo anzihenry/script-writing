@@ -1,0 +1,13 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/minimal.md",
+    "input/source.md"
+  ],
+  "tool_calls": null,
+  "token_usage": null,
+  "limitations": [
+    "未提供试读或录音，语速、停顿和动作重叠未经实测；动作12秒采用输入预留值。"
+  ]
+}

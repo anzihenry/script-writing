@@ -1,0 +1,80 @@
+{
+  "tasks": {
+    "R01": {
+      "required": [
+        "选择连续性审核或等价最小工作范围",
+        "指出票据持有人矛盾并引用前后句",
+        "不交付改写正文"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    },
+    "R02": {
+      "required": [
+        "只做估时",
+        "区分对白读速与动作占时、标估算",
+        "不宣称实际配音或改写"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-195d568712",
+      "task_id": "R02"
+    },
+    {
+      "id": "run-1c6e73e8c6",
+      "task_id": "R02"
+    },
+    {
+      "id": "run-1fcafdc727",
+      "task_id": "R01"
+    },
+    {
+      "id": "run-29790321fd",
+      "task_id": "R02"
+    },
+    {
+      "id": "run-339ced3f39",
+      "task_id": "R01"
+    },
+    {
+      "id": "run-622c7b926d",
+      "task_id": "R02"
+    },
+    {
+      "id": "run-a7ebfb98c0",
+      "task_id": "R01"
+    },
+    {
+      "id": "run-b585cc76b7",
+      "task_id": "R01"
+    },
+    {
+      "id": "run-bd54befba5",
+      "task_id": "R02"
+    },
+    {
+      "id": "run-c42f291519",
+      "task_id": "R02"
+    },
+    {
+      "id": "run-c765f683f1",
+      "task_id": "R01"
+    },
+    {
+      "id": "run-da8edcbbb3",
+      "task_id": "R01"
+    }
+  ]
+}

@@ -1,0 +1,3868 @@
+{
+  "summary": {
+    "A": {
+      "successful": 20,
+      "runs": 24,
+      "execution_statuses": {
+        "completed": 24
+      },
+      "critical_violations": 0,
+      "median_self_reported_unique_read_bytes": 1835.0,
+      "median_self_reported_tool_calls": 4,
+      "median_wall_seconds_upper_bound": 66.7506355,
+      "wall_seconds_observed_runs": 24,
+      "actual_token_usage": null,
+      "categories": {
+        "continuity": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 10313.0
+        },
+        "handoff": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 1876.0
+        },
+        "recovery": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 10340.0
+        },
+        "revision": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 1841.0
+        },
+        "routing": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 1593.5
+        },
+        "writing": {
+          "successful": 0,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 1830.5
+        }
+      }
+    },
+    "B": {
+      "successful": 24,
+      "runs": 24,
+      "execution_statuses": {
+        "completed": 24
+      },
+      "critical_violations": 0,
+      "median_self_reported_unique_read_bytes": 2043.5,
+      "median_self_reported_tool_calls": 4.0,
+      "median_wall_seconds_upper_bound": 72.513685,
+      "wall_seconds_observed_runs": 23,
+      "actual_token_usage": null,
+      "categories": {
+        "continuity": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 10535.0
+        },
+        "handoff": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 2184.0
+        },
+        "recovery": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 10553.0
+        },
+        "revision": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 2041.0
+        },
+        "routing": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 1773.5
+        },
+        "writing": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 2044.5
+        }
+      }
+    },
+    "C": {
+      "successful": 23,
+      "runs": 24,
+      "execution_statuses": {
+        "completed": 24
+      },
+      "critical_violations": 1,
+      "median_self_reported_unique_read_bytes": 19942.0,
+      "median_self_reported_tool_calls": 5,
+      "median_wall_seconds_upper_bound": 93.552239,
+      "wall_seconds_observed_runs": 23,
+      "actual_token_usage": null,
+      "categories": {
+        "continuity": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 16924.0
+        },
+        "handoff": {
+          "successful": 3,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 31612.0
+        },
+        "recovery": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 33798.5
+        },
+        "revision": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 8560.0
+        },
+        "routing": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 18460.0
+        },
+        "writing": {
+          "successful": 4,
+          "runs": 4,
+          "median_self_reported_unique_read_bytes": 19937.5
+        }
+      }
+    }
+  },
+  "by_task": {
+    "C01": {
+      "A": {
+        "successful": 2,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "C02": {
+      "A": {
+        "successful": 2,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "H01": {
+      "A": {
+        "successful": 2,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "H02": {
+      "A": {
+        "successful": 2,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 1,
+        "runs": 2
+      }
+    },
+    "R01": {
+      "A": {
+        "successful": 2,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "R02": {
+      "A": {
+        "successful": 2,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "S01": {
+      "A": {
+        "successful": 2,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "S02": {
+      "A": {
+        "successful": 2,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "V01": {
+      "A": {
+        "successful": 2,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "V02": {
+      "A": {
+        "successful": 2,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "W01": {
+      "A": {
+        "successful": 0,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "W02": {
+      "A": {
+        "successful": 0,
+        "runs": 2
+      },
+      "B": {
+        "successful": 2,
+        "runs": 2
+      },
+      "C": {
+        "successful": 2,
+        "runs": 2
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "run-083679a4d6",
+      "task_id": "C01",
+      "category": "continuity",
+      "condition": "C",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "定位EP011转移与EP012台词矛盾",
+          "status": "pass",
+          "quote": "首个明确分歧是 EP012-D001，不是 EP006，也不是 EP011。EP006 已真实归还；EP011 又真实转交。",
+          "reason": "对照源文 EP011-B001 连票交给罗禾、EP012-D001 声称一直自持及 EP012-B001/B003 空袋与同号票，输出准确定位结尾说法冲突，未将实物链误判为瞬移。"
+        },
+        {
+          "criterion": "指出EP006归还不抵消EP011后续转移",
+          "status": "pass",
+          "quote": "EP006 已真实归还；EP011 又真实转交。",
+          "reason": "输出将 EP006 当面归还与更晚 EP011 再次交出按先后区分；其逐集链及结论未用早先归还覆盖后续转移。"
+        },
+        {
+          "criterion": "引用逐字原文并区分说法与实物",
+          "status": "pass",
+          "quote": "后文 EP012-D001：“票从昨天起一直在我口袋，谁都没碰过。”但同场 B001 写“阿岑摸了摸空口袋，罗禾把红夹子放在秤旁”；B003 写“罗禾打开红夹子，露出同一号码的盐票；阿岑的手停在空口袋上”。",
+          "reason": "输出所引交接、结尾对白及空口袋/同号票片段可与源文逐字对应；判断以客观动作检验角色断言，而非把断言当持有事实。"
+        },
+        {
+          "criterion": "给最小修改且不宣称所有维度通过",
+          "status": "pass",
+          "quote": "最小建议：仅将 EP012-D001 改为“票连红夹子都交给你了，原票就在里面。”保留结尾动作与罗禾回应。",
+          "reason": "给出只改 EP012-D001 的局部建议及相关复核范围；全文为持物专项报告，未宣布其他维度或全季综合验收通过。实际交付为建议报告而非改写正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 29294,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": null,
+      "wall_seconds_upper_bound": 135.010779,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "054466bbc56a8ca95db3fbfc7d256fbfebb65578f76f1a460f77913e81efc9db",
+        "execution.json": "6e0d7320feef1bd7a275e1e038e5abdc14bb4d41a5ca8e6bf7ffaa614aa52671"
+      }
+    },
+    {
+      "id": "run-22484726ed",
+      "task_id": "C01",
+      "category": "continuity",
+      "condition": "A",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "定位EP011转移与EP012台词矛盾",
+          "status": "pass",
+          "quote": "判断：“一直在我口袋”被明确交出、接住及空口袋否定；“谁都没碰过”也被罗禾接持、放下和打开否定。",
+          "reason": "对照源文 EP011-B001 连票交给罗禾、EP012-D001 声称一直自持及 EP012-B001/B003 空袋与同号票，输出准确定位结尾说法冲突，未将实物链误判为瞬移。"
+        },
+        {
+          "criterion": "指出EP006归还不抵消EP011后续转移",
+          "status": "pass",
+          "quote": "EP006 当面还给阿岑并收入口袋 → EP007 未出示票 → EP008 阿岑取出又收好 → EP009 未丢弃 → EP010 未出示票 → EP011 连红夹子交给罗禾 → EP012 罗禾放下、打开，票仍在夹子里。",
+          "reason": "输出将 EP006 当面归还与更晚 EP011 再次交出按先后区分；其逐集链及结论未用早先归还覆盖后续转移。"
+        },
+        {
+          "criterion": "引用逐字原文并区分说法与实物",
+          "status": "pass",
+          "quote": "EP012-SC001-B003：“罗禾打开红夹子，露出同一号码的盐票；阿岑的手停在空口袋上。”",
+          "reason": "输出所引交接、结尾对白及空口袋/同号票片段可与源文逐字对应；判断以客观动作检验角色断言，而非把断言当持有事实。"
+        },
+        {
+          "criterion": "给最小修改且不宣称所有维度通过",
+          "status": "pass",
+          "quote": "影响范围：直接修改仅 EP012-D001；复核 EP011 的交接与 EP012 的空口袋、秤旁夹子和原票露出即可，无须倒改 EP003、EP006 或新增交接场。",
+          "reason": "给出只改 EP012-D001 的局部建议及相关复核范围；全文为持物专项报告，未宣布其他维度或全季综合验收通过。实际交付为建议报告而非改写正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "开头“应改这一句”及“不能用…人物撒谎补洞”措辞偏确定；其客观持物链判断正确，但未像其他可能方案一样明确保留作者有意撒谎的待确认分支。此为创作意图处理不足，不等同误判实物瞬移。"
+      ],
+      "read_bytes": 18944,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 85.119751,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "de59cb6bc5676284bc97a43365f965b752fe86630d932cd6de7003e118b4d1ef",
+        "execution.json": "5e9e1333e5fb4c7235480d6338225812dffa1747c14967dabfe6b872d6d6b451"
+      }
+    },
+    {
+      "id": "run-4be5c4d907",
+      "task_id": "C02",
+      "category": "continuity",
+      "condition": "A",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "不把过去缺席误判当前不知情",
+          "status": "pass",
+          "quote": "EP001-SC001 中小方不在场，只能说明他未目睹藏信",
+          "reason": "源文 EP001 仅说明过去未在场；输出结合后续获知节点判断当前行动，不把历史缺席误作永久不知情。"
+        },
+        {
+          "criterion": "指出EP002当面告知为来源",
+          "status": "pass",
+          "quote": "EP002-SC001 中小云已当面告知“信在柜子最下层”，小方点头，建立了明确的信息来源。",
+          "reason": "准确指出源文 EP002 小云当面告知位置、小方点头，作为 EP003 找信的直接信息来源。"
+        },
+        {
+          "criterion": "限定为给定范围、不声称全季通过",
+          "status": "pass",
+          "quote": "以上判断限于所给三场文本；未修改原文。",
+          "reason": "全文仅依据所给 EP001—EP003 场次裁定知情链，未扩展到未提供场次或宣称全季通过；对文本外事项未补造结论。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1682,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 63.741672,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "66fa7856ea509e65b1ea8127b1b119d6e6b4d23f233ef149d8a2a782a2bd546f",
+        "execution.json": "a33d2c3a4072ff3087202e6a7e87007195c0bc161a82d36b308dc665945686c9"
+      }
+    },
+    {
+      "id": "run-579417f2cc",
+      "task_id": "C01",
+      "category": "continuity",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "定位EP011转移与EP012台词矛盾",
+          "status": "pass",
+          "quote": "首个明确分歧：EP012-D001：“票从昨天起一直在我口袋，谁都没碰过。”",
+          "reason": "对照源文 EP011-B001 连票交给罗禾、EP012-D001 声称一直自持及 EP012-B001/B003 空袋与同号票，输出准确定位结尾说法冲突，未将实物链误判为瞬移。"
+        },
+        {
+          "criterion": "指出EP006归还不抵消EP011后续转移",
+          "status": "pass",
+          "quote": "因此“始终在我口袋”和“无人碰过”均被动作否定，EP006 不能覆盖 EP011 的新交接。",
+          "reason": "输出将 EP006 当面归还与更晚 EP011 再次交出按先后区分；其逐集链及结论未用早先归还覆盖后续转移。"
+        },
+        {
+          "criterion": "引用逐字原文并区分说法与实物",
+          "status": "pass",
+          "quote": "决定性后续：EP011-SC001-B001：“阿岑把盐票从自己口袋取出，夹进红夹子，再把夹子交给罗禾。”",
+          "reason": "输出所引交接、结尾对白及空口袋/同号票片段可与源文逐字对应；判断以客观动作检验角色断言，而非把断言当持有事实。"
+        },
+        {
+          "criterion": "给最小修改且不宣称所有维度通过",
+          "status": "pass",
+          "quote": "最小建议：仅将 EP012-D001 改为“票连红夹子都交给你了，原票还在吧？”保留现有动作及第二句。",
+          "reason": "给出只改 EP012-D001 的局部建议及相关复核范围；全文为持物专项报告，未宣布其他维度或全季综合验收通过。实际交付为建议报告而非改写正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 25555,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": null,
+      "wall_seconds_upper_bound": 95.107022,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "6ed714015663ccd78854b12888f682510cacd69efdaa19e67a666e6966de4ebe",
+        "execution.json": "0bbabb2487bfdc61fcb916c770c9b287b3fa815ed5254ccaa280d31fd4a3bc0a"
+      }
+    },
+    {
+      "id": "run-697fbe088f",
+      "task_id": "C02",
+      "category": "continuity",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "不把过去缺席误判当前不知情",
+          "status": "pass",
+          "quote": "不能据此断定小方以后始终不知情。",
+          "reason": "源文 EP001 仅说明过去未在场；输出结合后续获知节点判断当前行动，不把历史缺席误作永久不知情。"
+        },
+        {
+          "criterion": "指出EP002当面告知为来源",
+          "status": "pass",
+          "quote": "EP002-SC001（当前）：“小云当面告诉小方：‘信在柜子最下层。’小方点头。”此处提供了小方获知信件位置的明确渠道。",
+          "reason": "准确指出源文 EP002 小云当面告知位置、小方点头，作为 EP003 找信的直接信息来源。"
+        },
+        {
+          "criterion": "限定为给定范围、不声称全季通过",
+          "status": "pass",
+          "quote": "“找到”未明确写成取走，之后由谁持有未知。",
+          "reason": "全文仅依据所给 EP001—EP003 场次裁定知情链，未扩展到未提供场次或宣称全季通过；对文本外事项未补造结论。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "附加信件持物边界讨论超出知情审核主问题，但仍以已给三场为依据，未新增问题或修改正文。",
+        "未使用明确“仅限所给三场”的范围声明；实际论证全部限定给定场次及原文，且无全季通过主张，按实质范围判通过。"
+      ],
+      "read_bytes": 1904,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": null,
+      "wall_seconds_upper_bound": 56.15021,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "dc0bfd3e2b16c82f7551252c58f6da35fd39b82e45bef37937fbca1793099d0f",
+        "execution.json": "9fc6139b3f4a36530e05d8ea28c8a063fb068dd4d4925cb201e092890ba1186f"
+      }
+    },
+    {
+      "id": "run-6c617d6fa5",
+      "task_id": "C02",
+      "category": "continuity",
+      "condition": "A",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "不把过去缺席误判当前不知情",
+          "status": "pass",
+          "quote": "EP001-SC001 小方虽不在藏信现场，但 EP002-SC001 小云已当面告知“信在柜子最下层”，小方点头，构成明确的获知途径。",
+          "reason": "源文 EP001 仅说明过去未在场；输出结合后续获知节点判断当前行动，不把历史缺席误作永久不知情。"
+        },
+        {
+          "criterion": "指出EP002当面告知为来源",
+          "status": "pass",
+          "quote": "EP002-SC001 小云已当面告知“信在柜子最下层”，小方点头，构成明确的获知途径。",
+          "reason": "准确指出源文 EP002 小云当面告知位置、小方点头，作为 EP003 找信的直接信息来源。"
+        },
+        {
+          "criterion": "限定为给定范围、不声称全季通过",
+          "status": "pass",
+          "quote": "未发现有文本依据的知情穿帮。",
+          "reason": "全文仅依据所给 EP001—EP003 场次裁定知情链，未扩展到未提供场次或宣称全季通过；对文本外事项未补造结论。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "未使用明确“仅限所给三场”的范围声明；实际论证全部限定给定场次及原文，且无全季通过主张，按实质范围判通过。"
+      ],
+      "read_bytes": 1682,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 51.016282,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "bffbbe83abf5c265cb2b337cce479e75226062b8711065cf8bedf1e8b97d271f",
+        "execution.json": "8243456472e160d7fac2bb76e531987e421ade9ec1acdc9bae44ecc6ad0b52d5"
+      }
+    },
+    {
+      "id": "run-ae9b85da3c",
+      "task_id": "C01",
+      "category": "continuity",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "定位EP011转移与EP012台词矛盾",
+          "status": "pass",
+          "quote": "结论：盐票的客观交接链可闭合，结尾 EP012-D001 的角色说法与已展示动作冲突。",
+          "reason": "对照源文 EP011-B001 连票交给罗禾、EP012-D001 声称一直自持及 EP012-B001/B003 空袋与同号票，输出准确定位结尾说法冲突，未将实物链误判为瞬移。"
+        },
+        {
+          "criterion": "指出EP006归还不抵消EP011后续转移",
+          "status": "pass",
+          "quote": "核对依据涉及06、08、11的保管与交接，不需重写这些正常动作。",
+          "reason": "输出将 EP006 当面归还与更晚 EP011 再次交出按先后区分；其逐集链及结论未用早先归还覆盖后续转移。"
+        },
+        {
+          "criterion": "引用逐字原文并区分说法与实物",
+          "status": "pass",
+          "quote": "**前证**：EP011-SC001-B001：“阿岑把盐票从自己口袋取出，夹进红夹子，再把夹子交给罗禾。”",
+          "reason": "输出所引交接、结尾对白及空口袋/同号票片段可与源文逐字对应；判断以客观动作检验角色断言，而非把断言当持有事实。"
+        },
+        {
+          "criterion": "给最小修改且不宣称所有维度通过",
+          "status": "pass",
+          "quote": "**最小修改建议**：若本意是准确复述，D001可改为：“票我已经连红夹子交给你了，现在还在里面吧？”仅修改一条对白，保留后续开夹验票。",
+          "reason": "给出只改 EP012-D001 的局部建议及相关复核范围；全文为持物专项报告，未宣布其他维度或全季综合验收通过。实际交付为建议报告而非改写正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 19166,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 132.264948,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "ab893562940e2c125e58614304e2b73d6a33b4b717cc823d667f0e3f3157ade7",
+        "execution.json": "01c0c736bb6df880a01588c12779c5251c16504766a5d0bb900974275dbd92a9"
+      }
+    },
+    {
+      "id": "run-b3467de2e5",
+      "task_id": "C02",
+      "category": "continuity",
+      "condition": "C",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "不把过去缺席误判当前不知情",
+          "status": "pass",
+          "quote": "小云藏信时小方不在，只能说明小方未目睹藏信，不能据此认定他此后始终不知位置。",
+          "reason": "源文 EP001 仅说明过去未在场；输出结合后续获知节点判断当前行动，不把历史缺席误作永久不知情。"
+        },
+        {
+          "criterion": "指出EP002当面告知为来源",
+          "status": "pass",
+          "quote": "EP002-SC001（当前）：小云当面告诉小方“信在柜子最下层”，小方点头，已明确提供知情来源。",
+          "reason": "准确指出源文 EP002 小云当面告知位置、小方点头，作为 EP003 找信的直接信息来源。"
+        },
+        {
+          "criterion": "限定为给定范围、不声称全季通过",
+          "status": "pass",
+          "quote": "结论不延伸到未提供的其他正文；未修改正文或台账，无后续阶段操作。",
+          "reason": "全文仅依据所给 EP001—EP003 场次裁定知情链，未扩展到未提供场次或宣称全季通过；对文本外事项未补造结论。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 8293,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 75.336315,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "5e9f1e1720fcca92f80d1488ff03cf67af3981b25fd378a2d7a2c49e911e84f6",
+        "execution.json": "1bcf298776bdd0825d8166de9297a740b6dbf044f539b531891c0cdb34dabd08"
+      }
+    },
+    {
+      "id": "run-bc2fb73dfc",
+      "task_id": "C01",
+      "category": "continuity",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "定位EP011转移与EP012台词矛盾",
+          "status": "pass",
+          "quote": "已核对十二集。盐票的客观流转基本连贯；结尾有一处明确的“角色说法与已演动作冲突”。它不能证明盐票凭空转移，也不能直接认定阿岑撒谎。",
+          "reason": "对照源文 EP011-B001 连票交给罗禾、EP012-D001 声称一直自持及 EP012-B001/B003 空袋与同号票，输出准确定位结尾说法冲突，未将实物链误判为瞬移。"
+        },
+        {
+          "criterion": "指出EP006归还不抵消EP011后续转移",
+          "status": "pass",
+          "quote": "这只能证明第6集时收回，不能支持此后始终持有。",
+          "reason": "输出将 EP006 当面归还与更晚 EP011 再次交出按先后区分；其逐集链及结论未用早先归还覆盖后续转移。"
+        },
+        {
+          "criterion": "引用逐字原文并区分说法与实物",
+          "status": "pass",
+          "quote": "更近的EP011-SC001-B001：“阿岑把盐票从自己口袋取出，夹进红夹子，再把夹子交给罗禾。”",
+          "reason": "输出所引交接、结尾对白及空口袋/同号票片段可与源文逐字对应；判断以客观动作检验角色断言，而非把断言当持有事实。"
+        },
+        {
+          "criterion": "给最小修改且不宣称所有维度通过",
+          "status": "pass",
+          "quote": "**最小建议**：若台词意在陈述事实，仅将EP012-D001改为：“票昨天交给你了，一直夹着，没拆过吧？”保留疑问，避免把罗禾此前“不拆开”的承诺写成未经展示的事实。",
+          "reason": "给出只改 EP012-D001 的局部建议及相关复核范围；全文为持物专项报告，未宣布其他维度或全季综合验收通过。实际交付为建议报告而非改写正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 19166,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": null,
+      "wall_seconds_upper_bound": 87.57689,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "d9a4d098695d22633942722d0edb06d153d582bdf714a967d380c4049b5a02ce",
+        "execution.json": "f8f68f2bd9ba25562e38ac42284cb6827a8f3d28625329174fcd8aba0448db65"
+      }
+    },
+    {
+      "id": "run-cc6949a687",
+      "task_id": "C02",
+      "category": "continuity",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "不把过去缺席误判当前不知情",
+          "status": "pass",
+          "quote": "小方未在场，只能说明他未亲见此次藏信，不能据此断言他此后一直不知情。",
+          "reason": "源文 EP001 仅说明过去未在场；输出结合后续获知节点判断当前行动，不把历史缺席误作永久不知情。"
+        },
+        {
+          "criterion": "指出EP002当面告知为来源",
+          "status": "pass",
+          "quote": "EP002-SC001（当前）：“小云当面告诉小方：‘信在柜子最下层。’小方点头。”这是小方获得位置消息的明确节点。",
+          "reason": "准确指出源文 EP002 小云当面告知位置、小方点头，作为 EP003 找信的直接信息来源。"
+        },
+        {
+          "criterion": "限定为给定范围、不声称全季通过",
+          "status": "pass",
+          "quote": "期间是否被移动、找到后是否取走或由谁持有，原文未交代，均为未知，不据此列为问题。",
+          "reason": "全文仅依据所给 EP001—EP003 场次裁定知情链，未扩展到未提供场次或宣称全季通过；对文本外事项未补造结论。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "附加信件持物边界讨论超出知情审核主问题，但仍以已给三场为依据，未新增问题或修改正文。",
+        "未使用明确“仅限所给三场”的范围声明；实际论证全部限定给定场次及原文，且无全季通过主张，按实质范围判通过。"
+      ],
+      "read_bytes": 1904,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 73.625807,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "516bfe0d9cbbea010cfff7db00913869c4c6721610765b010547d52768eda27a",
+        "execution.json": "5aaea4447cd676b921210c88e457d9c0b8200539c533d4001649072a3b6d9cbe"
+      }
+    },
+    {
+      "id": "run-d90a8570d3",
+      "task_id": "C02",
+      "category": "continuity",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "不把过去缺席误判当前不知情",
+          "status": "pass",
+          "quote": "EP001-SC001（过去）：小云藏信时小方不在，只能说明小方未现场目睹藏信。",
+          "reason": "源文 EP001 仅说明过去未在场；输出结合后续获知节点判断当前行动，不把历史缺席误作永久不知情。"
+        },
+        {
+          "criterion": "指出EP002当面告知为来源",
+          "status": "pass",
+          "quote": "EP002-SC001（当前）：小云当面告知“信在柜子最下层”，小方点头，已明确建立信息传递。",
+          "reason": "准确指出源文 EP002 小云当面告知位置、小方点头，作为 EP003 找信的直接信息来源。"
+        },
+        {
+          "criterion": "限定为给定范围、不声称全季通过",
+          "status": "pass",
+          "quote": "结论不延伸至未提供的其他场次。原文未改动。",
+          "reason": "全文仅依据所给 EP001—EP003 场次裁定知情链，未扩展到未提供场次或宣称全季通过；对文本外事项未补造结论。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 8293,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 51.668649,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "c943fe3a84f255a2a17c9e9349402e99502edfc4f5f2f899fff6248dace8b85a",
+        "execution.json": "35b40a0bbf9e03dd707b73ede438f7b2372ec764e23807df8250688916517a9b"
+      }
+    },
+    {
+      "id": "run-ee4ff1266f",
+      "task_id": "C01",
+      "category": "continuity",
+      "condition": "A",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "定位EP011转移与EP012台词矛盾",
+          "status": "pass",
+          "quote": "结论：盐票实际交接链成立，结尾 EP012-D001 与前集交接及本集画面直接冲突。",
+          "reason": "对照源文 EP011-B001 连票交给罗禾、EP012-D001 声称一直自持及 EP012-B001/B003 空袋与同号票，输出准确定位结尾说法冲突，未将实物链误判为瞬移。"
+        },
+        {
+          "criterion": "指出EP006归还不抵消EP011后续转移",
+          "status": "pass",
+          "quote": "EP006 当面连袋归还阿岑；EP007 无票交接；EP008 阿岑展示后收好，罗禾只拿板；EP009 夹在秤底的是广告，明确未弃票；EP010 无票交接；EP011 连红夹子交罗禾；EP012 夹子落在秤旁并揭出同号票。",
+          "reason": "输出将 EP006 当面归还与更晚 EP011 再次交出按先后区分；其逐集链及结论未用早先归还覆盖后续转移。"
+        },
+        {
+          "criterion": "引用逐字原文并区分说法与实物",
+          "status": "pass",
+          "quote": "后文 EP012-D001：“票从昨天起一直在我口袋，谁都没碰过。”但同集 B001：“阿岑摸了摸空口袋，罗禾把红夹子放在秤旁。”B003：“罗禾打开红夹子，露出同一号码的盐票；阿岑的手停在空口袋上。”",
+          "reason": "输出所引交接、结尾对白及空口袋/同号票片段可与源文逐字对应；判断以客观动作检验角色断言，而非把断言当持有事实。"
+        },
+        {
+          "criterion": "给最小修改且不宣称所有维度通过",
+          "status": "pass",
+          "quote": "最小建议：仅将 EP012-D001 改为“票昨天连红夹子交给你了，现在还在夹子里吧？”保留其余动作和罗禾回应。影响范围：EP012 一句对白及配音；EP011 交接、EP012 揭票镜头均无需调整。",
+          "reason": "给出只改 EP012-D001 的局部建议及相关复核范围；全文为持物专项报告，未宣布其他维度或全季综合验收通过。实际交付为建议报告而非改写正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "标题“必修”偏确定，但正文明确保留“如意在表现阿岑说谎，应另行明确表演意图”，因此未把未知意图断言为已证实事实。"
+      ],
+      "read_bytes": 18944,
+      "limitations": [
+        "仅核对本目录提供的请求、来源和匿名 answer.md；无法独立验证交付文件以外是否发生操作，未据此推定违规。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 104.958341,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "149e8fb0d3c953fd8166c8bb3a09ef0feaa29e5497d13ace5902d1d3231a8ae4",
+      "output_hashes": {
+        "answer.md": "6c7a5426b003e99cd76e6dcfe06ed47715c544f087f71b6e2248301fd00cef66",
+        "execution.json": "b86e9bc3dab996f6aade59598612f9c2edc0e1c304ba1c90dd0dabcfcb9c5c4c"
+      }
+    },
+    {
+      "id": "run-22e51a7cdd",
+      "task_id": "H01",
+      "category": "handoff",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |",
+          "reason": "对照 tasks/H01/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "| EP001-SC001 | 夜／内，LOC001 | CHAR001、CHAR002（始终门外画外）；PROP001 风铃 | 风铃起初在桌上；CHAR001 从桌上拿起风铃。末状态：风铃在 CHAR001 手里；门未打开。 |\n\n必须保留：CHAR002 始终在门外画外，不增加进门或出镜动作；不指定持铃左右手。正文未另列揭示限制、机位或替代方案，不增补。\n\n## 逐字对白与声音\n\n以下两句均属 EP001-SC001，正文来源版本 v1.2。\n\n| 对白 ID | 说话者 | 声音方式 | 原文 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n顺序依正文为 D001 → D002；语气、声线、读音及具体停顿未指定，不另加表演要求。\n\n| 位置 | 类别 | 原文要求与边界 |\n| --- | --- | --- |\n| EP001-SC001 | 音效／环境声 | 可听雨声；具体起止、音量未指定。 |\n| EP001-SC001 | 音乐 | 无音乐要求。 |\n| EP001-SC001 | 屏幕文字 | 正文未指定。 |\n\n正文没有要求风铃发声，不新增风铃音效。\n\n## 资产提取\n\n全部引用位于 EP001-SC001；没有提供现成素材或外观设定，以下为需求提取，不表示已制作。\n\n| 资产 ID／元素 | 类型 | 正文锚点与状态 | 待补信息 |\n| --- | --- | --- | --- |\n| CHAR001 | 角色 | 现场说话；拿起风铃，结束时持有 | 外观、服装、声线未提供 |\n| CHAR002 | 角色／声音 | 始终门外画外，承担 D002 | 声线未提供；本场无出镜要求 |\n| LOC001 | 地点 | 夜、内景；含桌与门的空间关系 | 具体地点名称、视觉参考未提供 |\n| PROP001 | 道具：风铃 | 桌上 → CHAR001 手里 | 外形、材质、尺寸未提供 |\n| 桌、门（无独立 ID） | 场景元素 | 桌承放风铃；末状态门未打开 | 沿用 LOC001 场景需求，不另编 ID |",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 风铃及桌、门均有来源依据；风铃由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "阶段：G5｜状态：draft，未审核｜仅供预制作预览。\n唯一正文来源：`input/script.md` 的 EP001 v1.2。未改剧情；旧 v1.0 备忘录未读取、未采用。本交接单不构成审核或制作批准。\n\n## 场次与状态\n\n| 场次 | 时地 | 角色与道具 | 动作及首尾状态 |\n| --- | --- | --- | --- |\n| EP001-SC001 | 夜／内，LOC001 | CHAR001、CHAR002（始终门外画外）；PROP001 风铃 | 风铃起初在桌上；CHAR001 从桌上拿起风铃。末状态：风铃在 CHAR001 手里；门未打开。 |\n\n必须保留：CHAR002 始终在门外画外，不增加进门或出镜动作；不指定持铃左右手。正文未另列揭示限制、机位或替代方案，不增补。\n\n## 逐字对白与声音\n\n以下两句均属 EP001-SC001，正文来源版本 v1.2。\n\n| 对白 ID | 说话者 | 声音方式 | 原文 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n顺序依正文为 D001 → D002；语气、声线、读音及具体停顿未指定，不另加表演要求。\n\n| 位置 | 类别 | 原文要求与边界 |\n| --- | --- | --- |\n| EP001-SC001 | 音效／环境声 | 可听雨声；具体起止、音量未指定。 |\n| EP001-SC001 | 音乐 | 无音乐要求。 |\n| EP001-SC001 | 屏幕文字 | 正文未指定。 |\n\n正文没有要求风铃发声，不新增风铃音效。\n\n## 资产提取\n\n全部引用位于 EP001-SC001；没有提供现成素材或外观设定，以下为需求提取，不表示已制作。\n\n| 资产 ID／元素 | 类型 | 正文锚点与状态 | 待补信息 |\n| --- | --- | --- | --- |\n| CHAR001 | 角色 | 现场说话；拿起风铃，结束时持有 | 外观、服装、声线未提供 |\n| CHAR002 | 角色／声音 | 始终门外画外，承担 D002 | 声线未提供；本场无出镜要求 |\n| LOC001 | 地点 | 夜、内景；含桌与门的空间关系 | 具体地点名称、视觉参考未提供 |\n| PROP001 | 道具：风铃 | 桌上 → CHAR001 手里 | 外形、材质、尺寸未提供 |\n| 桌、门（无独立 ID） | 场景元素 | 桌承放风铃；末状态门未打开 | 沿用 LOC001 场景需求，不另编 ID |\n| 地面水（无独立 ID） | 对白涉及的环境信息 | D001 说“地上有水” | 正文未规定可见范围与表现方式 |\n\n## 计时、清单与核对\n\n- 唯一输入正文：`input/script.md`，v1.2，已提取；交付：`output/answer.md`，同版本草稿预览。\n- 原稿估时 45 秒，未实测；无逐句或动作分段时长，不伪造计时结果。",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "pass",
+          "quote": "| EP001-SC001 | 音效／环境声 | 可听雨声；具体起止、音量未指定。 |",
+          "reason": "逐项核对全文与 v1.2：动作、门外画外约束、雨声和无音乐要求均有来源；未增加机位、可见水迹、额外音效或批准事实。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 31612,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 101.636147,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "368bde92d3914e4754fceb4cf20317cee05dd6394e8919b1b726c001692e6e67",
+        "execution.json": "1d518644c9d765e7cef83cb392bd766c9cbbef0a010ff28db0a67ef64e419fdd"
+      }
+    },
+    {
+      "id": "run-25136a8bec",
+      "task_id": "H02",
+      "category": "handoff",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |",
+          "reason": "对照 tasks/H02/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "| EP001-SC001 | 夜／内，LOC001 | CHAR001；CHAR002（始终门外画外）；PROP001 纸伞 | 纸伞原在桌上，CHAR001 从桌上拿起。末状态：纸伞在 CHAR001 手里；门未打开。 |\n\n必须保留：CHAR002 始终在门外画外；不能新增入内或开门动作。原稿动作后列 D001、D002；具体动作与对白同步点未说明。屏幕文字、特殊揭示顺序、风险替代方案及跨集连接均未提供，不补写。\n\n## 逐字对白与声音\n\n以下两句均属 EP001-SC001，保持原文及标点。\n\n| 对白ID | 说话者 | 声音方式 | 原文 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n本场音效：**可听雨声，无音乐要求。**“无音乐要求”不改写成必须静音或禁止音乐。雨声具体起止、音量、对白重叠关系、声线、语气与读法均未指定。没有配音实测数据。\n\n## 资产需求\n\n所有资产均对应 EP001-SC001；正文是需求依据，不代表已有可用素材。\n\n| 资产ID／元素 | 提取锚点与状态 | 待补信息 |\n| --- | --- | --- |\n| CHAR001／角色 | 现场说话，拿起纸伞；末尾持伞 | 姓名、外观、服装、声线未提供；持伞左右手未指定 |\n| CHAR002／角色 | 始终门外画外，承担 D002 | 姓名与声线未提供；本场无人物可见造型要求 |\n| LOC001／场景 | 夜间内景；有桌、门 | 场景名称与美术参考未提供 |\n| PROP001／道具 | 纸伞；桌上→CHAR001 手里 | 颜色、形制、开合与破损状态未提供 |\n| 桌、门／未编号场景元素 | 桌承放纸伞；门未打开 | 未分配新ID；具体样式未提供 |",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 纸伞及桌、门均有来源依据；纸伞由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "**G5 提取稿｜draft，未审核｜仅供预制作预览，未锁定。**\n\n唯一正文来源：`input/script.md`，EP001 v1.2。仅整理该版本，未读取或混用旧 v1.0 备忘录；未改剧情、对白或版本状态。交付：`output/answer.md`。\n\n## 场次与末状态\n\n| 场次 | 时地 | 人物与道具 | 入场、动作与末状态 |\n| --- | --- | --- | --- |\n| EP001-SC001 | 夜／内，LOC001 | CHAR001；CHAR002（始终门外画外）；PROP001 纸伞 | 纸伞原在桌上，CHAR001 从桌上拿起。末状态：纸伞在 CHAR001 手里；门未打开。 |\n\n必须保留：CHAR002 始终在门外画外；不能新增入内或开门动作。原稿动作后列 D001、D002；具体动作与对白同步点未说明。屏幕文字、特殊揭示顺序、风险替代方案及跨集连接均未提供，不补写。\n\n## 逐字对白与声音\n\n以下两句均属 EP001-SC001，保持原文及标点。\n\n| 对白ID | 说话者 | 声音方式 | 原文 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n本场音效：**可听雨声，无音乐要求。**“无音乐要求”不改写成必须静音或禁止音乐。雨声具体起止、音量、对白重叠关系、声线、语气与读法均未指定。没有配音实测数据。\n\n## 资产需求\n\n所有资产均对应 EP001-SC001；正文是需求依据，不代表已有可用素材。\n\n| 资产ID／元素 | 提取锚点与状态 | 待补信息 |\n| --- | --- | --- |\n| CHAR001／角色 | 现场说话，拿起纸伞；末尾持伞 | 姓名、外观、服装、声线未提供；持伞左右手未指定 |\n| CHAR002／角色 | 始终门外画外，承担 D002 | 姓名与声线未提供；本场无人物可见造型要求 |\n| LOC001／场景 | 夜间内景；有桌、门 | 场景名称与美术参考未提供 |\n| PROP001／道具 | 纸伞；桌上→CHAR001 手里 | 颜色、形制、开合与破损状态未提供 |\n| 桌、门／未编号场景元素 | 桌承放纸伞；门未打开 | 未分配新ID；具体样式未提供 |\n| 地上有水／对白信息 | D001 明示 | 可视范围与呈现方式未指定，不添加水量等设定 |\n\n## 计时与交付核对\n\n原稿估时 **45秒，未实测**；不是录音时长，也不另造分镜秒数。已对照 v1.2 核对：1场、2句对白、2名角色（含画外角色）、1个地点ID、1个道具ID；雨声与末状态均已保留。",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "pass",
+          "quote": "本场音效：**可听雨声，无音乐要求。**“无音乐要求”不改写成必须静音或禁止音乐。雨声具体起止、音量、对白重叠关系、声线、语气与读法均未指定。没有配音实测数据。",
+          "reason": "逐项核对全文与 v1.2：动作、门外画外约束、雨声和无音乐要求均有来源；未增加机位、可见水迹、额外音效或批准事实。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 31612,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 102.725366,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "48cfd024a839d46ff5fd37b3f0574532384460afed3285541d71ecfded3c67be",
+        "execution.json": "ffe34ca508734aa1946129f9dac7a449179dbfe041a62ea5288d4a597c70512a"
+      }
+    },
+    {
+      "id": "run-28b21e2c9e",
+      "task_id": "H02",
+      "category": "handoff",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |",
+          "reason": "对照 tasks/H02/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "| 动作 | CHAR001 从桌上拿起 PROP001 纸伞。 |\n| 人物位置 | CHAR002 始终在门外画外。 |\n| 估时 | 45 秒，未实测。 |\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n音效：可听雨声，无音乐要求。\n\n## 资产与首尾状态核对\n\n| 资产／对象 | 首状态或场内状态 | 末状态 |\n| --- | --- | --- |\n| LOC001 | 夜／内；未提供地点名称 | 未写明场景切换 |\n| CHAR001 | 从桌上拿起纸伞；更具体初始位置未注明 | 纸伞在其手里 |\n| CHAR002 | 始终在门外画外 | 仍在门外画外 |\n| PROP001 纸伞 | 在桌上（由拿起动作明确） | 在 CHAR001 手里 |\n| 桌（无编号） | 纸伞最初放置处 | 未另述 |\n| 门（无编号） | 首状态未单独注明 | 门未打开 |",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 纸伞及桌、门均有来源依据；纸伞由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "状态：draft／草稿、未审核。本单仅按指定 v1.2 提取，供预览交接，不构成批准或锁定。\n来源：input/script.md。旧 v1.0 备忘录不参与本单状态判定。\n\n| 项目 | v1.2 内容 |\n| --- | --- |\n| 场次 | EP001-SC001 |\n| 时空 | 夜／内，LOC001 |\n| 动作 | CHAR001 从桌上拿起 PROP001 纸伞。 |\n| 人物位置 | CHAR002 始终在门外画外。 |\n| 估时 | 45 秒，未实测。 |",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "pass",
+          "quote": "| 动作 | CHAR001 从桌上拿起 PROP001 纸伞。 |\n| 人物位置 | CHAR002 始终在门外画外。 |\n| 估时 | 45 秒，未实测。 |\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n音效：可听雨声，无音乐要求。\n\n## 资产与首尾状态核对\n\n| 资产／对象 | 首状态或场内状态 | 末状态 |\n| --- | --- | --- |\n| LOC001 | 夜／内；未提供地点名称 | 未写明场景切换 |\n| CHAR001 | 从桌上拿起纸伞；更具体初始位置未注明 | 纸伞在其手里 |\n| CHAR002 | 始终在门外画外 | 仍在门外画外 |\n| PROP001 纸伞 | 在桌上（由拿起动作明确） | 在 CHAR001 手里 |\n| 桌（无编号） | 纸伞最初放置处 | 未另述 |\n| 门（无编号） | 首状态未单独注明 | 门未打开 |\n| 雨声音效 | 可听雨声 | 无进一步时点说明 |",
+          "reason": "逐项核对全文与 v1.2：动作、门外画外约束、雨声和无音乐要求均有来源；未增加机位、可见水迹、额外音效或批准事实。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2184,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 52.230248,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "dba78b4dba458549b77dc5638dbb4aa8dec06be3f331916809aa4b3e8da0a095",
+        "execution.json": "5b7c7c7c9bea95d07161424c16b8a186a042bb009b3b35f9b6195cbffa6a967f"
+      }
+    },
+    {
+      "id": "run-7e017fa6af",
+      "task_id": "H01",
+      "category": "handoff",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |",
+          "reason": "对照 tasks/H01/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "- 动作：CHAR001 从桌上拿起 PROP001 风铃；CHAR002 始终在门外画外。\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n音效：可听雨声，无音乐要求。\n\n## 资产与首尾状态核对\n\n| 项目 | 首状态／出场信息 | 末状态 |\n| --- | --- | --- |\n| CHAR001 | 从桌上拿起风铃 | 风铃在其手里 |\n| CHAR002 | 门外画外 | 始终在门外画外 |\n| PROP001 风铃 | 桌上 | CHAR001 手里 |\n| 门（原稿无资产编号） | 未单列首状态 | 门未打开 |",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 风铃及桌、门均有来源依据；风铃由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "状态：draft（草稿）、未审核；本单不构成批准或锁定。\n来源：input/script.md 中指定的 EP001 v1.2。旧 v1.0 备忘录不适用，未合入。\n估时：45 秒，未实测。",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "pass",
+          "quote": "- 动作：CHAR001 从桌上拿起 PROP001 风铃；CHAR002 始终在门外画外。\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n音效：可听雨声，无音乐要求。",
+          "reason": "逐项核对全文与 v1.2：动作、门外画外约束、雨声和无音乐要求均有来源；未增加机位、可见水迹、额外音效或批准事实。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2184,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 48.555868,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "04da5f4297f2e9ea4cd819e2502153445ca3d277124c69049e0bcf87e2d272cc",
+        "execution.json": "8cc5cabc215cd81caf51aade8abd6a1c83351fb4553d7ef35366d2f9aa1aaeb7"
+      }
+    },
+    {
+      "id": "run-92d17aca41",
+      "task_id": "H01",
+      "category": "handoff",
+      "condition": "A",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |",
+          "reason": "对照 tasks/H01/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "| EP001-SC001 | 夜/内 | LOC001 | CHAR001 从桌上拿起 PROP001 风铃；CHAR002 始终在门外画外。 |\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n|---|---|---|---|\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n音效：可听雨声。音乐：无音乐要求。\n\n## 资产\n\n| 类别 | 编号/名称 | 来源明确的信息 |\n|---|---|---|\n| 场景 | LOC001 | 夜/内，未提供场景名称 |\n| 角色 | CHAR001 | 拿起风铃，现场对白 |\n| 角色 | CHAR002 | 始终在门外画外，画外对白 |\n| 道具 | PROP001 风铃 | 起始在桌上，被 CHAR001 拿起 |\n| 陈设 | 桌 | 未提供资产编号 |\n| 场景构件 | 门 | 未提供资产编号，末状态未打开 |\n| 声音 | 雨声 | 可听，未提供资产编号 |\n\n## 末状态与时长\n\n风铃在 CHAR001 手里；门未打开。CHAR002 始终在门外画外。",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 风铃及桌、门均有来源依据；风铃由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "来源：input/script.md 中 EP001 v1.2。版本状态：draft，未审核。本单仅供草稿预览，不标锁定；未读取或混用旧 v1.0 备忘录。\n\n## 场次\n\n| 场次编号 | 时间/内外 | 场景资产 | 动作与位置 |\n|---|---|---|---|\n| EP001-SC001 | 夜/内 | LOC001 | CHAR001 从桌上拿起 PROP001 风铃；CHAR002 始终在门外画外。 |\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n|---|---|---|---|\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n音效：可听雨声。音乐：无音乐要求。\n\n## 资产\n\n| 类别 | 编号/名称 | 来源明确的信息 |\n|---|---|---|\n| 场景 | LOC001 | 夜/内，未提供场景名称 |\n| 角色 | CHAR001 | 拿起风铃，现场对白 |\n| 角色 | CHAR002 | 始终在门外画外，画外对白 |\n| 道具 | PROP001 风铃 | 起始在桌上，被 CHAR001 拿起 |\n| 陈设 | 桌 | 未提供资产编号 |\n| 场景构件 | 门 | 未提供资产编号，末状态未打开 |\n| 声音 | 雨声 | 可听，未提供资产编号 |\n\n## 末状态与时长\n\n风铃在 CHAR001 手里；门未打开。CHAR002 始终在门外画外。\n\n估时 45 秒，未实测。未增改剧情、对白或声音要求；未执行项目登记或控制命令。",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "pass",
+          "quote": "| EP001-SC001 | 夜/内 | LOC001 | CHAR001 从桌上拿起 PROP001 风铃；CHAR002 始终在门外画外。 |\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n|---|---|---|---|\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n音效：可听雨声。音乐：无音乐要求。",
+          "reason": "逐项核对全文与 v1.2：动作、门外画外约束、雨声和无音乐要求均有来源；未增加机位、可见水迹、额外音效或批准事实。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1876,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 67.352515,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "b21bafc92d466b9eb48c67289f6303655b262d0b7d327f2d6303abb5e6f26e56",
+        "execution.json": "384d463e7c803e6fcb4bc378e2c21697e5c7c10ee800acd976862a2977215958"
+      }
+    },
+    {
+      "id": "run-9e473f856e",
+      "task_id": "H02",
+      "category": "handoff",
+      "condition": "C",
+      "replicate": 1,
+      "success": false,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场（on_screen） | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外（off_screen） | 我就在门外等。 |",
+          "reason": "对照 tasks/H02/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。中文声音方式准确；括号中新增 on_screen 的镜头含义另在第四项裁定。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "| EP001-SC001 | 夜／内，LOC001 | CHAR001；CHAR002（始终门外画外）；PROP001 纸伞 | 起始纸伞在桌上；CHAR001 从桌上拿起纸伞。末状态：纸伞在 CHAR001 手里；门未打开。 |\n\n必须保留 CHAR002 始终在门外画外，不增加其入场、开门或纸伞转交。原文未指定机位、额外揭示顺序及跨集连接，不另补剧情。\n\n## 逐字对白与声音\n\n正文来源：v1.2；以下均属 EP001-SC001。\n\n| 对白 ID | 说话者 | 声音方式 | 原文 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场（on_screen） | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外（off_screen） | 我就在门外等。 |\n\n读法、语气、声线与单句时长未指定，不擅加要求。\n\n| 位置 | 类别 | 来源要求 |\n| --- | --- | --- |\n| EP001-SC001 | 音效／环境声 | 可听雨声；具体起止未指定。 |\n| EP001-SC001 | 音乐 | 无音乐要求；不改记为“禁止音乐”。 |\n| EP001-SC001 | 屏幕文字 | 正文未指定。 |\n\n## 资产需求\n\n全部对应 EP001-SC001；仅有正文引用，未提供成图、音频或已审批素材。\n\n| 资产 | 提取依据及状态 | 制作待确认 |\n| --- | --- | --- |\n| CHAR001 | 现场角色，拿起并持有纸伞 | 外观、服装、声线未提供 |\n| CHAR002 | 门外画外角色，提供第二句对白 | 声线未提供；本场无出镜要求 |\n| LOC001 | 夜间内景，含桌、门；对白提及地上有水 | 布景外观未定义；门末状态未打开 |\n| PROP001 | 纸伞：桌上→CHAR001 手里 | 造型、颜色、开合与持握手别未指定 |",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 纸伞及桌、门均有来源依据；纸伞由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "**draft｜未审核｜未锁定｜仅供预制作预览。**\n\n阶段：G5。唯一正文来源：`input/script.md`，EP001 v1.2。输出：`output/answer.md`，对应 v1.2。仅提取场次、逐字对白、声音、资产与末状态，不改剧情。旧 v1.0 备忘录未读取、未混用；无锁定依据，无下游接收记录。\n\n## 场次与状态\n\n| 场次 | 时间／地点 | 人物／道具 | 动作与首尾状态 |\n| --- | --- | --- | --- |\n| EP001-SC001 | 夜／内，LOC001 | CHAR001；CHAR002（始终门外画外）；PROP001 纸伞 | 起始纸伞在桌上；CHAR001 从桌上拿起纸伞。末状态：纸伞在 CHAR001 手里；门未打开。 |\n\n必须保留 CHAR002 始终在门外画外，不增加其入场、开门或纸伞转交。原文未指定机位、额外揭示顺序及跨集连接，不另补剧情。\n\n## 逐字对白与声音\n\n正文来源：v1.2；以下均属 EP001-SC001。\n\n| 对白 ID | 说话者 | 声音方式 | 原文 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场（on_screen） | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外（off_screen） | 我就在门外等。 |\n\n读法、语气、声线与单句时长未指定，不擅加要求。\n\n| 位置 | 类别 | 来源要求 |\n| --- | --- | --- |\n| EP001-SC001 | 音效／环境声 | 可听雨声；具体起止未指定。 |\n| EP001-SC001 | 音乐 | 无音乐要求；不改记为“禁止音乐”。 |\n| EP001-SC001 | 屏幕文字 | 正文未指定。 |\n\n## 资产需求\n\n全部对应 EP001-SC001；仅有正文引用，未提供成图、音频或已审批素材。\n\n| 资产 | 提取依据及状态 | 制作待确认 |\n| --- | --- | --- |\n| CHAR001 | 现场角色，拿起并持有纸伞 | 外观、服装、声线未提供 |\n| CHAR002 | 门外画外角色，提供第二句对白 | 声线未提供；本场无出镜要求 |\n| LOC001 | 夜间内景，含桌、门；对白提及地上有水 | 布景外观未定义；门末状态未打开 |\n| PROP001 | 纸伞：桌上→CHAR001 手里 | 造型、颜色、开合与持握手别未指定 |\n\n桌、门作为 LOC001 布景元素保留，不编造独立资产 ID；角色服装、道具变体无指定。\n\n## 清单、计时与核对\n\n- 已有：v1.2 正文；本交接单已完成所需提取。\n- 未提供：设定／连续性台账版本、审核报告及现有资产引用；因此不能确认外观规格或正式制作就绪。\n- 原文估时 45 秒，未实测；无逐句、逐动作时间分配，不将估时当作实测或目标区间。",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "fail",
+          "quote": "| EP001-D001 | CHAR001 | 现场（on_screen） | 别进来，地上有水。 |",
+          "reason": "来源只指定 CHAR001 的声音方式为“现场”，没有指定该句说话者在画面内；将其扩写成 on_screen 把声音方式进一步限定为镜头可见性，超出仅提取的授权。其余正文未编造制作批准。"
+        }
+      ],
+      "critical_violations": [
+        "仅提取授权下把 D001“现场”新增为“现场（on_screen）”，引入来源没有给出的画内呈现限定，属于范围外内容增补。"
+      ],
+      "additional_findings": [
+        "该问题限于 on_screen 注释；两句对白本身、中文声音方式、纸伞和门的末状态均准确，未据此否定这些已满足项。"
+      ],
+      "read_bytes": 31612,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 63.885818,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "d7fbbace24c0d4fbf6389d6cb29e92ef4fd09ccafe98bcd28f999c910119c8b8",
+        "execution.json": "11b8fd6c56785824aab6c7e5dc7e50008122938512e6fa1fbde4ab42a3ffa03b"
+      }
+    },
+    {
+      "id": "run-a9d005d0a3",
+      "task_id": "H01",
+      "category": "handoff",
+      "condition": "C",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |",
+          "reason": "对照 tasks/H01/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "| EP001-SC001 | 夜/内 | LOC001 | CHAR001；CHAR002（始终在门外画外） | PROP001 风铃 |\n\n入场信息：风铃在桌上；CHAR002 始终在门外画外。\n\n动作原文：CHAR001 从桌上拿起 PROP001 风铃，CHAR002 始终在门外画外。\n\n**末状态原文：风铃在CHAR001手里；门未打开。**\n\n导演约束：保留上述动作及末状态，CHAR002 保持门外画外，不补入室或开门动作。“地上有水”由对白表达；正文未另列可见积水的画面要求。\n\n## 逐字对白与声音方式\n\n来源：`input/script.md`，EP001 v1.2，EP001-SC001。\n\n| 对白ID | 说话者 | 声音方式 | 原文 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n声音原文：可听雨声，无音乐要求。\n\n雨声具体起止、强弱及台词读法未指定；无音乐要求不改写为“禁止音乐”。风铃声、其他音效及屏幕文字均未指定，不补造要求。\n\n## 资产提取\n\n以下为正文引用与场景元素，非已制作资产清单。\n\n| 资产/元素 | 场次 | 来源信息与状态 | 待补资料 |\n| --- | --- | --- | --- |\n| CHAR001 | EP001-SC001 | 从桌上拿起风铃；现场说话；末尾持风铃 | 姓名、外观、服装未提供 |\n| CHAR002 | EP001-SC001 | 始终在门外画外；画外说话 | 姓名、声线未提供；无出镜要求 |\n| LOC001 | EP001-SC001 | 夜/内；含桌、门 | 地点名称、视觉设定未提供 |\n| PROP001 风铃 | EP001-SC001 | 桌上→CHAR001 手里 | 外观、持握手别未提供 |\n| 桌、门（无独立ID） | EP001-SC001 | 桌承放风铃；末尾门未打开 | 造型未提供，不擅编ID |\n\n地上有水：台词信息；是否需独立视觉资产待后续确认。\n\n## 计时、核对及未决项\n\n正文估时45秒，未实测；未拆分或编造时间块。\n\n已按同版正文人工核对：1场、2句对白及原有ID齐全，CHAR002 的画外方式与角色引用保留；风铃转移、雨声、音乐要求及门未打开的末状态一致。本次仅完成提取核对，不代表审稿通过。",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 风铃及桌、门均有来源依据；风铃由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "**状态：draft，未审核；仅供草稿预览与预制作参考。**\n\n阶段：G5 制作交接。唯一剧情来源：`input/script.md`，EP001 v1.2。未使用旧 v1.0 备忘录，未改剧情或对白。输出：`output/answer.md`，对应 v1.2；未提升稿件状态。\n\n## 场次与状态\n\n| 场次 | 时间/空间 | 地点 | 人物 | 道具 |\n| --- | --- | --- | --- | --- |\n| EP001-SC001 | 夜/内 | LOC001 | CHAR001；CHAR002（始终在门外画外） | PROP001 风铃 |\n\n入场信息：风铃在桌上；CHAR002 始终在门外画外。\n\n动作原文：CHAR001 从桌上拿起 PROP001 风铃，CHAR002 始终在门外画外。\n\n**末状态原文：风铃在CHAR001手里；门未打开。**\n\n导演约束：保留上述动作及末状态，CHAR002 保持门外画外，不补入室或开门动作。“地上有水”由对白表达；正文未另列可见积水的画面要求。\n\n## 逐字对白与声音方式\n\n来源：`input/script.md`，EP001 v1.2，EP001-SC001。\n\n| 对白ID | 说话者 | 声音方式 | 原文 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n声音原文：可听雨声，无音乐要求。\n\n雨声具体起止、强弱及台词读法未指定；无音乐要求不改写为“禁止音乐”。风铃声、其他音效及屏幕文字均未指定，不补造要求。\n\n## 资产提取\n\n以下为正文引用与场景元素，非已制作资产清单。\n\n| 资产/元素 | 场次 | 来源信息与状态 | 待补资料 |\n| --- | --- | --- | --- |\n| CHAR001 | EP001-SC001 | 从桌上拿起风铃；现场说话；末尾持风铃 | 姓名、外观、服装未提供 |\n| CHAR002 | EP001-SC001 | 始终在门外画外；画外说话 | 姓名、声线未提供；无出镜要求 |\n| LOC001 | EP001-SC001 | 夜/内；含桌、门 | 地点名称、视觉设定未提供 |\n| PROP001 风铃 | EP001-SC001 | 桌上→CHAR001 手里 | 外观、持握手别未提供 |\n| 桌、门（无独立ID） | EP001-SC001 | 桌承放风铃；末尾门未打开 | 造型未提供，不擅编ID |\n\n地上有水：台词信息；是否需独立视觉资产待后续确认。\n\n## 计时、核对及未决项\n\n正文估时45秒，未实测；未拆分或编造时间块。",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "pass",
+          "quote": "动作原文：CHAR001 从桌上拿起 PROP001 风铃，CHAR002 始终在门外画外。\n\n**末状态原文：风铃在CHAR001手里；门未打开。**\n\n导演约束：保留上述动作及末状态，CHAR002 保持门外画外，不补入室或开门动作。“地上有水”由对白表达；正文未另列可见积水的画面要求。\n\n## 逐字对白与声音方式\n\n来源：`input/script.md`，EP001 v1.2，EP001-SC001。\n\n| 对白ID | 说话者 | 声音方式 | 原文 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n声音原文：可听雨声，无音乐要求。",
+          "reason": "逐项核对全文与 v1.2：动作、门外画外约束、雨声和无音乐要求均有来源；未增加机位、可见水迹、额外音效或批准事实。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 23507,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 63.708175,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "d23b922d76c559817f18b4b59b1602d7e8adcd79f9a336f10830dcd7a10cee8e",
+        "execution.json": "c85549f5f39d748d388ffd4e44cfffd09d69a8749a4c02934d031ed9efcb3358"
+      }
+    },
+    {
+      "id": "run-acf6241df2",
+      "task_id": "H01",
+      "category": "handoff",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |",
+          "reason": "对照 tasks/H01/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "| EP001-SC001 | 夜／内 | LOC001 | CHAR001 从桌上拿起 PROP001 风铃，CHAR002 始终在门外画外。 |\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 对白原文 |\n|---|---|---|---|\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n声音要求：可听雨声，无音乐要求。“无音乐要求”不等同于要求禁用音乐。\n\n## 资产与首尾状态核对\n\n| 对象 | 本场起始／过程 | 本场末状态 |\n|---|---|---|\n| CHAR001 | 从桌上拿起风铃；现场说话 | 风铃在其手里；具体站位未注明 |\n| CHAR002 | 始终在门外画外；画外说话 | 仍在门外画外 |\n| PROP001 风铃 | 起始在桌上，随后被 CHAR001 拿起 | 在 CHAR001 手里 |\n| 门（无独立编号） | 原稿未单列起始状态 | 门未打开 |\n| 桌（无独立编号） | 风铃起始放置处 | 未注明变化 |\n| LOC001 | 夜／内 | 未注明场景切换 |\n| 雨声音效 | 可听雨声 | 结束时是否持续未注明 |\n\n资产汇总：LOC001、CHAR001、CHAR002、PROP001 风铃；另有未编号的桌、门及雨声音效。对白提及“地上有水”，原稿未另列水迹资产或视觉要求，不追加具体布置。风铃未被指定发声。",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 风铃及桌、门均有来源依据；风铃由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "状态：**草稿、未审核**。本单仅提取指定 v1.2，供预览交接；不代表锁定、批准或剧情修订。旧 v1.0 备忘录未使用。\n\n## 场次与动作\n\n| 场次 | 时空 | 场景资产 | 原稿动作 |\n|---|---|---|---|\n| EP001-SC001 | 夜／内 | LOC001 | CHAR001 从桌上拿起 PROP001 风铃，CHAR002 始终在门外画外。 |\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 对白原文 |\n|---|---|---|---|\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n声音要求：可听雨声，无音乐要求。“无音乐要求”不等同于要求禁用音乐。\n\n## 资产与首尾状态核对\n\n| 对象 | 本场起始／过程 | 本场末状态 |\n|---|---|---|\n| CHAR001 | 从桌上拿起风铃；现场说话 | 风铃在其手里；具体站位未注明 |\n| CHAR002 | 始终在门外画外；画外说话 | 仍在门外画外 |\n| PROP001 风铃 | 起始在桌上，随后被 CHAR001 拿起 | 在 CHAR001 手里 |\n| 门（无独立编号） | 原稿未单列起始状态 | 门未打开 |\n| 桌（无独立编号） | 风铃起始放置处 | 未注明变化 |\n| LOC001 | 夜／内 | 未注明场景切换 |\n| 雨声音效 | 可听雨声 | 结束时是否持续未注明 |\n\n资产汇总：LOC001、CHAR001、CHAR002、PROP001 风铃；另有未编号的桌、门及雨声音效。对白提及“地上有水”，原稿未另列水迹资产或视觉要求，不追加具体布置。风铃未被指定发声。\n\n核对结果：指定稿共 1 场、2 条对白；角色与声音方式逐条对应；动作和末状态一致。门的起始状态、具体站位等未明内容保留为未注明，不补写剧情。\n\n时长：原稿**估时 45 秒，未实测**，仅供草稿预览参考。",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "pass",
+          "quote": "| EP001-SC001 | 夜／内 | LOC001 | CHAR001 从桌上拿起 PROP001 风铃，CHAR002 始终在门外画外。 |\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 对白原文 |\n|---|---|---|---|\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n声音要求：可听雨声，无音乐要求。“无音乐要求”不等同于要求禁用音乐。\n\n## 资产与首尾状态核对\n\n| 对象 | 本场起始／过程 | 本场末状态 |\n|---|---|---|\n| CHAR001 | 从桌上拿起风铃；现场说话 | 风铃在其手里；具体站位未注明 |\n| CHAR002 | 始终在门外画外；画外说话 | 仍在门外画外 |\n| PROP001 风铃 | 起始在桌上，随后被 CHAR001 拿起 | 在 CHAR001 手里 |\n| 门（无独立编号） | 原稿未单列起始状态 | 门未打开 |\n| 桌（无独立编号） | 风铃起始放置处 | 未注明变化 |\n| LOC001 | 夜／内 | 未注明场景切换 |\n| 雨声音效 | 可听雨声 | 结束时是否持续未注明 |",
+          "reason": "逐项核对全文与 v1.2：动作、门外画外约束、雨声和无音乐要求均有来源；未增加机位、可见水迹、额外音效或批准事实。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2105,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 64.95794,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "e09cd2ee9161c8adbaeb105fa81123bee9229b4c6603ba3b111bfbe2a8191d75",
+        "execution.json": "3edaa34e11661417999d4ea1f7811a898b3516660ca36b042a35dced4cf6b216"
+      }
+    },
+    {
+      "id": "run-bb17226b79",
+      "task_id": "H02",
+      "category": "handoff",
+      "condition": "A",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |",
+          "reason": "对照 tasks/H02/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "- 动作：CHAR001 从桌上拿起 PROP001 纸伞；CHAR002 始终在门外画外。\n- 估时：45 秒，未实测。\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n声音要求：可听雨声；无音乐要求。\n\n## 资产\n\n| 类别 | 编号／名称 | 原文信息 |\n| --- | --- | --- |\n| 场景 | LOC001 | 夜／内，未提供场景名称 |\n| 角色 | CHAR001 | 从桌上拿起纸伞，现场对白 |\n| 角色 | CHAR002 | 始终在门外画外，画外对白 |\n| 道具 | PROP001 纸伞 | 起初在桌上，由 CHAR001 拿起 |\n| 环境物件 | 桌、门 | 原文提及，未提供资产编号 |\n\n## 末状态\n\n- 纸伞在 CHAR001 手里。\n- 门未打开。",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 纸伞及桌、门均有来源依据；纸伞由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "来源：指定《EP001 v1.2》（draft，未审核）。本单仅提取该版本内容，供草稿预览使用，不表示审核通过或锁定；未使用旧 v1.0 备忘录。\n\n## 场次\n\n- 场次：EP001-SC001\n- 时空：夜／内\n- 场景资产：LOC001\n- 动作：CHAR001 从桌上拿起 PROP001 纸伞；CHAR002 始终在门外画外。\n- 估时：45 秒，未实测。",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "pass",
+          "quote": "- 动作：CHAR001 从桌上拿起 PROP001 纸伞；CHAR002 始终在门外画外。\n- 估时：45 秒，未实测。\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n声音要求：可听雨声；无音乐要求。",
+          "reason": "逐项核对全文与 v1.2：动作、门外画外约束、雨声和无音乐要求均有来源；未增加机位、可见水迹、额外音效或批准事实。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1876,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 70.902287,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "d5bd1ac1d100d9526ebd2a7ef4f28e1974e3e43af984347aefca6ae0a647194e",
+        "execution.json": "4a08e965d6f5db90f64398530dac62c2f50e7c923a3661b3aa6b90a85b33074c"
+      }
+    },
+    {
+      "id": "run-d62cc7b303",
+      "task_id": "H01",
+      "category": "handoff",
+      "condition": "A",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |",
+          "reason": "对照 tasks/H01/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "| EP001-SC001 | 夜 / 内 | LOC001 | CHAR001 从桌上拿起 PROP001 风铃，CHAR002 始终在门外画外。 |\n\n估时：45秒，未实测。\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n音效：可听雨声，无音乐要求。\n\n## 资产提取\n\n| 资产 | 文本依据及使用信息 |\n| --- | --- |\n| LOC001 | 夜 / 内；未提供场景名称。 |\n| CHAR001 | 从桌上拿起风铃；现场对白。 |\n| CHAR002 | 始终在门外画外；画外对白。 |\n| PROP001 风铃 | 起初在桌上，被 CHAR001 拿起。 |\n| 桌、门 | 文本提及，未提供资产编号。 |\n\n## 末状态\n\n风铃在CHAR001手里；门未打开。",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 风铃及桌、门均有来源依据；风铃由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "来源：input/script.md，EP001 v1.2。状态：draft，未审核；本单仅供草稿预览，不标锁定。未读取或混用旧 v1.0 备忘录。\n\n## 场次与动作\n\n| 场次 | 时间 / 内外 | 场景资产 | 原文动作 |\n| --- | --- | --- | --- |\n| EP001-SC001 | 夜 / 内 | LOC001 | CHAR001 从桌上拿起 PROP001 风铃，CHAR002 始终在门外画外。 |\n\n估时：45秒，未实测。",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "pass",
+          "quote": "| EP001-SC001 | 夜 / 内 | LOC001 | CHAR001 从桌上拿起 PROP001 风铃，CHAR002 始终在门外画外。 |\n\n估时：45秒，未实测。\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n音效：可听雨声，无音乐要求。",
+          "reason": "逐项核对全文与 v1.2：动作、门外画外约束、雨声和无音乐要求均有来源；未增加机位、可见水迹、额外音效或批准事实。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1876,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 42.967753,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "e2b70f3062cc72d5931c1a4f348c69bbeb05769b65f41cbb2276af4a49b4bd82",
+        "execution.json": "0306170f9b814d386b8f5a5116adb0911735a94c643d946fa45050fbd779a5bd"
+      }
+    },
+    {
+      "id": "run-f80ee2e320",
+      "task_id": "H02",
+      "category": "handoff",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |",
+          "reason": "对照 tasks/H02/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "- 原稿动作：CHAR001 从桌上拿起 PROP001 纸伞，CHAR002 始终在门外画外。\n- 估时：45秒，未实测。\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n|---|---|---|---|\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n声音要求：可听雨声，无音乐要求。\n\n## 资产与首尾状态核对\n\n| 资产／角色 | 首状态或原稿约束 | 末状态 |\n|---|---|---|\n| LOC001 | 夜／内场景 | 未注明场景变化 |\n| CHAR001 | 从桌上拿起纸伞 | 手持 PROP001 纸伞 |\n| CHAR002 | 始终在门外画外 | 仍在门外画外 |\n| PROP001 纸伞 | 在桌上 | 在 CHAR001 手里 |\n| 桌子（未提供编号） | 放置纸伞 | 纸伞已被拿起；桌子其他状态未注明 |\n| 门（未提供编号） | 首状态未单独明示 | 门未打开 |\n\n末状态原文：纸伞在CHAR001手里；门未打开。",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 纸伞及桌、门均有来源依据；纸伞由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "状态：draft／未审核。仅供草稿预览，未锁定、未批准。来源：input/script.md 指定 v1.2；旧 v1.0 备忘录不参与提取。\n\n## 场次与动作\n\n- 场次：EP001-SC001\n- 时空：夜／内，LOC001。\n- 原稿动作：CHAR001 从桌上拿起 PROP001 纸伞，CHAR002 始终在门外画外。\n- 估时：45秒，未实测。",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "pass",
+          "quote": "- 原稿动作：CHAR001 从桌上拿起 PROP001 纸伞，CHAR002 始终在门外画外。\n- 估时：45秒，未实测。\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n|---|---|---|---|\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n声音要求：可听雨声，无音乐要求。",
+          "reason": "逐项核对全文与 v1.2：动作、门外画外约束、雨声和无音乐要求均有来源；未增加机位、可见水迹、额外音效或批准事实。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2184,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 58.652973,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "2ef7c41f2783933def6a9855e6054eef613f9f7d24e6ff5284dfe3b8cadb4344",
+        "execution.json": "ba32c9ee6d55938e6f887b3df517d7e8fab1b437533bf7fea96594c5c698d46c"
+      }
+    },
+    {
+      "id": "run-fdcba7fe8a",
+      "task_id": "H02",
+      "category": "handoff",
+      "condition": "A",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "两句对白逐字且角色/方式准确",
+          "status": "pass",
+          "quote": "| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |",
+          "reason": "对照 tasks/H02/script.md，两句含标点逐字一致，D001 对应 CHAR001 现场，D002 对应 CHAR002 画外。"
+        },
+        {
+          "criterion": "资产及末状态来自v1.2而非旧稿",
+          "status": "pass",
+          "quote": "- 动作：CHAR001 从桌上拿起 PROP001 纸伞；CHAR002 始终在门外画外。\n- 时长：估时45秒，未实测。\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n音效：可听雨声。音乐：无音乐要求。\n\n## 资产\n\n| 类别 | 原文标识／名称 | 本场信息 |\n| --- | --- | --- |\n| 场景 | LOC001 | 夜／内；原文未给场景名称 |\n| 角色 | CHAR001 | 拿起并持有纸伞，现场对白 |\n| 角色 | CHAR002 | 始终在门外画外，画外对白 |\n| 道具 | PROP001 纸伞 | 从桌上被CHAR001拿起 |\n| 场景物件 | 桌、门 | 原文未给资产编号 |\n| 声音 | 雨声 | 可听 |\n\n## 场末状态\n\n- 纸伞在CHAR001手里。\n- 门未打开。",
+          "reason": "对照同目录 v1.2 来源，LOC001、两名角色、PROP001 纸伞及桌、门均有来源依据；纸伞由桌上进入 CHAR001 手里，门未打开，未混入旧 v1.0 的转交和开门状态。"
+        },
+        {
+          "criterion": "标draft预览/未审核/未实测",
+          "status": "pass",
+          "quote": "来源：input/script.md，EP001 v1.2（draft，未审核）。本单仅供草稿预览，未锁定；未引用旧 v1.0 备忘录。\n\n## 场次与动作\n\n- 场次：EP001-SC001\n- 时空：夜／内，LOC001。\n- 动作：CHAR001 从桌上拿起 PROP001 纸伞；CHAR002 始终在门外画外。\n- 时长：估时45秒，未实测。",
+          "reason": "标题标草稿预览，正文明确草稿/draft、未审核及估时45秒未实测，未提升为锁定或实测结果。"
+        },
+        {
+          "criterion": "不新增镜头事实或制作批准",
+          "status": "pass",
+          "quote": "- 动作：CHAR001 从桌上拿起 PROP001 纸伞；CHAR002 始终在门外画外。\n- 时长：估时45秒，未实测。\n\n## 逐字对白与声音方式\n\n| 对白编号 | 角色 | 声音方式 | 逐字对白 |\n| --- | --- | --- | --- |\n| EP001-D001 | CHAR001 | 现场 | 别进来，地上有水。 |\n| EP001-D002 | CHAR002 | 画外 | 我就在门外等。 |\n\n音效：可听雨声。音乐：无音乐要求。",
+          "reason": "逐项核对全文与 v1.2：动作、门外画外约束、雨声和无音乐要求均有来源；未增加机位、可见水迹、额外音效或批准事实。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1876,
+      "limitations": [
+        "本评阅仅依据所提供来源和匿名 answer.md；无法独立验证正文所述读取历史、人工核对过程或未执行操作，但不据此推定其虚构。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 55.704938,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "210ad7d56ac9f49639e5cbe80bd1a545e534de9941b7372f33a04237c53a7dd7",
+      "output_hashes": {
+        "answer.md": "c37603aad66dec8575ee1ff5d32a25fcbc71a960136739e8454c6d8483417f23",
+        "execution.json": "279363321178310e41ac30c51283bd0e2ef95be68f9ca299eddd81f2affc3dc2"
+      }
+    },
+    {
+      "id": "run-0f52efade1",
+      "task_id": "S01",
+      "category": "recovery",
+      "condition": "C",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "钥匙初始在商宁腰间",
+          "status": "pass",
+          "quote": "商宁腰间钥匙轻碰箱沿。",
+          "reason": "正文开场直接展示商宁腰间钥匙，与 season.md EP012-SC001-B003、D002 最后状态一致，未把 EP006 约定误作交接完成。"
+        },
+        {
+          "criterion": "承接待明早复测，不能假称已测",
+          "status": "pass",
+          "quote": "昨天两声都到了。今天这一次，还没试。",
+          "reason": "承接 EP012-D001“明早再试一次”和 B003 待复测纸条；新场只交班并保留待办，没有拉绳完成复测或声称实测通过。"
+        },
+        {
+          "criterion": "交接须有可见动作",
+          "status": "pass",
+          "quote": "商宁把钥匙放进他掌心。",
+          "reason": "交接在新场以取钥匙、递交或放掌心及接收动作直接展示，非画外归属跳变。"
+        },
+        {
+          "criterion": "给状态原文定位和约60秒估算",
+          "status": "pass",
+          "quote": "EP012-SC001-B003及D002最终确认。不能只用旧检查点推断。 |\n| 工具箱已关；“先锁好”是要求，正文未明确展示锁箱完成。 | EP009-SC001-B003、EP012-D002。本场先当镜核验锁扣，再交钥匙。 |\n| 已响两声，商宁已松手，杜衡数完余音；仅这一轮完成，明早复测尚未进行。 | EP012-SC001-B001、EP012-D001。 |\n| “待复测”纸条贴在钟罩上，不能当成通过标签撤下。 | EP012-SC001-B003。 |\n| 新绳留在锤上，旧线进废料袋；垫圈已装好，钟面刻度不动。 | EP007-SC001-B003、EP009-SC001-B003及D001—D002。 |\n| 钟罩已复位并拧紧；两张卡在钟罩内侧，新前旧后，不能直接从桌上拿卡。 | EP010-SC001-B003及D002、EP011-SC001-B001。 |\n| 木楔是临时支撑，未见撤除或正式修复；门把警示带未见解除。 | EP002-SC001-B001及D001—D002、EP003-SC001-B003；后文无变更。 |\n\n## EP013-SC001 内景／早晨 钟房\n\n人物：CHAR001 商宁、CHAR002 杜衡。目标：交还钥匙，交清尚未完成的复测；阻力：交班不能被误认成修复验收。以下对白均为现场。\n\n**0—12秒｜EP013-SC001-B001**\n\n门开。门把上的警示带随之晃动。杜衡进来，停在工具箱旁。商宁腰间钥匙轻碰箱沿。\n\n杜衡（EP013-D001）：我来接班。钥匙呢？\n\n商宁（EP013-D002）：先看箱子。\n\n**12—27秒｜EP013-SC001-B002**\n\n商宁蹲下，取下钥匙插入锁孔，将锁扣锁定，拔出钥匙，再提一下箱盖。箱盖不开。杜衡看清，摊开手。\n\n商宁把钥匙放进他掌心。杜衡从衣袋取出空钥匙环，将钥匙穿上，收回衣袋。\n\n商宁（EP013-D003）：箱子锁好了。钥匙交回。\n\n**27—45秒｜EP013-SC001-B003**\n\n商宁起身，指向钟罩上的纸条。杜衡顺着她的手看过去。\n\n商宁（EP013-D004）：昨天两声都到了。今天这一次，还没试。\n\n杜衡（EP013-D005）：那这张先留着。\n\n商宁（EP013-D006）：嗯。试完再记。\n\n**45—60秒｜EP013-SC001-B004**\n\n杜衡走到新绳旁，手伸向绳端，停住，抬眼看分针。商宁退开半步，给他让出位置。\n\n杜衡（EP013-D007）：等分针过去。\n\n商宁点头。镜头落在仍贴牢的“待复测”纸条，再带到两人等待的手。绳未拉动，无钟声。切。\n\n`screen_text`：“待复测”，末段留3秒可读画面，后期叠字；沿用EP012纸条，不新增记录。\n\n场末交接：钥匙经当面交接归杜衡；箱锁已在本场核验。复测仍未开始，纸条、警示带保留，其他检修状态不变。后续入口是等待复测时机，不能直接写成复测通过。\n\n时长为60秒生产估算",
+          "reason": "先列继承状态，定位至实际正文的集/动作块/对白；新场分段预算合计60秒并说明估算或未实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 33620,
+      "limitations": [
+        "仅核对本目录提供的来源和 answer.md；未检验外部文件修改或实际拍摄时长。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 70.784308,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "fd3ede724fe52e4d4851de7291123e858daf10c822489a3cdabb0b2096e164c4",
+        "execution.json": "b49c189893053b580607c037b48f37b89cc1d51946af8e13e31872fb32c8bcd2"
+      }
+    },
+    {
+      "id": "run-35b03bce37",
+      "task_id": "S02",
+      "category": "recovery",
+      "condition": "C",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别正文失效和实质冲突",
+          "status": "pass",
+          "quote": "EP004 v1.0 仍写主角独自游过河脱险，存在直接设定冲突。",
+          "reason": "依据 status.md 明确识别新版不会游泳与旧正文独自游河脱险的实质冲突，旧稿及旧审核不能直接沿用。"
+        },
+        {
+          "criterion": "先正文再连续性/审核再交接派生物",
+          "status": "pass",
+          "quote": "以后完成正文与连续性修订、真实回归审核后，才重新提取交接材料",
+          "reason": "补读顺序先设定和正文及必要前后文，再审核，最后交接派生物；明确以后需实质处理正文与相关连续性并重审后才更新交接，本次未实际续写。"
+        },
+        {
+          "criterion": "不只刷新哈希",
+          "status": "pass",
+          "quote": "不能仅更新版本标记消除失效。",
+          "reason": "要求核对能力、脱险因果和影响范围，并实质修订或复核及重审；即使未逐字提“哈希”，实际方案也不是仅刷新依赖标记。"
+        },
+        {
+          "criterion": "说明检查点过期且无批准",
+          "status": "pass",
+          "quote": "更新设定前的“交接就绪”仅是历史检查点，不能作为当前通过依据。",
+          "reason": "把旧检查点及旧审核限定为历史依据，当前不能据此交接；全文没有新增批准或声称已完成实质复核。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 33977,
+      "limitations": [
+        "任务只要求恢复判断；来源为 status.md 登记摘要，实际 bible、正文和审核报告未提供，不能由本评阅确认其真实修订结果。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 60.368816,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "00dad4b2d9b646dab3d67c66e978f53db224ff327da38fa919694abaed885bbe",
+        "execution.json": "ce4ec618f4fa4eace07a86fb973f350abbe77f05149f89e38539a7debdd7425b"
+      }
+    },
+    {
+      "id": "run-5b1560f214",
+      "task_id": "S02",
+      "category": "recovery",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别正文失效和实质冲突",
+          "status": "pass",
+          "quote": "保留为待复核旧稿；与当前设定直接冲突",
+          "reason": "依据 status.md 明确识别新版不会游泳与旧正文独自游河脱险的实质冲突，旧稿及旧审核不能直接沿用。"
+        },
+        {
+          "criterion": "先正文再连续性/审核再交接派生物",
+          "status": "pass",
+          "quote": "后续必须先实质修订并按 v2.0 重新审核，再更新交接和检查点",
+          "reason": "补读顺序先设定和正文及必要前后文，再审核，最后交接派生物；明确以后需实质处理正文与相关连续性并重审后才更新交接，本次未实际续写。"
+        },
+        {
+          "criterion": "不只刷新哈希",
+          "status": "pass",
+          "quote": "不得仅刷新版本号或哈希冒充复核。",
+          "reason": "要求核对能力、脱险因果和影响范围，并实质修订或复核及重审；即使未逐字提“哈希”，实际方案也不是仅刷新依赖标记。"
+        },
+        {
+          "criterion": "说明检查点过期且无批准",
+          "status": "pass",
+          "quote": "仅作定位导航，当前就绪结论失效",
+          "reason": "把旧检查点及旧审核限定为历史依据，当前不能据此交接；全文没有新增批准或声称已完成实质复核。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2022,
+      "limitations": [
+        "任务只要求恢复判断；来源为 status.md 登记摘要，实际 bible、正文和审核报告未提供，不能由本评阅确认其真实修订结果。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 100.467326,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "cfc8297cc1b61b80aa8b53687eadfff8cfc3680bebd669d3b8ab1b50d54804c5",
+        "execution.json": "654648c301cc9154eb7bce3291c451d63d71221264b77a841077560efe16b813"
+      }
+    },
+    {
+      "id": "run-8b0897eb58",
+      "task_id": "S02",
+      "category": "recovery",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别正文失效和实质冲突",
+          "status": "pass",
+          "quote": "EP004 v1.0 却仍由主角独自游过河脱险，存在明确设定冲突。",
+          "reason": "依据 status.md 明确识别新版不会游泳与旧正文独自游河脱险的实质冲突，旧稿及旧审核不能直接沿用。"
+        },
+        {
+          "criterion": "先正文再连续性/审核再交接派生物",
+          "status": "pass",
+          "quote": "正文、台账及审核适配 v2.0 后，才重新做 G5 一致性核对",
+          "reason": "补读顺序先设定和正文及必要前后文，再审核，最后交接派生物；明确以后需实质处理正文与相关连续性并重审后才更新交接，本次未实际续写。"
+        },
+        {
+          "criterion": "不只刷新哈希",
+          "status": "pass",
+          "quote": "待以后真实修订或复核完正文及台账，再做 G4 回归审核",
+          "reason": "要求核对能力、脱险因果和影响范围，并实质修订或复核及重审；即使未逐字提“哈希”，实际方案也不是仅刷新依赖标记。"
+        },
+        {
+          "criterion": "说明检查点过期且无批准",
+          "status": "pass",
+          "quote": "旧检查点保留为历史快照，不能作为本次通过依据。",
+          "reason": "把旧检查点及旧审核限定为历史依据，当前不能据此交接；全文没有新增批准或声称已完成实质复核。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 33977,
+      "limitations": [
+        "任务只要求恢复判断；来源为 status.md 登记摘要，实际 bible、正文和审核报告未提供，不能由本评阅确认其真实修订结果。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 114.827234,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "11e1666cb28b22c172183e1a74206190bfe366b090f8f5fd43843cf291e38471",
+        "execution.json": "1e5c817277fa1e742ca0a3e73b6d15269b3e6689e632e764a450ecef9b2a4d0c"
+      }
+    },
+    {
+      "id": "run-a0dd08c05d",
+      "task_id": "S01",
+      "category": "recovery",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "钥匙初始在商宁腰间",
+          "status": "pass",
+          "quote": "商宁站在工具箱旁，钥匙仍挂腰间。",
+          "reason": "正文开场直接展示商宁腰间钥匙，与 season.md EP012-SC001-B003、D002 最后状态一致，未把 EP006 约定误作交接完成。"
+        },
+        {
+          "criterion": "承接待明早复测，不能假称已测",
+          "status": "pass",
+          "quote": "还没有。昨晚两声，今天这次还欠着。",
+          "reason": "承接 EP012-D001“明早再试一次”和 B003 待复测纸条；新场只交班并保留待办，没有拉绳完成复测或声称实测通过。"
+        },
+        {
+          "criterion": "交接须有可见动作",
+          "status": "pass",
+          "quote": "钥匙落入杜衡掌心。他握住，收进衣袋。",
+          "reason": "交接在新场以取钥匙、递交或放掌心及接收动作直接展示，非画外归属跳变。"
+        },
+        {
+          "criterion": "给状态原文定位和约60秒估算",
+          "status": "pass",
+          "quote": "EP012-SC001-B003 再次拍到钥匙。EP006-D002 的“明早再交回”只是约定。 |\n| 工具箱曾关上；锁好是明确要求，但第十二集未展示上锁动作。 | EP009-SC001-B003、EP012-D002。续场应在镜头内核实或补足上锁，不能把口头要求当成完成记录。 |\n| 已响两声，翌晨仍待复测。 | EP012-SC001-B001、D001；B003 将“待复测”纸条贴在钟罩上。两声结果不能替代下一次复测。 |\n| 新绳在用、垫圈已装；钟面刻度不应再动。 | EP007-SC001-B003、EP009-SC001-B003及D001—D002、EP011-SC001-B003。EP002 的木楔只是临时支撑，后文未明确撤除或完成正式修复，不可宣布全修好。 |\n| 钟罩已复位并拧紧；新旧卡夹在钟罩内侧，新前旧后。 | EP010-SC001-B003、D002；EP011-SC001-B001。纸条在罩外，不能直接拿出罩内检修卡。 |\n\n旧检查点仅停在 EP006，不能独立支持第十三集：钥匙状态虽未改变，后续换垫圈、复位钟罩和待复测事项均须以上述正文更新。复测结果、木楔后续处置仍未决；门把警示带在 EP003 系上后也无撤除记录。以下安排为翌晨交班的新场景，不补写夜间操作。\n\n# EP013 夜钟·13 v1.0\n## EP013-SC001 内景／晨 钟房\n角色：商宁、杜衡。约60秒，含动作停顿，未配音实测。",
+          "reason": "先列继承状态，定位至实际正文的集/动作块/对白；新场分段预算合计60秒并说明估算或未实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "对白“昨晚两声”把 EP012 的日景测试改称昨晚；原场头为“内景/日”，EP011 的“八点到了”也未标夜晚。这是新增时间措辞的不一致，未改变钥匙或待复测核心状态。"
+      ],
+      "read_bytes": 19084,
+      "limitations": [
+        "仅核对本目录提供的来源和 answer.md；未检验外部文件修改或实际拍摄时长。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 58.038675,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "394419edb8e928dde1dfc29b74288d674e82fe155faa0c110b3debc5a864e46e",
+        "execution.json": "13dc6bc2c6753c13e32716e7e1bf37c64da928a46821fb59227173b485f45894"
+      }
+    },
+    {
+      "id": "run-b1464a0984",
+      "task_id": "S02",
+      "category": "recovery",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别正文失效和实质冲突",
+          "status": "pass",
+          "quote": "保留为待复核旧稿；与新设定直接冲突",
+          "reason": "依据 status.md 明确识别新版不会游泳与旧正文独自游河脱险的实质冲突，旧稿及旧审核不能直接沿用。"
+        },
+        {
+          "criterion": "先正文再连续性/审核再交接派生物",
+          "status": "pass",
+          "quote": "待受影响正文完成修订、相关审核完成且未决项得到处理后，再重新提取交接内容并更新检查点。",
+          "reason": "补读顺序先设定和正文及必要前后文，再审核，最后交接派生物；明确以后需实质处理正文与相关连续性并重审后才更新交接，本次未实际续写。"
+        },
+        {
+          "criterion": "不只刷新哈希",
+          "status": "pass",
+          "quote": "仅更新依赖版本或哈希不算复核。",
+          "reason": "要求核对能力、脱险因果和影响范围，并实质修订或复核及重审；即使未逐字提“哈希”，实际方案也不是仅刷新依赖标记。"
+        },
+        {
+          "criterion": "说明检查点过期且无批准",
+          "status": "pass",
+          "quote": "仅作定位导航，不代表当前可交接",
+          "reason": "把旧检查点及旧审核限定为历史依据，当前不能据此交接；全文没有新增批准或声称已完成实质复核。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2022,
+      "limitations": [
+        "任务只要求恢复判断；来源为 status.md 登记摘要，实际 bible、正文和审核报告未提供，不能由本评阅确认其真实修订结果。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 51.783728,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "4a7297accb90c27a830d334c8a1f4fcd90725d160941a19fdd625c95f9264203",
+        "execution.json": "9f24b42846a417918471e8daed66f4ff1d91c2e2142a20616ed5a9e5b37f5f90"
+      }
+    },
+    {
+      "id": "run-c366db0a0e",
+      "task_id": "S01",
+      "category": "recovery",
+      "condition": "A",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "钥匙初始在商宁腰间",
+          "status": "pass",
+          "quote": "腰间钥匙随转身轻碰箱沿。",
+          "reason": "正文开场直接展示商宁腰间钥匙，与 season.md EP012-SC001-B003、D002 最后状态一致，未把 EP006 约定误作交接完成。"
+        },
+        {
+          "criterion": "承接待明早复测，不能假称已测",
+          "status": "pass",
+          "quote": "昨天那两声响过，今天这次还没试。",
+          "reason": "承接 EP012-D001“明早再试一次”和 B003 待复测纸条；新场只交班并保留待办，没有拉绳完成复测或声称实测通过。"
+        },
+        {
+          "criterion": "交接须有可见动作",
+          "status": "pass",
+          "quote": "她从腰间取下钥匙，递向杜衡；等他握稳，才松手。",
+          "reason": "交接在新场以取钥匙、递交或放掌心及接收动作直接展示，非画外归属跳变。"
+        },
+        {
+          "criterion": "给状态原文定位和约60秒估算",
+          "status": "pass",
+          "quote": "EP012-SC001-B003、EP012-D002；EP009-SC001-B003亦确认关箱后钥匙仍由她保管。EP006-D002的“明早再交回”是约定，不能当作已完成交接；旧检查点仅记录至EP006。\n- 上次已响两声，商宁松手，杜衡数完余音；约定明早再试一次，复测尚未完成：“待复测”纸条贴在钟罩上。来源：EP012-SC001-B001、B003及EP012-D001。\n- 工具箱已关箱（EP009-SC001-B003），EP012-D002要求“先锁好”，但正文未展示锁箱完成。本场应当面核对锁扣，再交钥匙。\n- 新绳留在锤上，旧线进入废料袋，废料袋由杜衡收起；垫圈已装好，钟面刻度已准。来源：EP007-SC001-B003、EP010-SC001-B001、EP009-SC001-B003及D001—D002。不得写成重新换绳或随手调钟面。\n- 两张检修卡新前旧后，夹在钟罩内侧；钟罩已复位，最后一颗螺丝已拧紧。来源：EP010-SC001-B003及D002、EP011-SC001-B001。本场不直接取用藏在罩内的卡。\n\n第十三集首场\n\nEP013-SC001　内景／次日早晨／钟房\n人物：商宁、杜衡。约60秒，含操作停顿，未实测。",
+          "reason": "先列继承状态，定位至实际正文的集/动作块/对白；新场分段预算合计60秒并说明估算或未实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "锁箱仅写“捏住锁扣轻提，确认扣住”，未明确钥匙上锁或箱盖打不开；不足以独立证明已锁闭。不过本稿未把扣住明确宣称为锁闭，且所列 required 不要求锁闭结果。"
+      ],
+      "read_bytes": 18871,
+      "limitations": [
+        "仅核对本目录提供的来源和 answer.md；未检验外部文件修改或实际拍摄时长。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 48.974846,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "23af1d6a88143dd0da220de0d5d6d86d877087c04450c06e18f597877d03b3a5",
+        "execution.json": "fe0c240389bb8a477c4eec714938715b6d78f0a2b57f5f029b0ee66e22d518a0"
+      }
+    },
+    {
+      "id": "run-e287b69ae7",
+      "task_id": "S01",
+      "category": "recovery",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "钥匙初始在商宁腰间",
+          "status": "pass",
+          "quote": "商宁站在工具箱旁，腰间钥匙露在衣外。",
+          "reason": "正文开场直接展示商宁腰间钥匙，与 season.md EP012-SC001-B003、D002 最后状态一致，未把 EP006 约定误作交接完成。"
+        },
+        {
+          "criterion": "承接待明早复测，不能假称已测",
+          "status": "pass",
+          "quote": "钥匙交你。明早那次复测，今天还没做。",
+          "reason": "承接 EP012-D001“明早再试一次”和 B003 待复测纸条；新场只交班并保留待办，没有拉绳完成复测或声称实测通过。"
+        },
+        {
+          "criterion": "交接须有可见动作",
+          "status": "pass",
+          "quote": "商宁把钥匙放进杜衡掌心。",
+          "reason": "交接在新场以取钥匙、递交或放掌心及接收动作直接展示，非画外归属跳变。"
+        },
+        {
+          "criterion": "给状态原文定位和约60秒估算",
+          "status": "pass",
+          "quote": "最新证据为 EP012-SC001-B003 拍腰间钥匙。EP006-D002“明早再交回”仍待兑现。`checkpoint.md` 只记录到 EP006，不能替代后续正文。\n- **工具箱已关，锁好只是被要求，未明确展示执行。** EP009-SC001-B003 关箱；EP012-D002 要求“箱子先锁好”。本场现场确认锁闭，不倒推已经锁过。\n- **两声已响，复测未完成。** EP012-SC001-B001、D001；钟罩上留有待复测纸条（B003）。杜衡亲历并数过余音，无须由商宁重新告知两声结果。\n- **新绳在锤上；旧线已入废料袋并被杜衡收起。** EP007-SC001-B003、EP010-SC001-B001。不得拿旧线继续试。\n- **垫圈已装，钟面刻度已准。** EP009-SC001-B003、D001—D002。钟罩已复位、末颗螺丝拧紧（EP011-SC001-B001）；新旧卡夹在钟罩内侧，新前旧后（EP010-D001—D002、B003）。不能随手从桌面取卡。\n- **木楔仅是临时支撑，门把警示带未见撤除。** EP002-D001—D002、EP003-SC001-B003；后文未展示拆除，不写成修复验收通过。\n\n## EP013-SC001 内景／早晨／钟房\n\n人物：CHAR001 商宁、CHAR002 杜衡。目标：交回钥匙，把待复测事项交清；阻力：交班不等于检修结束。\n\n**0—10秒**\n\n杜衡推门进来，门把上的警示带轻晃。商宁站在工具箱旁，腰间钥匙露在衣外。\n\n杜衡（现场）：“我来接班。”\n\n商宁摸到钥匙，看一眼钟罩上的纸条，先走向工具箱。\n\n**10—25秒**\n\n商宁压实箱盖，将钥匙插入锁孔，转到锁闭位置。拔出钥匙后，提一下箱盖，确认打不开。\n\n杜衡等他验完，伸出手。\n\n**25—40秒**\n\n商宁（现场）：“钥匙交你。明早那次复测，今天还没做。”\n\n商宁把钥匙放进杜衡掌心。杜衡取出衣袋里的空钥匙环，穿入钥匙，收回衣袋。\n\n杜衡（现场）：“知道，先不撤条。”\n\n**40—60秒**\n\n商宁指向钟罩上的纸条，手停在纸边，没有揭下。\n\n商宁（现场）：“临时支撑还不能算修好。再试时，我拉，你看着。”\n\n杜衡走到钟旁，看向新绳，双手仍垂着。\n\n杜衡（现场）：“先把复测准备齐。”\n\n商宁留步。定格在纸条和静止的新绳上。无钟响，切场。\n\n`screen_text`：沿用纸条“待复测”，末尾留3秒可读，后期叠字；不新增通过或完成标记。\n\n## 出场状态与检查\n\n钥匙在杜衡衣袋；箱盖锁闭已现场确认；纸条与警示带保留，复测未开始。下一场入口为复测准备，须另行展示实际操作与结果。\n\n按动作串行、对白与简单动作并行估时约60秒，未朗读或配音实测。",
+          "reason": "先列继承状态，定位至实际正文的集/动作块/对白；新场分段预算合计60秒并说明估算或未实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "场景已明确次日早晨，对白仍称“明早那次复测，今天还没做”，时态容易误解；上下文和场末均明确本次复测尚未进行。"
+      ],
+      "read_bytes": 33620,
+      "limitations": [
+        "仅核对本目录提供的来源和 answer.md；未检验外部文件修改或实际拍摄时长。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": null,
+      "actual_token_usage": null,
+      "timing_excluded_reason": "collection occurred after quota pause; agent finish time unknown",
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "e67510e66639109c9cde7495dfe9895c59e0093e8b5071855193c1e68a398382",
+        "execution.json": "4973b4b6c04baea1a09666d01b84343299701ecbe8af631241562ab8cdcf33f3"
+      }
+    },
+    {
+      "id": "run-e541bd470b",
+      "task_id": "S01",
+      "category": "recovery",
+      "condition": "A",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "钥匙初始在商宁腰间",
+          "status": "pass",
+          "quote": "商宁站在工具箱旁，腰间钥匙清楚入画。",
+          "reason": "正文开场直接展示商宁腰间钥匙，与 season.md EP012-SC001-B003、D002 最后状态一致，未把 EP006 约定误作交接完成。"
+        },
+        {
+          "criterion": "承接待明早复测，不能假称已测",
+          "status": "pass",
+          "quote": "没有。昨晚两声，今天还得复测。",
+          "reason": "承接 EP012-D001“明早再试一次”和 B003 待复测纸条；新场只交班并保留待办，没有拉绳完成复测或声称实测通过。"
+        },
+        {
+          "criterion": "交接须有可见动作",
+          "status": "pass",
+          "quote": "商宁把钥匙放进杜衡掌中，等他握住才松手。",
+          "reason": "交接在新场以取钥匙、递交或放掌心及接收动作直接展示，非画外归属跳变。"
+        },
+        {
+          "criterion": "给状态原文定位和约60秒估算",
+          "status": "pass",
+          "quote": "最新依据为EP012-SC001-B003、D002，不能只凭旧检查点判断。\n- 第十二集已响两声，商宁松手、杜衡数完余音；只约定明早再试，复测尚未完成。待复测纸条贴在钟罩上。来源：EP012-SC001-B001、B003及D001。\n- 工具箱此前关上，但第十二集“箱子先锁好”是对白要求，未展示落锁动作；本场须现场确认、处理。来源：EP009-SC001-B003、EP012-D002。\n- 新绳留在锤上，旧线收入废料袋；垫圈已装好，钟面不动；新旧检修卡按新前旧后夹在钟罩内侧，钟罩已复位并拧紧螺丝。来源：EP007-SC001-B003、EP009-SC001-B003及D001—D002、EP010-SC001-B003及D002、EP011-SC001-B001。\n- 木楔曾被明确为临时支撑，后文未交代撤除或永久修复，不能宣称整钟修好。来源：EP002-SC001-B001及D001—D002。\n\n第十三集首场\n\nEP013-SC001　内景／翌晨　钟房\n角色：商宁、杜衡。约60秒，含操作与停顿，未配音实测。",
+          "reason": "先列继承状态，定位至实际正文的集/动作块/对白；新场分段预算合计60秒并说明估算或未实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "对白“昨晚两声”与来源 EP012“内景/日”场头不一致；来源并未确立夜间试钟。核心复测状态仍正确。"
+      ],
+      "read_bytes": 18871,
+      "limitations": [
+        "仅核对本目录提供的来源和 answer.md；未检验外部文件修改或实际拍摄时长。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 70.277262,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "bcba986232aa0073fa98b2a2b0b3ea2f09f0c0e88bc375979f2f9bf8d4e4ce18",
+        "execution.json": "490234bfd4c1fe53ef99579fa2a3f60770db535727b6538c310cfb067cdeca5e"
+      }
+    },
+    {
+      "id": "run-e60ceb8b40",
+      "task_id": "S02",
+      "category": "recovery",
+      "condition": "A",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别正文失效和实质冲突",
+          "status": "pass",
+          "quote": "EP004 v1.0 仍写主角独自游过河脱险，存在明确冲突。",
+          "reason": "依据 status.md 明确识别新版不会游泳与旧正文独自游河脱险的实质冲突，旧稿及旧审核不能直接沿用。"
+        },
+        {
+          "criterion": "先正文再连续性/审核再交接派生物",
+          "status": "pass",
+          "quote": "正文消除冲突并按 bible v2.0 重新审核后，才可更新交接材料，再重建“交接就绪”检查点。",
+          "reason": "补读顺序先设定和正文及必要前后文，再审核，最后交接派生物；明确以后需实质处理正文与相关连续性并重审后才更新交接，本次未实际续写。"
+        },
+        {
+          "criterion": "不只刷新哈希",
+          "status": "pass",
+          "quote": "核对能力、动作与脱险因果，界定最小受影响范围。",
+          "reason": "要求核对能力、脱险因果和影响范围，并实质修订或复核及重审；即使未逐字提“哈希”，实际方案也不是仅刷新依赖标记。"
+        },
+        {
+          "criterion": "说明检查点过期且无批准",
+          "status": "pass",
+          "quote": "旧审核通过和交接就绪检查点都早于此次变更，不能作为当前版本通过的依据",
+          "reason": "把旧检查点及旧审核限定为历史依据，当前不能据此交接；全文没有新增批准或声称已完成实质复核。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1809,
+      "limitations": [
+        "任务只要求恢复判断；来源为 status.md 登记摘要，实际 bible、正文和审核报告未提供，不能由本评阅确认其真实修订结果。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 82.706401,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "9c232f614cf56cac61d428f84d92dc757b88bb567b76a788f76cce8431e32426",
+        "execution.json": "428ef233c6858140e0fb42f04d7fa5e3c5b3a9470c685d29de93b34865bf2da8"
+      }
+    },
+    {
+      "id": "run-e736cec86a",
+      "task_id": "S01",
+      "category": "recovery",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "钥匙初始在商宁腰间",
+          "status": "pass",
+          "quote": "商宁低头，手指勾住腰间钥匙，尚未取下。",
+          "reason": "正文开场直接展示商宁腰间钥匙，与 season.md EP012-SC001-B003、D002 最后状态一致，未把 EP006 约定误作交接完成。"
+        },
+        {
+          "criterion": "承接待明早复测，不能假称已测",
+          "status": "pass",
+          "quote": "昨天两声都到了。今天这一次，还没试。",
+          "reason": "承接 EP012-D001“明早再试一次”和 B003 待复测纸条；新场只交班并保留待办，没有拉绳完成复测或声称实测通过。"
+        },
+        {
+          "criterion": "交接须有可见动作",
+          "status": "pass",
+          "quote": "他站起，将钥匙放进杜衡摊开的掌心。杜衡合拢手指。",
+          "reason": "交接在新场以取钥匙、递交或放掌心及接收动作直接展示，非画外归属跳变。"
+        },
+        {
+          "criterion": "给状态原文定位和约60秒估算",
+          "status": "pass",
+          "quote": "EP012-SC001-B003 再次拍到钥匙，D002 也确认位置。旧检查点仅停在 EP006，不能据“明早再交回”的承诺认定已归还；本场须展示实际交接。\n- 工具箱已关，但是否上锁未由动作证实：EP009-B003 写关箱；EP012-D002 的“箱子先锁好”是要求。开场应现场检查、锁妥，不补写画外完成。\n- EP012-B001 已响两声，D001 约定“明早再试一次”；B003 将待复测纸条贴在钟罩上。两声成功不等于复测完成；纸条须保留，次日复测仍是待办。\n- 钟罩已复位、最后一颗螺丝已拧紧（EP011-B001）；不能沿用 EP001 的靠墙状态。新绳留在锤上、旧线已入废料袋（EP007-B003），垫圈已装好（EP009-B003）；旧绳待更换已过期。木楔最初只是临时支撑（EP002-D001），后文未明确撤除或完成永久修复，不能宣布全钟修好。\n- 两张检修卡夹在钟罩内侧，新前旧后（EP010-B003、D001—D002）；不能让商宁直接拿桌上的卡登记。钟面刻度已准（EP009-D001—D002），不随意拨针。\n\n第十三集首场\n\n# EP013 夜钟·13 v1.0\n## EP013-SC001 内景／翌日早晨 钟房\n角色：商宁、杜衡。约60秒，含操作停顿，未配音实测。",
+          "reason": "先列继承状态，定位至实际正文的集/动作块/对白；新场分段预算合计60秒并说明估算或未实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "开头压纸条后已去工具箱锁箱并交钥匙，28—46秒又指纸条，46—60秒却写“商宁松开压着纸条的手”，缺少重新压纸条动作；为局部动作连续性瑕疵，不影响钥匙交接和未复测。"
+      ],
+      "read_bytes": 19084,
+      "limitations": [
+        "仅核对本目录提供的来源和 answer.md；未检验外部文件修改或实际拍摄时长。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 87.553616,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "2d6e70ef404a87512191f6bacf1b6811feb009bb4efd2950bf7124a833724594",
+        "execution.json": "0a83ef452d9fae9af3635b4eb8cbe8598b9c9648a0683c596714140fad1eb203"
+      }
+    },
+    {
+      "id": "run-ec0949394c",
+      "task_id": "S02",
+      "category": "recovery",
+      "condition": "A",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别正文失效和实质冲突",
+          "status": "pass",
+          "quote": "当前登记已显示它与 EP004“独自游过河脱险”冲突。",
+          "reason": "依据 status.md 明确识别新版不会游泳与旧正文独自游河脱险的实质冲突，旧稿及旧审核不能直接沿用。"
+        },
+        {
+          "criterion": "先正文再连续性/审核再交接派生物",
+          "status": "pass",
+          "quote": "只有正文与 v2.0 一致、相关审核重新通过、交接材料同步更新后，才能重新认定“交接就绪”。",
+          "reason": "补读顺序先设定和正文及必要前后文，再审核，最后交接派生物；明确以后需实质处理正文与相关连续性并重审后才更新交接，本次未实际续写。"
+        },
+        {
+          "criterion": "不只刷新哈希",
+          "status": "pass",
+          "quote": "核查脱险因果与后续引用",
+          "reason": "要求核对能力、脱险因果和影响范围，并实质修订或复核及重审；即使未逐字提“哈希”，实际方案也不是仅刷新依赖标记。"
+        },
+        {
+          "criterion": "说明检查点过期且无批准",
+          "status": "pass",
+          "quote": "旧 checkpoint 早于 bible 更新，仅能作为历史记录；review v1.0 的“通过”也不能覆盖新设定。",
+          "reason": "把旧检查点及旧审核限定为历史依据，当前不能据此交接；全文没有新增批准或声称已完成实质复核。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1809,
+      "limitations": [
+        "任务只要求恢复判断；来源为 status.md 登记摘要，实际 bible、正文和审核报告未提供，不能由本评阅确认其真实修订结果。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 41.354944,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "8a4efd22675e501806771fbd042d4950ec4a6eda2a291e82598f4de9d55d7f84",
+      "output_hashes": {
+        "answer.md": "e5bec9e534f4d96940fb80b019fc87458c08d31d5b1faf40b8f9096334ab5b92",
+        "execution.json": "63c44d4213d00e028969a705874ec3bf841a64efb35926ec4bd67918cdee7fb5"
+      }
+    },
+    {
+      "id": "run-0d469f9106",
+      "task_id": "V02",
+      "category": "revision",
+      "condition": "C",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。",
+          "reason": "outputs/run-0d469f9106/script-revised.md 的 D002：将仍能拿原箱交货改为无法拿原箱交货，消除与来源 SC001 原箱已毁的直接矛盾；未承诺已经改用新箱。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-0d469f9106/script-revised.md 与对应 tasks/V02/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-0d469f9106/script-revised.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "# 变更说明\n\n- 阶段：G4 问题修订与影响更新。\n- 输入：input/script.md，原稿标题标注 EP002 v1.0。\n- 输出：output/script-revised.md，修订版本 v1.1，状态 draft；为遵守其余逐字保留要求，正文标题沿用原文，输出版本以本说明为准。输入原稿未改动，新稿未锁定。\n- 问题 Q001（本次说明编号）：原箱已烧毁且没有复制品，EP002-D002 却承诺拿原箱交货，违反 EP002-SC001 的明确事实。\n- 改动 ID：EP002-D002。\n- 修改前：乙：箱子被我烧了，明天照样拿原箱交货。\n- 修改后：乙：箱子被我烧了，明天没法拿原箱交货。\n- 原因：仅将“照样”替换为“没法”，明确无法用原箱交货，消除事实冲突。不新增购箱、修复、复制或其他补发事件。\n- 影响与复核：相邻动作无需修改；EP002-D003 继续等待决定，EP002-SC002 继续保持未执行新行动。其余逐字原文与所有稳定 ID 保留。已用反向替换比对确认，唯一改动为上述两个字。本次为局部自审，不表示整集或全季审核通过。\n- 下游重做范围：如存在引用本句的台词表或 JSON，应只刷新 EP002-D002；当前未提供这些产物或项目登记文件，未执行或声称执行登记及管线命令。\n- 未决项：未决定改用新箱或其他处理方案，按用户最小修改范围保留；不阻碍本次冲突修复。后续若需制作交接，应以本修订稿及版本说明为输入。\n",
+          "reason": "changes.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "D002 明确的是不能拿原箱交货，尚未决定是否另找新箱；该表述已消除原箱仍可用的矛盾，并与 D003 等待决定兼容，不把未决定的后续方案判为事实冲突。"
+      ],
+      "read_bytes": 8566,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 59.470022,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "e9e3680978be4e986889b61bba73c04897d89f5eeb5abb1e9e204d1c19f74934",
+        "changes.md": "e483ef71cd52fea8a30f92dcf699658b7f8fbf578bbdf5bac0a84bdf8801d56a",
+        "execution.json": "9066f92daed73492730d1046a22d440979386fd29cb017dc7b8757862d99a9b7",
+        "script-revised.md": "fe2c7a4d1fac728ed29a16b8cb111e2ceb81143754bb9f9ef8eeef835febd713"
+      }
+    },
+    {
+      "id": "run-6e39c947af",
+      "task_id": "V02",
+      "category": "revision",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天不能交货。",
+          "reason": "outputs/run-6e39c947af/script-revised.md 的 D002：明确明天不能交货，与来源 SC001 原木箱烧毁且无复制品的限制一致。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：箱子被我烧了，明天不能交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-6e39c947af/script-revised.md 与对应 tasks/V02/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天不能交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-6e39c947af/script-revised.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "必须保留的事实与授权范围：\n\n- 原木箱已经烧毁且没有复制品；交货须改用新箱或明确不能交。\n- 两人仍留在原地，尚未执行新行动。\n- 仅获授权修订 EP002-D002 及确有必要的相邻动作；其余原文与稳定 ID 必须保留。\n\n已交付完整修订文件：`script-revised.md`。\n\n唯一改动为 EP002-D002：\n\n原文：乙：箱子被我烧了，明天照样拿原箱交货。\n\n修订：乙：箱子被我烧了，明天不能交货。\n\n将“照样拿原箱”改为“不能”，明确无法交货，消除原箱已毁却仍能拿原箱交货的事实冲突。保留烧箱者与时间信息，不补写取得新箱、复制品或其他先前事件。相邻动作无需修改，其余内容及所有 ID 均逐字保留。\n\n下游影响：本段不再承诺明天交货；EP002-D003 仍可理解为等待乙决定下一步，EP002-SC002 的未行动状态保持成立。若后续需要恢复交货，须另有获得授权的剧情安排，本次未增加。本修订未自动批准，也未声称运行项目登记或检查命令。\n",
+          "reason": "answer.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2047,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": null,
+      "wall_seconds_upper_bound": 85.899438,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "1d264ed1a32932361b45be6a9194343c164b181b3a7223eb6e326c77af90a52f",
+        "execution.json": "ae8008ac280413b6024dda8a1c839ef688d7dca33fdbc677d697536888816051",
+        "script-revised.md": "6ef1eb721c808d636338d508ce9d88a1bc2371d1aebb49cbdda709e3365bd4cd"
+      }
+    },
+    {
+      "id": "run-85e8f07a1d",
+      "task_id": "V01",
+      "category": "revision",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：我只是把信放在门口，还不知道她是否读过。",
+          "reason": "outputs/run-85e8f07a1d/script-revised.md 的 D002：撤回已经交给收信人与全部知情的断言，明确放在门口且阅读未知，与来源 SC001 一致。使用“我放信”的版本保留原对白中的行动主体，不构成新增交接事件。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：我只是把信放在门口，还不知道她是否读过。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-85e8f07a1d/script-revised.md 与对应 tasks/V01/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：我只是把信放在门口，还不知道她是否读过。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-85e8f07a1d/script-revised.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "必须保留的事实与授权范围：\n\n- 信只是放在门口；收信人未出现，是否读过未知。\n- 两人仍留在原地，未执行新行动。\n- 仅允许修订 EP002-D002 及确有必要的相邻动作；其余原文与稳定 ID 必须保留，不补造事件，不自动批准。\n\n已交付完整修订文件：`script-revised.md`。\n\n唯一改动：\n\n原文：EP002-D002 乙：我已经把信交给她了，所以她什么都知道。\n\n修订：EP002-D002 乙：我只是把信放在门口，还不知道她是否读过。\n\n此改动将“已亲手交付”和“对方全部知情”的无依据断言改为既有放信事实与阅读状态未知。无需修改相邻动作；标题、其他台词、场景描述及所有 ID 均逐字保留。\n\n下游影响：不能再据这句台词认定收信人已收到或读过信、已知晓内容；D003 的等待决定与 SC002 的未行动状态仍成立。未新增交付、阅读、确认等事件，也未执行或宣称项目批准。\n",
+          "reason": "answer.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2035,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 75.145347,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "bbfbf1fbd6d7b91a88469ccb3cb7ef42ef9d891a9df97422e43244392e5c0d5d",
+        "execution.json": "550731f1a51e3c6daa950c858ebec0928b8c5d4d19fb7ce71c4a777ffe049576",
+        "script-revised.md": "6c881c687a18950f3a6d4b163406cc42f5c56f111b00e1381e97c063ccaf854f"
+      }
+    },
+    {
+      "id": "run-9eb1c3d460",
+      "task_id": "V02",
+      "category": "revision",
+      "condition": "A",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。",
+          "reason": "outputs/run-9eb1c3d460/script-revised.md 的 D002：将仍能拿原箱交货改为无法拿原箱交货，消除与来源 SC001 原箱已毁的直接矛盾；未承诺已经改用新箱。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-9eb1c3d460/script-revised.md 与对应 tasks/V02/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-9eb1c3d460/script-revised.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "已交付完整修订文件：`script-revised.md`。\n\n仅修改 EP002-D002：\n\n- 原文：乙：箱子被我烧了，明天照样拿原箱交货。\n- 修订：乙：箱子被我烧了，明天没法拿原箱交货。\n\n将“照样”改为“没法”，消除原箱已烧毁却仍能用于交货的事实冲突。未增补购置新箱、完成交货等事件；相邻动作无需修改。其余文字、标题及稳定 ID 均逐字保留。\n",
+          "reason": "answer.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "D002 明确的是不能拿原箱交货，尚未决定是否另找新箱；该表述已消除原箱仍可用的矛盾，并与 D003 等待决定兼容，不把未决定的后续方案判为事实冲突。"
+      ],
+      "read_bytes": 1847,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 38.477878,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "b35849bfeab4bf8af3277cd7560531b078f924e8c80b30222ede37554e05fbb0",
+        "execution.json": "8dbb8f37253f7d43d063b847a4a91707ed3e0d54372bd95a75959ada6fe87620",
+        "script-revised.md": "fe2c7a4d1fac728ed29a16b8cb111e2ceb81143754bb9f9ef8eeef835febd713"
+      }
+    },
+    {
+      "id": "run-a7b071d0c3",
+      "task_id": "V02",
+      "category": "revision",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。",
+          "reason": "outputs/run-a7b071d0c3/script-revised.md 的 D002：将仍能拿原箱交货改为无法拿原箱交货，消除与来源 SC001 原箱已毁的直接矛盾；未承诺已经改用新箱。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-a7b071d0c3/script-revised.md 与对应 tasks/V02/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-a7b071d0c3/script-revised.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "必须保留的事实与授权范围：\n- 原木箱已经烧毁，没有复制品；交货只能改用新箱或明确不能交。\n- 两人仍在原地，未执行新行动。\n- 仅修订 EP002-D002 及确有必要的相邻动作，保留其余逐字原文和稳定 ID；不编造补发生的事件，不自动批准。\n\n已交付完整修订文件：`script-revised.md`。\n\n唯一改动：EP002-D002 从“箱子被我烧了，明天照样拿原箱交货。”改为“箱子被我烧了，明天没法拿原箱交货。”\n\n改动明确原箱不能用于明天交货，与烧毁事实一致；保留乙烧箱的陈述，未新增新箱、复制品、补救行动或先前事件。相邻动作无需修改，其余原文与全部 ID 均保留。\n\n下游影响：原箱交货不再是可行方案；是否另找新箱仍未决定，因此 EP002-D003“我等你决定。”和 EP002-SC002 的未行动状态继续成立。本次仅交付修订稿，未执行项目登记、检查、门禁或批准。\n",
+          "reason": "answer.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "D002 明确的是不能拿原箱交货，尚未决定是否另找新箱；该表述已消除原箱仍可用的矛盾，并与 D003 等待决定兼容，不把未决定的后续方案判为事实冲突。"
+      ],
+      "read_bytes": 2047,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 72.513685,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "0497c30bfe35b31c1a8c7f0bd9c00458a2451b3ec2ee37e2c4e9d19a9b4a33db",
+        "execution.json": "c5853237f00897d530d30ee2699f35b28e04a41582f2de6d810b7a886f992b89",
+        "script-revised.md": "fe2c7a4d1fac728ed29a16b8cb111e2ceb81143754bb9f9ef8eeef835febd713"
+      }
+    },
+    {
+      "id": "run-abc6222079",
+      "task_id": "V01",
+      "category": "revision",
+      "condition": "C",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：信只是放在门口，她还没出现，不知道她看过没有。",
+          "reason": "outputs/run-abc6222079/script-revised.md 的 D002：撤回已经交给收信人与全部知情的断言，明确放在门口且阅读未知，与来源 SC001 一致。使用“我放信”的版本保留原对白中的行动主体，不构成新增交接事件。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：信只是放在门口，她还没出现，不知道她看过没有。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-abc6222079/script-revised.md 与对应 tasks/V01/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：信只是放在门口，她还没出现，不知道她看过没有。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-abc6222079/script-revised.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "# 变更说明\n\n阶段：G4 问题修订与影响更新。\n输入：input/script.md，正文标注 v1.0。\n输出：output/script-revised.md，交付版本 v1.1-draft；按逐字保留要求，正文原题头不改，版本区别以本说明为准。原稿未覆盖，新稿未锁定。\n\n## Q001：递信与知情事实冲突\n\n改动 ID：EP002-D002。\n\n改前：乙：我已经把信交给她了，所以她什么都知道。\n\n改后：乙：信只是放在门口，她还没出现，不知道她看过没有。\n\n原因：EP002-SC001 仅确认信放在门口、收信人未出现、是否读信未知。原对白把放置信件误说成当面交付，并把未知的阅读与知情状态说成确定事实。新对白回到现有证据，不补写交信、读信、转告或其他事件。\n\n影响：仅 EP002-D002 一行；无需改动相邻动作。EP002-D001、EP002-D003、两处场景说明、原题头和所有稳定 ID 均逐字保留。EP002-SC002 中两人未执行新行动的状态不变。\n\n复核：已对照输入检查，替换新对白回原对白后与原文件完全一致。局部事实冲突已消除；这是本次自检，不代表整集或全季审核通过。\n\n下游重做范围：如存在旧台词表、配音稿或结构化导出，仅刷新 EP002-D002；输入未提供这些派生文件，不声称已更新。无项目登记文件，未执行或虚构登记及关口命令。\n\n未决项：收信人是否读信仍未知，保留为剧情现状；本次修订无待补事件。\n",
+          "reason": "changes.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 8554,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 93.552239,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "508d2d4e724fbe75a433f56798f69509d69f5ace355d12b6ef36101aacad8ad0",
+        "changes.md": "34f527a1e22d4de743c36df06aae2687e40fd1e48d2fc1b6e173c27b0adc8a5a",
+        "execution.json": "202d8c5a0559a17c39fa055c44b9cfaf536462fecc50d1bcaafb4bbd3c0b7a2c",
+        "script-revised.md": "7aa4a99b2abf2d7510a2a85521503e145352d2adc0d5a8062814e3fa0d18ca25"
+      }
+    },
+    {
+      "id": "run-dad7d422b1",
+      "task_id": "V01",
+      "category": "revision",
+      "condition": "A",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：我只是把信放在门口，还不知道她是否读过。",
+          "reason": "outputs/run-dad7d422b1/script-revised.md 的 D002：撤回已经交给收信人与全部知情的断言，明确放在门口且阅读未知，与来源 SC001 一致。使用“我放信”的版本保留原对白中的行动主体，不构成新增交接事件。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：我只是把信放在门口，还不知道她是否读过。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-dad7d422b1/script-revised.md 与对应 tasks/V01/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：我只是把信放在门口，还不知道她是否读过。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-dad7d422b1/script-revised.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "已完成完整修订，见 [script-revised.md](script-revised.md)。\n\n仅修改 EP002-D002：\n\n- 原文：乙：我已经把信交给她了，所以她什么都知道。\n- 修订：乙：我只是把信放在门口，还不知道她是否读过。\n\n将“已交给她”改为已知的“放在门口”，将“什么都知道”改为尚不能确认是否读过，与 EP002-SC001 一致。未增加收信、阅读或其他补发事件，无需修改相邻动作。其余文字、标题和稳定 ID 均逐字保留。\n",
+          "reason": "answer.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1835,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 66.148756,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "9645354880f4bdb22b62aa47717ad54e0653513ffe160ffa6176556ba58862ca",
+        "execution.json": "8dbb8f37253f7d43d063b847a4a91707ed3e0d54372bd95a75959ada6fe87620",
+        "script-revised.md": "6c881c687a18950f3a6d4b163406cc42f5c56f111b00e1381e97c063ccaf854f"
+      }
+    },
+    {
+      "id": "run-e10e7aad74",
+      "task_id": "V01",
+      "category": "revision",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：信只是放在门口，她有没有读过，我还不知道。",
+          "reason": "outputs/run-e10e7aad74/script-revised.md 的 D002：撤回已经交给收信人与全部知情的断言，明确放在门口且阅读未知，与来源 SC001 一致。使用“我放信”的版本保留原对白中的行动主体，不构成新增交接事件。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：信只是放在门口，她有没有读过，我还不知道。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-e10e7aad74/script-revised.md 与对应 tasks/V01/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：信只是放在门口，她有没有读过，我还不知道。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-e10e7aad74/script-revised.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "# 变更说明\n\n- 阶段：G4 审核-4 问题修订与影响更新。\n- 输入：input/script.md，茶馆 EP002 v1.0；输入文件保持只读。\n- 输出：output/script-revised.md，局部修订版 v1.1，draft。为遵守逐字保留要求，正文原标题不变；此处记录输出版本。\n- 问题 Q001（本次标记）：EP002-D002 声称已把信交给收信人且她已知悉全部，与 EP002-SC001 的门口放信、收信人未出现、是否阅读未知相冲突。\n- 改动 ID：EP002-D002。\n- 改前：乙：我已经把信交给她了，所以她什么都知道。\n- 改后：乙：信只是放在门口，她有没有读过，我还不知道。\n- 原因：将对白收回到已确认的放信事实及阅读状态未知，不推断收取、阅读和知情，不补写事件。\n- 范围：仅该对白；EP002-SC001、EP002-D001、EP002-D003、EP002-SC002 及标题逐字保留，稳定 ID 未改。\n- 自查：通过精确替换与逆向还原比对，确认其余内容不变；相邻动作没有必要改动，结尾仍未执行新行动。\n- 影响及下游重做范围：仅此句正文；输入中未提供台词表、JSON 等派生文件，无此类文件可同步。若另有旧派生稿，需刷新 EP002-D002 后复核。\n- 未决项：无阻塞项。本次仅局部自查，不代表整集审核或锁定。未提供项目登记文件，未执行或宣称通过任何管线命令。\n- 后续输入：若另行要求下游交接，应使用本修订稿；本次任务止于修订交付。\n",
+          "reason": "changes.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 8554,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": null,
+      "wall_seconds_upper_bound": 102.902378,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "7888d326ed3d467694ef286b467b8ce6c9943c71aba2eae8de559b112530597e",
+        "changes.md": "84c6940114932eba8e0bec70b622c6e22a4fdbefa0a8a40167391c68d31f53f1",
+        "execution.json": "958beab12cde16085d3061cbfee1a01ea55f6cedebd12cc9526eef484cc38e59",
+        "script-revised.md": "c725fba2500064244cc3a87ac34cfad52957d129fb19dfb528cb0c61d09cbc11"
+      }
+    },
+    {
+      "id": "run-e13d0fce2a",
+      "task_id": "V01",
+      "category": "revision",
+      "condition": "A",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：信只是放在门口，还不知道她是否读过。",
+          "reason": "outputs/run-e13d0fce2a/script.md 的 D002：撤回已经交给收信人与全部知情的断言，明确放在门口且阅读未知，与来源 SC001 一致。使用“我放信”的版本保留原对白中的行动主体，不构成新增交接事件。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：信只是放在门口，还不知道她是否读过。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-e13d0fce2a/script.md 与对应 tasks/V01/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：信只是放在门口，还不知道她是否读过。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-e13d0fce2a/script.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "已交付完整修订文件：[script.md](script.md)。\n\n仅修改 EP002-D002：\n\n> 乙：信只是放在门口，还不知道她是否读过。\n\n删除“已亲手交信”和“她什么都知道”两项无依据的断言，与 EP002-SC001 已明确的放信位置及阅读状态一致。未补写交接、阅读或其他事件，无需修改相邻动作。其余原文及全部稳定 ID 逐字保留。\n",
+          "reason": "answer.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1835,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 53.637211,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "60901f07bf977d81df8d562529c6995de0ab0add4b00d1440db2edbfb26726f5",
+        "execution.json": "8dbb8f37253f7d43d063b847a4a91707ed3e0d54372bd95a75959ada6fe87620",
+        "script.md": "34350153bc14e53672fa4b04d388cb59022520ab4d67541bf64a68c08c0072f6"
+      }
+    },
+    {
+      "id": "run-e3631de325",
+      "task_id": "V02",
+      "category": "revision",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。",
+          "reason": "outputs/run-e3631de325/script-revised.md 的 D002：将仍能拿原箱交货改为无法拿原箱交货，消除与来源 SC001 原箱已毁的直接矛盾；未承诺已经改用新箱。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-e3631de325/script-revised.md 与对应 tasks/V02/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-e3631de325/script-revised.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "# 变更说明\n\n阶段：G4 问题修订与影响更新。\n输入：input/script.md，原稿标题版本 v1.0。\n输出：output/script-revised.md，本次修订标识 v1.1-draft；为遵守其余原文逐字保留要求，正文标题仍保留原来的 v1.0，修订身份以本说明为准。未锁定，不替换生产基线。\n\n## Q001：原箱烧毁后仍声称拿原箱交货\n- 修改 ID：EP002-D002。\n- 修改前：乙：箱子被我烧了，明天照样拿原箱交货。\n- 修改后：乙：箱子被我烧了，明天没法拿原箱交货。\n- 原因：EP002-SC001 已明确原木箱烧毁且无复制品，原对白与此冲突。将承诺改为明确不能拿原箱交货，未新增箱子、采购、修复或其他补发生事件。\n- 影响：仅修订该对白；相邻动作无需变动，EP002-D003 仍可承接尚未作出的后续决定，EP002-SC002 的未行动状态保持不变。\n- 下游：若存在基于旧稿的对白表、字幕或 JSON，仅刷新该条对白并重新绑定修订稿；输入未提供这些文件，本次不声称已更新。\n\n检查：已通过文本比对，除该条对白替换外所有字符与稳定 ID 均保持原样。仅完成本次局部自检，不代表整集或全季审核通过。\n未决项：无阻塞本次修订的未决项；后续如何交货仍未决定，不在本次范围内。未提供项目登记文件，未执行或编造登记、关口命令结果。\n",
+          "reason": "changes.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "D002 明确的是不能拿原箱交货，尚未决定是否另找新箱；该表述已消除原箱仍可用的矛盾，并与 D003 等待决定兼容，不把未决定的后续方案判为事实冲突。"
+      ],
+      "read_bytes": 8566,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 87.188625,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "50010fd15d7bac1bd1ecc94a98fed17bad99f5376add89204fad63b6c2378418",
+        "changes.md": "d228c386444ee5135108030006dea58942a4e5919458f5c45f2e263f71e47e99",
+        "execution.json": "0552f4039f4268582e057cbe090029131b9ad91e26e044d17c47e0ef9a640cd1",
+        "script-revised.md": "fe2c7a4d1fac728ed29a16b8cb111e2ceb81143754bb9f9ef8eeef835febd713"
+      }
+    },
+    {
+      "id": "run-ed05857b6a",
+      "task_id": "V02",
+      "category": "revision",
+      "condition": "A",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。",
+          "reason": "outputs/run-ed05857b6a/script-revised.md 的 D002：将仍能拿原箱交货改为无法拿原箱交货，消除与来源 SC001 原箱已毁的直接矛盾；未承诺已经改用新箱。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-ed05857b6a/script-revised.md 与对应 tasks/V02/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：箱子被我烧了，明天没法拿原箱交货。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-ed05857b6a/script-revised.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "已交付完整修订文件：`script-revised.md`。\n\n仅修改 EP002-D002：\n\n原文：乙：箱子被我烧了，明天照样拿原箱交货。\n\n修订：乙：箱子被我烧了，明天没法拿原箱交货。\n\n将“照样”改为“没法”，明确原箱烧毁后无法用于交货，消除事实冲突。未新增补救事件或行动；相邻动作无须修改，其余逐字原文及所有稳定 ID 均保留。\n",
+          "reason": "answer.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "D002 明确的是不能拿原箱交货，尚未决定是否另找新箱；该表述已消除原箱仍可用的矛盾，并与 D003 等待决定兼容，不把未决定的后续方案判为事实冲突。"
+      ],
+      "read_bytes": 1847,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 478.740028,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "ebe141b646baff980dc062e823b8db74056870afd4b7544ce1843dd463b1aa5e",
+        "execution.json": "65b16560c102bcf20dda644e1c62d1e3397dc1fefd2dde8b0f920c13b2b094bb",
+        "script-revised.md": "fe2c7a4d1fac728ed29a16b8cb111e2ceb81143754bb9f9ef8eeef835febd713"
+      }
+    },
+    {
+      "id": "run-f7ecb23d80",
+      "task_id": "V01",
+      "category": "revision",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "解决D002与已给事实的矛盾",
+          "status": "pass",
+          "quote": "EP002-D002 乙：信只是放在门口，她还没出现，不知道她是否读过。",
+          "reason": "outputs/run-f7ecb23d80/script-revised.md 的 D002：撤回已经交给收信人与全部知情的断言，明确放在门口且阅读未知，与来源 SC001 一致。使用“我放信”的版本保留原对白中的行动主体，不构成新增交接事件。"
+        },
+        {
+          "criterion": "其余对白与ID逐字保留",
+          "status": "pass",
+          "quote": "EP002-D001 甲：现在怎么办？\nEP002-D002 乙：信只是放在门口，她还没出现，不知道她是否读过。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-f7ecb23d80/script-revised.md 与对应 tasks/V01/script.md 逐字比较：仅 D002 行不同，排除此行后剩余文本连同换行完全一致；标题、两场场次、D001、D003 与所有稳定 ID 均原样保留。"
+        },
+        {
+          "criterion": "不补造传信/复制品/光源/口令来源",
+          "status": "pass",
+          "quote": "EP002-D002 乙：信只是放在门口，她还没出现，不知道她是否读过。\nEP002-D003 甲：我等你决定。\nEP002-SC002：两人仍留在原地，未执行新行动。",
+          "reason": "outputs/run-f7ecb23d80/script-revised.md 全文仅修改上述 D002，未增加传信、复制品、光源、口令或其他补发生事件；结尾仍未行动。"
+        },
+        {
+          "criterion": "有变更说明且不自动审核锁定",
+          "status": "pass",
+          "quote": "必须保留的事实与授权范围：\n\n- 信只放在门口，收信人未出现，是否读过未知。\n- 两人仍在原地，未执行新行动。\n- 仅可修订 EP002-D002 及确有必要的相邻动作；其余原文与稳定 ID 必须保留，不补写事件。\n\n已交付完整修订文件：`script-revised.md`。\n\n唯一改动为 EP002-D002：\n\n原文：乙：我已经把信交给她了，所以她什么都知道。\n\n修订：乙：信只是放在门口，她还没出现，不知道她是否读过。\n\n将“已交到本人手中”改为既有的放信事实，并撤回“她什么都知道”的无依据断言。相邻动作无需修改，其余文本（含标题及全部 ID）逐字保留。\n\n下游影响：后续不能据此认定收信人已经收信、读信或知情；若情节需要确认，应由后续实际事件建立。此次未新增事件、执行项目控制命令或作出批准。\n",
+          "reason": "answer.md 提供修改前后及原因；核对所有交付文本未发现整集/全季审核通过、自动批准或锁定的声明。未明确写“未锁定”的简短版本也没有实际自动锁定内容，不能据此判违规。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2035,
+      "limitations": [
+        "裁定限于本目录提供的任务来源、匿名正文与说明；无执行轨迹，不能独立确认答复中所述比对操作是否实际运行，但本次已独立逐字核对交付正文。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 59.11626,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "472ac4e6379bf37b1fc552be08f960505614a7d3c9aa656101f803cdf9f587d3",
+      "output_hashes": {
+        "answer.md": "ff16c87a45306f222bde5ae32d4b2e67d1d88b754e014ff821fd47e757414496",
+        "execution.json": "20f59e72f228cb2cdfb4d7f4ce45f9dad08f56c87be10924712d01b1f3d43293",
+        "script-revised.md": "59821b948cc2d0ac860410484716171ff6d8e2f4ff10f1657cbed6408dc84607"
+      }
+    },
+    {
+      "id": "run-195d568712",
+      "task_id": "R02",
+      "category": "routing",
+      "condition": "A",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "只做估时",
+          "status": "pass",
+          "quote": "原对白有机会放进30秒，但余量较小，取决于停顿和表演节奏。",
+          "reason": "实际交付限于原对白字数、30 秒目标、条件及估算结果，没有润色文本或立项内容。"
+        },
+        {
+          "criterion": "区分对白读速与动作占时、标估算",
+          "status": "pass",
+          "quote": "假设实际发声速度为4字/秒，对白约16.25秒；加上述2秒停顿及12秒动作，总长约30.25秒，略超目标。",
+          "reason": "核对原文为甲 44 字、乙 21 字，动作明确预留 12 秒。输出分离对白速度/用时与动作预算，并声明速度、串并行或停顿假设及估算性质。"
+        },
+        {
+          "criterion": "不宣称实际配音或改写",
+          "status": "pass",
+          "quote": "未做实际朗读计时，因此不能保证成片时长。",
+          "reason": "实际输出没有配音、录音或实测完成声明，也没有交付改写文本；引用说明其文本估算性质和未验证范围。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1595,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 53.827711,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "11d572b87ba60cb7a6ae1bcb71f5afdd786d823775c36b00a90db5b16a0ef6ff",
+        "execution.json": "0f3f6d302ee7dc2b81f49357d70c6435c473f7007e9a4f902fb6fb01ad14da36"
+      }
+    },
+    {
+      "id": "run-1c6e73e8c6",
+      "task_id": "R02",
+      "category": "routing",
+      "condition": "C",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "只做估时",
+          "status": "pass",
+          "quote": "本次仅做 G3 时长估算，输出 v1.0，状态为估算、未实测。台词保持原样。",
+          "reason": "实际交付限于原对白字数、30 秒目标、条件及估算结果，没有润色文本或立项内容。"
+        },
+        {
+          "criterion": "区分对白读速与动作占时、标估算",
+          "status": "pass",
+          "quote": "采用每秒 3–4 字的纯发声速度，另给句间停顿、换人留出合计 2 秒。这个速度范围是计算假设，不是演员实测。沿用原文动作预留的 12 秒",
+          "reason": "核对原文为甲 44 字、乙 21 字，动作明确预留 12 秒。输出分离对白速度/用时与动作预算，并声明速度、串并行或停顿假设及估算性质。"
+        },
+        {
+          "criterion": "不宣称实际配音或改写",
+          "status": "pass",
+          "quote": "最终确认需要按原台词和动作安排计时读演；未润色，未立项。",
+          "reason": "实际输出没有配音、录音或实测完成声明，也没有交付改写文本；引用说明其文本估算性质和未验证范围。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 18460,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 94.466298,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "dd2edc78bcdcd227ba2875a1115ddc369d0e2340947961d64872877a71d7c270",
+        "execution.json": "b4fb179ac071f1c6331d98ad9863343869fda58993a27f49ad49e814a42eaac9"
+      }
+    },
+    {
+      "id": "run-1fcafdc727",
+      "task_id": "R01",
+      "category": "routing",
+      "condition": "A",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "选择连续性审核或等价最小工作范围",
+          "status": "pass",
+          "quote": "诊断对象：《旧影院 v1.0》EP001-SC002；仅以所给 EP001-SC001 作为前置状态参照。",
+          "reason": "报告围绕所给两场编号的票据状态核查，使用前场作为后场必要参照，符合局部连续性诊断授权。"
+        },
+        {
+          "criterion": "指出票据持有人矛盾并引用前后句",
+          "status": "pass",
+          "quote": "前置证据：EP001-SC001 中，甲将票据交给乙，乙把它锁进自己的抽屉。该段结束时，票据在乙的抽屉内。\n- 冲突位置：EP001-SC002 明确写“无人再次交接”，但甲随后“从自己的衣袋取出同一张票据交给丙”。",
+          "reason": "核对 source.md：SC001 交乙并锁进乙抽屉，SC002 无再次交接却由甲衣袋取出同一票据；输出明确标明两个场号，引用或忠实转述两处句子，并指出持有人及位置断裂。题目未要求逐字引文，忠实的带场号转述亦构成来源引用。"
+        },
+        {
+          "criterion": "不交付改写正文",
+          "status": "pass",
+          "quote": "以上仅依据所给文本诊断；未将未写出的取回、复制或其他事件视为既定事实。未修订正文，未扩展全季。",
+          "reason": "逐段检查实际交付，仅有证据、诊断、影响或核对建议，没有替换场次、改写对白或新增剧情正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1592,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 58.201667,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "81d83582bcf6d37022e1e36deb5d2b1f581decf9d8f6fafe19df04bd59fb603c",
+        "execution.json": "3d2d31e0e47aa138f304be05b2579be8582ca59552dbbf6112091df41a6d9deb"
+      }
+    },
+    {
+      "id": "run-29790321fd",
+      "task_id": "R02",
+      "category": "routing",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "只做估时",
+          "status": "pass",
+          "quote": "# 30秒对白估时",
+          "reason": "实际交付限于原对白字数、30 秒目标、条件及估算结果，没有润色文本或立项内容。"
+        },
+        {
+          "criterion": "区分对白读速与动作占时、标估算",
+          "status": "pass",
+          "quote": "以下为假设语速下的估算，并非实测：",
+          "reason": "核对原文为甲 44 字、乙 21 字，动作明确预留 12 秒。输出分离对白速度/用时与动作预算，并声明速度、串并行或停顿假设及估算性质。"
+        },
+        {
+          "criterion": "不宣称实际配音或改写",
+          "status": "pass",
+          "quote": "没有演员试读或录音，实际语速、情绪停顿、接话间隔及动作重叠时长均未验证；12秒动作时长直接采用输入预留值。以上仅为估时诊断，未修改原稿。",
+          "reason": "实际输出没有配音、录音或实测完成声明，也没有交付改写文本；引用说明其文本估算性质和未验证范围。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "“约超出-1.8秒”表达别扭，实际应表述为剩余约 1.8 秒；不影响表内估时或条件判断。",
+        "65÷4=16.25 秒；输出写 16.2 秒、合计 28.2 秒属于半秒末位取舍，差异仅 0.05 秒，不影响达标边界判断。"
+      ],
+      "read_bytes": 1775,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": null,
+      "wall_seconds_upper_bound": 65.623206,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "1eb12eb6335ce8bdd42dd598b9f02f022fc59086e65aea54656a297b6323674d",
+        "execution.json": "9e9952d4326c614876dd7fc8c4fb785df2b25912995b2964bf840fb01dc7f591"
+      }
+    },
+    {
+      "id": "run-339ced3f39",
+      "task_id": "R01",
+      "category": "routing",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "选择连续性审核或等价最小工作范围",
+          "status": "pass",
+          "quote": "阶段：G4 连续性专项审核。",
+          "reason": "报告围绕所给两场编号的票据状态核查，使用前场作为后场必要参照，符合局部连续性诊断授权。"
+        },
+        {
+          "criterion": "指出票据持有人矛盾并引用前后句",
+          "status": "pass",
+          "quote": "- **前态及证据**：EP001-SC001，“甲把票据交给乙，乙锁进自己的抽屉。”此时票据位于乙的抽屉，甲已交出票据。\n- **后态及证据**：EP001-SC002，先明确“无人再次交接”，随后“甲从自己的衣袋取出同一张票据交给丙”。票据却已回到甲的衣袋。",
+          "reason": "核对 source.md：SC001 交乙并锁进乙抽屉，SC002 无再次交接却由甲衣袋取出同一票据；输出明确标明两个场号，引用或忠实转述两处句子，并指出持有人及位置断裂。题目未要求逐字引文，忠实的带场号转述亦构成来源引用。"
+        },
+        {
+          "criterion": "不交付改写正文",
+          "status": "pass",
+          "quote": "本次仅指出问题，不补写转移情节，也不推定发生了盗取或掉包。",
+          "reason": "逐段检查实际交付，仅有证据、诊断、影响或核对建议，没有替换场次、改写对白或新增剧情正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 15705,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 70.450809,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "a937a1645212ab996b2873893654fddea00a7b1619689603cab73618883b0b87",
+        "execution.json": "c136cfd4a894b640658a63218fffc1080254813905a05d181833717e9d893406"
+      }
+    },
+    {
+      "id": "run-622c7b926d",
+      "task_id": "R02",
+      "category": "routing",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "只做估时",
+          "status": "pass",
+          "quote": "结论：对白有机会放进剩余的 18 秒，但余量不大；正常偏慢、带明显反应停顿的演法可能超时。",
+          "reason": "实际交付限于原对白字数、30 秒目标、条件及估算结果，没有润色文本或立项内容。"
+        },
+        {
+          "criterion": "区分对白读速与动作占时、标估算",
+          "status": "pass",
+          "quote": "若动作与对白不重叠、无额外停顿，最低需约 3.61 字/秒（65÷18）。若对白内部断句及换人另需 2 秒，则净发声需约 4.06 字/秒（65÷16），才能达到 30 秒。",
+          "reason": "核对原文为甲 44 字、乙 21 字，动作明确预留 12 秒。输出分离对白速度/用时与动作预算，并声明速度、串并行或停顿假设及估算性质。"
+        },
+        {
+          "criterion": "不宣称实际配音或改写",
+          "status": "pass",
+          "quote": "未提供朗读或表演录音，因此语速、情绪停顿以及动作能否与对白重叠均未验证。以上只能判定条件可行，不能保证成片达标。",
+          "reason": "实际输出没有配音、录音或实测完成声明，也没有交付改写文本；引用说明其文本估算性质和未验证范围。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2025,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 78.089108,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "9d2e6a6dfa978a3283c51b2d12506f065da3a20b9c731a968dd98d6c97c52b89",
+        "execution.json": "bc7cc064c30a8f57f243cd092f192d4d2fe231813f632cc9877c2eefbb2d5d1b"
+      }
+    },
+    {
+      "id": "run-a7ebfb98c0",
+      "task_id": "R01",
+      "category": "routing",
+      "condition": "C",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "选择连续性审核或等价最小工作范围",
+          "status": "pass",
+          "quote": "本次仅核查这段材料的道具状态衔接，不扩展其他场次或全季。",
+          "reason": "报告围绕所给两场编号的票据状态核查，使用前场作为后场必要参照，符合局部连续性诊断授权。"
+        },
+        {
+          "criterion": "指出票据持有人矛盾并引用前后句",
+          "status": "pass",
+          "quote": "- **前置证据**：EP001-SC001：“甲把票据交给乙，乙锁进自己的抽屉。”该场末票据位于乙的抽屉内，由乙保管。\n- **冲突证据**：EP001-SC002 先明确“无人再次交接”，随后“甲从自己的衣袋取出同一张票据交给丙”。",
+          "reason": "核对 source.md：SC001 交乙并锁进乙抽屉，SC002 无再次交接却由甲衣袋取出同一票据；输出明确标明两个场号，引用或忠实转述两处句子，并指出持有人及位置断裂。题目未要求逐字引文，忠实的带场号转述亦构成来源引用。"
+        },
+        {
+          "criterion": "不交付改写正文",
+          "status": "pass",
+          "quote": "由作者核实票据的预定保管者及转移路径，再在这段正文中统一持物状态与动作依据。此处只指出需核对的环节，不补写交接、不假设隐藏行动。",
+          "reason": "逐段检查实际交付，仅有证据、诊断、影响或核对建议，没有替换场次、改写对白或新增剧情正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 28552,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 85.989491,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "5663f572f8acdfc0869bb831e7e20d954bded8ea577ba0e6d4db43261de75cae",
+        "execution.json": "5e0a664a7f6bd906d703a5dface124f0724c4f4b4a6b1baee8c38d25646fed38"
+      }
+    },
+    {
+      "id": "run-b585cc76b7",
+      "task_id": "R01",
+      "category": "routing",
+      "condition": "A",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "选择连续性审核或等价最小工作范围",
+          "status": "pass",
+          "quote": "诊断对象：EP001-SC002；EP001-SC001 仅作为票据前置状态的依据。未修订正文，未扩展全季。",
+          "reason": "报告围绕所给两场编号的票据状态核查，使用前场作为后场必要参照，符合局部连续性诊断授权。"
+        },
+        {
+          "criterion": "指出票据持有人矛盾并引用前后句",
+          "status": "pass",
+          "quote": "- **前置证据**：EP001-SC001 中，甲已把票据交给乙，乙将其锁进自己的抽屉。票据最后明确的位置为乙的抽屉，持有者为乙。\n- **冲突证据**：EP001-SC002 明示“无人再次交接”，却让同一张票据出现在甲的衣袋中，并由甲交给丙。文本没有建立票据从乙的抽屉转移到甲衣袋的过程。",
+          "reason": "核对 source.md：SC001 交乙并锁进乙抽屉，SC002 无再次交接却由甲衣袋取出同一票据；输出明确标明两个场号，引用或忠实转述两处句子，并指出持有人及位置断裂。题目未要求逐字引文，忠实的带场号转述亦构成来源引用。"
+        },
+        {
+          "criterion": "不交付改写正文",
+          "status": "pass",
+          "quote": "现有文字明确写作“同一张”，不能自行假定为副本，也不能自行补入取回、偷取或再次交接事件。",
+          "reason": "逐段检查实际交付，仅有证据、诊断、影响或核对建议，没有替换场次、改写对白或新增剧情正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1592,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 51.177151,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "c7bc66785af673950e33560286be265a55e93492d5de95ab7b45e0a4693bbc8c",
+        "execution.json": "8cadfcb2255287ad1b8c275b0b3e0304369dba49b0e2697598f394b39d6a6284"
+      }
+    },
+    {
+      "id": "run-bd54befba5",
+      "task_id": "R02",
+      "category": "routing",
+      "condition": "A",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "只做估时",
+          "status": "pass",
+          "quote": "以上为文本估算，未实测演员朗读，不包含修改建议。",
+          "reason": "实际交付限于原对白字数、30 秒目标、条件及估算结果，没有润色文本或立项内容。"
+        },
+        {
+          "criterion": "区分对白读速与动作占时、标估算",
+          "status": "pass",
+          "quote": "每秒4字：对白约16.2秒，加动作共28.2秒，尚未另计停顿。",
+          "reason": "核对原文为甲 44 字、乙 21 字，动作明确预留 12 秒。输出分离对白速度/用时与动作预算，并声明速度、串并行或停顿假设及估算性质。"
+        },
+        {
+          "criterion": "不宣称实际配音或改写",
+          "status": "pass",
+          "quote": "以上为文本估算，未实测演员朗读，不包含修改建议。",
+          "reason": "实际输出没有配音、录音或实测完成声明，也没有交付改写文本；引用说明其文本估算性质和未验证范围。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "“自然停顿的表演大概率超时”没有概率证据，宜改为“可能超时”；其条件计算仍支持时间偏紧的判断。",
+        "65÷4=16.25 秒；输出写 16.2 秒、合计 28.2 秒属于半秒末位取舍，差异仅 0.05 秒，不影响达标边界判断。"
+      ],
+      "read_bytes": 1845,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": null,
+      "wall_seconds_upper_bound": 540.435315,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "3fb4bdf588e714983344b9b49e46e0a127307cab31437fc4a31a7a323082b512",
+        "execution.json": "688766f62ba75215d8deec7f3e73425ad72d1ca6b417a3d5d940c282c65a7bb8"
+      }
+    },
+    {
+      "id": "run-c42f291519",
+      "task_id": "R02",
+      "category": "routing",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "只做估时",
+          "status": "pass",
+          "quote": "本次为G3局部估时，输出估算v1（draft）",
+          "reason": "实际交付限于原对白字数、30 秒目标、条件及估算结果，没有润色文本或立项内容。"
+        },
+        {
+          "criterion": "区分对白读速与动作占时、标估算",
+          "status": "pass",
+          "quote": "发声速度为每秒3—4字，另给标点停顿、换人及语气留2—3秒。这是计算假设，没有录音实测",
+          "reason": "核对原文为甲 44 字、乙 21 字，动作明确预留 12 秒。输出分离对白速度/用时与动作预算，并声明速度、串并行或停顿假设及估算性质。"
+        },
+        {
+          "criterion": "不宣称实际配音或改写",
+          "status": "pass",
+          "quote": "未润色、未立项。本次为G3局部估时，输出估算v1（draft）；待验证项为按原稿试读及动作计时。",
+          "reason": "实际输出没有配音、录音或实测完成声明，也没有交付改写文本；引用说明其文本估算性质和未验证范围。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 18460,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 63.514173,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "5de81f1b386d7a8726aae255fdd8c3a568847179bf972c643134cc2d10a6d05b",
+        "execution.json": "541df83142097f77e24e182be44f96911cad0349b0bb88dbc0b72b9ce447f721"
+      }
+    },
+    {
+      "id": "run-c765f683f1",
+      "task_id": "R01",
+      "category": "routing",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "选择连续性审核或等价最小工作范围",
+          "status": "pass",
+          "quote": "范围仅限所给片段中的票据流转；不修订正文，不推及全季。",
+          "reason": "报告围绕所给两场编号的票据状态核查，使用前场作为后场必要参照，符合局部连续性诊断授权。"
+        },
+        {
+          "criterion": "指出票据持有人矛盾并引用前后句",
+          "status": "pass",
+          "quote": "前置状态（EP001-SC001）：甲把票据交给乙，乙将其锁进自己的抽屉。票据最后明确的位置是乙的抽屉。\n- 冲突表现（EP001-SC002）：文本明确“无人再次交接”，但甲从自己的衣袋取出“同一张票据”交给丙。",
+          "reason": "核对 source.md：SC001 交乙并锁进乙抽屉，SC002 无再次交接却由甲衣袋取出同一票据；输出明确标明两个场号，引用或忠实转述两处句子，并指出持有人及位置断裂。题目未要求逐字引文，忠实的带场号转述亦构成来源引用。"
+        },
+        {
+          "criterion": "不交付改写正文",
+          "status": "pass",
+          "quote": "未补写交接、未改稿，也未执行项目登记或检查命令。",
+          "reason": "逐段检查实际交付，仅有证据、诊断、影响或核对建议，没有替换场次、改写对白或新增剧情正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1772,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 49.609955,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "560ee1225a2c73898b14f5dfdab1fa063e7bb3b17bca49f4531fea7f92c20091",
+        "execution.json": "af7859174e30199fb49971e5460a6b4bbdb83bb7daefd27ba4c3e4530cc6754d"
+      }
+    },
+    {
+      "id": "run-da8edcbbb3",
+      "task_id": "R01",
+      "category": "routing",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "选择连续性审核或等价最小工作范围",
+          "status": "pass",
+          "quote": "本次仅检查 EP001-SC002 中票据的连续性，以所给 EP001-SC001 为直接前置依据；不改稿、不扩展全季。",
+          "reason": "报告围绕所给两场编号的票据状态核查，使用前场作为后场必要参照，符合局部连续性诊断授权。"
+        },
+        {
+          "criterion": "指出票据持有人矛盾并引用前后句",
+          "status": "pass",
+          "quote": "- **前置状态**：EP001-SC001 中甲已将票据交给乙，乙将其锁进自己的抽屉。\n- **冲突证据**：SC002 明示“无人再次交接”，却让同一张票据出现在甲的衣袋。所给文本没有建立票据从乙的抽屉回到甲手中的过程，两处道具归属及位置无法衔接。",
+          "reason": "核对 source.md：SC001 交乙并锁进乙抽屉，SC002 无再次交接却由甲衣袋取出同一票据；输出明确标明两个场号，引用或忠实转述两处句子，并指出持有人及位置断裂。题目未要求逐字引文，忠实的带场号转述亦构成来源引用。"
+        },
+        {
+          "criterion": "不交付改写正文",
+          "status": "pass",
+          "quote": "甲向丙交出票据的动作缺少成立依据，读者无法追踪该票据的流转。",
+          "reason": "逐段检查实际交付，仅有证据、诊断、影响或核对建议，没有替换场次、改写对白或新增剧情正文。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1772,
+      "limitations": [
+        "仅依据本目录提供的请求、来源文本和匿名 answer.md 评阅；不能验证未提供的执行过程或外部文件变动。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 63.088833,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "29bbcd70dff841217a1cce8cc8940304cb2407c4eb9995c33955bbfa051dab4e",
+      "output_hashes": {
+        "answer.md": "085b49bdcf55152b2a24fca9a9a692e229050661967910956418674d7a8a133c",
+        "execution.json": "53362792f95f0539bc103daa0ef3c66721e3f10d04c40533f2ae3acd262fb638"
+      }
+    },
+    {
+      "id": "run-00c164b8d0",
+      "task_id": "W02",
+      "category": "writing",
+      "condition": "C",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "主要道具三件：菌种箱 PROP001、阿禾的新棉衣 PROP002、墙面电闸 PROP003",
+          "reason": "全文仅阿禾与老周在冷藏室；实际操作菌种箱、棉衣和电闸，货架为固定设施。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "她脱下棉衣，露出薄工作服，D007。老周抬箱。阿禾把干燥的衣里压上湿底板，手掌推过去，衣里立刻洇黑。",
+          "reason": "B003合闸盖、脱衣擦水落实主动选择，新衣污染与失去保暖可见；B005师傅接住衣角共同清理，持续通电下改做局部清理，局面明确改变。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "**EP001-SC001-B005｜61–80秒**",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "计时：总估算80秒，可表演区间76–88秒，不另加片头尾；对白按约3–4字/秒、轮流相加，余量留给转身、脱衣、搬箱和停顿，未实际朗读。",
+          "reason": "逐段时长相加为80秒（本集末时标82秒者为82秒），在60–90秒范围内，且明确声明未实际朗读、未经实测或非拍摄实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 19942,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 7,
+      "wall_seconds_upper_bound": 216.690834,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "f056259638f34515ecf84c25876129bcee6cd9758cd5797dc47683b8a08c4a96",
+        "execution.json": "0e8560195c139cf3d2486f336bbb5ecec8936d24103f5887ad1fa07c6b2dec75"
+      }
+    },
+    {
+      "id": "run-067c762b85",
+      "task_id": "W02",
+      "category": "writing",
+      "condition": "A",
+      "replicate": 1,
+      "success": false,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "**主要道具（3件）：** 唯一一箱菌种、长柄硬刷、小周的浅色厚棉衣。",
+          "reason": "仅小周、老陈在冷藏室；箱、硬刷、棉衣三项实际出现，开关、货架、温度显示和地漏为固定场景设施。多个S编号均注明同场连续，没有新增地点。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "湿脏的箱底压下去，浅色衣料立刻洇出灰黑水印。",
+          "reason": "小周用新衣包箱并断电，承担衣物污染与保暖损失；老陈由拦阻改为清理并让小周守箱叫停，地漏排水形成新局面。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "### LC-E01-S04｜同场连续｜66—82秒",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "fail",
+          "quote": "**预计时长：约82秒。**",
+          "reason": "分段连续覆盖0至82秒（或80秒），在60–90秒范围内，但全文没有标注未经实测；“约”或“预计”不能代替明确实测状态，故组合要求不满足。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1835,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 126.840179,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "314a49403c7b5b2db0610b285a19993d542d5c51de5f2075861514f0e77c81e0",
+        "execution.json": "ef53dc28802b53f87bc3d82ac2c7a1da3f750ecbd6023555f490d70c513ed9c2"
+      }
+    },
+    {
+      "id": "run-09342c94df",
+      "task_id": "W01",
+      "category": "writing",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "主要道具仅三件：PROP001 底片一条、PROP002 瑕疵照片一张、PROP003 两张百元现金。柜台为固定布景。",
+          "reason": "仅老陈、小许，同一柜台连续时间；实际流转底片、照片、成组现金三项。末尾钱袋口按前文衣袋理解，未见独立取用第四件道具。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "小许收起两百元。老陈看着钱消失，没有伸手。",
+          "reason": "老陈先退实款再等小许交片，形成即时金钱代价；D011、D012接受验收后付款，顾客留下并交还底片，交易规则改变。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "| EP001-SC002-B003 | 12秒 |",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "计时：分块串行合计80秒，含结尾切黑，不另加片头尾；块内动作与对白并行。按约3–4字/秒并保留看底片、松手、收钱的停顿估算，预计76–86秒，未实测朗读。",
+          "reason": "逐段时长相加为80秒（本集末时标82秒者为82秒），在60–90秒范围内，且明确声明未实际朗读、未经实测或非拍摄实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "末镜“老陈空了的钱袋口”与前文“从衣袋掏出”用词不统一；未明确新增独立钱袋，故不直接按第四件主要道具判失败，制作时宜统一为衣袋。"
+      ],
+      "read_bytes": 19933,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 144.745549,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "43bfdf83688409eed82751f6144e1c0027c462c8de3e77d3fa0078621956eb8f",
+        "continuity.md": "28a9e65c7329e39206bd4f74b768cc60cd5a8e680ee5ae6e8de7d26343f59245",
+        "execution.json": "0e5c3061bdc36a1e5c02c1ebd179a2d324bf47060d2ee470330d40ee9f1f3d12"
+      }
+    },
+    {
+      "id": "run-2b6226d6ee",
+      "task_id": "W01",
+      "category": "writing",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "主要道具仅三件：一条底片、一张修复成片、一张收费单。柜台为固定布景。",
+          "reason": "仅老周、林岚在柜台前；动作使用底片、成片、收费单，灯是场景照明，没有新增主要道具。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "他拿起收费单，看了一眼“200”，从中间缓缓撕开，放在自己这一侧。",
+          "reason": "老周翻正成片、承认修错并撕收费单，D011至D013承担免费重做与前期劳动损失；林岚交片并带走成片作对照，验收权变化可见。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "**J01-C01-D015 老周：** 下次你先看。",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "总时长估算：约80秒；含动作与停顿，未经实测。",
+          "reason": "逐段时长相加为80秒（本集末时标82秒者为82秒），在60–90秒范围内，且明确声明未实际朗读、未经实测或非拍摄实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2040,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 438.939887,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "8936dd055b8efd2a818cf9ba2da4f33ebd9895947d6522003891b034dc50f49c",
+        "execution.json": "f725ca02175edd4b3bae46c2ea429867dedda40e2455e0c38abb0a84773253bf"
+      }
+    },
+    {
+      "id": "run-362054c755",
+      "task_id": "W01",
+      "category": "writing",
+      "condition": "C",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "仅用旧照相馆柜台区 LOC001；主要道具三件：底片 PROP001、洗花的照片 PROP002、一张百元纸币 PROP003。",
+          "reason": "仅老周、小林在同一柜台区；实际道具底片、照片、纸币三项，柜台翻板为固定布景。对白提及药水相纸未实际引入。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "小林拿起钱，放进口袋。老周目光随钱下落，没有阻拦。",
+          "reason": "B004实退一百元，B005接受先洗后付且失败不收费；B006掀翻板让顾客进入监督，既有金钱代价又有关系和空间站位变化。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "| EP001-SC001-B006 | 68–80秒 |",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "计时：六块串行合计80秒，预计76–88秒，无独立片头尾。对白按约3–4字/秒估算，块内动作并行，另留取钱、交接、对视及走位时间；未实测朗读。",
+          "reason": "逐段时长相加为80秒（本集末时标82秒者为82秒），在60–90秒范围内，且明确声明未实际朗读、未经实测或非拍摄实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 19933,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 148.290195,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "6b95bb16e8b853e166bd51fd0ec178dfcc2222696b9390e78384ad56952dc381",
+        "execution.json": "1f8a1949ebccb091e7f4ce237fa4705578ecd8cbed4c9b4a72f8ecf1caf9968e"
+      }
+    },
+    {
+      "id": "run-38271bb93b",
+      "task_id": "W01",
+      "category": "writing",
+      "condition": "A",
+      "replicate": 1,
+      "success": false,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "主要道具共三件：一条底片、一叠现金、写有“房租”的信封。柜台为固定布景。",
+          "reason": "仅店主与顾客在照相馆柜台内外；底片、成组现金、房租信封三类，实际未增加其他主要道具。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "店主把现金彻底推出手边。",
+          "reason": "店主抽出房租现金交顾客作押金，顾客实际收走三百，信封仅余一张；随后顾客交片并提前到场监督，店主承担现金占用与赔付风险。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "**E01-S01-D014 顾客：** 我四点来。修成什么样，我在这儿等。",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "fail",
+          "quote": "时长约82秒。",
+          "reason": "分段连续覆盖0至82秒（或80秒），在60–90秒范围内，但全文没有标注未经实测；“约”或“预计”不能代替明确实测状态，故组合要求不满足。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1826,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 95.691865,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "4a95e6d70c440089e2ceb630f3684b7b682ac77b2f901141892596cb8aad7197",
+        "execution.json": "c739c0496240cdd0f1a301e0a860ca2134d2574687ad0a028ee9eb97a0296d83"
+      }
+    },
+    {
+      "id": "run-4c946f3b6b",
+      "task_id": "W01",
+      "category": "writing",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "人物姓名暂定。仅周成、林禾两人。常驻场景：旧照相馆前厅。主要道具三件：一条底片、一张洗坏的照片、两张百元现金。",
+          "reason": "实际角色仅周成林禾，所有动作限前厅柜台；底片、照片、成组现金三项符合预算。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "林禾回来，数清两张钱，装进口袋。周成看着钱消失，抿了一下嘴。",
+          "reason": "先退款且撤手等待落实店主选择，已付出两百元；D013、D015取消预付款并接受失败不付，顾客留下底片和监督，交易规则改变。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "**E01-S01-D017 周成：**留着。",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "总时长估算约80秒，含动作与停顿，未经实测。",
+          "reason": "逐段时长相加为80秒（本集末时标82秒者为82秒），在60–90秒范围内，且明确声明未实际朗读、未经实测或非拍摄实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2040,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 112.986087,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "44a654361bd43aae3598bf137b50469cfcad5d8ccf16b2f89be893f78f299136",
+        "execution.json": "b6692d61a04b0ba8f649c2e02c26a42a60b249546e2b8bb1df726307ef88d44f"
+      }
+    },
+    {
+      "id": "run-50f6f28f45",
+      "task_id": "W02",
+      "category": "writing",
+      "condition": "A",
+      "replicate": 2,
+      "success": false,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "常驻场景：冷藏室内。主要道具三件：带盖菌种箱、学徒的厚棉服、塑料刮冰板。",
+          "reason": "实际仅小林与老周在冷藏室；菌种箱、厚棉服、刮冰板三项，开关排水槽货架为固定场景设施。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "雪白的内衬蹭过箱底黑泥。他停了一下，仍把衣角往里扯，两只袖子在箱盖上扎紧。",
+          "reason": "小林主动用新衣包箱导致内衬污染、薄衫发抖；得到师傅确认后断电并承担清槽工作，师傅守箱，水开始入槽，冲突转为合作。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "**E01-S01-D010 小林：**通一点了。",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "fail",
+          "quote": "总时长约80秒；本集仅一场，以下为场内节拍。",
+          "reason": "分段连续覆盖0至82秒（或80秒），在60–90秒范围内，但全文没有标注未经实测；“约”或“预计”不能代替明确实测状态，故组合要求不满足。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1835,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 100.274319,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "7aa430352f669e66dbba5c7091ccb14bc607da11b219ee0ea00ac3157327c73d",
+        "execution.json": "755cc220f4e5a98fdcb488e4cf43d22394d862484455134c448fd2f67f24391b"
+      }
+    },
+    {
+      "id": "run-55105b72a7",
+      "task_id": "W02",
+      "category": "writing",
+      "condition": "B",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "常驻场景：冷藏室内。主要道具三件：菌种箱、外套、地刮。电源开关为墙面固定设施。",
+          "reason": "仅小齐与老陈在冷藏室；箱子、外套、地刮三项实际出现，电开关为固定设施。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "小齐把箱子暂交回去，拉开外套，脱下。老陈托箱；小齐把衣服绕过箱底，拢紧两只袖子，重新抱住。",
+          "reason": "小齐脱外套承担持续抱箱、受冷和留下的成本；拒绝师傅接箱以保持清理分工，片尾由他要求师傅清出安全落脚地，局面改变。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "**E01-S01-D012 小齐：**先别放。把我站的这块再弄干一点。",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "总时长约80秒；以下为创作估时，非拍摄实测。",
+          "reason": "逐段时长相加为80秒（本集末时标82秒者为82秒），在60–90秒范围内，且明确声明未实际朗读、未经实测或非拍摄实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "开头结果概述称“让学徒决定何时恢复供电”，正文只明确学徒决定何时关电和箱子何处放置，尚无恢复供电授权对白；核心选择、代价和新局面仍成立。"
+      ],
+      "read_bytes": 2049,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": null,
+      "actual_token_usage": null,
+      "timing_excluded_reason": "collection occurred after quota pause; agent finish time unknown",
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "603269fdb5c4c604560588cc6677b1b02613fa015a87c776192eebfba035c526",
+        "execution.json": "92e464d52d41b0df4e28e7a041a2f9dbdb268a232852153ce9fb46bc39a76df9"
+      }
+    },
+    {
+      "id": "run-a8992ab8d8",
+      "task_id": "W01",
+      "category": "writing",
+      "condition": "A",
+      "replicate": 2,
+      "success": false,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "常驻场景：旧照相馆内，柜台至门口。主要道具三件：一条底片、一张样片、两张百元钞票（合计一组现金）。",
+          "reason": "实际仅老周小林在照相馆柜台至门口；底片、样片与成组现金三项。多个场编号注明同场连续，不构成新地点。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "他松手，把两张钱推过柜台，收回双手。",
+          "reason": "店主将现金交出且允许带走底片，顾客实际收款；顾客随后返回交片监督并获先验后付条件，主动赔付造成即时损失且改变交易。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "### J01-C04｜同场连续｜63—80秒（17秒）",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "fail",
+          "quote": "预计时长：80秒。",
+          "reason": "分段连续覆盖0至82秒（或80秒），在60–90秒范围内，但全文没有标注未经实测；“约”或“预计”不能代替明确实测状态，故组合要求不满足。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 1826,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 108.848145,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "06369636ae57b5eed1987164d7fef814d7187edc65f21cdcf41e1594ddfa4b03",
+        "execution.json": "b3aa6ad7b422a2fbda3ef8257684059e6a36e93f904997873d3899141a9daffa"
+      }
+    },
+    {
+      "id": "run-c722f4aa6e",
+      "task_id": "W02",
+      "category": "writing",
+      "condition": "C",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "主要道具仅三件：带盖菌种保温箱PROP001、墙上电闸PROP002、小禾的新外套PROP003；固定搁架、地漏属场景。",
+          "reason": "仅小禾与老陈在冷藏室同处连续；保温菌种箱、电闸、外套三项，提及抹布但没有实际带入，师傅也未离场。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "她用外套兜起地漏口的一团污泥，挪到干处；黑水浸透衣襟，露出一条清晰污痕。",
+          "reason": "小禾亲手以新衣清污并继续擦水，承担衣物污染与留下清理代价；先移箱封盖后断电，片尾排水开始、师傅留守等她指令，任务与关系均改变。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "| EP001-SC002-B004 | 12秒 |",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "计时：25＋55＝80秒，预计表演调整后75–88秒；按对白约3–4字/秒起算，对白与动作重叠，搬箱、选择停顿及排水另留时间，未实际朗读。",
+          "reason": "逐段时长相加为80秒（本集末时标82秒者为82秒），在60–90秒范围内，且明确声明未实际朗读、未经实测或非拍摄实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 19942,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 151.75252,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "eb1c9e8c32972dc8a4a55360c9508c6e4b55bcf5facd42a8acb0f71c78adcbe9",
+        "continuity.md": "34cbcec460f0122c5397f299206ea31cc98b7c1b187cf684ee30ad7ba67ee1a5",
+        "execution.json": "e6262ee76f74e2b72c5d3536eb73ec302cb78ac5c3480ec5a6249f23d6a6a598"
+      }
+    },
+    {
+      "id": "run-cb2fc56bab",
+      "task_id": "W02",
+      "category": "writing",
+      "condition": "B",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "人物姓名暂定。全集仅小林、老周；唯一场景为冷藏室内门口。主要道具三件：菌种箱、新工服、墙上固定电闸。",
+          "reason": "仅小林老周在冷藏室门口；实际菌种箱、工服、电闸三项，门封及货架属固定布景，没有第三人。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "他抓住袖口开衩，用力撕开一截，裹住手指，把黑泥一点点带出来。",
+          "reason": "小林撕坏新工服清门封，并明确不断电晚走；门实际合严后师傅接手擦水、学徒守箱，衣物损毁及继续留班换来可见新局面。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "**E01-S01-D011 老周：** 现在你管。门缝别再开了。",
+          "reason": "正文集场/节拍与对白均有唯一编号；逐项核对各对白都可定位所属场，表格形式通过动作栏D编号对应，无悬空或重复对白编号。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "预计总时长约82秒，含停顿与动作；为纸面估时，未经实拍或计时排演。",
+          "reason": "逐段时长相加为80秒（本集末时标82秒者为82秒），在60–90秒范围内，且明确声明未实际朗读、未经实测或非拍摄实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 2049,
+      "limitations": [
+        "仅核对本目录的任务来源与匿名交付；没有拍摄或计时排演证据，时长通过仅指纸面估算及标注。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 4,
+      "wall_seconds_upper_bound": 116.138091,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "c121bbf5441f0a58f6768b0f72035a11812a2e42c095b2f54634c33e16996610",
+      "output_hashes": {
+        "answer.md": "929eae7da35e8ec9ceab820fc01f6ec263d2a75d37c5729c14f64d8cf09e0587",
+        "execution.json": "313f0686cd6b5576b094ed22624207ca179d8d0b0c7d9bb9553030b9f50b8e0c"
+      }
+    }
+  ],
+  "limitation": "AI semantic grades; literal quote checks only; repeated fixed tasks, not independent story samples"
+}

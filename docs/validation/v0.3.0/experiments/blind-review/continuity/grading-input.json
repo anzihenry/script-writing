@@ -1,0 +1,81 @@
+{
+  "tasks": {
+    "C01": {
+      "required": [
+        "定位EP011转移与EP012台词矛盾",
+        "指出EP006归还不抵消EP011后续转移",
+        "引用逐字原文并区分说法与实物",
+        "给最小修改且不宣称所有维度通过"
+      ],
+      "major_issue": "EP012-D001 的“一直在我口袋”与EP011交给罗禾及EP012实物矛盾；应辨明可能谎言，待确认意图，不武断当成实物瞬移。",
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    },
+    "C02": {
+      "required": [
+        "不把过去缺席误判当前不知情",
+        "指出EP002当面告知为来源",
+        "限定为给定范围、不声称全季通过"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-083679a4d6",
+      "task_id": "C01"
+    },
+    {
+      "id": "run-22484726ed",
+      "task_id": "C01"
+    },
+    {
+      "id": "run-4be5c4d907",
+      "task_id": "C02"
+    },
+    {
+      "id": "run-579417f2cc",
+      "task_id": "C01"
+    },
+    {
+      "id": "run-697fbe088f",
+      "task_id": "C02"
+    },
+    {
+      "id": "run-6c617d6fa5",
+      "task_id": "C02"
+    },
+    {
+      "id": "run-ae9b85da3c",
+      "task_id": "C01"
+    },
+    {
+      "id": "run-b3467de2e5",
+      "task_id": "C02"
+    },
+    {
+      "id": "run-bc2fb73dfc",
+      "task_id": "C01"
+    },
+    {
+      "id": "run-cc6949a687",
+      "task_id": "C02"
+    },
+    {
+      "id": "run-d90a8570d3",
+      "task_id": "C02"
+    },
+    {
+      "id": "run-ee4ff1266f",
+      "task_id": "C01"
+    }
+  ]
+}

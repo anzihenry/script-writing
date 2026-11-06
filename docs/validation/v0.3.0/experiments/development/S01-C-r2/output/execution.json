@@ -1,0 +1,18 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-episode/SKILL.md",
+    "input/checkpoint.md",
+    "input/season.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-writing/references/standards.md",
+    "input/skills/ai-short-drama-writing/assets/templates.md"
+  ],
+  "tool_calls": 5,
+  "token_usage": null,
+  "limitations": [
+    "时长为动作与对白预算，未实际朗读或配音实测。",
+    "未提供项目登记文件，未运行项目登记或管线检查；仅完成本场正文与连续性自查。"
+  ]
+}

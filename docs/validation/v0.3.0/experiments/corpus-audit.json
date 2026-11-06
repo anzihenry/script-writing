@@ -1,0 +1,45 @@
+{
+  "tasks": 24,
+  "long_form": [
+    {
+      "task_id": "C01",
+      "split": "dev",
+      "episodes": 12,
+      "characters": 8727,
+      "bytes": 17477,
+      "scene_count": 12,
+      "dialogue_rows": 24
+    },
+    {
+      "task_id": "C03",
+      "split": "holdout",
+      "episodes": 12,
+      "characters": 8697,
+      "bytes": 17387,
+      "scene_count": 12,
+      "dialogue_rows": 24
+    },
+    {
+      "task_id": "S01",
+      "split": "dev",
+      "episodes": 12,
+      "characters": 8625,
+      "bytes": 17171,
+      "scene_count": 12,
+      "dialogue_rows": 24
+    },
+    {
+      "task_id": "S03",
+      "split": "holdout",
+      "episodes": 12,
+      "characters": 8628,
+      "bytes": 17180,
+      "scene_count": 12,
+      "dialogue_rows": 24
+    }
+  ],
+  "limitations": [
+    "synthetic one-scene episodes, shared staging scaffolding",
+    "not real production footage or human-reviewed long dramas"
+  ]
+}

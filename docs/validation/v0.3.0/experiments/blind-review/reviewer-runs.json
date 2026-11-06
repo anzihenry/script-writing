@@ -1,0 +1,160 @@
+{
+  "runs": [
+    {
+      "category": "continuity",
+      "started_at": "2026-11-06T16:36:51Z",
+      "finished_at": "2026-11-06T16:38:48Z",
+      "agent_id": "/root/m2_serial_resume/review_continuity",
+      "model": "unknown",
+      "status": "completed",
+      "corrections": [],
+      "technical_errors": []
+    },
+    {
+      "category": "handoff",
+      "started_at": "2026-11-06T16:38:59Z",
+      "finished_at": "2026-11-06T16:41:05Z",
+      "agent_id": "/root/m2_serial_resume/review_handoff",
+      "model": "unknown",
+      "status": "completed",
+      "corrections": [
+        {
+          "attempt": 1,
+          "errors": [
+            "run-22e51a7cdd required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-22e51a7cdd required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-25136a8bec required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-25136a8bec required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-28b21e2c9e required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-28b21e2c9e required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-28b21e2c9e required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-7e017fa6af required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-7e017fa6af required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-7e017fa6af required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-92d17aca41 required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-92d17aca41 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-92d17aca41 required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-9e473f856e required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-9e473f856e required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-a9d005d0a3 required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-a9d005d0a3 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-a9d005d0a3 required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-acf6241df2 required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-acf6241df2 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-acf6241df2 required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-bb17226b79 required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-bb17226b79 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-bb17226b79 required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-d62cc7b303 required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-d62cc7b303 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-d62cc7b303 required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-f80ee2e320 required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-f80ee2e320 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-f80ee2e320 required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-fdcba7fe8a required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-fdcba7fe8a required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-fdcba7fe8a required[3]: pass quote empty or not literal in corresponding outputs"
+          ],
+          "original_saved": "handoff/grades-attempt-1.json",
+          "reason": "pass quote must be a literal contiguous fragment in corresponding original output"
+        }
+      ],
+      "technical_errors": []
+    },
+    {
+      "category": "recovery",
+      "started_at": "2026-11-06T16:41:38Z",
+      "finished_at": "2026-11-06T23:26:08Z",
+      "agent_id": "/root/m2_serial_resume/review_recovery",
+      "model": "unknown",
+      "status": "completed",
+      "corrections": [
+        {
+          "attempt": 1,
+          "errors": [
+            "run-0f52efade1 required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-a0dd08c05d required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-c366db0a0e required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-e287b69ae7 required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-e541bd470b required[3]: pass quote empty or not literal in corresponding outputs",
+            "run-e736cec86a required[3]: pass quote empty or not literal in corresponding outputs"
+          ],
+          "original_saved": "recovery/grades-attempt-1.json",
+          "reason": "pass quote must be a literal contiguous fragment in corresponding original output"
+        }
+      ],
+      "technical_errors": []
+    },
+    {
+      "category": "revision",
+      "started_at": "2026-11-06T23:26:17Z",
+      "finished_at": "2026-11-06T23:27:51Z",
+      "agent_id": "/root/m2_serial_resume/review_revision",
+      "model": "unknown",
+      "status": "completed",
+      "corrections": [
+        {
+          "attempt": 1,
+          "errors": [
+            "run-0d469f9106 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-6e39c947af required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-85e8f07a1d required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-9eb1c3d460 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-a7b071d0c3 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-abc6222079 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-dad7d422b1 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-e10e7aad74 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-e13d0fce2a required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-e3631de325 required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-ed05857b6a required[2]: pass quote empty or not literal in corresponding outputs",
+            "run-f7ecb23d80 required[2]: pass quote empty or not literal in corresponding outputs"
+          ],
+          "original_saved": "revision/grades-attempt-1.json",
+          "reason": "pass quote must be a literal contiguous fragment in corresponding original output"
+        }
+      ],
+      "technical_errors": []
+    },
+    {
+      "category": "routing",
+      "started_at": "2026-11-06T23:28:01Z",
+      "finished_at": "2026-11-06T23:29:53Z",
+      "agent_id": "/root/m2_serial_resume/review_routing",
+      "model": "unknown",
+      "status": "completed",
+      "corrections": [
+        {
+          "attempt": 1,
+          "errors": [
+            "run-339ced3f39 required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-a7ebfb98c0 required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-b585cc76b7 required[1]: pass quote empty or not literal in corresponding outputs",
+            "run-da8edcbbb3 required[1]: pass quote empty or not literal in corresponding outputs"
+          ],
+          "original_saved": "routing/grades-attempt-1.json",
+          "reason": "pass quote must be a literal contiguous fragment in corresponding original output"
+        }
+      ],
+      "technical_errors": []
+    },
+    {
+      "category": "writing",
+      "started_at": "2026-11-06T23:30:01Z",
+      "finished_at": "2026-11-06T23:32:01Z",
+      "agent_id": "/root/m2_serial_resume/review_writing",
+      "model": "unknown",
+      "status": "completed",
+      "corrections": [],
+      "technical_errors": []
+    }
+  ],
+  "coordinator_interruptions": [
+    {
+      "reason": "coordinator usage limit reported by parent",
+      "observed_at": "2026-11-06T23:25:45Z",
+      "finished_at": null,
+      "category": "recovery",
+      "disposition": "retain reviewer delivery; resume technical quote correction without rerun"
+    }
+  ]
+}

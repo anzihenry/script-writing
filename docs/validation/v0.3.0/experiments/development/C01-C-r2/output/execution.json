@@ -1,0 +1,1 @@
+{"read_files":["request.md","input/request.md","input/season.md","input/skills/ai-short-drama-continuity-audit/SKILL.md","input/skills/ai-short-drama-writing/references/common.md"],"tool_calls":null,"token_usage":null,"limitations":["仅依据提供的十二集 v1.0 正文审核持物连续性；未提供独立持物台账或项目登记文件。","结尾是否刻意撒谎或记错无法由现有正文确定；动作衔接缺省处列为待核实。"]}

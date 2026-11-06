@@ -1,0 +1,6 @@
+{
+  "read_files": ["request.md", "input/request.md", "input/minimal.md", "input/script.md", "input/cli-help.txt"],
+  "tool_calls": 4,
+  "token_usage": null,
+  "limitations": ["时长沿用原稿估时45秒，未实测。", "原稿未注明的首尾细节保持未注明；未执行项目控制命令。"]
+}

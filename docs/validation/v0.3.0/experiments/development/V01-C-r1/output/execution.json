@@ -1,0 +1,15 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-revision/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/script.md"
+  ],
+  "tool_calls": 5,
+  "token_usage": null,
+  "limitations": [
+    "仅核对所提供正文的指定局部，不代表整集或全季审核。",
+    "未提供项目登记文件或派生台词表，未执行项目登记或派生文件更新。"
+  ]
+}

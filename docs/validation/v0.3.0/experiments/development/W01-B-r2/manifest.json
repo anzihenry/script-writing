@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "task_id": "W01",
+  "condition": "B",
+  "replicate": 2,
+  "pilot": false,
+  "split": "dev",
+  "category": "writing",
+  "prepared_at": "2026-11-05T06:35:03.019345+00:00",
+  "status": "prepared",
+  "model": null,
+  "budget": {
+    "tool_calls": 12,
+    "answer_hanzi": 1500,
+    "enforcement": "instruction-only"
+  },
+  "host_limitations": [
+    "shared skill catalog/tool descriptions remain visible",
+    "directory isolation is instruction-only",
+    "no provider token telemetry"
+  ],
+  "input_hashes": {
+    "brief.md": "69b6efebc81c2fd45ef1714fa2cfdd7649d8809e013c2382bee9f514e9b9c421",
+    "cli-help.txt": "6b648d8663b7898baeeae71d2167fd0971f912717ee6f4bbfbadddd30125182b",
+    "minimal.md": "6ad23f7f5ff7ecc6ad66df4965f7495ec153997de9951a433737425a60cf89df",
+    "request.md": "dfdc4a4d53a6d20533382171c5fb230c85a611fd9e92d1a70dfb488b481a5fd5"
+  },
+  "request_sha256": "33e89bd2615a062576b968433160565d2aa6cc512b20173edaa7a01e104a2f9c",
+  "entry_rules": []
+}

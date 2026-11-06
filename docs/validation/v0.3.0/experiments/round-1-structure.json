@@ -1,0 +1,266 @@
+{
+  "round": 1,
+  "runs": 36,
+  "by_condition": {
+    "A": 12,
+    "B": 12,
+    "C": 12
+  },
+  "unchanged_inputs": 36,
+  "reported_tool_budget_overruns": [],
+  "rows": [
+    {
+      "run_id": "C01-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "C01-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "C01-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": null
+    },
+    {
+      "run_id": "C02-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "C02-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "C02-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "H01-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "H01-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "H01-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": 6
+    },
+    {
+      "run_id": "H02-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "H02-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "H02-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": 5
+    },
+    {
+      "run_id": "R01-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "R01-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "R01-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": 5
+    },
+    {
+      "run_id": "R02-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": null
+    },
+    {
+      "run_id": "R02-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": 5
+    },
+    {
+      "run_id": "R02-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": 6
+    },
+    {
+      "run_id": "S01-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "S01-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "S01-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": 5
+    },
+    {
+      "run_id": "S02-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "S02-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "S02-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": 5
+    },
+    {
+      "run_id": "V01-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "V01-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "V01-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": 5
+    },
+    {
+      "run_id": "V02-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "V02-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": null
+    },
+    {
+      "run_id": "V02-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": 5
+    },
+    {
+      "run_id": "W01-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "W01-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "W01-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": 5
+    },
+    {
+      "run_id": "W02-A-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "A",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "W02-B-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "B",
+      "tool_calls_self_report": 4
+    },
+    {
+      "run_id": "W02-C-r1",
+      "status": "completed",
+      "input_unchanged": true,
+      "condition": "C",
+      "tool_calls_self_report": 7
+    }
+  ],
+  "semantic_grading": "not performed"
+}

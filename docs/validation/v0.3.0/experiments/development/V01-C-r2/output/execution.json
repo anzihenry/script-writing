@@ -1,0 +1,14 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/script.md",
+    "input/skills/ai-short-drama-revision/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/common.md"
+  ],
+  "tool_calls": null,
+  "token_usage": null,
+  "limitations": [
+    "仅根据本次提供的单集片段完成局部自查；未提供项目登记文件或派生稿，未运行管线或同步其他文件。"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/source.md",
+    "input/skills/ai-short-drama-writing/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-review/SKILL.md",
+    "input/skills/ai-short-drama-continuity-audit/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/standards.md",
+    "input/skills/ai-short-drama-writing/references/workflow.md",
+    "input/skills/ai-short-drama-writing/assets/templates.md"
+  ],
+  "tool_calls": 5,
+  "token_usage": null,
+  "limitations": [
+    "仅核查所给两条场次正文；未提供其他正文或连续性台账，不能验证全季或其他连续性维度。",
+    "按用户要求仅诊断，未修订正文或执行修后复核。"
+  ]
+}

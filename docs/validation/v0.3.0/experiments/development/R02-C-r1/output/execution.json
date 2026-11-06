@@ -1,0 +1,14 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-writing/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-writing/references/subskills.md",
+    "input/source.md",
+    "input/skills/ai-short-drama-timing/SKILL.md"
+  ],
+  "tool_calls": 6,
+  "token_usage": null,
+  "limitations": ["无朗读或配音实测，语速与语言停顿为显式假设", "原文未明确动作与对白的并行时长，无法确认整场实际达标"]
+}

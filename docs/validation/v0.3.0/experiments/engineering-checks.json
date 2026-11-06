@@ -1,0 +1,20 @@
+{
+  "status": "intermediate checks while semantic evaluation runs",
+  "runs": [
+    {
+      "command": "/usr/bin/python3 -m unittest discover -s tests -q",
+      "python": "3.9.6",
+      "exit_code": 0,
+      "tests": 88,
+      "seconds": 3.001
+    },
+    {
+      "command": "python3.14 -m unittest discover -s tests -q",
+      "python": "3.14 (executable name; patch not captured)",
+      "exit_code": 0,
+      "tests": 88,
+      "seconds": 4.673
+    }
+  ],
+  "source": "captured execution tool results; not semantic scores"
+}

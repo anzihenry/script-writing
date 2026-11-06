@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "task_id": "R02",
+  "condition": "B",
+  "replicate": 1,
+  "pilot": false,
+  "split": "dev",
+  "category": "routing",
+  "prepared_at": "2026-11-05T06:35:01.805722+00:00",
+  "status": "prepared",
+  "model": null,
+  "budget": {
+    "tool_calls": 12,
+    "answer_hanzi": 1500,
+    "enforcement": "instruction-only"
+  },
+  "host_limitations": [
+    "shared skill catalog/tool descriptions remain visible",
+    "directory isolation is instruction-only",
+    "no provider token telemetry"
+  ],
+  "input_hashes": {
+    "cli-help.txt": "6b648d8663b7898baeeae71d2167fd0971f912717ee6f4bbfbadddd30125182b",
+    "minimal.md": "72125c354df4b52098933118ade318bf25baee19921f2986235e715de208bbc4",
+    "request.md": "681957bfe38f05b3a3593d0224dd93fef82edc387a20c794bc936655cf35dfab",
+    "source.md": "a305ec08db14389e8f1b78a86c5541c3149be17f9770738f4fdd1c40dfe67b46"
+  },
+  "request_sha256": "33e89bd2615a062576b968433160565d2aa6cc512b20173edaa7a01e104a2f9c",
+  "entry_rules": []
+}

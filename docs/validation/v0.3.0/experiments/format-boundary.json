@@ -1,0 +1,26 @@
+[
+  {
+    "task_id": "C01",
+    "machine_parser": "duplicate readable-format marker",
+    "task_mode": "human-readable semantic task; no registered project",
+    "impact": "Do not use as pipeline-format acceptance input; no source change during frozen evaluation"
+  },
+  {
+    "task_id": "C03",
+    "machine_parser": "duplicate readable-format marker",
+    "task_mode": "human-readable semantic task; no registered project",
+    "impact": "Do not use as pipeline-format acceptance input; no source change during frozen evaluation"
+  },
+  {
+    "task_id": "S01",
+    "machine_parser": "duplicate readable-format marker",
+    "task_mode": "human-readable semantic task; no registered project",
+    "impact": "Do not use as pipeline-format acceptance input; no source change during frozen evaluation"
+  },
+  {
+    "task_id": "S03",
+    "machine_parser": "duplicate readable-format marker",
+    "task_mode": "human-readable semantic task; no registered project",
+    "impact": "Do not use as pipeline-format acceptance input; no source change during frozen evaluation"
+  }
+]

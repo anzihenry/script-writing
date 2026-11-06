@@ -1,0 +1,27 @@
+{
+  "task_id": "R01",
+  "condition": "B",
+  "replicate": 2,
+  "status": "completed",
+  "errors": [],
+  "agent_id": "/root/m2_serial_coordinator/m2_run_38",
+  "started_at": "2026-11-06T06:01:17Z",
+  "finished_at": "2026-11-06T06:02:06.609955+00:00",
+  "output_hashes": {
+    "answer.md": "560ee1225a2c73898b14f5dfdab1fa063e7bb3b17bca49f4531fea7f92c20091",
+    "execution.json": "af7859174e30199fb49971e5460a6b4bbdb83bb7daefd27ba4c3e4530cc6754d"
+  },
+  "manifest_sha256": "97c1dcdd2d08f7ee7d74e3c323bcd13760d720cc4d7b7e402ee83fa2b4f4a6c7",
+  "input_unchanged": true,
+  "actual_input_hashes": {
+    "cli-help.txt": "6b648d8663b7898baeeae71d2167fd0971f912717ee6f4bbfbadddd30125182b",
+    "minimal.md": "72125c354df4b52098933118ade318bf25baee19921f2986235e715de208bbc4",
+    "request.md": "9fa81cc33cb2c2bcc57679f278e4a8490d57c435e19ceeb5325dadb65ea690a2",
+    "source.md": "db31e02272614d0d27c88fe71ac825d9fc251f1264a2954a8659a58657f80264"
+  },
+  "recorder_sha256": "af50fe14bd631380c0b0ca4a4768f8b6d29c2d8e4a12f78289147e8d7b3ee314",
+  "actual_request_sha256": "33e89bd2615a062576b968433160565d2aa6cc512b20173edaa7a01e104a2f9c",
+  "self_reported_unique_read_bytes": 1772,
+  "actual_token_usage": null,
+  "telemetry_source": "executor self-report; not instrumented trace"
+}

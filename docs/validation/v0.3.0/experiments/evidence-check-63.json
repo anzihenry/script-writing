@@ -1,0 +1,323 @@
+{
+  "verified_runs": 63,
+  "expected_runs": 72,
+  "matrix_complete": false,
+  "rows": [
+    {
+      "run_id": "C01-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "C01-A-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "C01-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "C01-B-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "C01-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "C01-C-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "C02-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "C02-A-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "C02-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "C02-B-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "C02-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "C02-C-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "H01-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "H01-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "H01-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "H02-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "H02-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "H02-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R01-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R01-A-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R01-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R01-B-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R01-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R01-C-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R02-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R02-A-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R02-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R02-B-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R02-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "R02-C-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "S01-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "S01-A-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "S01-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "S01-B-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "S01-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "S01-C-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "S02-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "S02-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "S02-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V01-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V01-A-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V01-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V01-B-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V01-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V01-C-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V02-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V02-A-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V02-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V02-B-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V02-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "V02-C-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W01-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W01-A-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W01-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W01-B-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W01-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W01-C-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W02-A-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W02-A-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W02-B-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W02-B-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W02-C-r1",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    },
+    {
+      "run_id": "W02-C-r2",
+      "input_matches_frozen": true,
+      "record_status": "completed"
+    }
+  ],
+  "semantic_grading": "Not inferred from evidence integrity"
+}

@@ -1,0 +1,16 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/script.md",
+    "input/skills/ai-short-drama-handoff/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-writing/references/handoff.md",
+    "input/skills/ai-short-drama-writing/references/workflow.md",
+    "input/skills/ai-short-drama-writing/assets/templates.md",
+    "input/skills/ai-short-drama-writing/assets/project-template/handoff.md"
+  ],
+  "tool_calls": 6,
+  "token_usage": null,
+  "limitations": ["源稿为draft、未审核；时长45秒仅为原稿估算，未实测。", "未提供项目登记文件、设定与连续性台账、已有资产文件或实际下游接收反馈；未执行管线命令。"]
+}

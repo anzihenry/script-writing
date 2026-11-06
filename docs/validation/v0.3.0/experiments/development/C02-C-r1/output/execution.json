@@ -1,0 +1,12 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/source.md",
+    "input/skills/ai-short-drama-continuity-audit/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/common.md"
+  ],
+  "tool_calls": 4,
+  "token_usage": null,
+  "limitations": ["审核仅覆盖所提供的三场 v1.0，不代表未提供正文的审核结论。"]
+}

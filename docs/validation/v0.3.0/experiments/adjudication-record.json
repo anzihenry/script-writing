@@ -1,0 +1,9 @@
+{
+  "agent_id": "/root/m2_adjudication",
+  "model": null,
+  "started_at": null,
+  "finished_at": null,
+  "note": "Exact agent timing not captured; excluded from cost metrics. Independent context, serial review; source inputs verified unchanged.",
+  "input_hashes_verified": true,
+  "decision_sha256": "572fc9bc08f34aeacf4f09c3a33307456a74ec70b84528d987417f156983cb2c"
+}

@@ -1,0 +1,15 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-episode/SKILL.md",
+    "input/checkpoint.md",
+    "input/season.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-writing/references/standards.md",
+    "input/skills/ai-short-drama-writing/assets/templates.md"
+  ],
+  "tool_calls": 5,
+  "token_usage": null,
+  "limitations": ["时长为估算，未朗读或配音实测。", "输入未提供项目登记文件，未执行项目登记或关口命令。"]
+}

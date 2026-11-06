@@ -1,0 +1,16 @@
+{
+  "attempt": 1,
+  "agent_id": "/root/m2_serial_coordinator/m2_run_06",
+  "status": "completed",
+  "started_at": "2026-11-05T11:26:32Z",
+  "interventions": [
+    {
+      "type": "non_content_status_inquiry",
+      "at": "2026-11-05T11:33:07.656800+00:00",
+      "message": "状态询问：当前是否遇到工具、权限或平台阻塞？如有，请报告具体阻塞原因。",
+      "authorized_by": "parent requested blocker-only status inquiry",
+      "response": "无工具、权限或平台阻塞，已读取本运行输入，正在写入估时结论。"
+    }
+  ],
+  "finished_at": "2026-11-05T11:35:32.435315+00:00"
+}

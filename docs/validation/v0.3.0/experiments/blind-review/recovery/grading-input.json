@@ -1,0 +1,82 @@
+{
+  "tasks": {
+    "S01": {
+      "required": [
+        "钥匙初始在商宁腰间",
+        "承接待明早复测，不能假称已测",
+        "交接须有可见动作",
+        "给状态原文定位和约60秒估算"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    },
+    "S02": {
+      "required": [
+        "识别正文失效和实质冲突",
+        "先正文再连续性/审核再交接派生物",
+        "不只刷新哈希",
+        "说明检查点过期且无批准"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-0f52efade1",
+      "task_id": "S01"
+    },
+    {
+      "id": "run-35b03bce37",
+      "task_id": "S02"
+    },
+    {
+      "id": "run-5b1560f214",
+      "task_id": "S02"
+    },
+    {
+      "id": "run-8b0897eb58",
+      "task_id": "S02"
+    },
+    {
+      "id": "run-a0dd08c05d",
+      "task_id": "S01"
+    },
+    {
+      "id": "run-b1464a0984",
+      "task_id": "S02"
+    },
+    {
+      "id": "run-c366db0a0e",
+      "task_id": "S01"
+    },
+    {
+      "id": "run-e287b69ae7",
+      "task_id": "S01"
+    },
+    {
+      "id": "run-e541bd470b",
+      "task_id": "S01"
+    },
+    {
+      "id": "run-e60ceb8b40",
+      "task_id": "S02"
+    },
+    {
+      "id": "run-e736cec86a",
+      "task_id": "S01"
+    },
+    {
+      "id": "run-ec0949394c",
+      "task_id": "S02"
+    }
+  ]
+}
