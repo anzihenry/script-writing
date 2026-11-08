@@ -1,0 +1,1907 @@
+{
+  "schema_version": "1.0",
+  "project_id": "RECOVERY-N06",
+  "episodes": [
+    "EP001",
+    "EP002",
+    "EP003",
+    "EP004",
+    "EP005",
+    "EP006",
+    "EP007",
+    "EP008",
+    "EP009",
+    "EP010",
+    "EP011",
+    "EP012",
+    "EP013"
+  ],
+  "artifacts": {
+    "brief": {
+      "kind": "brief",
+      "scope": "project",
+      "path": "brief.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "2cf2d0aa041f931a8cf10982799d70f7bed360c47bb9fce6cd295381a070b7a6",
+      "depends_on": [],
+      "evidence": null
+    },
+    "bible": {
+      "kind": "bible",
+      "scope": "project",
+      "path": "bible.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d",
+      "depends_on": [
+        {
+          "id": "brief",
+          "revision": "v1.0",
+          "sha256": "2cf2d0aa041f931a8cf10982799d70f7bed360c47bb9fce6cd295381a070b7a6"
+        }
+      ],
+      "evidence": null
+    },
+    "outline": {
+      "kind": "outline",
+      "scope": "project",
+      "path": "outline.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e",
+      "depends_on": [
+        {
+          "id": "brief",
+          "revision": "v1.0",
+          "sha256": "2cf2d0aa041f931a8cf10982799d70f7bed360c47bb9fce6cd295381a070b7a6"
+        },
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP001": {
+      "kind": "script",
+      "scope": "EP001",
+      "path": "episodes/EP001-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "ff157945adfddeec856be87b8cb6ecc4f4f833f0fb24174dd423df417f3a0b25",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP001": {
+      "kind": "continuity",
+      "scope": "EP001",
+      "path": "continuity/EP001-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+      "depends_on": [
+        {
+          "id": "script_EP001",
+          "revision": "v1.0",
+          "sha256": "ff157945adfddeec856be87b8cb6ecc4f4f833f0fb24174dd423df417f3a0b25"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP002": {
+      "kind": "script",
+      "scope": "EP002",
+      "path": "episodes/EP002-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "67776dada191a15918a345fc262d19481479a59485bbefeb2421be4a1c418b6d",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        },
+        {
+          "id": "continuity_EP001",
+          "revision": "v1.0",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP002": {
+      "kind": "continuity",
+      "scope": "EP002",
+      "path": "continuity/EP002-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+      "depends_on": [
+        {
+          "id": "script_EP002",
+          "revision": "v1.0",
+          "sha256": "67776dada191a15918a345fc262d19481479a59485bbefeb2421be4a1c418b6d"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP003": {
+      "kind": "script",
+      "scope": "EP003",
+      "path": "episodes/EP003-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "bd8aeeb1f7609114959d95f596cbea05a102fd680fe6c38476aa73e1e446db59",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        },
+        {
+          "id": "continuity_EP002",
+          "revision": "v1.0",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP003": {
+      "kind": "continuity",
+      "scope": "EP003",
+      "path": "continuity/EP003-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+      "depends_on": [
+        {
+          "id": "script_EP003",
+          "revision": "v1.0",
+          "sha256": "bd8aeeb1f7609114959d95f596cbea05a102fd680fe6c38476aa73e1e446db59"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP004": {
+      "kind": "script",
+      "scope": "EP004",
+      "path": "episodes/EP004-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "b25540d60cd616d5fd5e3f36da24fb1c7bf02e43fc52db8494e81ae3f1208f92",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        },
+        {
+          "id": "continuity_EP003",
+          "revision": "v1.0",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP004": {
+      "kind": "continuity",
+      "scope": "EP004",
+      "path": "continuity/EP004-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+      "depends_on": [
+        {
+          "id": "script_EP004",
+          "revision": "v1.0",
+          "sha256": "b25540d60cd616d5fd5e3f36da24fb1c7bf02e43fc52db8494e81ae3f1208f92"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP005": {
+      "kind": "script",
+      "scope": "EP005",
+      "path": "episodes/EP005-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "a951d26998def5d2f733c45ea3cee256f5fc613b0bcebfd7ce96bec677e761ff",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        },
+        {
+          "id": "continuity_EP004",
+          "revision": "v1.0",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP005": {
+      "kind": "continuity",
+      "scope": "EP005",
+      "path": "continuity/EP005-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+      "depends_on": [
+        {
+          "id": "script_EP005",
+          "revision": "v1.0",
+          "sha256": "a951d26998def5d2f733c45ea3cee256f5fc613b0bcebfd7ce96bec677e761ff"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP006": {
+      "kind": "script",
+      "scope": "EP006",
+      "path": "episodes/EP006-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "626e20aa6756506836de11099aba3cb87ee73f1427a9f6f915149dcba27f0da7",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        },
+        {
+          "id": "continuity_EP005",
+          "revision": "v1.0",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP006": {
+      "kind": "continuity",
+      "scope": "EP006",
+      "path": "continuity/EP006-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+      "depends_on": [
+        {
+          "id": "script_EP006",
+          "revision": "v1.0",
+          "sha256": "626e20aa6756506836de11099aba3cb87ee73f1427a9f6f915149dcba27f0da7"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP007": {
+      "kind": "script",
+      "scope": "EP007",
+      "path": "episodes/EP007-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "afd32d9e5914034824092874010e7a5fe18ae7382a855d3af0ea3148a80b73ce",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        },
+        {
+          "id": "continuity_EP006",
+          "revision": "v1.0",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP007": {
+      "kind": "continuity",
+      "scope": "EP007",
+      "path": "continuity/EP007-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+      "depends_on": [
+        {
+          "id": "script_EP007",
+          "revision": "v1.0",
+          "sha256": "afd32d9e5914034824092874010e7a5fe18ae7382a855d3af0ea3148a80b73ce"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP008": {
+      "kind": "script",
+      "scope": "EP008",
+      "path": "episodes/EP008-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "7e372ed13a65cd4ff2747969efd687b0801da3f59d5fce3dd8be8b0956c9e4a2",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        },
+        {
+          "id": "continuity_EP007",
+          "revision": "v1.0",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP008": {
+      "kind": "continuity",
+      "scope": "EP008",
+      "path": "continuity/EP008-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+      "depends_on": [
+        {
+          "id": "script_EP008",
+          "revision": "v1.0",
+          "sha256": "7e372ed13a65cd4ff2747969efd687b0801da3f59d5fce3dd8be8b0956c9e4a2"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP009": {
+      "kind": "script",
+      "scope": "EP009",
+      "path": "episodes/EP009-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "73d50bcb1ef5a463d7033e72fbae41d0de9fffa139fd0e238d0537aab5146465",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        },
+        {
+          "id": "continuity_EP008",
+          "revision": "v1.0",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP009": {
+      "kind": "continuity",
+      "scope": "EP009",
+      "path": "continuity/EP009-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+      "depends_on": [
+        {
+          "id": "script_EP009",
+          "revision": "v1.0",
+          "sha256": "73d50bcb1ef5a463d7033e72fbae41d0de9fffa139fd0e238d0537aab5146465"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP010": {
+      "kind": "script",
+      "scope": "EP010",
+      "path": "episodes/EP010-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "c3984b09b3e3217c84bee7104a24702ff1cf87045bed4b896c751c59908b9d36",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        },
+        {
+          "id": "continuity_EP009",
+          "revision": "v1.0",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP010": {
+      "kind": "continuity",
+      "scope": "EP010",
+      "path": "continuity/EP010-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+      "depends_on": [
+        {
+          "id": "script_EP010",
+          "revision": "v1.0",
+          "sha256": "c3984b09b3e3217c84bee7104a24702ff1cf87045bed4b896c751c59908b9d36"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP011": {
+      "kind": "script",
+      "scope": "EP011",
+      "path": "episodes/EP011-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "e9a88c6922e7cad60597c657396e9397abce62b0b81b49bbb003ae2dc564a4fe",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        },
+        {
+          "id": "continuity_EP010",
+          "revision": "v1.0",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP011": {
+      "kind": "continuity",
+      "scope": "EP011",
+      "path": "continuity/EP011-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+      "depends_on": [
+        {
+          "id": "script_EP011",
+          "revision": "v1.0",
+          "sha256": "e9a88c6922e7cad60597c657396e9397abce62b0b81b49bbb003ae2dc564a4fe"
+        }
+      ],
+      "evidence": null
+    },
+    "script_EP012": {
+      "kind": "script",
+      "scope": "EP012",
+      "path": "episodes/EP012-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "35a91a73e2c8e6c2b16d75c1ab0778a2658f1395477a0a47b2545c39c569ecc1",
+      "depends_on": [
+        {
+          "id": "bible",
+          "revision": "v1.0",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+        },
+        {
+          "id": "outline",
+          "revision": "v1.0",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+        },
+        {
+          "id": "continuity_EP011",
+          "revision": "v1.0",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+        }
+      ],
+      "evidence": null
+    },
+    "continuity_EP012": {
+      "kind": "continuity",
+      "scope": "EP012",
+      "path": "continuity/EP012-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "f53ae9340e33072d5964d120000ea63b6cb1c96fdb698f4212f8376ba7725fee",
+      "depends_on": [
+        {
+          "id": "script_EP012",
+          "revision": "v1.0",
+          "sha256": "35a91a73e2c8e6c2b16d75c1ab0778a2658f1395477a0a47b2545c39c569ecc1"
+        }
+      ],
+      "evidence": null
+    },
+    "review_EP012": {
+      "kind": "review",
+      "scope": "EP012",
+      "path": "reviews/EP012-v1.0.md",
+      "revision": "v1.0",
+      "status": "draft",
+      "sha256": "e96b115e43d773fd51f0c8ee667efd5d62dc06eac97055f616637e402a937565",
+      "depends_on": [
+        {
+          "id": "script_EP012",
+          "revision": "v1.0",
+          "sha256": "35a91a73e2c8e6c2b16d75c1ab0778a2658f1395477a0a47b2545c39c569ecc1"
+        },
+        {
+          "id": "continuity_EP012",
+          "revision": "v1.0",
+          "sha256": "f53ae9340e33072d5964d120000ea63b6cb1c96fdb698f4212f8376ba7725fee"
+        }
+      ],
+      "evidence": null
+    }
+  },
+  "issues": [],
+  "history": [
+    {
+      "at": "2026-11-07T06:17:37.015495+00:00",
+      "id": "brief",
+      "previous": null,
+      "current": {
+        "kind": "brief",
+        "scope": "project",
+        "path": "brief.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "2cf2d0aa041f931a8cf10982799d70f7bed360c47bb9fce6cd295381a070b7a6",
+        "depends_on": [],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.016351+00:00",
+      "id": "bible",
+      "previous": null,
+      "current": {
+        "kind": "bible",
+        "scope": "project",
+        "path": "bible.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d",
+        "depends_on": [
+          {
+            "id": "brief",
+            "revision": "v1.0",
+            "sha256": "2cf2d0aa041f931a8cf10982799d70f7bed360c47bb9fce6cd295381a070b7a6"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.017255+00:00",
+      "id": "outline",
+      "previous": null,
+      "current": {
+        "kind": "outline",
+        "scope": "project",
+        "path": "outline.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e",
+        "depends_on": [
+          {
+            "id": "brief",
+            "revision": "v1.0",
+            "sha256": "2cf2d0aa041f931a8cf10982799d70f7bed360c47bb9fce6cd295381a070b7a6"
+          },
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.018430+00:00",
+      "id": "script_EP001",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP001",
+        "path": "episodes/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "ff157945adfddeec856be87b8cb6ecc4f4f833f0fb24174dd423df417f3a0b25",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.020010+00:00",
+      "id": "continuity_EP001",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP001",
+        "path": "continuity/EP001-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+        "depends_on": [
+          {
+            "id": "script_EP001",
+            "revision": "v1.0",
+            "sha256": "ff157945adfddeec856be87b8cb6ecc4f4f833f0fb24174dd423df417f3a0b25"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.021895+00:00",
+      "id": "script_EP002",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP002",
+        "path": "episodes/EP002-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "67776dada191a15918a345fc262d19481479a59485bbefeb2421be4a1c418b6d",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          },
+          {
+            "id": "continuity_EP001",
+            "revision": "v1.0",
+            "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.023712+00:00",
+      "id": "continuity_EP002",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP002",
+        "path": "continuity/EP002-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+        "depends_on": [
+          {
+            "id": "script_EP002",
+            "revision": "v1.0",
+            "sha256": "67776dada191a15918a345fc262d19481479a59485bbefeb2421be4a1c418b6d"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.025738+00:00",
+      "id": "script_EP003",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP003",
+        "path": "episodes/EP003-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "bd8aeeb1f7609114959d95f596cbea05a102fd680fe6c38476aa73e1e446db59",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          },
+          {
+            "id": "continuity_EP002",
+            "revision": "v1.0",
+            "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.028744+00:00",
+      "id": "continuity_EP003",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP003",
+        "path": "continuity/EP003-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+        "depends_on": [
+          {
+            "id": "script_EP003",
+            "revision": "v1.0",
+            "sha256": "bd8aeeb1f7609114959d95f596cbea05a102fd680fe6c38476aa73e1e446db59"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.031139+00:00",
+      "id": "script_EP004",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP004",
+        "path": "episodes/EP004-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "b25540d60cd616d5fd5e3f36da24fb1c7bf02e43fc52db8494e81ae3f1208f92",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          },
+          {
+            "id": "continuity_EP003",
+            "revision": "v1.0",
+            "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.033794+00:00",
+      "id": "continuity_EP004",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP004",
+        "path": "continuity/EP004-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+        "depends_on": [
+          {
+            "id": "script_EP004",
+            "revision": "v1.0",
+            "sha256": "b25540d60cd616d5fd5e3f36da24fb1c7bf02e43fc52db8494e81ae3f1208f92"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.036437+00:00",
+      "id": "script_EP005",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP005",
+        "path": "episodes/EP005-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "a951d26998def5d2f733c45ea3cee256f5fc613b0bcebfd7ce96bec677e761ff",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          },
+          {
+            "id": "continuity_EP004",
+            "revision": "v1.0",
+            "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.039124+00:00",
+      "id": "continuity_EP005",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP005",
+        "path": "continuity/EP005-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+        "depends_on": [
+          {
+            "id": "script_EP005",
+            "revision": "v1.0",
+            "sha256": "a951d26998def5d2f733c45ea3cee256f5fc613b0bcebfd7ce96bec677e761ff"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.042707+00:00",
+      "id": "script_EP006",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP006",
+        "path": "episodes/EP006-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "626e20aa6756506836de11099aba3cb87ee73f1427a9f6f915149dcba27f0da7",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          },
+          {
+            "id": "continuity_EP005",
+            "revision": "v1.0",
+            "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.046406+00:00",
+      "id": "continuity_EP006",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP006",
+        "path": "continuity/EP006-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+        "depends_on": [
+          {
+            "id": "script_EP006",
+            "revision": "v1.0",
+            "sha256": "626e20aa6756506836de11099aba3cb87ee73f1427a9f6f915149dcba27f0da7"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.049862+00:00",
+      "id": "script_EP007",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP007",
+        "path": "episodes/EP007-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "afd32d9e5914034824092874010e7a5fe18ae7382a855d3af0ea3148a80b73ce",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          },
+          {
+            "id": "continuity_EP006",
+            "revision": "v1.0",
+            "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.053484+00:00",
+      "id": "continuity_EP007",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP007",
+        "path": "continuity/EP007-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+        "depends_on": [
+          {
+            "id": "script_EP007",
+            "revision": "v1.0",
+            "sha256": "afd32d9e5914034824092874010e7a5fe18ae7382a855d3af0ea3148a80b73ce"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.057224+00:00",
+      "id": "script_EP008",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP008",
+        "path": "episodes/EP008-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "7e372ed13a65cd4ff2747969efd687b0801da3f59d5fce3dd8be8b0956c9e4a2",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          },
+          {
+            "id": "continuity_EP007",
+            "revision": "v1.0",
+            "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.061634+00:00",
+      "id": "continuity_EP008",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP008",
+        "path": "continuity/EP008-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+        "depends_on": [
+          {
+            "id": "script_EP008",
+            "revision": "v1.0",
+            "sha256": "7e372ed13a65cd4ff2747969efd687b0801da3f59d5fce3dd8be8b0956c9e4a2"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.067039+00:00",
+      "id": "script_EP009",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP009",
+        "path": "episodes/EP009-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "73d50bcb1ef5a463d7033e72fbae41d0de9fffa139fd0e238d0537aab5146465",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          },
+          {
+            "id": "continuity_EP008",
+            "revision": "v1.0",
+            "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.071517+00:00",
+      "id": "continuity_EP009",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP009",
+        "path": "continuity/EP009-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+        "depends_on": [
+          {
+            "id": "script_EP009",
+            "revision": "v1.0",
+            "sha256": "73d50bcb1ef5a463d7033e72fbae41d0de9fffa139fd0e238d0537aab5146465"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.075795+00:00",
+      "id": "script_EP010",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP010",
+        "path": "episodes/EP010-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "c3984b09b3e3217c84bee7104a24702ff1cf87045bed4b896c751c59908b9d36",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          },
+          {
+            "id": "continuity_EP009",
+            "revision": "v1.0",
+            "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.080716+00:00",
+      "id": "continuity_EP010",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP010",
+        "path": "continuity/EP010-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+        "depends_on": [
+          {
+            "id": "script_EP010",
+            "revision": "v1.0",
+            "sha256": "c3984b09b3e3217c84bee7104a24702ff1cf87045bed4b896c751c59908b9d36"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.086190+00:00",
+      "id": "script_EP011",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP011",
+        "path": "episodes/EP011-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "e9a88c6922e7cad60597c657396e9397abce62b0b81b49bbb003ae2dc564a4fe",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          },
+          {
+            "id": "continuity_EP010",
+            "revision": "v1.0",
+            "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.091654+00:00",
+      "id": "continuity_EP011",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP011",
+        "path": "continuity/EP011-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+        "depends_on": [
+          {
+            "id": "script_EP011",
+            "revision": "v1.0",
+            "sha256": "e9a88c6922e7cad60597c657396e9397abce62b0b81b49bbb003ae2dc564a4fe"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.097059+00:00",
+      "id": "script_EP012",
+      "previous": null,
+      "current": {
+        "kind": "script",
+        "scope": "EP012",
+        "path": "episodes/EP012-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "35a91a73e2c8e6c2b16d75c1ab0778a2658f1395477a0a47b2545c39c569ecc1",
+        "depends_on": [
+          {
+            "id": "bible",
+            "revision": "v1.0",
+            "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+          },
+          {
+            "id": "outline",
+            "revision": "v1.0",
+            "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+          },
+          {
+            "id": "continuity_EP011",
+            "revision": "v1.0",
+            "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.103028+00:00",
+      "id": "continuity_EP012",
+      "previous": null,
+      "current": {
+        "kind": "continuity",
+        "scope": "EP012",
+        "path": "continuity/EP012-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "f53ae9340e33072d5964d120000ea63b6cb1c96fdb698f4212f8376ba7725fee",
+        "depends_on": [
+          {
+            "id": "script_EP012",
+            "revision": "v1.0",
+            "sha256": "35a91a73e2c8e6c2b16d75c1ab0778a2658f1395477a0a47b2545c39c569ecc1"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    },
+    {
+      "at": "2026-11-07T06:17:37.109259+00:00",
+      "id": "review_EP012",
+      "previous": null,
+      "current": {
+        "kind": "review",
+        "scope": "EP012",
+        "path": "reviews/EP012-v1.0.md",
+        "revision": "v1.0",
+        "status": "draft",
+        "sha256": "e96b115e43d773fd51f0c8ee667efd5d62dc06eac97055f616637e402a937565",
+        "depends_on": [
+          {
+            "id": "script_EP012",
+            "revision": "v1.0",
+            "sha256": "35a91a73e2c8e6c2b16d75c1ab0778a2658f1395477a0a47b2545c39c569ecc1"
+          },
+          {
+            "id": "continuity_EP012",
+            "revision": "v1.0",
+            "sha256": "f53ae9340e33072d5964d120000ea63b6cb1c96fdb698f4212f8376ba7725fee"
+          }
+        ],
+        "evidence": null
+      },
+      "note": null
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "CP1",
+      "at": "2026-11-07T06:17:37.111608+00:00",
+      "scopes": [
+        "EP012"
+      ],
+      "snapshots": {
+        "brief": {
+          "kind": "brief",
+          "scope": "project",
+          "path": "brief.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "2cf2d0aa041f931a8cf10982799d70f7bed360c47bb9fce6cd295381a070b7a6",
+          "depends_on": [],
+          "evidence": null
+        },
+        "bible": {
+          "kind": "bible",
+          "scope": "project",
+          "path": "bible.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d",
+          "depends_on": [
+            {
+              "id": "brief",
+              "revision": "v1.0",
+              "sha256": "2cf2d0aa041f931a8cf10982799d70f7bed360c47bb9fce6cd295381a070b7a6"
+            }
+          ],
+          "evidence": null
+        },
+        "outline": {
+          "kind": "outline",
+          "scope": "project",
+          "path": "outline.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e",
+          "depends_on": [
+            {
+              "id": "brief",
+              "revision": "v1.0",
+              "sha256": "2cf2d0aa041f931a8cf10982799d70f7bed360c47bb9fce6cd295381a070b7a6"
+            },
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP001": {
+          "kind": "script",
+          "scope": "EP001",
+          "path": "episodes/EP001-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "ff157945adfddeec856be87b8cb6ecc4f4f833f0fb24174dd423df417f3a0b25",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP001": {
+          "kind": "continuity",
+          "scope": "EP001",
+          "path": "continuity/EP001-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+          "depends_on": [
+            {
+              "id": "script_EP001",
+              "revision": "v1.0",
+              "sha256": "ff157945adfddeec856be87b8cb6ecc4f4f833f0fb24174dd423df417f3a0b25"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP002": {
+          "kind": "script",
+          "scope": "EP002",
+          "path": "episodes/EP002-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "67776dada191a15918a345fc262d19481479a59485bbefeb2421be4a1c418b6d",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            },
+            {
+              "id": "continuity_EP001",
+              "revision": "v1.0",
+              "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP002": {
+          "kind": "continuity",
+          "scope": "EP002",
+          "path": "continuity/EP002-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+          "depends_on": [
+            {
+              "id": "script_EP002",
+              "revision": "v1.0",
+              "sha256": "67776dada191a15918a345fc262d19481479a59485bbefeb2421be4a1c418b6d"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP003": {
+          "kind": "script",
+          "scope": "EP003",
+          "path": "episodes/EP003-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "bd8aeeb1f7609114959d95f596cbea05a102fd680fe6c38476aa73e1e446db59",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            },
+            {
+              "id": "continuity_EP002",
+              "revision": "v1.0",
+              "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP003": {
+          "kind": "continuity",
+          "scope": "EP003",
+          "path": "continuity/EP003-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+          "depends_on": [
+            {
+              "id": "script_EP003",
+              "revision": "v1.0",
+              "sha256": "bd8aeeb1f7609114959d95f596cbea05a102fd680fe6c38476aa73e1e446db59"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP004": {
+          "kind": "script",
+          "scope": "EP004",
+          "path": "episodes/EP004-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "b25540d60cd616d5fd5e3f36da24fb1c7bf02e43fc52db8494e81ae3f1208f92",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            },
+            {
+              "id": "continuity_EP003",
+              "revision": "v1.0",
+              "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP004": {
+          "kind": "continuity",
+          "scope": "EP004",
+          "path": "continuity/EP004-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+          "depends_on": [
+            {
+              "id": "script_EP004",
+              "revision": "v1.0",
+              "sha256": "b25540d60cd616d5fd5e3f36da24fb1c7bf02e43fc52db8494e81ae3f1208f92"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP005": {
+          "kind": "script",
+          "scope": "EP005",
+          "path": "episodes/EP005-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "a951d26998def5d2f733c45ea3cee256f5fc613b0bcebfd7ce96bec677e761ff",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            },
+            {
+              "id": "continuity_EP004",
+              "revision": "v1.0",
+              "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP005": {
+          "kind": "continuity",
+          "scope": "EP005",
+          "path": "continuity/EP005-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+          "depends_on": [
+            {
+              "id": "script_EP005",
+              "revision": "v1.0",
+              "sha256": "a951d26998def5d2f733c45ea3cee256f5fc613b0bcebfd7ce96bec677e761ff"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP006": {
+          "kind": "script",
+          "scope": "EP006",
+          "path": "episodes/EP006-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "626e20aa6756506836de11099aba3cb87ee73f1427a9f6f915149dcba27f0da7",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            },
+            {
+              "id": "continuity_EP005",
+              "revision": "v1.0",
+              "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP006": {
+          "kind": "continuity",
+          "scope": "EP006",
+          "path": "continuity/EP006-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+          "depends_on": [
+            {
+              "id": "script_EP006",
+              "revision": "v1.0",
+              "sha256": "626e20aa6756506836de11099aba3cb87ee73f1427a9f6f915149dcba27f0da7"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP007": {
+          "kind": "script",
+          "scope": "EP007",
+          "path": "episodes/EP007-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "afd32d9e5914034824092874010e7a5fe18ae7382a855d3af0ea3148a80b73ce",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            },
+            {
+              "id": "continuity_EP006",
+              "revision": "v1.0",
+              "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP007": {
+          "kind": "continuity",
+          "scope": "EP007",
+          "path": "continuity/EP007-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+          "depends_on": [
+            {
+              "id": "script_EP007",
+              "revision": "v1.0",
+              "sha256": "afd32d9e5914034824092874010e7a5fe18ae7382a855d3af0ea3148a80b73ce"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP008": {
+          "kind": "script",
+          "scope": "EP008",
+          "path": "episodes/EP008-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "7e372ed13a65cd4ff2747969efd687b0801da3f59d5fce3dd8be8b0956c9e4a2",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            },
+            {
+              "id": "continuity_EP007",
+              "revision": "v1.0",
+              "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP008": {
+          "kind": "continuity",
+          "scope": "EP008",
+          "path": "continuity/EP008-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+          "depends_on": [
+            {
+              "id": "script_EP008",
+              "revision": "v1.0",
+              "sha256": "7e372ed13a65cd4ff2747969efd687b0801da3f59d5fce3dd8be8b0956c9e4a2"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP009": {
+          "kind": "script",
+          "scope": "EP009",
+          "path": "episodes/EP009-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "73d50bcb1ef5a463d7033e72fbae41d0de9fffa139fd0e238d0537aab5146465",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            },
+            {
+              "id": "continuity_EP008",
+              "revision": "v1.0",
+              "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP009": {
+          "kind": "continuity",
+          "scope": "EP009",
+          "path": "continuity/EP009-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+          "depends_on": [
+            {
+              "id": "script_EP009",
+              "revision": "v1.0",
+              "sha256": "73d50bcb1ef5a463d7033e72fbae41d0de9fffa139fd0e238d0537aab5146465"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP010": {
+          "kind": "script",
+          "scope": "EP010",
+          "path": "episodes/EP010-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "c3984b09b3e3217c84bee7104a24702ff1cf87045bed4b896c751c59908b9d36",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            },
+            {
+              "id": "continuity_EP009",
+              "revision": "v1.0",
+              "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP010": {
+          "kind": "continuity",
+          "scope": "EP010",
+          "path": "continuity/EP010-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+          "depends_on": [
+            {
+              "id": "script_EP010",
+              "revision": "v1.0",
+              "sha256": "c3984b09b3e3217c84bee7104a24702ff1cf87045bed4b896c751c59908b9d36"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP011": {
+          "kind": "script",
+          "scope": "EP011",
+          "path": "episodes/EP011-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "e9a88c6922e7cad60597c657396e9397abce62b0b81b49bbb003ae2dc564a4fe",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            },
+            {
+              "id": "continuity_EP010",
+              "revision": "v1.0",
+              "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP011": {
+          "kind": "continuity",
+          "scope": "EP011",
+          "path": "continuity/EP011-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef",
+          "depends_on": [
+            {
+              "id": "script_EP011",
+              "revision": "v1.0",
+              "sha256": "e9a88c6922e7cad60597c657396e9397abce62b0b81b49bbb003ae2dc564a4fe"
+            }
+          ],
+          "evidence": null
+        },
+        "script_EP012": {
+          "kind": "script",
+          "scope": "EP012",
+          "path": "episodes/EP012-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "35a91a73e2c8e6c2b16d75c1ab0778a2658f1395477a0a47b2545c39c569ecc1",
+          "depends_on": [
+            {
+              "id": "bible",
+              "revision": "v1.0",
+              "sha256": "cb51eb989b7e8bb4df770853966b46064db8aa766af0bdade21679c6d2e0d95d"
+            },
+            {
+              "id": "outline",
+              "revision": "v1.0",
+              "sha256": "72d5f5f74bfbc27297fd57e9f688d013d3344ee990109a6afa5db4f7dd27d85e"
+            },
+            {
+              "id": "continuity_EP011",
+              "revision": "v1.0",
+              "sha256": "0e87b62d2b8977857972571fbf970167ca1d0bea4e8eee30c97a20e611adf3ef"
+            }
+          ],
+          "evidence": null
+        },
+        "continuity_EP012": {
+          "kind": "continuity",
+          "scope": "EP012",
+          "path": "continuity/EP012-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "f53ae9340e33072d5964d120000ea63b6cb1c96fdb698f4212f8376ba7725fee",
+          "depends_on": [
+            {
+              "id": "script_EP012",
+              "revision": "v1.0",
+              "sha256": "35a91a73e2c8e6c2b16d75c1ab0778a2658f1395477a0a47b2545c39c569ecc1"
+            }
+          ],
+          "evidence": null
+        },
+        "review_EP012": {
+          "kind": "review",
+          "scope": "EP012",
+          "path": "reviews/EP012-v1.0.md",
+          "revision": "v1.0",
+          "status": "draft",
+          "sha256": "e96b115e43d773fd51f0c8ee667efd5d62dc06eac97055f616637e402a937565",
+          "depends_on": [
+            {
+              "id": "script_EP012",
+              "revision": "v1.0",
+              "sha256": "35a91a73e2c8e6c2b16d75c1ab0778a2658f1395477a0a47b2545c39c569ecc1"
+            },
+            {
+              "id": "continuity_EP012",
+              "revision": "v1.0",
+              "sha256": "f53ae9340e33072d5964d120000ea63b6cb1c96fdb698f4212f8376ba7725fee"
+            }
+          ],
+          "evidence": null
+        }
+      },
+      "open_issues": [],
+      "next_entry": "从目标阶段接续，不能推定批准",
+      "reread": "回读最新正文和未决问题"
+    }
+  ]
+}

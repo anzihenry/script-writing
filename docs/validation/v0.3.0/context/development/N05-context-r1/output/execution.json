@@ -1,0 +1,26 @@
+{
+  "read_files": [
+    "request.md",
+    "input/context/context.md",
+    "input/context/manifest.json",
+    "input/rules/ai-short-drama-handoff/SKILL.md",
+    "input/rules/ai-short-drama-writing/references/common.md",
+    "input/rules/ai-short-drama-writing/references/handoff.md",
+    "input/rules/ai-short-drama-writing/references/workflow.md",
+    "input/rules/ai-short-drama-writing/assets/templates.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/handoff.md",
+    "input/project/project.json",
+    "input/project/reviews/EP012-v1.0.md",
+    "input/project/episodes/EP012-v1.0.md",
+    "input/project/continuity/EP012-v1.0.md",
+    "input/project/bible.md",
+    "input/project/brief.md"
+  ],
+  "tool_calls": 6,
+  "actual_token_usage": null,
+  "limitations": [
+    "未执行全包 verify-context 或管线 gate；仅直接回读当前来源并核对项目及所选材料哈希。",
+    "部分大批量工具输出发生截断；关键当前问题、目标状态、审核正文和交接规则已通过后续定向输出核对。",
+    "未进行雨测、完整语义审核、审批或下游接收；未修正文或关闭问题。"
+  ]
+}

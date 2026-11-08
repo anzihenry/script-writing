@@ -1,0 +1,4 @@
+interface:
+  display_name: "对白与角色口吻"
+  short_description: "针对短剧对白与角色口吻提供专项处理，明确输入、产物、验收和返工边界"
+  default_prompt: "使用 $ai-short-drama-dialogue-writing，根据现有材料完成对白与角色口吻，只处理本次指定范围。"

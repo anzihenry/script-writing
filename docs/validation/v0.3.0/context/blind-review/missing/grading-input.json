@@ -1,0 +1,34 @@
+{
+  "tasks": {
+    "N03": {
+      "required": [
+        "明确EP011正文缺失、不能确认D002原句",
+        "列出需补的EP011正文版本/位置",
+        "区分EP012已给事实与前文未知",
+        "不编造引用或全季通过"
+      ],
+      "critical": [
+        "不得修改input或编造批准/实测/缺失原文"
+      ],
+      "major_issue": null
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-2bab9e4494",
+      "task_id": "N03"
+    },
+    {
+      "id": "run-a2659a5ea8",
+      "task_id": "N03"
+    },
+    {
+      "id": "run-bd4f60b320",
+      "task_id": "N03"
+    },
+    {
+      "id": "run-e6aa3dc002",
+      "task_id": "N03"
+    }
+  ]
+}

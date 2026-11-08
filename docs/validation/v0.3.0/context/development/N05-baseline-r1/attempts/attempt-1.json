@@ -1,0 +1,13 @@
+{
+  "current_run": "N05-baseline-r1",
+  "attempt": 1,
+  "started_at": "2026-11-07T15:18:37Z",
+  "agent_id": null,
+  "status": "interruption_observed",
+  "execution_interruption": {
+    "observed_at": "2026-11-08T01:58:08.285177Z",
+    "observation": "No output files and no active executor in live agent tree; previous coordinator absent. Successful spawn and executor end time unknown. No explicit executor quota error observed.",
+    "agent_end_at": null
+  },
+  "timing_excluded_reason": "Interrupted starting attempt; successful spawn and end time unknown"
+}

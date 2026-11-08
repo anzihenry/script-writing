@@ -1,0 +1,10 @@
+{
+  "attempt": 1,
+  "agent_id": "/root/m2_serial_resume/m3_v2_run_02",
+  "started_at": "2026-11-07T06:28:32Z",
+  "agent_finished_at": null,
+  "observed_at": "2026-11-07T15:06:24Z",
+  "status": "infrastructure_failed",
+  "reason": "usage limit",
+  "output_files_present": []
+}

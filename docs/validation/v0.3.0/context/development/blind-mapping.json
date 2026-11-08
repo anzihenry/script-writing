@@ -1,0 +1,194 @@
+{
+  "run-1e2830c6a6": {
+    "run": "N01-baseline-r1",
+    "category": "normal",
+    "task_id": "N01",
+    "condition": "baseline",
+    "replicate": 1,
+    "result_sha256": "756b49fd5113ba7f669bc855ca8b19f37df1374a987dcc69fa15a6f12de37eae"
+  },
+  "run-fa42286098": {
+    "run": "N01-context-r1",
+    "category": "normal",
+    "task_id": "N01",
+    "condition": "context",
+    "replicate": 1,
+    "result_sha256": "74d272176fd87bd1416f0f78605c3a0f2ba2b2350c6c9073a70adfe962839022"
+  },
+  "run-1064b7710f": {
+    "run": "N02-context-r1",
+    "category": "upstream",
+    "task_id": "N02",
+    "condition": "context",
+    "replicate": 1,
+    "result_sha256": "a1c6f9280fc59c0241eec767ed169c37f5067b2bef94e17babad92fd2857add2"
+  },
+  "run-3631c2b714": {
+    "run": "N02-baseline-r1",
+    "category": "upstream",
+    "task_id": "N02",
+    "condition": "baseline",
+    "replicate": 1,
+    "result_sha256": "4aaefd22c846aed9de724c64f5b17690c2c0327d4530958ef6860558b74e0d37"
+  },
+  "run-bd4f60b320": {
+    "run": "N03-baseline-r1",
+    "category": "missing",
+    "task_id": "N03",
+    "condition": "baseline",
+    "replicate": 1,
+    "result_sha256": "0b944c87ff88e72f6c95a15ee2b271704089cc322b56d7c92377a328c256aa42"
+  },
+  "run-2bab9e4494": {
+    "run": "N03-context-r1",
+    "category": "missing",
+    "task_id": "N03",
+    "condition": "context",
+    "replicate": 1,
+    "result_sha256": "bc05a08225dd943d7362de9135080a9d85016f773eeff83a3d788537a503fef5"
+  },
+  "run-fa99c4fe31": {
+    "run": "N04-context-r1",
+    "category": "local_revision",
+    "task_id": "N04",
+    "condition": "context",
+    "replicate": 1,
+    "result_sha256": "2e1e05f5d81b5d71fbdf94c159f1ad7db480706228ad42a6b3f3698cb51cee78"
+  },
+  "run-2f31ab93c8": {
+    "run": "N04-baseline-r1",
+    "category": "local_revision",
+    "task_id": "N04",
+    "condition": "baseline",
+    "replicate": 1,
+    "result_sha256": "c7c786dd836e93f712048a9be7c724032f6313077e9326133ef18824386f56fe"
+  },
+  "run-bcdaafc232": {
+    "run": "N05-baseline-r1",
+    "category": "issue",
+    "task_id": "N05",
+    "condition": "baseline",
+    "replicate": 1,
+    "result_sha256": "c7bf37bb8eb348566c51156315f02996a680c7578cf2e67bdb6a4a86513c9ebb"
+  },
+  "run-d90f9d387b": {
+    "run": "N05-context-r1",
+    "category": "issue",
+    "task_id": "N05",
+    "condition": "context",
+    "replicate": 1,
+    "result_sha256": "7b48f3c48d078efe59c931fd13cbac442fab502187f0c8ef8fa2af51f0b28670"
+  },
+  "run-80bb7b91f2": {
+    "run": "N06-context-r1",
+    "category": "legacy",
+    "task_id": "N06",
+    "condition": "context",
+    "replicate": 1,
+    "result_sha256": "3c931c5b1fb7570c36e69c29f26b07dbb4db9ba06b3606a9ab3d0bec7d31a121"
+  },
+  "run-623dce0392": {
+    "run": "N06-baseline-r1",
+    "category": "legacy",
+    "task_id": "N06",
+    "condition": "baseline",
+    "replicate": 1,
+    "result_sha256": "fee19cd0f7c121b48578646303b52d4a6a431b6fd713933db9f9d76a2c8cdd84"
+  },
+  "run-6bca3d52c3": {
+    "run": "N01-context-r2",
+    "category": "normal",
+    "task_id": "N01",
+    "condition": "context",
+    "replicate": 2,
+    "result_sha256": "46199cd6190797acc232e35a4eb2f8c4c85f1c5c31e3c26477843fc8c6b79950"
+  },
+  "run-216b77a848": {
+    "run": "N01-baseline-r2",
+    "category": "normal",
+    "task_id": "N01",
+    "condition": "baseline",
+    "replicate": 2,
+    "result_sha256": "d7e3c78e45e5fbb5905f86e5fdadaa2108b9d4a01e83aa6f69900d54bc1d159d"
+  },
+  "run-5fc6946499": {
+    "run": "N02-baseline-r2",
+    "category": "upstream",
+    "task_id": "N02",
+    "condition": "baseline",
+    "replicate": 2,
+    "result_sha256": "b2618631e54a09d709cd6b0d67fb274607518a8ced68fa05d46adfe12240c866"
+  },
+  "run-09c1f5c76c": {
+    "run": "N02-context-r2",
+    "category": "upstream",
+    "task_id": "N02",
+    "condition": "context",
+    "replicate": 2,
+    "result_sha256": "7cfc6d81fb9b84f1a78afa315fde4ef4abe366cc16e1a637712a64d92ca46a5a"
+  },
+  "run-e6aa3dc002": {
+    "run": "N03-context-r2",
+    "category": "missing",
+    "task_id": "N03",
+    "condition": "context",
+    "replicate": 2,
+    "result_sha256": "9869d6b524654ac6db911829cf178bd37e5250f7e6ed4ecdd2d8b25b7947ef95"
+  },
+  "run-a2659a5ea8": {
+    "run": "N03-baseline-r2",
+    "category": "missing",
+    "task_id": "N03",
+    "condition": "baseline",
+    "replicate": 2,
+    "result_sha256": "9a2740374d04bc5d4192870c3640a9771ac890514141110ed5ed16f29516cc91"
+  },
+  "run-acdbdc82d7": {
+    "run": "N04-baseline-r2",
+    "category": "local_revision",
+    "task_id": "N04",
+    "condition": "baseline",
+    "replicate": 2,
+    "result_sha256": "d42bea6091dce2e98d979dc84ab90898a7bffc48a5c8d24e4a068acf144a9cd3"
+  },
+  "run-957c99bed8": {
+    "run": "N04-context-r2",
+    "category": "local_revision",
+    "task_id": "N04",
+    "condition": "context",
+    "replicate": 2,
+    "result_sha256": "f3627d432d29178175cad843f8d99a2f0c74b54e86b61f61cd8cd5f98592be9d"
+  },
+  "run-689d96ad7b": {
+    "run": "N05-context-r2",
+    "category": "issue",
+    "task_id": "N05",
+    "condition": "context",
+    "replicate": 2,
+    "result_sha256": "90cd2b89cce71f2002d8ace3088814e5907ecf5164470530ad59f56f4feb4b1f"
+  },
+  "run-4beb0bd549": {
+    "run": "N05-baseline-r2",
+    "category": "issue",
+    "task_id": "N05",
+    "condition": "baseline",
+    "replicate": 2,
+    "result_sha256": "68091c5127a049eda02b85e486b798f38d91bc7db83b6abe3e237d3a8706b0da"
+  },
+  "run-303d62ee3c": {
+    "run": "N06-baseline-r2",
+    "category": "legacy",
+    "task_id": "N06",
+    "condition": "baseline",
+    "replicate": 2,
+    "result_sha256": "0e59c5da73f90f4a9e3481f026b1ef7dc8c76f6474af163f442655bc3e284554"
+  },
+  "run-4c1d998847": {
+    "run": "N06-context-r2",
+    "category": "legacy",
+    "task_id": "N06",
+    "condition": "context",
+    "replicate": 2,
+    "result_sha256": "e50e2794eebcc78b3d8fa14e8db0008a9832715a518823f067b5a555ce25b21f"
+  }
+}

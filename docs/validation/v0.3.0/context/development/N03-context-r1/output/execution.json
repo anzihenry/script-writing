@@ -1,0 +1,29 @@
+{
+  "read_files": [
+    "request.md",
+    "input/context/context.md",
+    "input/context/manifest.json",
+    "input/rules/ai-short-drama-review/SKILL.md",
+    "input/rules/ai-short-drama-writing/references/common.md",
+    "input/rules/ai-short-drama-writing/references/standards.md",
+    "input/rules/ai-short-drama-continuity-audit/SKILL.md",
+    "input/project/episodes/EP012-v1.0.md",
+    "input/project/continuity/EP011-v1.0.md",
+    "input/project/continuity/EP012-v1.0.md",
+    "input/project/reviews/EP012-v1.0.md",
+    "input/rules/ai-short-drama-writing/references/workflow.md",
+    "input/rules/ai-short-drama-writing/assets/templates.md",
+    "input/project/handoff/EP011-v1.0.md",
+    "input/project/reviews/EP011-v1.0.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/review.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/changes.md",
+    "input/project/project.json"
+  ],
+  "tool_calls": 6,
+  "actual_token_usage": null,
+  "limitations": [
+    "EP011-v1.0 正文实际缺失，无法核实 EP011-D002 原句或跨集时间关系。",
+    "只核查指定对白与测试时间，未开展全季审核；未修订正文。",
+    "未执行 verify-context；对本次相关现存正文、台账及审核文件逐项核对哈希，并回读完整来源。"
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "G3 单集与批次剧本写作"
+  short_description: "根据大纲与设定撰写 AI 短剧单集或批次分场剧本，完成动作、对白、时间预算和连续性更新"
+  default_prompt: "使用 $ai-short-drama-episode，根据现有材料完成单集与批次剧本写作，按规范交付并列明未决项。"

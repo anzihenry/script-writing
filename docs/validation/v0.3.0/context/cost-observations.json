@@ -1,0 +1,285 @@
+{
+  "rows": [
+    {
+      "run_id": "N01-baseline-r1",
+      "condition": "baseline",
+      "task_id": "N01",
+      "unique_reported_files": 42,
+      "raw_project_read_files": 33,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 195254,
+      "recorder_reported_read_bytes": 195254,
+      "tool_calls": 5
+    },
+    {
+      "run_id": "N01-baseline-r2",
+      "condition": "baseline",
+      "task_id": "N01",
+      "unique_reported_files": 41,
+      "raw_project_read_files": 33,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 194555,
+      "recorder_reported_read_bytes": 194555,
+      "tool_calls": 6
+    },
+    {
+      "run_id": "N01-context-r1",
+      "condition": "context",
+      "task_id": "N01",
+      "unique_reported_files": 15,
+      "raw_project_read_files": 6,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 126394,
+      "recorder_reported_read_bytes": 126394,
+      "tool_calls": 5
+    },
+    {
+      "run_id": "N01-context-r2",
+      "condition": "context",
+      "task_id": "N01",
+      "unique_reported_files": 15,
+      "raw_project_read_files": 6,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 126394,
+      "recorder_reported_read_bytes": 126394,
+      "tool_calls": 5
+    },
+    {
+      "run_id": "N02-baseline-r1",
+      "condition": "baseline",
+      "task_id": "N02",
+      "unique_reported_files": 41,
+      "raw_project_read_files": 33,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 199949,
+      "recorder_reported_read_bytes": 199949,
+      "tool_calls": 8
+    },
+    {
+      "run_id": "N02-baseline-r2",
+      "condition": "baseline",
+      "task_id": "N02",
+      "unique_reported_files": 47,
+      "raw_project_read_files": 34,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 219878,
+      "recorder_reported_read_bytes": 219878,
+      "tool_calls": 8
+    },
+    {
+      "run_id": "N02-context-r1",
+      "condition": "context",
+      "task_id": "N02",
+      "unique_reported_files": 41,
+      "raw_project_read_files": 32,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 241485,
+      "recorder_reported_read_bytes": 241485,
+      "tool_calls": 7
+    },
+    {
+      "run_id": "N02-context-r2",
+      "condition": "context",
+      "task_id": "N02",
+      "unique_reported_files": 38,
+      "raw_project_read_files": 29,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 148266,
+      "recorder_reported_read_bytes": 148266,
+      "tool_calls": 7
+    },
+    {
+      "run_id": "N03-baseline-r1",
+      "condition": "baseline",
+      "task_id": "N03",
+      "unique_reported_files": 44,
+      "raw_project_read_files": 33,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 201931,
+      "recorder_reported_read_bytes": 201931,
+      "tool_calls": 7
+    },
+    {
+      "run_id": "N03-baseline-r2",
+      "condition": "baseline",
+      "task_id": "N03",
+      "unique_reported_files": 47,
+      "raw_project_read_files": 33,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 208816,
+      "recorder_reported_read_bytes": 208816,
+      "tool_calls": 7
+    },
+    {
+      "run_id": "N03-context-r1",
+      "condition": "context",
+      "task_id": "N03",
+      "unique_reported_files": 18,
+      "raw_project_read_files": 7,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 135001,
+      "recorder_reported_read_bytes": 135001,
+      "tool_calls": 6
+    },
+    {
+      "run_id": "N03-context-r2",
+      "condition": "context",
+      "task_id": "N03",
+      "unique_reported_files": 18,
+      "raw_project_read_files": 7,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 135001,
+      "recorder_reported_read_bytes": 135001,
+      "tool_calls": 7
+    },
+    {
+      "run_id": "N04-baseline-r1",
+      "condition": "baseline",
+      "task_id": "N04",
+      "unique_reported_files": 40,
+      "raw_project_read_files": 29,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 198141,
+      "recorder_reported_read_bytes": 198141,
+      "tool_calls": 6
+    },
+    {
+      "run_id": "N04-baseline-r2",
+      "condition": "baseline",
+      "task_id": "N04",
+      "unique_reported_files": 15,
+      "raw_project_read_files": 6,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 88995,
+      "recorder_reported_read_bytes": 88995,
+      "tool_calls": 6
+    },
+    {
+      "run_id": "N04-context-r1",
+      "condition": "context",
+      "task_id": "N04",
+      "unique_reported_files": 18,
+      "raw_project_read_files": 5,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 135431,
+      "recorder_reported_read_bytes": 135431,
+      "tool_calls": 6
+    },
+    {
+      "run_id": "N04-context-r2",
+      "condition": "context",
+      "task_id": "N04",
+      "unique_reported_files": 18,
+      "raw_project_read_files": 5,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 75992,
+      "recorder_reported_read_bytes": 75992,
+      "tool_calls": 6
+    },
+    {
+      "run_id": "N05-baseline-r1",
+      "condition": "baseline",
+      "task_id": "N05",
+      "unique_reported_files": 40,
+      "raw_project_read_files": 32,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 198029,
+      "recorder_reported_read_bytes": 198029,
+      "tool_calls": 6
+    },
+    {
+      "run_id": "N05-baseline-r2",
+      "condition": "baseline",
+      "task_id": "N05",
+      "unique_reported_files": 42,
+      "raw_project_read_files": 32,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 203413,
+      "recorder_reported_read_bytes": 203413,
+      "tool_calls": 6
+    },
+    {
+      "run_id": "N05-context-r1",
+      "condition": "context",
+      "task_id": "N05",
+      "unique_reported_files": 15,
+      "raw_project_read_files": 6,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 131169,
+      "recorder_reported_read_bytes": 131169,
+      "tool_calls": 6
+    },
+    {
+      "run_id": "N05-context-r2",
+      "condition": "context",
+      "task_id": "N05",
+      "unique_reported_files": 18,
+      "raw_project_read_files": 9,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 134897,
+      "recorder_reported_read_bytes": 134897,
+      "tool_calls": 5
+    },
+    {
+      "run_id": "N06-baseline-r1",
+      "condition": "baseline",
+      "task_id": "N06",
+      "unique_reported_files": 40,
+      "raw_project_read_files": 36,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 187898,
+      "recorder_reported_read_bytes": 187898,
+      "tool_calls": null
+    },
+    {
+      "run_id": "N06-baseline-r2",
+      "condition": "baseline",
+      "task_id": "N06",
+      "unique_reported_files": 43,
+      "raw_project_read_files": 35,
+      "context_read_files": 0,
+      "canonical_reported_read_bytes": 199340,
+      "recorder_reported_read_bytes": 199340,
+      "tool_calls": 10
+    },
+    {
+      "run_id": "N06-context-r1",
+      "condition": "context",
+      "task_id": "N06",
+      "unique_reported_files": 39,
+      "raw_project_read_files": 34,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 132545,
+      "recorder_reported_read_bytes": 132545,
+      "tool_calls": 6
+    },
+    {
+      "run_id": "N06-context-r2",
+      "condition": "context",
+      "task_id": "N06",
+      "unique_reported_files": 42,
+      "raw_project_read_files": 34,
+      "context_read_files": 2,
+      "canonical_reported_read_bytes": 139069,
+      "recorder_reported_read_bytes": 139069,
+      "tool_calls": 6
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "runs": 12,
+      "median_read_bytes": 198740.5,
+      "median_read_files": 41.5,
+      "median_raw_project_read_files": 33.0,
+      "median_tool_calls": 6
+    },
+    "context": {
+      "runs": 12,
+      "median_read_bytes": 134949.0,
+      "median_read_files": 18.0,
+      "median_raw_project_read_files": 7.0,
+      "median_tool_calls": 6.0
+    }
+  },
+  "limitation": "Self-reported file access, full file sizes even for partial reads; not tokens or measured repeated-read count. Raw project files are a supplementary lookup proxy. Packet generation cost excluded."
+}

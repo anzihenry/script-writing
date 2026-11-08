@@ -1,0 +1,9 @@
+{
+  "agent_id": "/root/m3_adjudication",
+  "model": null,
+  "started_at": "2026-11-08T12:42:56Z",
+  "completed_observed_at": "2026-11-08T12:44:54Z",
+  "input_hashes_verified": true,
+  "decision_sha256": "c04552848923fe83e535d1009497a99c7df13830f51a1415dc0288a70a484859",
+  "limitation": "Observed orchestration timestamps; no exact agent processing latency or syscall-level audit"
+}

@@ -1,0 +1,127 @@
+{
+  "at": "2026-11-07T06:26:03.308387+00:00",
+  "runs": 24,
+  "context_packages": [
+    {
+      "run_id": "N01-context-r1",
+      "packet_files": 60,
+      "packet_bytes": 311970,
+      "sources": 27,
+      "continuity_status": "RECORDED",
+      "blockers": 4,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    },
+    {
+      "run_id": "N02-context-r1",
+      "packet_files": 60,
+      "packet_bytes": 318207,
+      "sources": 27,
+      "continuity_status": "UNVERIFIED",
+      "blockers": 49,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    },
+    {
+      "run_id": "N03-context-r1",
+      "packet_files": 59,
+      "packet_bytes": 303875,
+      "sources": 28,
+      "continuity_status": "UNVERIFIED",
+      "blockers": 7,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    },
+    {
+      "run_id": "N04-context-r1",
+      "packet_files": 60,
+      "packet_bytes": 305765,
+      "sources": 28,
+      "continuity_status": "RECORDED",
+      "blockers": 1,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    },
+    {
+      "run_id": "N05-context-r1",
+      "packet_files": 60,
+      "packet_bytes": 307826,
+      "sources": 28,
+      "continuity_status": "RECORDED",
+      "blockers": 3,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    },
+    {
+      "run_id": "N06-context-r1",
+      "packet_files": 60,
+      "packet_bytes": 310854,
+      "sources": 27,
+      "continuity_status": "UNVERIFIED",
+      "blockers": 4,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    },
+    {
+      "run_id": "N01-context-r2",
+      "packet_files": 60,
+      "packet_bytes": 311970,
+      "sources": 27,
+      "continuity_status": "RECORDED",
+      "blockers": 4,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    },
+    {
+      "run_id": "N02-context-r2",
+      "packet_files": 60,
+      "packet_bytes": 318207,
+      "sources": 27,
+      "continuity_status": "UNVERIFIED",
+      "blockers": 49,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    },
+    {
+      "run_id": "N03-context-r2",
+      "packet_files": 59,
+      "packet_bytes": 303875,
+      "sources": 28,
+      "continuity_status": "UNVERIFIED",
+      "blockers": 7,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    },
+    {
+      "run_id": "N04-context-r2",
+      "packet_files": 60,
+      "packet_bytes": 305765,
+      "sources": 28,
+      "continuity_status": "RECORDED",
+      "blockers": 1,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    },
+    {
+      "run_id": "N05-context-r2",
+      "packet_files": 60,
+      "packet_bytes": 307826,
+      "sources": 28,
+      "continuity_status": "RECORDED",
+      "blockers": 3,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    },
+    {
+      "run_id": "N06-context-r2",
+      "packet_files": 60,
+      "packet_bytes": 310854,
+      "sources": 27,
+      "continuity_status": "UNVERIFIED",
+      "blockers": 4,
+      "checkpoint": "CP1",
+      "freshness": "VERIFIED"
+    }
+  ],
+  "note": "Recorded and checked before formal executor launch; artifact sizes are not token usage."
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "G1 故事与人物设定"
+  short_description: "为 AI 短剧建立或修订故事总纲、结局、人物弧线、世界规则和资产设定集"
+  default_prompt: "使用 $ai-short-drama-bible，根据现有材料完成故事与人物设定，按规范交付并列明未决项。"

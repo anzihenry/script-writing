@@ -1,0 +1,78 @@
+{
+  "runs": [
+    {
+      "run_id": "N01-baseline-r1"
+    },
+    {
+      "run_id": "N01-context-r1"
+    },
+    {
+      "run_id": "N02-context-r1"
+    },
+    {
+      "run_id": "N02-baseline-r1"
+    },
+    {
+      "run_id": "N03-baseline-r1"
+    },
+    {
+      "run_id": "N03-context-r1"
+    },
+    {
+      "run_id": "N04-context-r1"
+    },
+    {
+      "run_id": "N04-baseline-r1"
+    },
+    {
+      "run_id": "N05-baseline-r1"
+    },
+    {
+      "run_id": "N05-context-r1"
+    },
+    {
+      "run_id": "N06-context-r1"
+    },
+    {
+      "run_id": "N06-baseline-r1"
+    },
+    {
+      "run_id": "N01-context-r2"
+    },
+    {
+      "run_id": "N01-baseline-r2"
+    },
+    {
+      "run_id": "N02-baseline-r2"
+    },
+    {
+      "run_id": "N02-context-r2"
+    },
+    {
+      "run_id": "N03-context-r2"
+    },
+    {
+      "run_id": "N03-baseline-r2"
+    },
+    {
+      "run_id": "N04-baseline-r2"
+    },
+    {
+      "run_id": "N04-context-r2"
+    },
+    {
+      "run_id": "N05-context-r2"
+    },
+    {
+      "run_id": "N05-baseline-r2"
+    },
+    {
+      "run_id": "N06-baseline-r2"
+    },
+    {
+      "run_id": "N06-context-r2"
+    }
+  ],
+  "policy": null,
+  "original_schedule_sha256": "94e13fdb8f6ba481f530d9e5e9e045fc622122daec73efb5bd3d43c93e0c1a25"
+}

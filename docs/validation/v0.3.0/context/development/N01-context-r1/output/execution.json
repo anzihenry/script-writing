@@ -1,0 +1,27 @@
+{
+  "read_files": [
+    "request.md",
+    "input/context/context.md",
+    "input/context/manifest.json",
+    "input/rules/ai-short-drama-episode/SKILL.md",
+    "input/rules/ai-short-drama-writing/references/common.md",
+    "input/rules/ai-short-drama-writing/references/standards.md",
+    "input/rules/ai-short-drama-writing/assets/templates.md",
+    "input/project/brief.md",
+    "input/project/bible.md",
+    "input/project/outline.md",
+    "input/project/episodes/EP012-v1.0.md",
+    "input/project/continuity/EP012-v1.0.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/episode.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/continuity.md",
+    "input/project/project.json"
+  ],
+  "tool_calls": 5,
+  "actual_token_usage": null,
+  "limitations": [
+    "未进行朗读、配音或成片实测。",
+    "未进行审核或锁定。",
+    "未运行verify-context；关键状态回读完整项目来源，未声称上下文包已核验。",
+    "未阅读全文EP001至EP011，不声明全季连续性。"
+  ]
+}

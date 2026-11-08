@@ -1,0 +1,24 @@
+{
+  "read_files": [
+    "request.md",
+    "input/rules/ai-short-drama-review/SKILL.md",
+    "input/rules/ai-short-drama-writing/references/common.md",
+    "input/rules/ai-short-drama-writing/references/standards.md",
+    "input/rules/ai-short-drama-revision/SKILL.md",
+    "input/rules/ai-short-drama-regression-review/SKILL.md",
+    "input/rules/ai-short-drama-writing/references/workflow.md",
+    "input/rules/ai-short-drama-writing/assets/templates.md",
+    "input/project/project.json",
+    "input/project/episodes/EP012-v1.0.md",
+    "input/project/reviews/EP012-v1.0.md",
+    "input/project/feedback.md",
+    "input/project/bible.md",
+    "input/project/continuity/EP012-v1.0.md",
+    "output/revised.md"
+  ],
+  "tool_calls": 6,
+  "actual_token_usage": null,
+  "limitations": [
+    "仅自检指定对白与同场动作及字节差异；未作整集审核、实际计时、登记刷新或锁定。"
+  ]
+}

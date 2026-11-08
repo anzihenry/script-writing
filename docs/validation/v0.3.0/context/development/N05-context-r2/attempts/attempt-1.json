@@ -1,0 +1,14 @@
+{
+  "current_run": "N05-context-r2",
+  "attempt": 1,
+  "started_at": "2026-11-08T02:34:27.425444Z",
+  "agent_id": "/root/m3_serial_resume/n05_context_r2",
+  "status": "interrupted",
+  "execution_interruption": {
+    "observed_at": "2026-11-08T07:26:39.659866Z",
+    "error": "Agent errored: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/settings/usage to purchase more credits or try again at 3:24 PM.",
+    "agent_end_at": null,
+    "observation": "Output empty. User explicitly authorized fresh attempt."
+  },
+  "timing_excluded_reason": "Usage-limit interruption; no delivery, actual end time unknown"
+}

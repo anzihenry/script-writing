@@ -1,0 +1,31 @@
+{
+  "read_files": [
+    "request.md",
+    "input/context/context.md",
+    "input/context/manifest.json",
+    "input/rules/ai-short-drama-episode/SKILL.md",
+    "input/rules/ai-short-drama-writing/references/common.md",
+    "input/rules/ai-short-drama-writing/references/standards.md",
+    "input/rules/ai-short-drama-writing/assets/templates.md",
+    "input/context/sources/artifacts/brief.md",
+    "input/context/sources/artifacts/bible.md",
+    "input/context/sources/artifacts/outline.md",
+    "input/context/sources/artifacts/script_EP012.md",
+    "input/context/sources/artifacts/continuity_EP012.md",
+    "input/context/sources/project.json",
+    "input/rules/ai-short-drama-writing/assets/project-template/episode.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/continuity.md",
+    "input/project/brief.md",
+    "input/project/bible.md",
+    "input/project/outline.md",
+    "input/project/episodes/EP012-v1.0.md",
+    "input/project/continuity/EP012-v1.0.md"
+  ],
+  "tool_calls": 7,
+  "actual_token_usage": null,
+  "limitations": [
+    "未执行完整 verify-context；仅核对五份直接来源原文件的登记哈希。",
+    "project.json 首次显示曾截断；随后定向读取相关版本、依赖与哈希结果。",
+    "未进行审核、锁定、实际朗读或制作测试；未全面回读 EP001–EP011。"
+  ]
+}

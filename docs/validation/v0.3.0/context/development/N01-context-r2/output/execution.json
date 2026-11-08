@@ -1,0 +1,26 @@
+{
+  "read_files": [
+    "request.md",
+    "input/context/context.md",
+    "input/context/manifest.json",
+    "input/rules/ai-short-drama-episode/SKILL.md",
+    "input/rules/ai-short-drama-writing/references/common.md",
+    "input/rules/ai-short-drama-writing/references/standards.md",
+    "input/rules/ai-short-drama-writing/assets/templates.md",
+    "input/project/bible.md",
+    "input/project/brief.md",
+    "input/project/outline.md",
+    "input/project/episodes/EP012-v1.0.md",
+    "input/project/continuity/EP012-v1.0.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/episode.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/continuity.md",
+    "input/project/project.json"
+  ],
+  "tool_calls": 5,
+  "actual_token_usage": null,
+  "limitations": [
+    "未执行全包 verify-context，仅核对五份直接来源的内容哈希。",
+    "部分大体量元数据工具输出截断；已直接读取本集所需完整正文与台账。",
+    "时长估算未实测；未审核或锁定；未验证制作效果。"
+  ]
+}

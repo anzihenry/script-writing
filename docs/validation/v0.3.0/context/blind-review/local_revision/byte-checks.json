@@ -1,0 +1,30 @@
+{
+  "run-fa99c4fe31": {
+    "status": "MATCH",
+    "outside_edit_cell_unchanged": true,
+    "original_cell": "箱子先锁好，钥匙还在我腰上。",
+    "revised_cell": "箱子先锁好，钥匙还在你腰上。",
+    "limitation": "Byte boundary only; semantic adequacy requires independent judgment"
+  },
+  "run-2f31ab93c8": {
+    "status": "MATCH",
+    "outside_edit_cell_unchanged": true,
+    "original_cell": "箱子先锁好，钥匙还在我腰上。",
+    "revised_cell": "箱子先锁好，钥匙还在你腰上。",
+    "limitation": "Byte boundary only; semantic adequacy requires independent judgment"
+  },
+  "run-acdbdc82d7": {
+    "status": "MATCH",
+    "outside_edit_cell_unchanged": true,
+    "original_cell": "箱子先锁好，钥匙还在我腰上。",
+    "revised_cell": "箱子先锁好，钥匙还在你腰上。",
+    "limitation": "Byte boundary only; semantic adequacy requires independent judgment"
+  },
+  "run-957c99bed8": {
+    "status": "MATCH",
+    "outside_edit_cell_unchanged": true,
+    "original_cell": "箱子先锁好，钥匙还在我腰上。",
+    "revised_cell": "箱子先锁好，钥匙还在你腰上。",
+    "limitation": "Byte boundary only; semantic adequacy requires independent judgment"
+  }
+}

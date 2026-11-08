@@ -1,0 +1,27 @@
+{
+  "read_files": [
+    "request.md",
+    "input/context/context.md",
+    "input/context/manifest.json",
+    "input/rules/ai-short-drama-review/SKILL.md",
+    "input/rules/ai-short-drama-writing/references/common.md",
+    "input/rules/ai-short-drama-revision/SKILL.md",
+    "input/rules/ai-short-drama-regression-review/SKILL.md",
+    "input/project/episodes/EP012-v1.0.md",
+    "input/project/continuity/EP012-v1.0.md",
+    "input/rules/ai-short-drama-writing/references/standards.md",
+    "input/rules/ai-short-drama-writing/references/workflow.md",
+    "input/rules/ai-short-drama-writing/assets/templates.md",
+    "input/project/bible.md",
+    "input/project/reviews/EP012-v1.0.md",
+    "input/project/project.json",
+    "input/rules/ai-short-drama-writing/assets/project-template/review.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/changes.md",
+    "output/revised.md"
+  ],
+  "tool_calls": 6,
+  "actual_token_usage": null,
+  "limitations": [
+    "仅复核 D002 与同场持钥匙动作的一致性及其他字节不变；未作整集、全季或制作审核。"
+  ]
+}

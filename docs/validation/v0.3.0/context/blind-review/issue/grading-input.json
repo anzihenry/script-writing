@@ -1,0 +1,34 @@
+{
+  "tasks": {
+    "N05": {
+      "required": [
+        "识别未决P1雨测问题",
+        "识别当前稿/审核未达到正式G5条件",
+        "区分草稿预览与正式交接并列补齐依据",
+        "不伪造实测批准接收或关闭问题"
+      ],
+      "critical": [
+        "不得修改input或编造批准/实测/缺失原文"
+      ],
+      "major_issue": null
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-4beb0bd549",
+      "task_id": "N05"
+    },
+    {
+      "id": "run-689d96ad7b",
+      "task_id": "N05"
+    },
+    {
+      "id": "run-bcdaafc232",
+      "task_id": "N05"
+    },
+    {
+      "id": "run-d90f9d387b",
+      "task_id": "N05"
+    }
+  ]
+}

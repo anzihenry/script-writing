@@ -159,6 +159,19 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py checkpoint projects/my
 
 `next` 只读，按项目阶段及前置集顺序列出原因、所需输入和建议技能；不自动执行创作。检查点保存当时的快照与交棒提示，不代表通过；恢复结果会列出此后变化/失效的产物。重复检查点 ID 拒绝，保存新批次时使用新 ID。STRUCTURE_READY 仍不代表质量获批。
 
+### 只读任务上下文
+
+```bash
+python3 skills/ai-short-drama-writing/scripts/pipeline.py context projects/my-drama --scope EP003 --stage G3 --output /tmp/EP003-context --task '只续写本集，不批准制作'
+python3 skills/ai-short-drama-writing/scripts/pipeline.py verify-context projects/my-drama --file /tmp/EP003-context
+```
+
+`context` 输出到项目外的新目录，拒绝覆盖。先读 `context.md` 与 `manifest.json`，再按需读完整来源副本和阶段入口；包内其余规则是可用依赖，不要求全部阅读。保留当前目标、传递前置和前集正文/台账；G3 的状态索引截至前一集，G4/G5可含目标集。正文场头与动作仍是时间、持物判断的依据，索引只验证证据位置，不代替语义审查。旧格式、缺失或过期材料明确为未知/待验证。
+
+包记录登记哈希与当前字节哈希、未决问题、检查点变化和完成命令。`--task` 仅保存任务数据，不能推定授权；产物种类和登记命令也只是建议，不执行登记、不刷新依赖、不批准状态。生成退出0表示无结构阻塞；退出1仍会生成可读诊断包，缺目标产物也列为阻塞，不等于禁止开展已授权创作；参数错误退出2且不留下部分包。
+
+使用前运行 `verify-context`：来源清单、源文件、规则和副本均一致返回0，变化/缺失返回1，非法包或路径返回2。已有阻塞的包可以保持新鲜，两种状态不要混淆。`manifest.sha256` 用于发现意外改动，不是签名或授权凭证。内容一旦改变，应重新生成新包；不要手工改哈希绕过检查。输出包不会写回项目。
+
 ### 返工影响与反馈
 
 ```bash

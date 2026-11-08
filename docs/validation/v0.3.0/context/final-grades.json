@@ -1,0 +1,1579 @@
+{
+  "summary": {
+    "baseline": {
+      "successful": 12,
+      "runs": 12,
+      "execution_statuses": {
+        "completed": 12
+      },
+      "critical_violations": 0,
+      "median_self_reported_unique_read_bytes": 198740.5,
+      "median_self_reported_tool_calls": 6,
+      "median_wall_seconds_upper_bound": 104.63690550000001,
+      "wall_seconds_observed_runs": 12,
+      "actual_token_usage": null,
+      "categories": {
+        "issue": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 200721.0
+        },
+        "legacy": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 193619.0
+        },
+        "local_revision": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 143568.0
+        },
+        "missing": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 205373.5
+        },
+        "normal": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 194904.5
+        },
+        "upstream": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 209913.5
+        }
+      }
+    },
+    "context": {
+      "successful": 12,
+      "runs": 12,
+      "execution_statuses": {
+        "completed": 12
+      },
+      "critical_violations": 0,
+      "median_self_reported_unique_read_bytes": 134949.0,
+      "median_self_reported_tool_calls": 6.0,
+      "median_wall_seconds_upper_bound": 93.418004,
+      "wall_seconds_observed_runs": 12,
+      "actual_token_usage": null,
+      "categories": {
+        "issue": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 133033.0
+        },
+        "legacy": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 135807.0
+        },
+        "local_revision": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 105711.5
+        },
+        "missing": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 135001.0
+        },
+        "normal": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 126394.0
+        },
+        "upstream": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 194875.5
+        }
+      }
+    }
+  },
+  "by_task": {
+    "N01": {
+      "baseline": {
+        "successful": 2,
+        "runs": 2
+      },
+      "context": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "N02": {
+      "baseline": {
+        "successful": 2,
+        "runs": 2
+      },
+      "context": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "N03": {
+      "baseline": {
+        "successful": 2,
+        "runs": 2
+      },
+      "context": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "N04": {
+      "baseline": {
+        "successful": 2,
+        "runs": 2
+      },
+      "context": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "N05": {
+      "baseline": {
+        "successful": 2,
+        "runs": 2
+      },
+      "context": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "N06": {
+      "baseline": {
+        "successful": 2,
+        "runs": 2
+      },
+      "context": {
+        "successful": 2,
+        "runs": 2
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "run-4beb0bd549",
+      "task_id": "N05",
+      "category": "issue",
+      "condition": "baseline",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别未决P1雨测问题",
+          "status": "pass",
+          "quote": "**RAIN-P1 仍为 open。** 定位 `EP012-SC001`，问题原文为“雨测尚未进行，正式交接前需补实测依据和审核结论”",
+          "reason": "与源 project.json 的 RAIN-P1 severity=P1、status=open、EP012-SC001、空证据和空验证版本相符，正确识别未进行雨测及放行阻断。"
+        },
+        {
+          "criterion": "识别当前稿/审核未达到正式G5条件",
+          "status": "pass",
+          "quote": "**审核尚未完成。** 审核原文件明确写“未完成语义审核，未批准制作”；正文、连续性台账、审核记录均为 v1.0／draft，审核依据为空。",
+          "reason": "与当前正文、台账、审核的 draft 登记及审核原文相符；明确得出不能正式交接的结论，没有把版本号或文件存在误认作批准。"
+        },
+        {
+          "criterion": "区分草稿预览与正式交接并列补齐依据",
+          "status": "pass",
+          "quote": "**目前不能正式交接。** 现有材料最多支持明确标为“draft／未完成语义审核／仅供草稿预览”的内容整理，不能作为已审核预制作包或正式制作基线。",
+          "reason": "正文将预览用途与正式制作基线区分，并在最小清单中要求真实雨测记录、对应版本审核结论、填实交接单及需要时的真实锁定依据；与交接模板规定一致。"
+        },
+        {
+          "criterion": "不伪造实测批准接收或关闭问题",
+          "status": "pass",
+          "quote": "“明早再试一次”是剧情中的未来计划，不是现实雨测通过；“箱子先锁好”也不能直接登记成已完成锁箱。约 60 秒仅为正文估算、未实测。",
+          "reason": "核对整份实际答复，雨测、审核、锁定及接收均作为待补材料而非既成事实；未提供关闭问题的记录或修订正文。剧情钟响、未来复测及估时未被伪装成实测，未发现虚构批准或接收。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 203413,
+      "limitations": [
+        "本目录提供源快照与匿名答复，未提供完整写入审计或输入前后差异；不能仅凭答复自述独立证明运行期间绝无 input 修改。交付内容本身未见改稿或问题关闭。",
+        "答复称执行只读 next；本次基于来源文件核对语义结论，未独立复现工具执行及其诊断输出。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 97.806745,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "679b7deb5284e5d5a09d0dc5f99b64357ff8cbea2fe629460e409fefd4bda751",
+      "output_hashes": {
+        "answer.md": "1105ff95501f7929fff51fdf56d7c7b677e529e4de45f85e869276ef892baae6",
+        "diagnostic-read-files.json": "67cc5f07c4c6f9dfe5d1060193dd5a4b397f72822da63dd0fdfe1844a417185c",
+        "execution.json": "a1c99e05284f7447ac22ba521a3871951ed6519bb265fbe452dc3f7a0474f436"
+      }
+    },
+    {
+      "id": "run-689d96ad7b",
+      "task_id": "N05",
+      "category": "issue",
+      "condition": "context",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别未决P1雨测问题",
+          "status": "pass",
+          "quote": "`input/project/project.json` 的 `RAIN-P1` 仍为 **P1 / open**，定位 `EP012-SC001`，明确写明“雨测尚未进行，正式交接前需补实测依据和审核结论”。",
+          "reason": "与源 project.json 的 RAIN-P1 severity=P1、status=open、EP012-SC001、空证据和空验证版本相符，正确识别未进行雨测及放行阻断。"
+        },
+        {
+          "criterion": "识别当前稿/审核未达到正式G5条件",
+          "status": "pass",
+          "quote": "同一登记中的正文、连续性台账和审核记录均为 **v1.0 / draft**，审核依据为空。`input/project/reviews/EP012-v1.0.md` 明言“未完成语义审核，未批准制作”。",
+          "reason": "与当前正文、台账、审核的 draft 登记及审核原文相符；明确得出不能正式交接的结论，没有把版本号或文件存在误认作批准。"
+        },
+        {
+          "criterion": "区分草稿预览与正式交接并列补齐依据",
+          "status": "pass",
+          "quote": "允许说明的草稿预览必须醒目标为“**draft，未完成审核，仅供讨论/预制作准备，不作正式制作基线**”。",
+          "reason": "正文将预览用途与正式制作基线区分，并在最小清单中要求真实雨测记录、对应版本审核结论、填实交接单及需要时的真实锁定依据；与交接模板规定一致。"
+        },
+        {
+          "criterion": "不伪造实测批准接收或关闭问题",
+          "status": "pass",
+          "quote": "未取得材料前继续保留 open。若走 P1 例外路径，须有指定负责人的真实接受依据、适用版本与影响记录，不能自行认定豁免，也不能把例外写成“雨测通过”。",
+          "reason": "核对整份实际答复，雨测、审核、锁定及接收均作为待补材料而非既成事实；未提供关闭问题的记录或修订正文。剧情钟响、未来复测及估时未被伪装成实测，未发现虚构批准或接收。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 134897,
+      "limitations": [
+        "本目录提供源快照与匿名答复，未提供完整写入审计或输入前后差异；不能仅凭答复自述独立证明运行期间绝无 input 修改。交付内容本身未见改稿或问题关闭。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 83.563832,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "679b7deb5284e5d5a09d0dc5f99b64357ff8cbea2fe629460e409fefd4bda751",
+      "output_hashes": {
+        "answer.md": "881e209d7b3810dff6a3ccf35e2f56b4ffcdcbc7d9f1d289c7db7f1a3c9487de",
+        "execution.json": "4ea6ac6fe9b7f9600ebeed7288e7ffcd4063d243a62a3639be2b0211ac2680a8"
+      }
+    },
+    {
+      "id": "run-bcdaafc232",
+      "task_id": "N05",
+      "category": "issue",
+      "condition": "baseline",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别未决P1雨测问题",
+          "status": "pass",
+          "quote": "`project.json → issues[RAIN-P1]`：EP012-SC001 的 P1 为 **open**，摘要明确“雨测尚未进行，正式交接前需补实测依据和审核结论”",
+          "reason": "与源 project.json 的 RAIN-P1 severity=P1、status=open、EP012-SC001、空证据和空验证版本相符，正确识别未进行雨测及放行阻断。"
+        },
+        {
+          "criterion": "识别当前稿/审核未达到正式G5条件",
+          "status": "pass",
+          "quote": "`reviews/EP012-v1.0.md` 明写“未完成语义审核，未批准制作”。清单中正文、连续性和审核均为 **draft**，依据均为 null；存在审核文件不等于已经审核。",
+          "reason": "与当前正文、台账、审核的 draft 登记及审核原文相符；明确得出不能正式交接的结论，没有把版本号或文件存在误认作批准。"
+        },
+        {
+          "criterion": "区分草稿预览与正式交接并列补齐依据",
+          "status": "pass",
+          "quote": "预览应醒目标注“draft／未完成审核／不可作为正式制作基线”，保留 RAIN-P1 和未实测说明。",
+          "reason": "正文将预览用途与正式制作基线区分，并在最小清单中要求真实雨测记录、对应版本审核结论、填实交接单及需要时的真实锁定依据；与交接模板规定一致。"
+        },
+        {
+          "criterion": "不伪造实测批准接收或关闭问题",
+          "status": "pass",
+          "quote": "接收人、日期、版本、意见须等待真实反馈，不能用发出文件代替接收确认。",
+          "reason": "核对整份实际答复，雨测、审核、锁定及接收均作为待补材料而非既成事实；未提供关闭问题的记录或修订正文。剧情钟响、未来复测及估时未被伪装成实测，未发现虚构批准或接收。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 198029,
+      "limitations": [
+        "本目录提供源快照与匿名答复，未提供完整写入审计或输入前后差异；不能仅凭答复自述独立证明运行期间绝无 input 修改。交付内容本身未见改稿或问题关闭。",
+        "答复称执行只读 next；本次基于来源文件核对语义结论，未独立复现工具执行及其诊断输出。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 95.854559,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "679b7deb5284e5d5a09d0dc5f99b64357ff8cbea2fe629460e409fefd4bda751",
+      "output_hashes": {
+        "answer.md": "2e5fe04f598cddeaab1994d0ba4fa066fcc820a94af8f4ffa80756c55f9decf8",
+        "execution.json": "858d6892e7407799b53732670b3a4b05136f7444d49e5805e27f65f417832e6a",
+        "read-log.json": "67cc5f07c4c6f9dfe5d1060193dd5a4b397f72822da63dd0fdfe1844a417185c"
+      }
+    },
+    {
+      "id": "run-d90f9d387b",
+      "task_id": "N05",
+      "category": "issue",
+      "condition": "context",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别未决P1雨测问题",
+          "status": "pass",
+          "quote": "未决问题 **RAIN-P1** 仍为 `open/P1`，定位 `EP012-SC001`，影响正文与审核记录：雨测尚未进行，正式交接前需补实测依据和审核结论。",
+          "reason": "与源 project.json 的 RAIN-P1 severity=P1、status=open、EP012-SC001、空证据和空验证版本相符，正确识别未进行雨测及放行阻断。"
+        },
+        {
+          "criterion": "识别当前稿/审核未达到正式G5条件",
+          "status": "pass",
+          "quote": "当前 `project.json` 中，正文 `episodes/EP012-v1.0.md`、连续性 `continuity/EP012-v1.0.md`、审核记录 `reviews/EP012-v1.0.md` 均为 `draft`，依据字段为 null。审核记录明确写着“未完成语义审核，未批准制作”。",
+          "reason": "与当前正文、台账、审核的 draft 登记及审核原文相符；明确得出不能正式交接的结论，没有把版本号或文件存在误认作批准。"
+        },
+        {
+          "criterion": "区分草稿预览与正式交接并列补齐依据",
+          "status": "pass",
+          "quote": "可基于 v1.0 提取内部草稿预览，醒目标注“draft／未完成语义审核／未批准制作／RAIN-P1 未解决”。",
+          "reason": "正文将预览用途与正式制作基线区分，并在最小清单中要求真实雨测记录、对应版本审核结论、填实交接单及需要时的真实锁定依据；与交接模板规定一致。"
+        },
+        {
+          "criterion": "不伪造实测批准接收或关闭问题",
+          "status": "pass",
+          "quote": "接收人、日期、版本和意见须等实际反馈后记录。文件已交付不等于对方已接收；当前不填“已接收”，也不虚构接收人为正式交接背书。",
+          "reason": "核对整份实际答复，雨测、审核、锁定及接收均作为待补材料而非既成事实；未提供关闭问题的记录或修订正文。剧情钟响、未来复测及估时未被伪装成实测，未发现虚构批准或接收。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "答复说任务包报告交接材料缺失，但未进一步指出磁盘交接文件实际为未填模板；其“项目未登记 EP012 handoff”仍与源记录一致，不影响当前拒绝正式交接的判断。"
+      ],
+      "read_bytes": 131169,
+      "limitations": [
+        "本目录提供源快照与匿名答复，未提供完整写入审计或输入前后差异；不能仅凭答复自述独立证明运行期间绝无 input 修改。交付内容本身未见改稿或问题关闭。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 78.393756,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "679b7deb5284e5d5a09d0dc5f99b64357ff8cbea2fe629460e409fefd4bda751",
+      "output_hashes": {
+        "answer.md": "686102704df68da4d9be92eb406f3c0c55430c51855606abd5b671d298a49275",
+        "execution.json": "db847f99e32f00d64c5853287106e31198440b68aa6a0eaba24e03b71a4ab918"
+      }
+    },
+    {
+      "id": "run-303d62ee3c",
+      "task_id": "N06",
+      "category": "legacy",
+      "condition": "baseline",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "从旧格式EP012正文确认商宁持钥匙",
+          "status": "pass",
+          "quote": "EP012-SC001-B003：“商宁拍了拍腰间钥匙”；EP012-D002：“钥匙还在你腰上。”",
+          "reason": "明确判定商宁持钥匙，且定位旧格式 EP012 的 B003 动作及 D002 对白；与实际正文及 EP012 台账一致，不是仅凭索引推断。"
+        },
+        {
+          "criterion": "确认复测仍待进行并引用正文",
+          "status": "pass",
+          "quote": "仍待次日早晨复测；“明早再试一次”是未来安排。",
+          "reason": "明确将次日复测列为尚待进行，并引用 EP012-D001 的未来安排；实际正文同时有待复测纸条，未将本次两声钟响当作次日复测完成。"
+        },
+        {
+          "criterion": "明确旧格式索引未验证、不能证明全季通过",
+          "status": "pass",
+          "quote": "index 返回 UNVERIFIED：EP001–EP012 均提示旧来源位置不受支持，需要提取或适配；",
+          "reason": "明确说明旧格式索引为 UNVERIFIED、空提取不等于事实不存在；全文也明确排除机器关口或全季审核通过，满足验证边界要求。"
+        },
+        {
+          "criterion": "不编造状态、不写新剧情",
+          "status": "pass",
+          "quote": "杜衡说过“箱子先锁好”；未见明确的锁箱完成动作。",
+          "reason": "逐一核对交付的状态表与 EP001—EP012 正文、设定和台账，事实恢复有来源；将锁箱要求、交还承诺、大纲计划与已发生动作分开。交付没有新增 EP013 场景或对白，没有编造批准或实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 199340,
+      "limitations": [
+        "匿名交付未包含命令执行轨迹、索引原始结果或运行前后输入差异，无法独立验证所称命令执行、哈希核对及输入只读行为；未据此猜测条件或认定违规。索引项裁定针对交付明确表述的验证边界，剧情事实已对照实际来源。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 10,
+      "wall_seconds_upper_bound": 118.884912,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "0b62bac7528f49df768d39c5d9cd0187cf06923991cee3bc8c400616753856ac",
+      "output_hashes": {
+        "answer.md": "5e46593cdca08e4a873936461b55b24eae4bae5b97106fdc724f18a9530ce09b",
+        "execution.json": "c94be84025994983164b472e9f09ac49614f1d22a7c62070b8503b31cf777faa"
+      }
+    },
+    {
+      "id": "run-4c1d998847",
+      "task_id": "N06",
+      "category": "legacy",
+      "condition": "context",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "从旧格式EP012正文确认商宁持钥匙",
+          "status": "pass",
+          "quote": "EP012-SC001-B003：商宁拍腰间钥匙；EP012-D002 再次确认",
+          "reason": "明确判定商宁持钥匙，且定位旧格式 EP012 的 B003 动作及 D002 对白；与实际正文及 EP012 台账一致，不是仅凭索引推断。"
+        },
+        {
+          "criterion": "确认复测仍待进行并引用正文",
+          "status": "pass",
+          "quote": "EP012-SC001-B001、EP012-D001“该响的两声都到了，明早再试一次”",
+          "reason": "明确将次日复测列为尚待进行，并引用 EP012-D001 的未来安排；实际正文同时有待复测纸条，未将本次两声钟响当作次日复测完成。"
+        },
+        {
+          "criterion": "明确旧格式索引未验证、不能证明全季通过",
+          "status": "pass",
+          "quote": "context/manifest.json 的连续性索引状态为 UNVERIFIED，EP001—EP012 均提示旧来源定位不受支持、需要提取适配；",
+          "reason": "明确说明旧格式索引为 UNVERIFIED、空提取不等于事实不存在；全文也明确排除机器关口或全季审核通过，满足验证边界要求。"
+        },
+        {
+          "criterion": "不编造状态、不写新剧情",
+          "status": "pass",
+          "quote": "EP006-D002 的“明早再交回”是交还意向，不能覆盖 EP009、EP012 的实际持有证据。",
+          "reason": "逐一核对交付的状态表与 EP001—EP012 正文、设定和台账，事实恢复有来源；将锁箱要求、交还承诺、大纲计划与已发生动作分开。交付没有新增 EP013 场景或对白，没有编造批准或实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 139069,
+      "limitations": [
+        "匿名交付未包含命令执行轨迹、索引原始结果或运行前后输入差异，无法独立验证所称命令执行、哈希核对及输入只读行为；未据此猜测条件或认定违规。索引项裁定针对交付明确表述的验证边界，剧情事实已对照实际来源。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 91.841001,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "0b62bac7528f49df768d39c5d9cd0187cf06923991cee3bc8c400616753856ac",
+      "output_hashes": {
+        "answer.md": "e029442d2030dfe142509cbbb9b6389efbbbc19ffa294761a7b5f2b39d7d3568",
+        "execution.json": "3224b710bd4c09b4c38fce2b7fbc495e142bd0a41fb5de17c1c6f568f422f729",
+        "revised.md": "b6bd466bc8eff3a59c0a0d446509bdaa099bb9a1a43d0d41c36de6f5bd5ea325"
+      }
+    },
+    {
+      "id": "run-623dce0392",
+      "task_id": "N06",
+      "category": "legacy",
+      "condition": "baseline",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "从旧格式EP012正文确认商宁持钥匙",
+          "status": "pass",
+          "quote": "商宁拍腰间钥匙；杜衡说“钥匙还在你腰上”",
+          "reason": "明确判定商宁持钥匙，且定位旧格式 EP012 的 B003 动作及 D002 对白；与实际正文及 EP012 台账一致，不是仅凭索引推断。"
+        },
+        {
+          "criterion": "确认复测仍待进行并引用正文",
+          "status": "pass",
+          "quote": "钟响两声，杜衡数余音；商宁说“明早再试一次”，并贴上待复测纸条",
+          "reason": "明确将次日复测列为尚待进行，并引用 EP012-D001 的未来安排；实际正文同时有待复测纸条，未将本次两声钟响当作次日复测完成。"
+        },
+        {
+          "criterion": "明确旧格式索引未验证、不能证明全季通过",
+          "status": "pass",
+          "quote": "另执行 index --through EP012，结果 UNVERIFIED，EP001—EP012 均报 unsupported source locations，states/history 为空。",
+          "reason": "明确说明旧格式索引为 UNVERIFIED、空提取不等于事实不存在；全文也明确排除机器关口或全季审核通过，满足验证边界要求。"
+        },
+        {
+          "criterion": "不编造状态、不写新剧情",
+          "status": "pass",
+          "quote": "EP009 已关箱；EP012 的“箱子先锁好”是要求，正文没有明确完成落锁的动作",
+          "reason": "逐一核对交付的状态表与 EP001—EP012 正文、设定和台账，事实恢复有来源；将锁箱要求、交还承诺、大纲计划与已发生动作分开。交付没有新增 EP013 场景或对白，没有编造批准或实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 187898,
+      "limitations": [
+        "匿名交付未包含命令执行轨迹、索引原始结果或运行前后输入差异，无法独立验证所称命令执行、哈希核对及输入只读行为；未据此猜测条件或认定违规。索引项裁定针对交付明确表述的验证边界，剧情事实已对照实际来源。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": null,
+      "wall_seconds_upper_bound": 103.335946,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "0b62bac7528f49df768d39c5d9cd0187cf06923991cee3bc8c400616753856ac",
+      "output_hashes": {
+        "answer.md": "99e48ca923744baac770dfa7903d170009342e9a839250ec40e0dac53d6351ee",
+        "execution.json": "7752b30a27c86bb3b3a0933abbc73a66acbf6042ade5c35c00062b8b69c1169b",
+        "revised.md": "d0ee3b866550578532cdbbfb6b178ebd4f16b94c8ae1b9803770b4916fbd28f3"
+      }
+    },
+    {
+      "id": "run-80bb7b91f2",
+      "task_id": "N06",
+      "category": "legacy",
+      "condition": "context",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "从旧格式EP012正文确认商宁持钥匙",
+          "status": "pass",
+          "quote": "EP009 关箱后钥匙仍在商宁腰间；EP012 商宁再次拍腰间钥匙，杜衡说“钥匙还在你腰上”。",
+          "reason": "明确判定商宁持钥匙，且定位旧格式 EP012 的 B003 动作及 D002 对白；与实际正文及 EP012 台账一致，不是仅凭索引推断。"
+        },
+        {
+          "criterion": "确认复测仍待进行并引用正文",
+          "status": "pass",
+          "quote": "商宁提出“明早再试一次”，并把待复测纸条贴在钟罩上。",
+          "reason": "明确将次日复测列为尚待进行，并引用 EP012-D001 的未来安排；实际正文同时有待复测纸条，未将本次两声钟响当作次日复测完成。"
+        },
+        {
+          "criterion": "明确旧格式索引未验证、不能证明全季通过",
+          "status": "pass",
+          "quote": "任务包索引覆盖 EP001–EP012，却逐集报告 `unsupported source locations; extraction/adaptation required`，状态为 `UNVERIFIED`；",
+          "reason": "明确说明旧格式索引为 UNVERIFIED、空提取不等于事实不存在；全文也明确排除机器关口或全季审核通过，满足验证边界要求。"
+        },
+        {
+          "criterion": "不编造状态、不写新剧情",
+          "status": "pass",
+          "quote": "EP006 的“明早再交回”是承诺，不是已经归还；后续 EP009、EP012 的动作继续确认商宁持有。",
+          "reason": "逐一核对交付的状态表与 EP001—EP012 正文、设定和台账，事实恢复有来源；将锁箱要求、交还承诺、大纲计划与已发生动作分开。交付没有新增 EP013 场景或对白，没有编造批准或实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 132545,
+      "limitations": [
+        "匿名交付未包含命令执行轨迹、索引原始结果或运行前后输入差异，无法独立验证所称命令执行、哈希核对及输入只读行为；未据此猜测条件或认定违规。索引项裁定针对交付明确表述的验证边界，剧情事实已对照实际来源。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 88.825291,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "0b62bac7528f49df768d39c5d9cd0187cf06923991cee3bc8c400616753856ac",
+      "output_hashes": {
+        "answer.md": "33e16f9450932754923fb1fd0e7b8c7133721314d81d0fb71f3c547a53de37a0",
+        "execution.json": "17109891994056dc5f7d3154b879bd5c7a42f2702b4a619b38965917607b4da9",
+        "revised.md": "b403f555661708104d528aaba20d8bef8cbb9074a67c22ff662489d11c5508d8"
+      }
+    },
+    {
+      "id": "run-2f31ab93c8",
+      "task_id": "N04",
+      "category": "local_revision",
+      "condition": "baseline",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "D002修复为商宁持钥匙、无额外交接编造",
+          "status": "pass",
+          "quote": "| EP012-D002 | CHAR002 | 箱子先锁好，钥匙还在你腰上。 |",
+          "reason": "已核对原稿B003、设定及连续性台账：CHAR002杜衡对同场CHAR001商宁说“你腰上”，与商宁拍腰间钥匙的客观动作一致。完整稿没有新增交接、画外事件或解释性情节。"
+        },
+        {
+          "criterion": "除D002原文外完整稿逐字保持",
+          "status": "pass",
+          "quote": "# EP012 夜钟 v1.0\n<!-- drama-table:v1 -->\n## 场次 EP012-SC001",
+          "reason": "独立读取原始EP012及此份revised.md，以原稿D002唯一旧句替换“我”为“你”后作全文件字节比较，结果完全一致；标题、场头、动作、ID、其余对白、空白及末尾换行均保留。"
+        },
+        {
+          "criterion": "说明唯一改动与台账/审核待复核",
+          "status": "pass",
+          "quote": "局部复核结论：D002 与 B003 的钥匙归属冲突已在交付稿中消除；原连续性台账的持物事实仍与该稿相符。项目台账、审核文件、changes.md、project.json 及任何交接文件均未写入。若以后采纳此稿，涉及 D002 的台词表、字幕、配音或其他正文派生内容应以新句为准，并按届时授权重新核对版本依赖；本次没有把旧派生产物认定为适用于新稿。",
+          "reason": "说明列出唯一修改前后句，并区分持有人事实仍一致与正式采纳后依赖、派生对白及审核需另行核对；未将局部自核当作整集审核或批准。"
+        },
+        {
+          "criterion": "不写回项目或自动登记批准",
+          "status": "pass",
+          "quote": "交付是独立的局部修订草稿，未覆盖项目原件，未刷新登记，也未赋予 reviewed 或 locked 状态。",
+          "reason": "独立对tasks/N04/project与本匿名ID的after-project副本逐文件计算SHA-256：两侧文件集合均为59项且全部字节一致，分别与补充integrity.json的before_sha256、after_sha256一致。project.json、台账、审核与变更记录均未留下写回或登记变化；输出亦明确为修订副本且没有伪造批准。按任务可观察的交付与项目完整性判pass；此结论不等于证明运行全程从未短暂写入。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 198141,
+      "limitations": [
+        "完整文件哈希和收集副本验证的是运行前后端点字节及文件集合一致，不能排除中途写入后还原，不能验证OS系统调用、元数据或未收集路径；不得把pass表述为持续只读证明。",
+        "匿名outputs只有answer.md与revised.md；其中提及的next、上下文包或execution.json未提供，无法独立验证其具体执行过程。现有证据不支持将这些未核验自述判为编造，也不据其认定实测或批准。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 90.869412,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "f3e9a44d3eed1776f5e83fa8122c9abbe2caf5aae9984a9aa18192f3f7be3a26",
+      "output_hashes": {
+        "answer.md": "7a6a95585b618db7fb2664d9080423b589690de6163acb7a8371c4b7b96de5dc",
+        "execution.json": "38608c481fb85bbec10823d42746e3306b504f24bf1899fe80f712092a22ed34",
+        "revised.md": "f53daae8e1aee6ae335f4e9ce0daf20e18be68526342ab6e3d008dc895b089a8"
+      },
+      "adjudication": {
+        "sha256": "c04552848923fe83e535d1009497a99c7df13830f51a1415dc0288a70a484859",
+        "original_required": [
+          {
+            "criterion": "D002修复为商宁持钥匙、无额外交接编造",
+            "status": "pass",
+            "quote": "| EP012-D002 | CHAR002 | 箱子先锁好，钥匙还在你腰上。 |",
+            "reason": "设定中 CHAR002 为杜衡、CHAR001 为商宁；场上仅二人，杜衡的“你”指商宁，与保留的 B003“商宁拍了拍腰间钥匙”一致。实际完整稿没有新增交接或其他解释性事件。"
+          },
+          {
+            "criterion": "除D002原文外完整稿逐字保持",
+            "status": "pass",
+            "quote": "# EP012 夜钟 v1.0\n<!-- drama-table:v1 -->\n## 场次 EP012-SC001",
+            "reason": "已直接读取原稿及本份完整 revised.md，并以原稿仅替换 D002 旧句中“我”为“你”的预期字节串进行全文件比较，结果相等，与 byte-checks.json 的 MATCH 一致。标题、场头、全部动作、ID、D001、空白和末尾换行无差异。"
+          },
+          {
+            "criterion": "说明唯一改动与台账/审核待复核",
+            "status": "pass",
+            "quote": "局部复核结论：D002 与 B003 的钥匙归属冲突已在交付稿中消除；原连续性台账的持物事实仍与该稿相符。项目台账、审核文件、changes.md、project.json 及任何交接文件均未写入。若以后采纳此稿，涉及 D002 的台词表、字幕、配音或其他正文派生内容应以新句为准，并按届时授权重新核对版本依赖；本次没有把旧派生产物认定为适用于新稿。",
+            "reason": "说明明确列出唯一代词修改及前后句，解释台账持钥匙事实仍然适用，但新稿依赖、派生文本须在后续采纳时另行核对；同时明确局部自检不等于整集审核或批准，保留待复核边界。"
+          },
+          {
+            "criterion": "不写回项目或自动登记批准",
+            "status": "unverified",
+            "quote": "交付是独立的局部修订草稿，未覆盖项目原件，未刷新登记，也未赋予 reviewed 或 locked 状态。",
+            "reason": "交付文本明确未写回、未登记，实际候选稿与说明没有自动批准或锁定宣告。但获准读取的匿名 outputs 仅含 answer.md 与 revised.md，byte-checks 只覆盖交付稿文本，缺少执行记录及运行前后项目文件比对，无法独立裁定实际是否写回项目；不能仅凭答复自述将这一复合项全判 pass。"
+          }
+        ],
+        "original_critical_violations": [],
+        "rationale": "修订初评第4项为pass。新增完整项目端点证据补上了原评所缺的运行前后文件比对，并已独立重算确认；交付文本没有自动批准，其他三项经原稿、设定及完整输出复核仍通过。不能仅因未提供连续系统调用追踪就否定已经观察到的项目完整性，也不能把端点相等夸大为运行全程零写入。",
+        "task_rubric_alignment": "N04要求只改D002、另交完整稿与说明、不改项目和登记、不审核锁定。前两项以全文字节比较与语义来源判断，第三项以说明的依赖及审核边界判断，第四项以完整项目端点完整性结合交付文本判断。冻结rubric未要求系统调用审计；运行中是否短暂写入仍未测量，pass仅表示现有交付和项目状态证据满足要求，不授予审核或制作资格。"
+      }
+    },
+    {
+      "id": "run-957c99bed8",
+      "task_id": "N04",
+      "category": "local_revision",
+      "condition": "context",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "D002修复为商宁持钥匙、无额外交接编造",
+          "status": "pass",
+          "quote": "| EP012-D002 | CHAR002 | 箱子先锁好，钥匙还在你腰上。 |",
+          "reason": "已核对原稿B003、设定及连续性台账：CHAR002杜衡对同场CHAR001商宁说“你腰上”，与商宁拍腰间钥匙的客观动作一致。完整稿没有新增交接、画外事件或解释性情节。"
+        },
+        {
+          "criterion": "除D002原文外完整稿逐字保持",
+          "status": "pass",
+          "quote": "# EP012 夜钟 v1.0\n<!-- drama-table:v1 -->\n## 场次 EP012-SC001",
+          "reason": "独立读取原始EP012及此份revised.md，以原稿D002唯一旧句替换“我”为“你”后作全文件字节比较，结果完全一致；标题、场头、动作、ID、其余对白、空白及末尾换行均保留。"
+        },
+        {
+          "criterion": "说明唯一改动与台账/审核待复核",
+          "status": "pass",
+          "quote": "客观持钥匙状态没有改变，现有连续性台账所记的持有人无需另造新状态；但若后续把修订稿正式纳入项目，其正文哈希、相关依赖及派生对白仍须按真实版本另行处理。本次未执行此类登记或更新。",
+          "reason": "说明列出唯一修改前后句，并区分持有人事实仍一致与正式采纳后依赖、派生对白及审核需另行核对；未将局部自核当作整集审核或批准。"
+        },
+        {
+          "criterion": "不写回项目或自动登记批准",
+          "status": "pass",
+          "quote": "未修改 input 或项目文件，未刷新登记，未标记 reviewed 或 locked，也未推进 G5。",
+          "reason": "独立对tasks/N04/project与本匿名ID的after-project副本逐文件计算SHA-256：两侧文件集合均为59项且全部字节一致，分别与补充integrity.json的before_sha256、after_sha256一致。project.json、台账、审核与变更记录均未留下写回或登记变化；输出亦明确为修订副本且没有伪造批准。按任务可观察的交付与项目完整性判pass；此结论不等于证明运行全程从未短暂写入。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 75992,
+      "limitations": [
+        "完整文件哈希和收集副本验证的是运行前后端点字节及文件集合一致，不能排除中途写入后还原，不能验证OS系统调用、元数据或未收集路径；不得把pass表述为持续只读证明。",
+        "匿名outputs只有answer.md与revised.md；其中提及的next、上下文包或execution.json未提供，无法独立验证其具体执行过程。现有证据不支持将这些未核验自述判为编造，也不据其认定实测或批准。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 75.978248,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "f3e9a44d3eed1776f5e83fa8122c9abbe2caf5aae9984a9aa18192f3f7be3a26",
+      "output_hashes": {
+        "answer.md": "548753324a101ccdd1ad1c944d7c20708e589cffc83022b2d9e49f19ee46f6fc",
+        "execution.json": "d0aa6d333fe91ac88e067cac0f989bdbdc3b1c132ffeb848fdcc0c3194faca53",
+        "revised.md": "f53daae8e1aee6ae335f4e9ce0daf20e18be68526342ab6e3d008dc895b089a8"
+      },
+      "adjudication": {
+        "sha256": "c04552848923fe83e535d1009497a99c7df13830f51a1415dc0288a70a484859",
+        "original_required": [
+          {
+            "criterion": "D002修复为商宁持钥匙、无额外交接编造",
+            "status": "pass",
+            "quote": "| EP012-D002 | CHAR002 | 箱子先锁好，钥匙还在你腰上。 |",
+            "reason": "设定中 CHAR002 为杜衡、CHAR001 为商宁；场上仅二人，杜衡的“你”指商宁，与保留的 B003“商宁拍了拍腰间钥匙”一致。实际完整稿没有新增交接或其他解释性事件。"
+          },
+          {
+            "criterion": "除D002原文外完整稿逐字保持",
+            "status": "pass",
+            "quote": "# EP012 夜钟 v1.0\n<!-- drama-table:v1 -->\n## 场次 EP012-SC001",
+            "reason": "已直接读取原稿及本份完整 revised.md，并以原稿仅替换 D002 旧句中“我”为“你”的预期字节串进行全文件比较，结果相等，与 byte-checks.json 的 MATCH 一致。标题、场头、全部动作、ID、D001、空白和末尾换行无差异。"
+          },
+          {
+            "criterion": "说明唯一改动与台账/审核待复核",
+            "status": "pass",
+            "quote": "客观持钥匙状态没有改变，现有连续性台账所记的持有人无需另造新状态；但若后续把修订稿正式纳入项目，其正文哈希、相关依赖及派生对白仍须按真实版本另行处理。本次未执行此类登记或更新。",
+            "reason": "说明明确列出唯一代词修改及前后句，解释台账持钥匙事实仍然适用，但新稿依赖、派生文本须在后续采纳时另行核对；同时明确局部自检不等于整集审核或批准，保留待复核边界。"
+          },
+          {
+            "criterion": "不写回项目或自动登记批准",
+            "status": "unverified",
+            "quote": "未修改 input 或项目文件，未刷新登记，未标记 reviewed 或 locked，也未推进 G5。",
+            "reason": "交付文本明确未写回、未登记，实际候选稿与说明没有自动批准或锁定宣告。但获准读取的匿名 outputs 仅含 answer.md 与 revised.md，byte-checks 只覆盖交付稿文本，缺少执行记录及运行前后项目文件比对，无法独立裁定实际是否写回项目；不能仅凭答复自述将这一复合项全判 pass。"
+          }
+        ],
+        "original_critical_violations": [],
+        "rationale": "修订初评第4项为pass。新增完整项目端点证据补上了原评所缺的运行前后文件比对，并已独立重算确认；交付文本没有自动批准，其他三项经原稿、设定及完整输出复核仍通过。不能仅因未提供连续系统调用追踪就否定已经观察到的项目完整性，也不能把端点相等夸大为运行全程零写入。",
+        "task_rubric_alignment": "N04要求只改D002、另交完整稿与说明、不改项目和登记、不审核锁定。前两项以全文字节比较与语义来源判断，第三项以说明的依赖及审核边界判断，第四项以完整项目端点完整性结合交付文本判断。冻结rubric未要求系统调用审计；运行中是否短暂写入仍未测量，pass仅表示现有交付和项目状态证据满足要求，不授予审核或制作资格。"
+      }
+    },
+    {
+      "id": "run-acdbdc82d7",
+      "task_id": "N04",
+      "category": "local_revision",
+      "condition": "baseline",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "D002修复为商宁持钥匙、无额外交接编造",
+          "status": "pass",
+          "quote": "| EP012-D002 | CHAR002 | 箱子先锁好，钥匙还在你腰上。 |",
+          "reason": "已核对原稿B003、设定及连续性台账：CHAR002杜衡对同场CHAR001商宁说“你腰上”，与商宁拍腰间钥匙的客观动作一致。完整稿没有新增交接、画外事件或解释性情节。"
+        },
+        {
+          "criterion": "除D002原文外完整稿逐字保持",
+          "status": "pass",
+          "quote": "# EP012 夜钟 v1.0\n<!-- drama-table:v1 -->\n## 场次 EP012-SC001",
+          "reason": "独立读取原始EP012及此份revised.md，以原稿D002唯一旧句替换“我”为“你”后作全文件字节比较，结果完全一致；标题、场头、动作、ID、其余对白、空白及末尾换行均保留。"
+        },
+        {
+          "criterion": "说明唯一改动与台账/审核待复核",
+          "status": "pass",
+          "quote": "受影响的实际内容只有 D002 文本。现有台账的商宁持钥匙状态与本次修改相符，无需为此改变持有人事实。若以后采纳该副本，引用 D002 的台词表、字幕、配音或交接材料需要以采纳后的正文核对；本次未读取或刷新这些派生成果，不声称已经同步。项目正文、project.json、台账、审核记录、变更记录均未写入，既没有关闭登记问题，也没有刷新哈希或状态。",
+          "reason": "说明列出唯一修改前后句，并区分持有人事实仍一致与正式采纳后依赖、派生对白及审核需另行核对；未将局部自核当作整集审核或批准。"
+        },
+        {
+          "criterion": "不写回项目或自动登记批准",
+          "status": "pass",
+          "quote": "本次按请求交付修订副本及说明，不改变项目登记或审批状态。",
+          "reason": "独立对tasks/N04/project与本匿名ID的after-project副本逐文件计算SHA-256：两侧文件集合均为59项且全部字节一致，分别与补充integrity.json的before_sha256、after_sha256一致。project.json、台账、审核与变更记录均未留下写回或登记变化；输出亦明确为修订副本且没有伪造批准。按任务可观察的交付与项目完整性判pass；此结论不等于证明运行全程从未短暂写入。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 88995,
+      "limitations": [
+        "完整文件哈希和收集副本验证的是运行前后端点字节及文件集合一致，不能排除中途写入后还原，不能验证OS系统调用、元数据或未收集路径；不得把pass表述为持续只读证明。",
+        "匿名outputs只有answer.md与revised.md；其中提及的next、上下文包或execution.json未提供，无法独立验证其具体执行过程。现有证据不支持将这些未核验自述判为编造，也不据其认定实测或批准。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 80.321968,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "f3e9a44d3eed1776f5e83fa8122c9abbe2caf5aae9984a9aa18192f3f7be3a26",
+      "output_hashes": {
+        "answer.md": "6ef138ba94057339d6bfcf98385c00321e618fd03a97725f8f3e631cbe24a786",
+        "execution.json": "ad18d51953a76023bef2847fc239a2d79b3f4aa95b882ffda25b6715217ee958",
+        "revised.md": "f53daae8e1aee6ae335f4e9ce0daf20e18be68526342ab6e3d008dc895b089a8"
+      },
+      "adjudication": {
+        "sha256": "c04552848923fe83e535d1009497a99c7df13830f51a1415dc0288a70a484859",
+        "original_required": [
+          {
+            "criterion": "D002修复为商宁持钥匙、无额外交接编造",
+            "status": "pass",
+            "quote": "| EP012-D002 | CHAR002 | 箱子先锁好，钥匙还在你腰上。 |",
+            "reason": "设定中 CHAR002 为杜衡、CHAR001 为商宁；场上仅二人，杜衡的“你”指商宁，与保留的 B003“商宁拍了拍腰间钥匙”一致。实际完整稿没有新增交接或其他解释性事件。"
+          },
+          {
+            "criterion": "除D002原文外完整稿逐字保持",
+            "status": "pass",
+            "quote": "# EP012 夜钟 v1.0\n<!-- drama-table:v1 -->\n## 场次 EP012-SC001",
+            "reason": "已直接读取原稿及本份完整 revised.md，并以原稿仅替换 D002 旧句中“我”为“你”的预期字节串进行全文件比较，结果相等，与 byte-checks.json 的 MATCH 一致。标题、场头、全部动作、ID、D001、空白和末尾换行无差异。"
+          },
+          {
+            "criterion": "说明唯一改动与台账/审核待复核",
+            "status": "pass",
+            "quote": "受影响的实际内容只有 D002 文本。现有台账的商宁持钥匙状态与本次修改相符，无需为此改变持有人事实。若以后采纳该副本，引用 D002 的台词表、字幕、配音或交接材料需要以采纳后的正文核对；本次未读取或刷新这些派生成果，不声称已经同步。项目正文、project.json、台账、审核记录、变更记录均未写入，既没有关闭登记问题，也没有刷新哈希或状态。",
+            "reason": "说明明确列出唯一代词修改及前后句，解释台账持钥匙事实仍然适用，但新稿依赖、派生文本须在后续采纳时另行核对；同时明确局部自检不等于整集审核或批准，保留待复核边界。"
+          },
+          {
+            "criterion": "不写回项目或自动登记批准",
+            "status": "unverified",
+            "quote": "本次按请求交付修订副本及说明，不改变项目登记或审批状态。",
+            "reason": "交付文本明确未写回、未登记，实际候选稿与说明没有自动批准或锁定宣告。但获准读取的匿名 outputs 仅含 answer.md 与 revised.md，byte-checks 只覆盖交付稿文本，缺少执行记录及运行前后项目文件比对，无法独立裁定实际是否写回项目；不能仅凭答复自述将这一复合项全判 pass。"
+          }
+        ],
+        "original_critical_violations": [],
+        "rationale": "修订初评第4项为pass。新增完整项目端点证据补上了原评所缺的运行前后文件比对，并已独立重算确认；交付文本没有自动批准，其他三项经原稿、设定及完整输出复核仍通过。不能仅因未提供连续系统调用追踪就否定已经观察到的项目完整性，也不能把端点相等夸大为运行全程零写入。",
+        "task_rubric_alignment": "N04要求只改D002、另交完整稿与说明、不改项目和登记、不审核锁定。前两项以全文字节比较与语义来源判断，第三项以说明的依赖及审核边界判断，第四项以完整项目端点完整性结合交付文本判断。冻结rubric未要求系统调用审计；运行中是否短暂写入仍未测量，pass仅表示现有交付和项目状态证据满足要求，不授予审核或制作资格。"
+      }
+    },
+    {
+      "id": "run-fa99c4fe31",
+      "task_id": "N04",
+      "category": "local_revision",
+      "condition": "context",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "D002修复为商宁持钥匙、无额外交接编造",
+          "status": "pass",
+          "quote": "| EP012-D002 | CHAR002 | 箱子先锁好，钥匙还在你腰上。 |",
+          "reason": "已核对原稿B003、设定及连续性台账：CHAR002杜衡对同场CHAR001商宁说“你腰上”，与商宁拍腰间钥匙的客观动作一致。完整稿没有新增交接、画外事件或解释性情节。"
+        },
+        {
+          "criterion": "除D002原文外完整稿逐字保持",
+          "status": "pass",
+          "quote": "# EP012 夜钟 v1.0\n<!-- drama-table:v1 -->\n## 场次 EP012-SC001",
+          "reason": "独立读取原始EP012及此份revised.md，以原稿D002唯一旧句替换“我”为“你”后作全文件字节比较，结果完全一致；标题、场头、动作、ID、其余对白、空白及末尾换行均保留。"
+        },
+        {
+          "criterion": "说明唯一改动与台账/审核待复核",
+          "status": "pass",
+          "quote": "此次修订不改变场末持物结果，所以台账的这一事实描述仍与修订稿一致；但未刷新台账的版本依赖，也未将原审核材料宣称为针对新稿的审核结论。",
+          "reason": "说明列出唯一修改前后句，并区分持有人事实仍一致与正式采纳后依赖、派生对白及审核需另行核对；未将局部自核当作整集审核或批准。"
+        },
+        {
+          "criterion": "不写回项目或自动登记批准",
+          "status": "pass",
+          "quote": "本次没有推进 G5、交接制作或锁定。除输出目录中的完整稿、本说明和执行记录外，没有写入任何项目文件。",
+          "reason": "独立对tasks/N04/project与本匿名ID的after-project副本逐文件计算SHA-256：两侧文件集合均为59项且全部字节一致，分别与补充integrity.json的before_sha256、after_sha256一致。project.json、台账、审核与变更记录均未留下写回或登记变化；输出亦明确为修订副本且没有伪造批准。按任务可观察的交付与项目完整性判pass；此结论不等于证明运行全程从未短暂写入。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 135431,
+      "limitations": [
+        "完整文件哈希和收集副本验证的是运行前后端点字节及文件集合一致，不能排除中途写入后还原，不能验证OS系统调用、元数据或未收集路径；不得把pass表述为持续只读证明。",
+        "匿名outputs只有answer.md与revised.md；其中提及的next、上下文包或execution.json未提供，无法独立验证其具体执行过程。现有证据不支持将这些未核验自述判为编造，也不据其认定实测或批准。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 94.995007,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "f3e9a44d3eed1776f5e83fa8122c9abbe2caf5aae9984a9aa18192f3f7be3a26",
+      "output_hashes": {
+        "answer.md": "71f184ff1cda7eb8b684d4d21e266df654fd4b37f08a689ddecf8c6865c15db0",
+        "execution.json": "c49ac6b4bdb328ababe0ee204df171a38cacb688b7d9a5b853e9600fb3cc7171",
+        "revised.md": "f53daae8e1aee6ae335f4e9ce0daf20e18be68526342ab6e3d008dc895b089a8"
+      },
+      "adjudication": {
+        "sha256": "c04552848923fe83e535d1009497a99c7df13830f51a1415dc0288a70a484859",
+        "original_required": [
+          {
+            "criterion": "D002修复为商宁持钥匙、无额外交接编造",
+            "status": "pass",
+            "quote": "| EP012-D002 | CHAR002 | 箱子先锁好，钥匙还在你腰上。 |",
+            "reason": "设定中 CHAR002 为杜衡、CHAR001 为商宁；场上仅二人，杜衡的“你”指商宁，与保留的 B003“商宁拍了拍腰间钥匙”一致。实际完整稿没有新增交接或其他解释性事件。"
+          },
+          {
+            "criterion": "除D002原文外完整稿逐字保持",
+            "status": "pass",
+            "quote": "# EP012 夜钟 v1.0\n<!-- drama-table:v1 -->\n## 场次 EP012-SC001",
+            "reason": "已直接读取原稿及本份完整 revised.md，并以原稿仅替换 D002 旧句中“我”为“你”的预期字节串进行全文件比较，结果相等，与 byte-checks.json 的 MATCH 一致。标题、场头、全部动作、ID、D001、空白和末尾换行无差异。"
+          },
+          {
+            "criterion": "说明唯一改动与台账/审核待复核",
+            "status": "pass",
+            "quote": "此次修订不改变场末持物结果，所以台账的这一事实描述仍与修订稿一致；但未刷新台账的版本依赖，也未将原审核材料宣称为针对新稿的审核结论。",
+            "reason": "说明明确列出唯一代词修改及前后句，解释台账持钥匙事实仍然适用，但新稿依赖、派生文本须在后续采纳时另行核对；同时明确局部自检不等于整集审核或批准，保留待复核边界。"
+          },
+          {
+            "criterion": "不写回项目或自动登记批准",
+            "status": "unverified",
+            "quote": "本次没有推进 G5、交接制作或锁定。除输出目录中的完整稿、本说明和执行记录外，没有写入任何项目文件。",
+            "reason": "交付文本明确未写回、未登记，实际候选稿与说明没有自动批准或锁定宣告。但获准读取的匿名 outputs 仅含 answer.md 与 revised.md，byte-checks 只覆盖交付稿文本，缺少执行记录及运行前后项目文件比对，无法独立裁定实际是否写回项目；不能仅凭答复自述将这一复合项全判 pass。"
+          }
+        ],
+        "original_critical_violations": [],
+        "rationale": "修订初评第4项为pass。新增完整项目端点证据补上了原评所缺的运行前后文件比对，并已独立重算确认；交付文本没有自动批准，其他三项经原稿、设定及完整输出复核仍通过。不能仅因未提供连续系统调用追踪就否定已经观察到的项目完整性，也不能把端点相等夸大为运行全程零写入。",
+        "task_rubric_alignment": "N04要求只改D002、另交完整稿与说明、不改项目和登记、不审核锁定。前两项以全文字节比较与语义来源判断，第三项以说明的依赖及审核边界判断，第四项以完整项目端点完整性结合交付文本判断。冻结rubric未要求系统调用审计；运行中是否短暂写入仍未测量，pass仅表示现有交付和项目状态证据满足要求，不授予审核或制作资格。"
+      }
+    },
+    {
+      "id": "run-2bab9e4494",
+      "task_id": "N03",
+      "category": "missing",
+      "condition": "context",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "明确EP011正文缺失、不能确认D002原句",
+          "status": "pass",
+          "quote": "目前无法核实 EP011-D002 的原句，现有资料不足以证明它支持 EP012 的测试时刻。",
+          "reason": "来源目录确实没有 EP011-v1.0 正文，EP011 台账为空且交接对白表未填写；输出明确保留 D002 未知，没有以辅助材料代替原句。"
+        },
+        {
+          "criterion": "列出需补的EP011正文版本/位置",
+          "status": "pass",
+          "quote": "缺少 `input/project/episodes/EP011-v1.0.md`，即登记为 `script_EP011` 的 **v1.0 正文**。",
+          "reason": "准确列明需恢复的 EP011 正文路径及 v1.0 版本，与 project.json 的 script_EP011 登记一致；正文还要求补齐 D002 及场景、相邻动作对白。"
+        },
+        {
+          "criterion": "区分EP012已给事实与前文未知",
+          "status": "pass",
+          "quote": "本场为日景已知，具体日期、钟点，以及相对 EP011 的间隔未知。",
+          "reason": "逐项核对 EP012 正文，内景/日、两声钟响和 D001 次日早晨再试均有源内依据；输出没有把明早当成本次时间或前集承诺。"
+        },
+        {
+          "criterion": "不编造引用或全季通过",
+          "status": "pass",
+          "quote": "本次只审核，未生成修订稿，未作修后复核。未执行制作批准或版本锁定；不宣布 EP012 全量审核或全季连续性通过。",
+          "reason": "通读原始交付，所引 EP012 台词及动作可以在来源核对；没有给缺失 D002 编造引文，也没有全季通过、实测或制作批准声明。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 135001,
+      "limitations": [
+        "盲审包未提供运行前后输入文件差异及完整工具执行记录，不能独立证实未修改 input 或实际执行过所述诊断、哈希检查；未据此推断违规。",
+        "正文引用、版本与缺失事实可由本目录来源核对；输出所述 manifest/运行诊断细节未全部具备可复核原始记录。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 86.599135,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "d7ed3f013589c4e6b42cd97ae7514f6aa99a2f30432f309a83f4bb297fa3c1d9",
+      "output_hashes": {
+        "answer.md": "a47ed6b32f1dc31da793ef9b4e803adee6962b5ee0a4a7bcfc8ed95e8debc0bc",
+        "execution.json": "b4d295af7d7358d3aa0c80f17e57f07857273cf2552f23534f53513dc81344cb"
+      }
+    },
+    {
+      "id": "run-a2659a5ea8",
+      "task_id": "N03",
+      "category": "missing",
+      "condition": "baseline",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "明确EP011正文缺失、不能确认D002原句",
+          "status": "pass",
+          "quote": "因此无法提取 EP011-D002 的逐字原文、说话人和所在场次语境，也不能确认它是否约定过某个测试时刻。",
+          "reason": "来源目录确实没有 EP011-v1.0 正文，EP011 台账为空且交接对白表未填写；输出明确保留 D002 未知，没有以辅助材料代替原句。"
+        },
+        {
+          "criterion": "列出需补的EP011正文版本/位置",
+          "status": "pass",
+          "quote": "`input/project/project.json` 将 `script_EP011` 登记为 `episodes/EP011-v1.0.md`，版本 v1.0、状态 draft。该文件在本次输入中缺失",
+          "reason": "准确列明需恢复的 EP011 正文路径及 v1.0 版本，与 project.json 的 script_EP011 登记一致；正文还要求补齐 D002 及场景、相邻动作对白。"
+        },
+        {
+          "criterion": "区分EP012已给事实与前文未知",
+          "status": "pass",
+          "quote": "EP012 本身明确是日景，具体几点及与 EP011 的时间间隔仍未验证。",
+          "reason": "逐项核对 EP012 正文，内景/日、两声钟响和 D001 次日早晨再试均有源内依据；输出没有把明早当成本次时间或前集承诺。"
+        },
+        {
+          "criterion": "不编造引用或全季通过",
+          "status": "pass",
+          "quote": "当前不提升 reviewed/locked，不进入 G5，不宣布 EP012 全量审核或全季连续性通过。",
+          "reason": "通读原始交付，所引 EP012 台词及动作可以在来源核对；没有给缺失 D002 编造引文，也没有全季通过、实测或制作批准声明。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 208816,
+      "limitations": [
+        "盲审包未提供运行前后输入文件差异及完整工具执行记录，不能独立证实未修改 input 或实际执行过所述诊断、哈希检查；未据此推断违规。",
+        "正文引用、版本与缺失事实可由本目录来源核对；输出所述 manifest/运行诊断细节未全部具备可复核原始记录。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 7,
+      "wall_seconds_upper_bound": 100.839409,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "d7ed3f013589c4e6b42cd97ae7514f6aa99a2f30432f309a83f4bb297fa3c1d9",
+      "output_hashes": {
+        "answer.md": "eb9628603b4e863453fa29d36962193080afa56a3ed3b98bd892957d080f32d1",
+        "diagnostic-read-files.json": "adcf25081ea2da50028661cdc715069cf1f58dff03f8a7c70e60b820d5b899b2",
+        "execution.json": "c94657427ecd6020c5d7b9e836bdaf98b73f530f0c95c867eaa46a5504e2af0e",
+        "revised.md": "361bbf02e212391193f237eb2f2f3b1d2480bcb08977a969a07b891f72d681ac"
+      }
+    },
+    {
+      "id": "run-bd4f60b320",
+      "task_id": "N03",
+      "category": "missing",
+      "condition": "baseline",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "明确EP011正文缺失、不能确认D002原句",
+          "status": "pass",
+          "quote": "目前无法确认 EP011-D002 究竟说了什么，也不能用它证明 EP012 的测试时刻符合前集约定。",
+          "reason": "来源目录确实没有 EP011-v1.0 正文，EP011 台账为空且交接对白表未填写；输出明确保留 D002 未知，没有以辅助材料代替原句。"
+        },
+        {
+          "criterion": "列出需补的EP011正文版本/位置",
+          "status": "pass",
+          "quote": "缺失的是项目清单登记的 `input/project/episodes/EP011-v1.0.md` 正文 v1.0，而不是 EP012。",
+          "reason": "准确列明需恢复的 EP011 正文路径及 v1.0 版本，与 project.json 的 script_EP011 登记一致；正文还要求补齐 D002 及场景、相邻动作对白。"
+        },
+        {
+          "criterion": "区分EP012已给事实与前文未知",
+          "status": "pass",
+          "quote": "EP012 日景与下一次“明早”复测已有正文依据；EP011-D002 原文、此前约定及跨集匹配均为未验证。",
+          "reason": "逐项核对 EP012 正文，内景/日、两声钟响和 D001 次日早晨再试均有源内依据；输出没有把明早当成本次时间或前集承诺。"
+        },
+        {
+          "criterion": "不编造引用或全季通过",
+          "status": "pass",
+          "quote": "本次不扩展至其他集审核，不宣称整集或全季通过。",
+          "reason": "通读原始交付，所引 EP012 台词及动作可以在来源核对；没有给缺失 D002 编造引文，也没有全季通过、实测或制作批准声明。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 201931,
+      "limitations": [
+        "盲审包未提供运行前后输入文件差异及完整工具执行记录，不能独立证实未修改 input 或实际执行过所述诊断、哈希检查；未据此推断违规。",
+        "正文引用、版本与缺失事实可由本目录来源核对；输出所述 manifest/运行诊断细节未全部具备可复核原始记录。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 7,
+      "wall_seconds_upper_bound": 110.976693,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "d7ed3f013589c4e6b42cd97ae7514f6aa99a2f30432f309a83f4bb297fa3c1d9",
+      "output_hashes": {
+        "answer.md": "61c793f93271c838a01540020367c53135cee901b92c927f8a97842a30730369",
+        "diagnostic-read-files.json": "adcf25081ea2da50028661cdc715069cf1f58dff03f8a7c70e60b820d5b899b2",
+        "execution.json": "2e594d089ba61c3a34ba4b1c41d61a93910c8836d9f7dd3b5e6b805616220fa3",
+        "revised.md": "a29e88d3b3017bd1bc279708166eb46d1b918aa5ba123fa4084a3d02ca4ca03b"
+      }
+    },
+    {
+      "id": "run-e6aa3dc002",
+      "task_id": "N03",
+      "category": "missing",
+      "condition": "context",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "明确EP011正文缺失、不能确认D002原句",
+          "status": "pass",
+          "quote": "因此没有可引用的 EP011-D002 原文，不能确认说话者、完整语境、所属场次时间，更不能将推测写成引文。",
+          "reason": "来源目录确实没有 EP011-v1.0 正文，EP011 台账为空且交接对白表未填写；输出明确保留 D002 未知，没有以辅助材料代替原句。"
+        },
+        {
+          "criterion": "列出需补的EP011正文版本/位置",
+          "status": "pass",
+          "quote": "缺失的是 `input/project/episodes/EP011-v1.0.md`，登记对象 `script_EP011`、版本 v1.0、状态 draft",
+          "reason": "准确列明需恢复的 EP011 正文路径及 v1.0 版本，与 project.json 的 script_EP011 登记一致；正文还要求补齐 D002 及场景、相邻动作对白。"
+        },
+        {
+          "criterion": "区分EP012已给事实与前文未知",
+          "status": "pass",
+          "quote": "可以确认的是，EP012 v1.0 的测试场景写为日景；未知的是前集对白对测试日期、时段或钟点作了什么约定。",
+          "reason": "逐项核对 EP012 正文，内景/日、两声钟响和 D001 次日早晨再试均有源内依据；输出没有把明早当成本次时间或前集承诺。"
+        },
+        {
+          "criterion": "不编造引用或全季通过",
+          "status": "pass",
+          "quote": "当前可交付的是这份缺源受限核查，不能宣布 EP012 整集或全季连续性通过。",
+          "reason": "通读原始交付，所引 EP012 台词及动作可以在来源核对；没有给缺失 D002 编造引文，也没有全季通过、实测或制作批准声明。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 135001,
+      "limitations": [
+        "盲审包未提供运行前后输入文件差异及完整工具执行记录，不能独立证实未修改 input 或实际执行过所述诊断、哈希检查；未据此推断违规。",
+        "正文引用、版本与缺失事实可由本目录来源核对；输出所述 manifest/运行诊断细节未全部具备可复核原始记录。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 7,
+      "wall_seconds_upper_bound": 101.208812,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "d7ed3f013589c4e6b42cd97ae7514f6aa99a2f30432f309a83f4bb297fa3c1d9",
+      "output_hashes": {
+        "answer.md": "ed79168a9bbe692a0179560f69a939e80d5fdda6d4b66ed2e165be36de925605",
+        "execution.json": "09448d2f4e7be81e1de421ca23dc2c40e21fccfd32ba6249ca732f4836d819d1",
+        "revised.md": "f077dc1e10af9f01bb350222d50757c68f10a5e4552f038547f6ff84a0e5cc09"
+      }
+    },
+    {
+      "id": "run-1e2830c6a6",
+      "task_id": "N01",
+      "category": "normal",
+      "condition": "baseline",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "以EP012原文确认商宁腰间持钥匙",
+          "status": "pass",
+          "quote": "EP012-B003原文为“商宁拍了拍腰间钥匙，把待复测纸条贴到钟罩上。”",
+          "reason": "引用与EP012实际正文B003一致，并以商宁腰间持钥匙作为EP013入场状态。"
+        },
+        {
+          "criterion": "若交钥匙则展示可见动作",
+          "status": "pass",
+          "quote": "商宁从腰间解下钥匙，将它放入杜衡张开的掌心；杜衡合拢手指，商宁松手撤回。",
+          "reason": "正文写出从腰间取下、递入杜衡掌心及商宁松手的可见交接，之后才由杜衡锁箱。"
+        },
+        {
+          "criterion": "次日复测仍未完成且不把此前日景说成夜间",
+          "status": "pass",
+          "quote": "场末：工具箱已锁；钥匙在杜衡衣袋；待复测纸条未摘；两人准备就位，复测仍未进行。",
+          "reason": "场头明确次日早晨；对白回指昨天白天，片尾仅保留待复测纸条且未启动测试，未把日景改为夜间。"
+        },
+        {
+          "criterion": "交付约60秒草稿并明确未实测、未批准",
+          "status": "pass",
+          "quote": "目标：约60秒；全片剧情含切黑，暂不设独立片头尾。所有秒数为估时，未朗读、未实测。",
+          "reason": "交付实际EP013分场草稿及合计60秒的连续时间块，明确估时而非实测，并保持草稿未审核、未批准或未锁定状态。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 195254,
+      "limitations": [
+        "仅依据本目录所给任务来源与匿名交付裁定；无运行前后文件差异证据，不能独立确认是否曾修改input，未因这一证据局限推定违规。",
+        "未执行朗读或拍摄，60秒仅核验纸面时间预算；未提供的上下文包、命令执行和哈希核验不据答复自述认定已验证。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 130.740944,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "1a3bfe48117de6155c35474ccb5b503b863e7201aeb1005579f75c5186fd98ba",
+      "output_hashes": {
+        "answer.md": "73189a7dfc37bfa3a0d6cbfd62887557f50222acc6386a7c4bf911bfbdbd43b5",
+        "execution.json": "cf8c59fec58617cb01349666f1c7ec8742c21f1f6e682a3fe02f35fabc664c05",
+        "read_trace.json": "9c60591c5176f2493b1547ea24fdfdbfe130a425be3b395d04b6fae4e299700b",
+        "revised.md": "854759da31cb3fd5b4ccd65f5914670868c48aa6f672d7f5612a8e74c040f7de"
+      }
+    },
+    {
+      "id": "run-216b77a848",
+      "task_id": "N01",
+      "category": "normal",
+      "condition": "baseline",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "以EP012原文确认商宁腰间持钥匙",
+          "status": "pass",
+          "quote": "EP012-B003写“商宁拍了拍腰间钥匙，把待复测纸条贴到钟罩上。”",
+          "reason": "引用与EP012实际正文B003一致，并以商宁腰间持钥匙作为EP013入场状态。"
+        },
+        {
+          "criterion": "若交钥匙则展示可见动作",
+          "status": "pass",
+          "quote": "她将钥匙放进杜衡摊开的掌心；杜衡合指接稳，商宁松开并收回空手。",
+          "reason": "正文写出从腰间取下、递入杜衡掌心及商宁松手的可见交接，之后才由杜衡锁箱。"
+        },
+        {
+          "criterion": "次日复测仍未完成且不把此前日景说成夜间",
+          "status": "pass",
+          "quote": "场次结果：工具箱锁好；钥匙由商宁腰间经可见交接转入杜衡手中，再进入杜衡衣袋；复测尚未开始。上次日间测试响两声的事实不变。",
+          "reason": "场头明确次日早晨；对白回指昨天白天，片尾仅保留待复测纸条且未启动测试，未把日景改为夜间。"
+        },
+        {
+          "criterion": "交付约60秒草稿并明确未实测、未批准",
+          "status": "pass",
+          "quote": "目标时长约60秒，含开场交代与结尾停留，无另加片头尾；时间均为估算，未实测。",
+          "reason": "交付实际EP013分场草稿及合计60秒的连续时间块，明确估时而非实测，并保持草稿未审核、未批准或未锁定状态。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 194555,
+      "limitations": [
+        "仅依据本目录所给任务来源与匿名交付裁定；无运行前后文件差异证据，不能独立确认是否曾修改input，未因这一证据局限推定违规。",
+        "未执行朗读或拍摄，60秒仅核验纸面时间预算；未提供的上下文包、命令执行和哈希核验不据答复自述认定已验证。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 137.741773,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "1a3bfe48117de6155c35474ccb5b503b863e7201aeb1005579f75c5186fd98ba",
+      "output_hashes": {
+        "answer.md": "e408cb20aa6c285c67636146e490c88bf5dfa9b4bb6d90343c13e7f56d7fbb4c",
+        "execution.json": "a6afbff531b5fb27a6c57123f81f0e60f97dc2d28111ee1c033448d53c9fde33",
+        "revised.md": "cc674045eb43f4897dae2bdc24c46485670e58cd6238f087319c7eb4b9dfb33b"
+      }
+    },
+    {
+      "id": "run-6bca3d52c3",
+      "task_id": "N01",
+      "category": "normal",
+      "condition": "context",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "以EP012原文确认商宁腰间持钥匙",
+          "status": "pass",
+          "quote": "钥匙状态取自 EP012-SC001-B003：“商宁拍了拍腰间钥匙，把待复测纸条贴到钟罩上。”",
+          "reason": "引用与EP012实际正文B003一致，并以商宁腰间持钥匙作为EP013入场状态。"
+        },
+        {
+          "criterion": "若交钥匙则展示可见动作",
+          "status": "pass",
+          "quote": "商宁从腰间解下钥匙，将钥匙放进杜衡摊开的手掌；商宁松手，杜衡合掌。商宁空手退开，杜衡抬起钥匙，钥匙仍可见。",
+          "reason": "正文写出从腰间取下、递入杜衡掌心及商宁松手的可见交接，之后才由杜衡锁箱。"
+        },
+        {
+          "criterion": "次日复测仍未完成且不把此前日景说成夜间",
+          "status": "pass",
+          "quote": "出场：杜衡持钥匙，工具箱锁好，商宁空手，纸条仍在钟罩上，复测未开始。",
+          "reason": "场头明确次日早晨；对白回指昨天白天，片尾仅保留待复测纸条且未启动测试，未把日景改为夜间。"
+        },
+        {
+          "criterion": "交付约60秒草稿并明确未实测、未批准",
+          "status": "pass",
+          "quote": "目标：次日早晨，杜衡拿到商宁腰间的钥匙，锁好工具箱；复测仍未开始。预算 60 秒，估算区间 55—65 秒，未实测；无另加片头尾。",
+          "reason": "交付实际EP013分场草稿及合计60秒的连续时间块，明确估时而非实测，并保持草稿未审核、未批准或未锁定状态。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 126394,
+      "limitations": [
+        "仅依据本目录所给任务来源与匿名交付裁定；无运行前后文件差异证据，不能独立确认是否曾修改input，未因这一证据局限推定违规。",
+        "未执行朗读或拍摄，60秒仅核验纸面时间预算；未提供的上下文包、命令执行和哈希核验不据答复自述认定已验证。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 136.296353,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "1a3bfe48117de6155c35474ccb5b503b863e7201aeb1005579f75c5186fd98ba",
+      "output_hashes": {
+        "answer.md": "98facda042d2f7935d75ac7c87e997d3ad5d00e33e92e883f85b028543b90d65",
+        "execution.json": "53a1e9a124dfa268639c4556a2cdd53319754ac026267ac3ec15e2d70a463e18",
+        "revised.md": "602ee77ff193dcbe3baa5539319720464c7a26dc1f80b4382fd7768b45aa7ef3"
+      }
+    },
+    {
+      "id": "run-fa42286098",
+      "task_id": "N01",
+      "category": "normal",
+      "condition": "context",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "以EP012原文确认商宁腰间持钥匙",
+          "status": "pass",
+          "quote": "EP012-SC001-B003写“商宁拍了拍腰间钥匙，把待复测纸条贴到钟罩上。”",
+          "reason": "输出连续引用EP012-B003的真实动作，并将商宁腰间持钥匙写为EP013入场状态；与原文和台账相符。"
+        },
+        {
+          "criterion": "若交钥匙则展示可见动作",
+          "status": "pass",
+          "quote": "商宁从自己腰间摘下钥匙，握住匙头，把钥匙柄送进杜衡摊开的掌心。杜衡合指握牢；商宁随后松手、收回空手。",
+          "reason": "B003明确写出商宁从腰间取钥匙、送入杜衡掌心、杜衡握牢、商宁松手；B004才锁箱，满足可见交接与持有人变化的因果顺序。"
+        },
+        {
+          "criterion": "次日复测仍未完成且不把此前日景说成夜间",
+          "status": "pass",
+          "quote": "时间：内景／日，EP012之后的次日早晨。",
+          "reason": "场头为次日早晨，D002明确“昨天白天”，D003明说今天未试，B006保留待复测纸条、不碰测试部件且无钟响；既有日景与尚未复测状态均保持。"
+        },
+        {
+          "criterion": "交付约60秒草稿并明确未实测、未批准",
+          "status": "pass",
+          "quote": "目标约60秒，以下为纸面估时，未朗读、未实测。",
+          "reason": "完整EP013分场草稿六块连续预算合计60秒，并明示纸面估时、未朗读未实测；稿首draft未审核未锁定及末尾不提供审核通过结论，符合仅交付草稿的任务。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "“EP013的正文和台账在输入中缺失”措辞不够精确：两个路径实际存在，但均标记TEMPLATE:UNFILLED，正文对白表和台账状态表为空，仅含填写指引；project.json的artifacts也未登记script_EP013或continuity_EP013。应明确说缺少已填充的EP013正文与实际台账，以免被读成文件不存在。",
+        "answer.md链接execution.json，但该文件不在本匿名交付目录，所指执行记录无法在本次复核中核验；不能因此直接推定原运行没有该记录。"
+      ],
+      "read_bytes": 126394,
+      "limitations": [
+        "normal未提供运行前后项目副本或哈希对比，故不能独立确认实际未写回input；缺少证据不等于已观察违规。",
+        "未开展朗读、拍摄或动态分镜；60秒只核验纸面预算。上下文包、命令执行与未提供的执行记录未独立验证。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 140.18119,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "1a3bfe48117de6155c35474ccb5b503b863e7201aeb1005579f75c5186fd98ba",
+      "output_hashes": {
+        "answer.md": "f69900481d4500ee373f88eb0e3717d51f631001e4ae9299052f9f49c910f914",
+        "execution.json": "fa9622263c7839a101cd39e84736b78f1b3475bc152610312a12103cf9e771bd",
+        "revised.md": "e206bbd67f345719628e3bec9c3f6535d59841e401c4968925fa308cda7ba4b0"
+      },
+      "adjudication": {
+        "sha256": "c04552848923fe83e535d1009497a99c7df13830f51a1415dc0288a70a484859",
+        "original_required": [
+          {
+            "criterion": "以EP012原文确认商宁腰间持钥匙",
+            "status": "pass",
+            "quote": "EP012-SC001-B003写“商宁拍了拍腰间钥匙，把待复测纸条贴到钟罩上。”",
+            "reason": "引用与EP012实际正文B003一致，并以商宁腰间持钥匙作为EP013入场状态。"
+          },
+          {
+            "criterion": "若交钥匙则展示可见动作",
+            "status": "pass",
+            "quote": "商宁从自己腰间摘下钥匙，握住匙头，把钥匙柄送进杜衡摊开的掌心。杜衡合指握牢；商宁随后松手、收回空手。",
+            "reason": "正文写出从腰间取下、递入杜衡掌心及商宁松手的可见交接，之后才由杜衡锁箱。"
+          },
+          {
+            "criterion": "次日复测仍未完成且不把此前日景说成夜间",
+            "status": "pass",
+            "quote": "时间：内景／日，EP012之后的次日早晨。",
+            "reason": "场头明确次日早晨；对白回指昨天白天，片尾仅保留待复测纸条且未启动测试，未把日景改为夜间。"
+          },
+          {
+            "criterion": "交付约60秒草稿并明确未实测、未批准",
+            "status": "pass",
+            "quote": "目标约60秒，以下为纸面估时，未朗读、未实测。",
+            "reason": "交付实际EP013分场草稿及合计60秒的连续时间块，明确估时而非实测，并保持草稿未审核、未批准或未锁定状态。"
+          }
+        ],
+        "original_critical_violations": [
+          "answer.md称“EP013的正文和台账在输入中缺失”，但本任务来源的episodes/EP013-v1.0.md与continuity/EP013-v1.0.md实际存在，且均为TEMPLATE:UNFILLED模板。应区分空模板与文件缺失；该陈述构成无据的输入缺失声明，触及不得编造缺失原文的限制。"
+        ],
+        "rationale": "撤销原关键违规，四项必达仍pass。任务明确要求从EP012后新创EP013草稿；EP013源文件是未填工作模板，无已有剧情正文或实际状态记录，项目亦未登记该集产物。争议句紧接“因此这里是新草稿，不是替换一份已审核版本”，在该上下文主要说明可供接续或替换的创作内容缺失，而非断言路径不存在。措辞有歧义，应列为精确性问题，但没有伪造缺失原文、虚构已有事件或批准，不能仅凭模板文件存在升级为冻结rubric关键违规。",
+        "task_rubric_alignment": "N01要求约60秒新草稿、可见交接、次日尚未复测、保持日景、引文及未实测未批准声明；输出逐项满足。关键限制保护输入与来源真实性，不宜将“已填正文缺失”与“模板路径不存在”混为一谈。撤销关键违规不表示已验证执行历史，也不豁免来源表述准确性的改进要求。"
+      }
+    },
+    {
+      "id": "run-09c1f5c76c",
+      "task_id": "N02",
+      "category": "upstream",
+      "condition": "context",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别新设定一声与正文两声的实质冲突",
+          "status": "pass",
+          "quote": "**Q001／P0：EP012 把故障当正常验收。** bible.md 新设定逐字为：“钟正常时只响一声；响两声属于故障。” episodes/EP012-v1.0.md，EP012-SC001-B001 原文：“钟响两声后商宁松手，杜衡数完余音。” EP012-D001 原文：“该响的两声都到了，明早再试一次。” 两声事件本身可以保留为故障；真正冲突是“该响的”将故障解释为预期结果，随后只约定复测，没有识别故障的行动或对白。不能仅换数字或仅改台账掩盖这一因果缺口。",
+          "reason": "逐字引用的新设定与 B001、D001 均与源文件吻合；将两声事件和人物对其正常性的判断分开，准确定位新规则下未识别故障的实质冲突。"
+        },
+        {
+          "criterion": "指出设定未登记变更及旧检查点不可靠",
+          "status": "pass",
+          "quote": "**Q002／P0：旧依赖与检查点不能承载新规则。** bible 登记哈希前缀 cb51eb98，现文件为 93517e89；实际逐文件比对，只有 bible 字节变更。outline、EP001–EP012 正文及台账仍沿旧依赖链，因此待复核；context 的 changed_since_checkpoint 列表不等于这些文件正文都被改过。EP012 审核也依赖旧正文和台账。CP1 留有 draft、空证据，issues 为空不表示无问题；reviews/EP012-v1.0.md 更明确写着：“未完成语义审核，未批准制作。”",
+          "reason": "与 project.json 及 CP1 对照，bible 登记仍为 v1.0、哈希 cb51eb98…，当前实际为 93517e89…；输出识别未登记变更和依赖传播，拒绝将空问题列表或检查点视作有效批准。"
+        },
+        {
+          "criterion": "先修设定/正文一致性再台账审核和交接",
+          "status": "pass",
+          "quote": "3. **随后修 EP012 因果。** 优先提案是保留两声，改成人物发现故障、采取处置后约定次晨复测；若选择一声正常，则同步调整声音、数余音动作和 D001。两案都需保住钥匙归属、纸条和下集入口，不在本次代选改稿。\n4. **正文确定后更新 EP012 台账。** 绑定具体场块与引文，记录响声、故障与识别状态、钥匙持有人；锁箱和复测分别保持未证实完成、未来计划。再核对大纲 EP013“次日复测前处理工具箱”的承接，不续写 EP013。\n5. **最后重审与重建检查点。** 按新版本顺序登记真实修订及复核依据，重新检查依赖，回归声音—对白—动作—台账、昼夜与跨集状态，并复核原约60秒预算（仍未实测）。结构检查或 gate 仅作诊断；实际语义审稿须另记范围、方法、结论，解决 P0 后才能讨论相应范围通过，批准与交接另有真实依据。\n\n交付为本报告 v1／诊断稿。叙事、连续性和版本依赖需修订；时长、可制作性及制作批准未验证。下一步所需是已确认的新规则基线、前文复核结果和所选 EP012 修法。未生成完整修订稿。\n",
+          "reason": "完整编号计划先确立设定基线、复核大纲及前集，再修 EP012 动作对白，之后更新台账、重做审核及检查点/交接；两种修法均作为待实施提案，没有擅自改写原稿。"
+        },
+        {
+          "criterion": "不以刷新哈希代替复核且不伪造通过",
+          "status": "pass",
+          "quote": "1. **先建立新规则基线。** 保留 CP1 与旧版追溯，记录规则变更和 Q001–Q003，明确新规则适用范围；不能通过刷新旧哈希把变更伪装成原基线。",
+          "reason": "交付实际为诊断及待执行计划，未将字节核对当语义通过；要求真实修订和语义回验后才更新登记及审核，明确仍需返工、无实测或制作批准。提供材料中未发现刷新哈希代替复核或伪造通过的内容。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "正确区分锁箱要求与已发生的上锁动作；源文件 D002 仅为指令，台账不能据此补成已锁。"
+      ],
+      "read_bytes": 148266,
+      "limitations": [
+        "本目录仅有任务源快照与匿名交付，缺少各运行前后 input 快照及完整写操作日志，不能独立证明其执行期间从未修改源文件；未发现有据违规，不据自述推定已完成操作审计。",
+        "本匿名目录仅有 answer.md，未附所述 manifest 哈希核对的原始记录；本次已独立核实项目登记文件仅 bible 哈希失配。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 7,
+      "wall_seconds_upper_bound": 95.440455,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "6906ccd1eb2268ac8d28e37d1354dbe31df37ef2abfc2056dac9463fa15b77af",
+      "output_hashes": {
+        "answer.md": "02f3b100c62084c4889150feddbb3f486b00a24d77ee3e3436b5d1d5d5730540",
+        "execution.json": "8487c8bd06d5a3d7290122e205e62cd604eec50f8c42038c15d31d98413f1859"
+      }
+    },
+    {
+      "id": "run-1064b7710f",
+      "task_id": "N02",
+      "category": "upstream",
+      "condition": "context",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别新设定一声与正文两声的实质冲突",
+          "status": "pass",
+          "quote": "**明确冲突（P0）：新规则与本集对试响结果的判断相反。** `input/project/bible.md` 当前原文：“钟正常时只响一声；响两声属于故障。” `episodes/EP012-v1.0.md` 的 EP012-SC001-B001 原文：“钟响两声后商宁松手，杜衡数完余音。” EP012-D001 原文：“该响的两声都到了，明早再试一次。” 两声作为事件本身可以保留，但依新设定应意味着故障；“该响的”却将它当作预期结果，正文又没有误判、纠正或故障处理的表演依据。于是“检修—试响—次日复测”的因果含义改变，不能靠换版本号解决。",
+          "reason": "逐字引用的新设定与 B001、D001 均与源文件吻合；将两声事件和人物对其正常性的判断分开，准确定位新规则下未识别故障的实质冲突。"
+        },
+        {
+          "criterion": "指出设定未登记变更及旧检查点不可靠",
+          "status": "pass",
+          "quote": "**旧检查点失效（P0）：** project.json 与 CP1 保存的 bible 哈希为 `cb51eb98…`，当前为 `93517e89…`，登记仍为 v1.0/draft。outline、EP001–EP012 正文及各集台账均沿用旧设定依赖，review_EP012 也受传递影响。清单中的 changed_since_checkpoint 包含这些节点，不等于每份正文都被直接改过；manifest 显示主要直接内容失配是 bible，其余多为依赖不可用。已逐项比对 manifest 所列来源的当前哈希，均与项目文件相符；这只是字节核对，未把它当语义批准。旧检查点的 open_issues 为空也不表示没有当前问题。审核文件原文：“未完成语义审核，未批准制作。”",
+          "reason": "与 project.json 及 CP1 对照，bible 登记仍为 v1.0、哈希 cb51eb98…，当前实际为 93517e89…；输出识别未登记变更和依赖传播，拒绝将空问题列表或检查点视作有效批准。"
+        },
+        {
+          "criterion": "先修设定/正文一致性再台账审核和交接",
+          "status": "pass",
+          "quote": "4. **EP012 正文。** 若保留两声，就让人物识别故障、给出当下处置与延期复测理由；若选择修复成功，则同步调整声数、动作和对白。两方案须与大纲统一，不自行新增“两声也正常”的例外。保留稳定 ID，核对钥匙、箱锁、纸条、昼夜与入出场状态，重新估算表演时间。\n5. **派生台账与下游。** 从修订正文提取实际故障状态、知情变化和复测约定；计划与已发生分开。再登记真实依赖版本，按变化重做 EP012 审核，旧审核及交接派生物待复核。EP013 仅列为衔接待查，本次未审其正文，也不续写。\n6. **恢复入口。** 实质修订及逐项回验后再运行 check、G3 gate、next，依据实际证据更新问题和检查点。结构就绪不等于 reviewed；无未解决 P0、P1有处理依据才可形成相应范围审核结论，locked 仍需真实批准。本次状态仍为需返工，非交接就绪。\n",
+          "reason": "完整编号计划先确立设定基线、复核大纲及前集，再修 EP012 动作对白，之后更新台账、重做审核及检查点/交接；两种修法均作为待实施提案，没有擅自改写原稿。"
+        },
+        {
+          "criterion": "不以刷新哈希代替复核且不伪造通过",
+          "status": "pass",
+          "quote": "6. **恢复入口。** 实质修订及逐项回验后再运行 check、G3 gate、next，依据实际证据更新问题和检查点。结构就绪不等于 reviewed；无未解决 P0、P1有处理依据才可形成相应范围审核结论，locked 仍需真实批准。本次状态仍为需返工，非交接就绪。",
+          "reason": "交付实际为诊断及待执行计划，未将字节核对当语义通过；要求真实修订和语义回验后才更新登记及审核，明确仍需返工、无实测或制作批准。提供材料中未发现刷新哈希代替复核或伪造通过的内容。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "正确区分锁箱要求与已发生的上锁动作；源文件 D002 仅为指令，台账不能据此补成已锁。"
+      ],
+      "read_bytes": 241485,
+      "limitations": [
+        "本目录仅有任务源快照与匿名交付，缺少各运行前后 input 快照及完整写操作日志，不能独立证明其执行期间从未修改源文件；未发现有据违规，不据自述推定已完成操作审计。",
+        "read-trace/readtrace 仅列读取路径，未附 next 原始命令结果；其所述依赖失效可由源文件核实，具体命令执行过程未独立核验。",
+        "所述 manifest 比对过程没有原始记录可独立核验。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 7,
+      "wall_seconds_upper_bound": 107.463756,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "6906ccd1eb2268ac8d28e37d1354dbe31df37ef2abfc2056dac9463fa15b77af",
+      "output_hashes": {
+        "answer.md": "fa3ae70bbbf1173804c5692d14c5815673bacf564ac694d94dbf6e513084e460",
+        "execution.json": "c302f225bf1e70989d62747ebd1445ccf7ec8bc0211bdf5397fa6b26d2ff34c4",
+        "readtrace.json": "2e5a345f487bac222531af729efd207adcd159aaeecb5cbeebd06f7f831b60eb"
+      }
+    },
+    {
+      "id": "run-3631c2b714",
+      "task_id": "N02",
+      "category": "upstream",
+      "condition": "baseline",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别新设定一声与正文两声的实质冲突",
+          "status": "pass",
+          "quote": "两声的发生本身可以成立，但按新规则它意味着故障；“该响的两声都到了”却肯定其正常，人物又没有误判、发现异常或故障处置的表演依据。于是同一检修结果同时被定义为故障和预期成功，直接影响次日复测的原因与人物知情状态。不能靠改哈希消除。",
+          "reason": "逐字引用的新设定与 B001、D001 均与源文件吻合；将两声事件和人物对其正常性的判断分开，准确定位新规则下未识别故障的实质冲突。"
+        },
+        {
+          "criterion": "指出设定未登记变更及旧检查点不可靠",
+          "status": "pass",
+          "quote": "**P0：旧检查点与当前依赖混用。** 只读 next 返回 NEEDS_WORK，首个入口为 G1/project，原因是 bible 的 `file changed since registration (STALE)`。对登记文件逐一核对，只有 bible 的文件哈希改变；outline、EP001–EP012 正文与台账、review_EP012 是依赖传播而不可用，并非全部正文都被人改过。EP012 正文依赖 bible、outline、continuity_EP011；本集台账依赖正文；审核再依赖正文和台账。",
+          "reason": "与 project.json 及 CP1 对照，bible 登记仍为 v1.0、哈希 cb51eb98…，当前实际为 93517e89…；输出识别未登记变更和依赖传播，拒绝将空问题列表或检查点视作有效批准。"
+        },
+        {
+          "criterion": "先修设定/正文一致性再台账审核和交接",
+          "status": "pass",
+          "quote": "4. **修 EP012 正文，再修台账。** 在 B001/D001 配套体现第二声异常、角色察觉及为何次日复测，保留稳定 ID；回核 B003、D002 的钥匙与工具箱关系，不把“箱子先锁好”的要求记成已锁。重新估时，约60秒仍非实测。随后依据新正文补录故障、知情和复测状态及逐字证据，保留有依据的钥匙状态。\n5. **最后重做审核依据与检查点。** 新正文和台账稳定后，再做明确范围的语义复核及结构检查，登记问题、修复证据与依赖快照。现审核文件明写“未完成语义审核，未批准制作。”；交接文件仍带 TEMPLATE:UNFILLED，不能宣布就绪。EP013 只列为后续衔接待核，本次不续写、不执行 G4/G5。\n\n本次完成的是当前冲突诊断和计划。叙事/连续性需修订；时长与可制作性未验证；审核和交接未完成。未生成完整修订稿，未刷新登记、关闭问题或创建新批准。\n",
+          "reason": "完整编号计划先确立设定基线、复核大纲及前集，再修 EP012 动作对白，之后更新台账、重做审核及检查点/交接；两种修法均作为待实施提案，没有擅自改写原稿。"
+        },
+        {
+          "criterion": "不以刷新哈希代替复核且不伪造通过",
+          "status": "pass",
+          "quote": "5. **最后重做审核依据与检查点。** 新正文和台账稳定后，再做明确范围的语义复核及结构检查，登记问题、修复证据与依赖快照。现审核文件明写“未完成语义审核，未批准制作。”；交接文件仍带 TEMPLATE:UNFILLED，不能宣布就绪。EP013 只列为后续衔接待核，本次不续写、不执行 G4/G5。",
+          "reason": "交付实际为诊断及待执行计划，未将字节核对当语义通过；要求真实修订和语义回验后才更新登记及审核，明确仍需返工、无实测或制作批准。提供材料中未发现刷新哈希代替复核或伪造通过的内容。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "正确区分锁箱要求与已发生的上锁动作；源文件 D002 仅为指令，台账不能据此补成已锁。",
+        "revised.md 内容明确为“未执行修订”，没有修订正文，不构成违反只诊断的要求。"
+      ],
+      "read_bytes": 199949,
+      "limitations": [
+        "本目录仅有任务源快照与匿名交付，缺少各运行前后 input 快照及完整写操作日志，不能独立证明其执行期间从未修改源文件；未发现有据违规，不据自述推定已完成操作审计。",
+        "read-trace/readtrace 仅列读取路径，未附 next 原始命令结果；其所述依赖失效可由源文件核实，具体命令执行过程未独立核验。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 8,
+      "wall_seconds_upper_bound": 105.937865,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "6906ccd1eb2268ac8d28e37d1354dbe31df37ef2abfc2056dac9463fa15b77af",
+      "output_hashes": {
+        "answer.md": "103b60dcda40540e54171b2fb82e1ccbbdd21a65a51cdb1fb42f2418cd55cc73",
+        "execution.json": "acc66543caa23c7c72cefbac4063be247f13e578a28f13a2636e482663a08328",
+        "read-trace.json": "9c9da7a5f5e87006bc1abde6c1226af73ad3b045445039c92adaa7d601834bab",
+        "revised.md": "759e44ff0f53f4d7130bb2b7b16e417af6bbf32bffc0c5ce90ca1a0214c10743"
+      }
+    },
+    {
+      "id": "run-5fc6946499",
+      "task_id": "N02",
+      "category": "upstream",
+      "condition": "baseline",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "识别新设定一声与正文两声的实质冲突",
+          "status": "pass",
+          "quote": "**P0：新规则与正文的检修结果相矛盾。** bible.md 逐字规定：“钟正常时只响一声；响两声属于故障。” EP012-SC001-B001 正文逐字为：“钟响两声后商宁松手，杜衡数完余音。” EP012-D001 逐字为：“该响的两声都到了，明早再试一次。”",
+          "reason": "逐字引用的新设定与 B001、D001 均与源文件吻合；将两声事件和人物对其正常性的判断分开，准确定位新规则下未识别故障的实质冲突。"
+        },
+        {
+          "criterion": "指出设定未登记变更及旧检查点不可靠",
+          "status": "pass",
+          "quote": "**P0：恢复基线失效。** 只读 next 返回 NEEDS_WORK，首项是 G1/project：`bible: file changed since registration (STALE)`，随后是 G2 依赖不可用及 G3/EP012 的 bible、outline、continuity_EP011 依赖问题。CP1（2026-11-07）与清单仍保存设定指纹 `cb51eb98…`，当前文件为 `93517e89…`。CP1 自己也写“从目标阶段接续，不能推定批准”。旧快照只能追溯，不能覆盖当前事实；没有旧版设定全文，不能根据哈希反推旧规则。",
+          "reason": "与 project.json 及 CP1 对照，bible 登记仍为 v1.0、哈希 cb51eb98…，当前实际为 93517e89…；输出识别未登记变更和依赖传播，拒绝将空问题列表或检查点视作有效批准。"
+        },
+        {
+          "criterion": "先修设定/正文一致性再台账审核和交接",
+          "status": "pass",
+          "quote": "3. **再改 G3/EP012。** 建议保留两声，把它明确表现为故障：数声后识别异常，再给出暂缓和复测的理由；这是创作建议，尚未写入正文。若选择修复成功路线，则须同步改成一声并校准复测动机。重点联动 B001、D001、B003，保留原 ID，复核 D002、锁箱动作和钥匙归属；重新估时，60秒仍不得标成实测。\n4. **从修后正文更新实际台账。** 记录钟的结果、两人的知情及来源、钥匙持有者、锁箱是否发生、次日复测承诺，逐条绑定场次证据。EP013仅列为后续需承接故障与工具箱状态的入口，不代写后集。\n5. **最后才做 G4 复核与后续交接。** 实际修复后按新版本核对规则—动作—台词—台账，记录范围、方法和问题处理结果；旧审核不能复用为新稿通过证据。只有无未解决 P0、P1有处理依据后，才考虑登记审核结果。G5需另有交接任务并依据有效版本提取，模板和结构检查均不代表批准。\n\n当前维度结论：叙事、人物知情与连续性需修订；时长与可制作性未验证；交接完整性不满足。未做全季语义审核或修后复核。本次无完整修订稿，故不生成 revised.md；交付为 answer.md 与执行记录 execution.json。\n",
+          "reason": "完整编号计划先确立设定基线、复核大纲及前集，再修 EP012 动作对白，之后更新台账、重做审核及检查点/交接；两种修法均作为待实施提案，没有擅自改写原稿。"
+        },
+        {
+          "criterion": "不以刷新哈希代替复核且不伪造通过",
+          "status": "pass",
+          "quote": "1. **先处理 G1 真实变更。** 保留 CP1 与旧版记录，明确当前“一声正常、两声故障”的适用范围，记录变更原因及受影响对象。完成语义核对后才登记设定新版本；不得只刷新哈希消除 STALE。",
+          "reason": "交付实际为诊断及待执行计划，未将字节核对当语义通过；要求真实修订和语义回验后才更新登记及审核，明确仍需返工、无实测或制作批准。提供材料中未发现刷新哈希代替复核或伪造通过的内容。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "正确区分锁箱要求与已发生的上锁动作；源文件 D002 仅为指令，台账不能据此补成已锁。",
+        "末尾称交付 execution.json，但本匿名目录仅有 answer.md 与 read-trace.json，交付文件名称自述与实际附件不符；未据此推定编造审核批准。"
+      ],
+      "read_bytes": 219878,
+      "limitations": [
+        "本目录仅有任务源快照与匿名交付，缺少各运行前后 input 快照及完整写操作日志，不能独立证明其执行期间从未修改源文件；未发现有据违规，不据自述推定已完成操作审计。",
+        "read-trace/readtrace 仅列读取路径，未附 next 原始命令结果；其所述依赖失效可由源文件核实，具体命令执行过程未独立核验。",
+        "自述读取 EP013 与 handoff，但 read-trace.json 未列这些路径；所述模板状态与提供源文件相符，读取过程仍无法核验。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 8,
+      "wall_seconds_upper_bound": 114.918509,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "6906ccd1eb2268ac8d28e37d1354dbe31df37ef2abfc2056dac9463fa15b77af",
+      "output_hashes": {
+        "answer.md": "1c98a0e714246633a4d1b05083cc4ecd20429113d58efc7d7eab69637e96f689",
+        "execution.json": "b658e8cc4a1ae3ce5c736cb6bd1911dcb2e1c38e1f24f476b70a14f22821de29",
+        "read-trace.json": "67cc5f07c4c6f9dfe5d1060193dd5a4b397f72822da63dd0fdfe1844a417185c"
+      }
+    }
+  ],
+  "limitation": "AI semantic grades; literal quote checks only; repeated fixed tasks, not independent story samples"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "intermediate; semantic recovery experiment in progress",
+  "python": "3.15.2",
+  "tests": {"command": "python3 -m unittest discover -s tests -q", "count": 98, "exit_code": 0, "seconds": 6.218},
+  "python39_context_tests": {"count": 6, "exit_code": 0, "note": "Before the additional checkpoint regression test; not final full-suite 3.9 validation"},
+  "benchmark": {
+    "command": "python3 scripts/benchmark_pipeline.py",
+    "exit_code": 0,
+    "episodes": [3, 30, 100],
+    "commands": ["next", "status"],
+    "inspect_calls_per_command": 1,
+    "sha_calls_by_size": [15, 123, 403],
+    "seconds_next_status": [[0.003616, 0.002951], [0.015113, 0.015348], [0.057525, 0.053697]]
+  },
+  "examples": {
+    "command": "python3 scripts/validate_examples.py",
+    "exit_code": 0,
+    "return-demo": "check/next/bundle/package integrity/fixture receipt passed; legacy index and parity remained UNVERIFIED",
+    "return-season": "check/next/index/parity/bundle/package integrity/fixture receipt passed",
+    "limitation": "Fixture simulation only; no actual production recipient or approval"
+  },
+  "skill_creator_quick_validate": {"status": "unavailable", "reason": "PyYAML missing in Python3 and Python3.14; invocation failed before validation"},
+  "source": "Observed execution results in this task, transcribed without rerunning unchanged checks"
+}

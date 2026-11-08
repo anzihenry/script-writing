@@ -1,0 +1,21 @@
+{
+  "current_run": "N02-baseline-r2",
+  "attempt": 1,
+  "started_at": "2026-11-08T02:09:20.560772Z",
+  "agent_id": "/root/m3_serial_resume/n02_baseline_r2",
+  "status": "interrupted",
+  "execution_interruption": {
+    "observed_at": "2026-11-08T02:24:36.134560Z",
+    "error": "Agent errored: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/settings/usage to purchase more credits or try again at 2:57 PM.",
+    "agent_end_at": null,
+    "preserved_output": [
+      {
+        "file": "read-audit.json",
+        "original_mtime_ns": 1794103813979642051,
+        "sha256": "2af0fc5555f99eff061734293fd4a6ea7fa87b15d55bf16eaeda78f58ce41239"
+      }
+    ],
+    "observation": "Partial output only; no answer.md or execution.json. User explicitly authorized fresh attempt."
+  },
+  "timing_excluded_reason": "Usage-limit interruption; incomplete delivery, actual end time unknown"
+}

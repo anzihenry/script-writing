@@ -1,0 +1,29 @@
+{
+  "read_files": [
+    "request.md",
+    "input/context/context.md",
+    "input/context/manifest.json",
+    "input/rules/ai-short-drama-review/SKILL.md",
+    "input/rules/ai-short-drama-writing/references/common.md",
+    "input/rules/ai-short-drama-writing/references/standards.md",
+    "input/rules/ai-short-drama-continuity-audit/SKILL.md",
+    "input/rules/ai-short-drama-writing/references/workflow.md",
+    "input/rules/ai-short-drama-writing/assets/templates.md",
+    "input/project/project.json",
+    "input/project/episodes/EP012-v1.0.md",
+    "input/project/continuity/EP011-v1.0.md",
+    "input/project/continuity/EP012-v1.0.md",
+    "input/project/reviews/EP012-v1.0.md",
+    "input/project/handoff/EP011-v1.0.md",
+    "input/project/reviews/EP011-v1.0.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/review.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/changes.md"
+  ],
+  "tool_calls": 7,
+  "actual_token_usage": null,
+  "limitations": [
+    "EP011 v1.0 正文缺失，无法引用或核实 EP011-D002。",
+    "仅核查指定时间衔接；未运行完整 verify-context 或全量关口，未作整集及全季审核。",
+    "未修订正文，revised.md 仅说明未修订原因。"
+  ]
+}

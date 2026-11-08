@@ -1,0 +1,20 @@
+{
+  "verified_runs": 1,
+  "expected_runs": 24,
+  "matrix_complete": false,
+  "rows": [
+    {
+      "run_id": "N01-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed",
+      "output_hashes": {
+        "answer.md": "73189a7dfc37bfa3a0d6cbfd62887557f50222acc6386a7c4bf911bfbdbd43b5",
+        "execution.json": "cf8c59fec58617cb01349666f1c7ec8742c21f1f6e682a3fe02f35fabc664c05",
+        "read_trace.json": "9c60591c5176f2493b1547ea24fdfdbfe130a425be3b395d04b6fae4e299700b",
+        "revised.md": "854759da31cb3fd5b4ccd65f5914670868c48aa6f672d7f5612a8e74c040f7de"
+      }
+    }
+  ],
+  "semantic_quality": "Not inferred from integrity"
+}

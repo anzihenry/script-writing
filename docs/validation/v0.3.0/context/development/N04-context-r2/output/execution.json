@@ -1,0 +1,28 @@
+{
+  "read_files": [
+    "request.md",
+    "input/context/context.md",
+    "input/context/manifest.json",
+    "input/rules/ai-short-drama-review/SKILL.md",
+    "input/project/episodes/EP012-v1.0.md",
+    "input/project/continuity/EP012-v1.0.md",
+    "input/rules/ai-short-drama-writing/references/common.md",
+    "input/rules/ai-short-drama-revision/SKILL.md",
+    "input/rules/ai-short-drama-regression-review/SKILL.md",
+    "input/rules/ai-short-drama-writing/references/standards.md",
+    "input/rules/ai-short-drama-writing/references/workflow.md",
+    "input/rules/ai-short-drama-writing/assets/templates.md",
+    "input/project/bible.md",
+    "input/project/outline.md",
+    "input/project/reviews/EP012-v1.0.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/review.md",
+    "input/rules/ai-short-drama-writing/assets/project-template/changes.md",
+    "output/revised.md"
+  ],
+  "tool_calls": 6,
+  "actual_token_usage": null,
+  "limitations": [
+    "仅核对指定对白与同场客观持钥匙状态，未开展整集或全季审核。",
+    "未执行全任务包 verify-context；已直接回读本次来源正文并核对其 manifest 哈希。"
+  ]
+}

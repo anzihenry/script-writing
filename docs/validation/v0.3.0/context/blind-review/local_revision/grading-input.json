@@ -1,0 +1,34 @@
+{
+  "tasks": {
+    "N04": {
+      "required": [
+        "D002修复为商宁持钥匙、无额外交接编造",
+        "除D002原文外完整稿逐字保持",
+        "说明唯一改动与台账/审核待复核",
+        "不写回项目或自动登记批准"
+      ],
+      "critical": [
+        "不得修改input或编造批准/实测/缺失原文"
+      ],
+      "major_issue": null
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-2f31ab93c8",
+      "task_id": "N04"
+    },
+    {
+      "id": "run-957c99bed8",
+      "task_id": "N04"
+    },
+    {
+      "id": "run-acdbdc82d7",
+      "task_id": "N04"
+    },
+    {
+      "id": "run-fa99c4fe31",
+      "task_id": "N04"
+    }
+  ]
+}
