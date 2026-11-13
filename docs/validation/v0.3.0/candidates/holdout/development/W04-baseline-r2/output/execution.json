@@ -1,0 +1,17 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/brief.md",
+    "input/skills/ai-short-drama-episode/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-writing/references/standards.md",
+    "input/skills/ai-short-drama-writing/assets/templates.md",
+    "input/skills/ai-short-drama-writing/assets/project-template/episode.md",
+    "input/skills/ai-short-drama-writing/assets/project-template/continuity.md"
+  ],
+  "tool_calls": 6,
+  "actual_token_usage": null,
+  "model": null,
+  "limitations": ["时长为估算，未实际朗读或制作动态分镜。", "剪线与扳脚的道具动作尚未实拍验证。"]
+}

@@ -1,0 +1,223 @@
+{
+  "verified_runs": 36,
+  "expected_runs": 48,
+  "matrix_complete": false,
+  "rows": [
+    {
+      "run_id": "C03-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "C03-baseline-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "C03-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "C03-candidate-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "C04-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "C04-baseline-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "C04-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "C04-candidate-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "H03-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "H03-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "H04-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "H04-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R03-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R03-baseline-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R03-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R03-candidate-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R04-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R04-baseline-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R04-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R04-candidate-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "S03-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "S03-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "S04-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "S04-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "V03-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "V03-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "V04-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "V04-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W03-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W03-baseline-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W03-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W03-candidate-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W04-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W04-baseline-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W04-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W04-candidate-r2",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    }
+  ]
+}

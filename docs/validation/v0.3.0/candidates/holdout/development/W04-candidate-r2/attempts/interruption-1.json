@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-11-10T10:47:00.436033+00:00",
+  "coordinator_error": "usage limit explicitly reported",
+  "executor_finish_at": null,
+  "executor_status": "absent from live tree on resume; output empty",
+  "original_attempt": {
+    "run_id": "W04-candidate-r2",
+    "started_at": "2026-11-10T06:06:06.266097+00:00",
+    "agent_id": "/root/m4_holdout_resume2/holdout_32",
+    "observed_completed_at": null,
+    "status": "running",
+    "model": null,
+    "token_usage": null
+  },
+  "action": "preserve empty first attempt; user explicitly resumed; permit fresh second attempt"
+}

@@ -1,0 +1,30 @@
+{
+  "runs": [
+    {
+      "run_id": "W01-baseline-r1"
+    },
+    {
+      "run_id": "W01-candidate-r1"
+    },
+    {
+      "run_id": "S01-candidate-r1"
+    },
+    {
+      "run_id": "S01-baseline-r1"
+    },
+    {
+      "run_id": "W01-candidate-r2"
+    },
+    {
+      "run_id": "W01-baseline-r2"
+    },
+    {
+      "run_id": "S01-baseline-r2"
+    },
+    {
+      "run_id": "S01-candidate-r2"
+    }
+  ],
+  "policy": null,
+  "original_schedule_sha256": "cb97e11b001f27b7a97a388a97c62fa1b78530dbc3bc6b0fa47746826336b3c6"
+}

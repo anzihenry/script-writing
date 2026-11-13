@@ -1,0 +1,257 @@
+{
+  "cases": [
+    {
+      "case_id": "appearance",
+      "assessment_sha256": "0fb8c9ad56204dcc7796228745e8ee4da031e4ed501a4220f940cabf487d1f32",
+      "artifacts": 19,
+      "decisions": {
+        "review": 7,
+        "no_direct_semantic_change": 12,
+        "uncertain": 0
+      },
+      "limitation": "Structure and literal evidence checked; semantic correctness requires independent assessment",
+      "file_affected": 18,
+      "stale_artifacts": 17,
+      "candidate_location_count": 16,
+      "priority_artifacts": [
+        "bible",
+        "export_EP001",
+        "export_EP002",
+        "export_EP003",
+        "handoff_EP001",
+        "handoff_EP002",
+        "handoff_EP003"
+      ],
+      "priority_outside_file_closure": [],
+      "file_closure_without_direct_semantic_change": [
+        "continuity_EP001",
+        "continuity_EP002",
+        "continuity_EP003",
+        "outline",
+        "review_EP001",
+        "review_EP002",
+        "review_EP003",
+        "script_EP001",
+        "script_EP002",
+        "script_EP003",
+        "season_review"
+      ],
+      "critical_artifacts_without_candidate_locations": [
+        "bible"
+      ]
+    },
+    {
+      "case_id": "knowledge",
+      "assessment_sha256": "a5c2a0700527f2be2ead84a8738d2a504742d7203c9a800edd845fe148011f46",
+      "artifacts": 19,
+      "decisions": {
+        "review": 8,
+        "no_direct_semantic_change": 11,
+        "uncertain": 0
+      },
+      "limitation": "Structure and literal evidence checked; semantic correctness requires independent assessment",
+      "file_affected": 18,
+      "stale_artifacts": 17,
+      "candidate_location_count": 11,
+      "priority_artifacts": [
+        "bible",
+        "continuity_EP002",
+        "export_EP002",
+        "handoff_EP002",
+        "outline",
+        "review_EP002",
+        "script_EP002",
+        "season_review"
+      ],
+      "priority_outside_file_closure": [],
+      "file_closure_without_direct_semantic_change": [
+        "continuity_EP001",
+        "continuity_EP003",
+        "export_EP001",
+        "export_EP003",
+        "handoff_EP001",
+        "handoff_EP003",
+        "review_EP001",
+        "review_EP003",
+        "script_EP001",
+        "script_EP003"
+      ],
+      "critical_artifacts_without_candidate_locations": [
+        "bible",
+        "outline",
+        "review_EP002",
+        "season_review"
+      ]
+    },
+    {
+      "case_id": "world",
+      "assessment_sha256": "287391c7d6c00bb584a832890c1f8f691ddc41d44e609d71ee1802f65b2aeba3",
+      "artifacts": 19,
+      "decisions": {
+        "review": 13,
+        "no_direct_semantic_change": 6,
+        "uncertain": 0
+      },
+      "limitation": "Structure and literal evidence checked; semantic correctness requires independent assessment",
+      "file_affected": 18,
+      "stale_artifacts": 17,
+      "candidate_location_count": 16,
+      "priority_artifacts": [
+        "bible",
+        "continuity_EP001",
+        "continuity_EP002",
+        "export_EP001",
+        "export_EP002",
+        "handoff_EP001",
+        "handoff_EP002",
+        "outline",
+        "review_EP001",
+        "review_EP002",
+        "script_EP001",
+        "script_EP002",
+        "season_review"
+      ],
+      "priority_outside_file_closure": [],
+      "file_closure_without_direct_semantic_change": [
+        "continuity_EP003",
+        "export_EP003",
+        "handoff_EP003",
+        "review_EP003",
+        "script_EP003"
+      ],
+      "critical_artifacts_without_candidate_locations": [
+        "bible",
+        "season_review"
+      ]
+    },
+    {
+      "case_id": "wording",
+      "assessment_sha256": "1ca4d9e376246eb817173c17e02cf0bee7df1d9abe9bcb43b93d09e15f2c7044",
+      "artifacts": 19,
+      "decisions": {
+        "review": 4,
+        "no_direct_semantic_change": 15,
+        "uncertain": 0
+      },
+      "limitation": "Structure and literal evidence checked; semantic correctness requires independent assessment",
+      "file_affected": 16,
+      "stale_artifacts": 15,
+      "candidate_location_count": 17,
+      "priority_artifacts": [
+        "export_EP001",
+        "handoff_EP001",
+        "review_EP001",
+        "script_EP001"
+      ],
+      "priority_outside_file_closure": [],
+      "file_closure_without_direct_semantic_change": [
+        "continuity_EP001",
+        "continuity_EP002",
+        "continuity_EP003",
+        "export_EP002",
+        "export_EP003",
+        "handoff_EP002",
+        "handoff_EP003",
+        "review_EP002",
+        "review_EP003",
+        "script_EP002",
+        "script_EP003",
+        "season_review"
+      ],
+      "critical_artifacts_without_candidate_locations": [
+        "review_EP001"
+      ]
+    },
+    {
+      "case_id": "foreshadow",
+      "assessment_sha256": "676f4dafb2b1af0f93a9b28d27b32830d30083ee81c10fe2a2301f571fbc173c",
+      "artifacts": 19,
+      "decisions": {
+        "review": 12,
+        "no_direct_semantic_change": 7,
+        "uncertain": 0
+      },
+      "limitation": "Structure and literal evidence checked; semantic correctness requires independent assessment",
+      "file_affected": 17,
+      "stale_artifacts": 16,
+      "candidate_location_count": 0,
+      "priority_artifacts": [
+        "continuity_EP002",
+        "continuity_EP003",
+        "export_EP002",
+        "export_EP003",
+        "handoff_EP002",
+        "handoff_EP003",
+        "outline",
+        "review_EP002",
+        "review_EP003",
+        "script_EP002",
+        "script_EP003",
+        "season_review"
+      ],
+      "priority_outside_file_closure": [],
+      "file_closure_without_direct_semantic_change": [
+        "continuity_EP001",
+        "export_EP001",
+        "handoff_EP001",
+        "review_EP001",
+        "script_EP001"
+      ],
+      "critical_artifacts_without_candidate_locations": [
+        "continuity_EP002",
+        "continuity_EP003",
+        "export_EP002",
+        "export_EP003",
+        "handoff_EP002",
+        "handoff_EP003",
+        "outline",
+        "review_EP002",
+        "review_EP003",
+        "script_EP002",
+        "script_EP003",
+        "season_review"
+      ]
+    },
+    {
+      "case_id": "end_state",
+      "assessment_sha256": "b1d4d0b7bb7b91d682cd153418057bd3b00e5b2d8d2bcf76777e607d58cf08d3",
+      "artifacts": 19,
+      "decisions": {
+        "review": 11,
+        "no_direct_semantic_change": 8,
+        "uncertain": 0
+      },
+      "limitation": "Structure and literal evidence checked; semantic correctness requires independent assessment",
+      "file_affected": 16,
+      "stale_artifacts": 15,
+      "candidate_location_count": 17,
+      "priority_artifacts": [
+        "continuity_EP001",
+        "continuity_EP002",
+        "export_EP001",
+        "export_EP002",
+        "handoff_EP001",
+        "handoff_EP002",
+        "review_EP001",
+        "review_EP002",
+        "script_EP001",
+        "script_EP002",
+        "season_review"
+      ],
+      "priority_outside_file_closure": [],
+      "file_closure_without_direct_semantic_change": [
+        "continuity_EP003",
+        "export_EP003",
+        "handoff_EP003",
+        "review_EP003",
+        "script_EP003"
+      ],
+      "critical_artifacts_without_candidate_locations": [
+        "review_EP001",
+        "review_EP002",
+        "season_review"
+      ]
+    }
+  ],
+  "limitation": "Independent AI assessments of six fixed fixtures; artifact counts are not measured reading/time savings. Candidate location presence does not prove semantic coverage. All STALE and gate requirements remain authoritative."
+}

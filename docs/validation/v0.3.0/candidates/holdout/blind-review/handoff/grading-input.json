@@ -1,0 +1,66 @@
+{
+  "tasks": {
+    "H03": {
+      "required": [
+        "两句对白逐字且角色/方式准确",
+        "资产及末状态来自v1.2而非旧稿",
+        "标draft预览/未审核/未实测",
+        "不新增镜头事实或制作批准"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    },
+    "H04": {
+      "required": [
+        "两句对白逐字且角色/方式准确",
+        "资产及末状态来自v1.2而非旧稿",
+        "标draft预览/未审核/未实测",
+        "不新增镜头事实或制作批准"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-1354f4f656",
+      "task_id": "H03"
+    },
+    {
+      "id": "run-5aa092a9e9",
+      "task_id": "H03"
+    },
+    {
+      "id": "run-5f67612437",
+      "task_id": "H03"
+    },
+    {
+      "id": "run-73214499f0",
+      "task_id": "H03"
+    },
+    {
+      "id": "run-7e5c973a2b",
+      "task_id": "H04"
+    },
+    {
+      "id": "run-a6a32df161",
+      "task_id": "H04"
+    },
+    {
+      "id": "run-a925fe56c7",
+      "task_id": "H04"
+    },
+    {
+      "id": "run-dc472a192a",
+      "task_id": "H04"
+    }
+  ]
+}

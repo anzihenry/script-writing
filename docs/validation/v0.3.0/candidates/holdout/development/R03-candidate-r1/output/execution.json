@@ -1,0 +1,16 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-writing/SKILL.md",
+    "input/source.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-asset-handoff/SKILL.md",
+    "output/answer.md",
+    "output/execution.json"
+  ],
+  "tool_calls": 6,
+  "actual_token_usage": null,
+  "model": null,
+  "limitations": ["未提供资产设定、已有资源或实物及样片；制作规格与备份数量待后续确认。"]
+}

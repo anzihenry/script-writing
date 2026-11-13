@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-11-10T05:46:24.608607+00:00",
+  "coordinator_error": "usage limit explicitly reported",
+  "executor_error": "usage limit explicitly reported in live agent status",
+  "executor_finish_at": null,
+  "output_mtimes": {
+    "answer.md": "2026-11-10T00:18:18.235435+00:00",
+    "execution.json": "2026-11-10T00:18:18.237983+00:00"
+  },
+  "original_attempt": {
+    "run_id": "S04-baseline-r1",
+    "started_at": "2026-11-10T00:17:10.329108+00:00",
+    "agent_id": "/root/m4_holdout_resume/holdout_20",
+    "observed_completed_at": null,
+    "status": "running",
+    "model": null,
+    "token_usage": null
+  },
+  "action": "collect existing answer and execution report without retry; exclude elapsed timing"
+}

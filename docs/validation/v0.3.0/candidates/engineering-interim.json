@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-09T11:20:44.824176+00:00",
+  "command": "python3 -m unittest discover -s tests",
+  "python": "3.15.2 (main, Oct 25 2026, 16:57:51) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "exit_code": 0,
+  "tests": 104,
+  "seconds": 12.404,
+  "output": "Ran 104 tests in 12.404s\n\nOK",
+  "tool_sessions": [
+    "63701"
+  ],
+  "files": {
+    "scripts/candidate_experiment.py": "ddbdf8e1fc6feec8386bfb76c954e90f54f9459160fcbf839f286c542f625027",
+    "scripts/measure_dependency_scope.py": "5e101975377ca69cc328fb325449f813734488d997b620e6124c6a10946c1fd8",
+    "tests/test_candidate_experiment.py": "4f5322d4351ba20c3b3dcd9fb980ee4d11b80874f75316445b6fa05db7b79202",
+    "tests/test_dependency_scope.py": "f3da5686d015f2c9d309edf9b5485a9ecb73dd67e91d487ceb022126c46648a7"
+  },
+  "limitation": "Interim engineering check; M4 semantic/holdout acceptance incomplete"
+}

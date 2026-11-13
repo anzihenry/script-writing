@@ -1,0 +1,17 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-continuity-audit/SKILL.md",
+    "input/source.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "output/answer.md",
+    "output/execution.json"
+  ],
+  "tool_calls": 5,
+  "actual_token_usage": null,
+  "limitations": [
+    "仅依据提供的三场文字核对道具状态，未提供实际道具台账。",
+    "第二场台词是否有意不实、第三场原锁身份是否承担必要情节功能，材料未说明。"
+  ]
+}

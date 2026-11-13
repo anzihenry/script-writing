@@ -1,0 +1,374 @@
+{
+  "case_id": "world",
+  "items": [
+    {
+      "artifact_id": "bible",
+      "decision": "review",
+      "locations": [
+        "LOC001 场景规则",
+        "人物信息边界与因果链"
+      ],
+      "evidence": [
+        {
+          "path": "before/bible.md",
+          "quote": "只有林夏在室内，对方无法看到桌面，不知道她已比对纸片。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "新版本把不透明门改为透明观察窗，并明确来访者已知比对行为；须审查这项新增知情与仍保留的错号试探因果是否相容，不能仅改场景名。"
+    },
+    {
+      "artifact_id": "brief",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "项目目标、规模与结局范围"
+      ],
+      "evidence": [
+        {
+          "path": "after/brief.md",
+          "quote": "林夏必须在不开门的情况下核实来访者的归还物，并保留与失窃页有关的证据。"
+        }
+      ],
+      "reason": "不开门不等于看不见；观察窗没有改变核实、留证目标、角色道具数量或责任待核查边界。这里未要求不透明门或秘密比对。"
+    },
+    {
+      "artifact_id": "continuity_EP001",
+      "decision": "review",
+      "locations": [
+        "EP001-SC001 states 人物知情",
+        "F001/F002 planted"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP001-v1.0.md",
+          "quote": "\"after\": \"只确认撕口关联\""
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "记录目前仅写林夏的关联认知和观众看到异常索纸；新规则明确来访者已知她比对纸片，需检查跨集信息状态是否遗漏，并确认异常索纸的解释。不是断言原有道具状态错误。"
+    },
+    {
+      "artifact_id": "continuity_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001 CHAR001.knows_record",
+        "F001 paid"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP002-v1.0.md",
+          "quote": "林夏确认对方知道登记信息，尚不能证明偷窃"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "记录的确认知情与 F001 paid 依赖纠正能提供额外信息；新可视条件需核对其证据来源与信息增量，不能直接沿用旧结论，也不能据此断言已证明偷窃。"
+    },
+    {
+      "artifact_id": "continuity_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001 道具落点与 F002 paid"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP003-v1.0.md",
+          "quote": "钥匙你留着，纸给我就走。"
+        }
+      ],
+      "reason": "放弃钥匙索纸仍直接支撑索纸为首要目的；新观察条件不改变钥匙留封面、纸片入簿或该对白所兑现的 F002。没有登记隐藏操作或对方不知比对的状态。"
+    },
+    {
+      "artifact_id": "export_EP001",
+      "decision": "review",
+      "locations": [
+        "EP001-SC001-B003",
+        "EP001-SC001-B005–B007 / D005"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.json",
+          "quote": "纸片靠近独特撕口，两者吻合。门外索纸，她停手。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "透明观察窗与看见桌面直接涉及比对动作、索纸时机和信息泄露；须确认门侧站位与桌面可视、画外角色呈现，并重新判断索纸是否已是对比对的反应。动作可以保留，但不能沿用对方不知情的理解。"
+    },
+    {
+      "artifact_id": "export_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001-B002–B005 / D002–D004",
+        "EP002-SC001-B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.json",
+          "quote": "她抬眼看不透明门，没有开门，也没有说出对方身份。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "B004 不透明门直接冲突新观察窗规则，且对方已见比对改变故意报错后立即纠正的动机与证明力。需核对第四行是既有知识还是现场可见信息；看见桌面不自动等于可读行号，也不能假定已通过遮挡修复。"
+    },
+    {
+      "artifact_id": "export_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001-B002–B007 / D002–D005"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.json",
+          "quote": "她将纸片夹进登记簿，合上封面，钥匙压在簿上。"
+        }
+      ],
+      "reason": "第三集的拒交、收存纸片、呼叫与离去均不依赖对方看不见桌面；对白已明确告知要核对，索纸目的及责任待核查仍成立。此处未写不透明门或隐藏比对，对方全程画外也不等于无法透窗观察。版本再登记仍必需。"
+    },
+    {
+      "artifact_id": "handoff_EP001",
+      "decision": "review",
+      "locations": [
+        "EP001-SC001-B003",
+        "EP001-SC001-B005–B007 / D005"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.md",
+          "quote": "纸片靠近独特撕口，两者吻合。门外索纸，她停手。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "透明观察窗与看见桌面直接涉及比对动作、索纸时机和信息泄露；须确认门侧站位与桌面可视、画外角色呈现，并重新判断索纸是否已是对比对的反应。动作可以保留，但不能沿用对方不知情的理解。"
+    },
+    {
+      "artifact_id": "handoff_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001-B002–B005 / D002–D004",
+        "EP002-SC001-B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.md",
+          "quote": "她抬眼看不透明门，没有开门，也没有说出对方身份。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "B004 不透明门直接冲突新观察窗规则，且对方已见比对改变故意报错后立即纠正的动机与证明力。需核对第四行是既有知识还是现场可见信息；看见桌面不自动等于可读行号，也不能假定已通过遮挡修复。"
+    },
+    {
+      "artifact_id": "handoff_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001-B002–B007 / D002–D005"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.md",
+          "quote": "她将纸片夹进登记簿，合上封面，钥匙压在簿上。"
+        }
+      ],
+      "reason": "第三集的拒交、收存纸片、呼叫与离去均不依赖对方看不见桌面；对白已明确告知要核对，索纸目的及责任待核查仍成立。此处未写不透明门或隐藏比对，对方全程画外也不等于无法透窗观察。版本再登记仍必需。"
+    },
+    {
+      "artifact_id": "outline",
+      "decision": "review",
+      "locations": [
+        "EP001 关联到 EP002 试探",
+        "F001 回收"
+      ],
+      "evidence": [
+        {
+          "path": "after/outline.md",
+          "quote": "F001：撕口关联在 EP002 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "新增看见比对的信息改变试探双方信息差，需检查 EP002 知情纠正作为 F001 回收的说服力；不自动判定第三集兑现无效。"
+    },
+    {
+      "artifact_id": "review_EP001",
+      "decision": "review",
+      "locations": [
+        "EP001 叙事/人物/连续性与制作结论"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP001-v1.0.md",
+          "quote": "通过；EP001-SC001 的选择产生下一局面，见动作块 B001–B007"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "旧通过结论需按新人物信息差重新审查；EP001 比对后的索纸动机改变，EP002 另有不透明门的显式冲突，不能把旧审稿的文字无矛盾判断继续用于新设定。"
+    },
+    {
+      "artifact_id": "review_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002 叙事/人物/连续性与制作结论"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP002-v1.0.md",
+          "quote": "通过；EP002-SC001 的选择产生下一局面，见动作块 B001–B007"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "旧通过结论需按新人物信息差重新审查；EP001 比对后的索纸动机改变，EP002 另有不透明门的显式冲突，不能把旧审稿的文字无矛盾判断继续用于新设定。"
+    },
+    {
+      "artifact_id": "review_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003 叙事/人物/连续性结论"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP003-v1.0.md",
+          "quote": "通过；林夏始终不开门，来访者从催开门逐步转向索纸"
+        }
+      ],
+      "reason": "该集判断依托不开门、拒交证据与呼叫，观察窗并未取消这些行为，也未改变本集知情不等于偷窃的边界；结论需要按依赖流程再确认，但未发现专由本次变更导致的本集文本矛盾。"
+    },
+    {
+      "artifact_id": "script_EP001",
+      "decision": "review",
+      "locations": [
+        "EP001-SC001-B003",
+        "EP001-SC001-B005–B007 / D005"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP001-v1.0.md",
+          "quote": "纸片靠近独特撕口，两者吻合。门外索纸，她停手。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "透明观察窗与看见桌面直接涉及比对动作、索纸时机和信息泄露；须确认门侧站位与桌面可视、画外角色呈现，并重新判断索纸是否已是对比对的反应。动作可以保留，但不能沿用对方不知情的理解。"
+    },
+    {
+      "artifact_id": "script_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001-B002–B005 / D002–D004",
+        "EP002-SC001-B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "她抬眼看不透明门，没有开门，也没有说出对方身份。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "B004 不透明门直接冲突新观察窗规则，且对方已见比对改变故意报错后立即纠正的动机与证明力。需核对第四行是既有知识还是现场可见信息；看见桌面不自动等于可读行号，也不能假定已通过遮挡修复。"
+    },
+    {
+      "artifact_id": "script_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001-B002–B007 / D002–D005"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP003-v1.0.md",
+          "quote": "她将纸片夹进登记簿，合上封面，钥匙压在簿上。"
+        }
+      ],
+      "reason": "第三集的拒交、收存纸片、呼叫与离去均不依赖对方看不见桌面；对白已明确告知要核对，索纸目的及责任待核查仍成立。此处未写不透明门或隐藏比对，对方全程画外也不等于无法透窗观察。版本再登记仍必需。"
+    },
+    {
+      "artifact_id": "season_review",
+      "decision": "review",
+      "locations": [
+        "information",
+        "character_arc",
+        "foreshadows / F001",
+        "escalation 的 EP001 索纸时机"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/season-v1.0.md",
+          "quote": "林夏事先记得三号第四行；EP002-D003 对方纠正。只确认知情，EP003 保留身份待核查。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "只有林夏在室内，对方能够看见桌面，知道她已比对纸片。"
+        }
+      ],
+      "reason": "全季信息评述没有纳入来访者已看到比对这一新事实，需复核报错试探的有效性、知情信息增量与 F001 回收；不能把第三集身份待核查升级为确认犯罪，也不能因前集变化否定独立成立的拒交结局。"
+    }
+  ],
+  "critical_locations": [
+    {
+      "artifact_id": "bible",
+      "location": "LOC001 与对方知道她已比对纸片的规则",
+      "reason": "世界可视性与人物知识同步改变，须检查因果链能否继续成立。"
+    },
+    {
+      "artifact_id": "script_EP001",
+      "location": "EP001-SC001-B005–B007 / EP001-D005",
+      "reason": "比对可被观察后，索纸与沉默的动机、时点及后续双方知情基础需要复核。"
+    },
+    {
+      "artifact_id": "script_EP002",
+      "location": "EP002-SC001-B004",
+      "reason": "仍写不透明门，与新透明观察窗规则直接冲突；交接及导出复制同一冲突。"
+    },
+    {
+      "artifact_id": "script_EP002",
+      "location": "EP002-SC001-B002–B003、B005–B007 / D002–D004",
+      "reason": "看见比对后仍立即纠正的动机与林夏据此确认知情的证据来源需要重新判断。"
+    },
+    {
+      "artifact_id": "continuity_EP001",
+      "location": "EP001-SC001 人物知识状态",
+      "reason": "跨集记录需考虑来访者已知比对行为，避免继续沿用旧信息差。"
+    },
+    {
+      "artifact_id": "season_review",
+      "location": "information 与 foreshadows",
+      "reason": "旧 pass 尚未处理新观察条件对试探和 F001 回收的影响。"
+    }
+  ],
+  "limitations": [
+    "仅访问指定 request.md、task.json 及 before/、after/；下游仍为旧正文，未假定任何修复已执行。",
+    "分类只表示本次变更的针对性语义阅读优先级；所有文件级 STALE、版本/依赖再登记及 gate 仍适用，no_direct_semantic_change 不表示免检或批准。",
+    "可看见桌面并未明确能读到行号、观察窗尺寸或各处视线；相关可视与知识边界须在复核中确认，不预设唯一改写方案。",
+    "未测量耗时，不估算节省；未改写任何原件。"
+  ]
+}

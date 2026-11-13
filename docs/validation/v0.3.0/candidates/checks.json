@@ -1,0 +1,73 @@
+{
+  "at": "2026-11-13T07:50:12.852180+00:00",
+  "tests": [
+    {
+      "python": "Python 3.9.6",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "exit_code": 0,
+      "tests": 108,
+      "log": "tests-final-py39.txt",
+      "sha256": "62bda05e1cb11819567fa4efacebacdc24f55c25e4391cd163c983faf7532444"
+    },
+    {
+      "python": "Python 3.14.10",
+      "command": [
+        "/opt/homebrew/bin/python3.14",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "exit_code": 0,
+      "tests": 108,
+      "log": "tests-final-py314.txt",
+      "sha256": "3afb5b85ae8a2c1f2e86b1d8e8cfec804524e5b37129d7d9b5bc50336d8e6577"
+    },
+    {
+      "python": "Python 3.15.2",
+      "command": [
+        "/opt/homebrew/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "exit_code": 0,
+      "tests": 108,
+      "log": "tests-final-current.txt",
+      "sha256": "3f8c40deff47dd01963cb34591550a998b3e70e743d6a8a7e125a45540b51e13"
+    }
+  ],
+  "benchmark": {
+    "file": "benchmark.json",
+    "sha256": "ba460cc72bfc967d48b27b649f0923b1b2dd363ded9ab83e79978aeff24c4175",
+    "exit_code": 0
+  },
+  "examples": {
+    "file": "examples.json",
+    "sha256": "0e9d9928cd63b58c3eca2c37bc873d06bb9c91d70ff5df3481b29d347709b1d7",
+    "exit_code": 0
+  },
+  "development_runs": 8,
+  "holdout_runs": 48,
+  "scope_cases": 6,
+  "holdout_success": 47,
+  "holdout_unverified_runs": 1,
+  "confirmed_critical_violations": 0,
+  "semantic_sources": {
+    "dev/final-grades.json": "3ffe1aaa376e6914c74920e2fdeaabfd63081a7be87f917e01f0b890d7feabed",
+    "scope/summary.json": "872d45f64abca5117afc0c1b799d75ff55c66fa8a95981132f2ce85aefcc205f",
+    "holdout/final-grades.json": "73eeb1973cab4950f31d96e42fa75b5fe054e878207ccd288ede0cb0a7d68d63"
+  },
+  "remote_ci": "not run",
+  "production_validation": "not run"
+}

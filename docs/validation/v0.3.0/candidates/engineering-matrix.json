@@ -1,0 +1,54 @@
+{
+  "recorded_at": "2026-11-09T13:13:15.232576+00:00",
+  "checks": [
+    {
+      "python": "/usr/bin/python3",
+      "version": "Python 3.9.6",
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "exit_code": 0,
+      "tests": 106,
+      "log": "tests-interim-py39.txt",
+      "log_sha256": "c08c545228e9b642ae0963f8df22393c6b0341e43ad053ab37f489229cfdf175"
+    },
+    {
+      "python": "/opt/homebrew/bin/python3.14",
+      "version": "Python 3.14.10",
+      "command": [
+        "/opt/homebrew/bin/python3.14",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "exit_code": 0,
+      "tests": 106,
+      "log": "tests-interim-py314.txt",
+      "log_sha256": "58b4176dfa018bbf2648912716578325be5b9b4c9b106ac9f69ae51d2841845a"
+    },
+    {
+      "python": "/opt/homebrew/bin/python3",
+      "version": "Python 3.15.2",
+      "command": [
+        "/opt/homebrew/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "exit_code": 0,
+      "tests": 106,
+      "log": "tests-interim-current.txt",
+      "log_sha256": "42545c902c16bcddf4be2bfda93643fc45de7002565cc1f18748c2c4877432a7"
+    }
+  ],
+  "limitation": "Before holdout completion; deterministic tests are not new model evaluations"
+}

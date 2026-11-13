@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-11-10T16:38:47.099694+00:00",
+  "coordinator_error": "usage limit explicitly reported",
+  "executor_error": "usage limit explicitly reported in live agent status",
+  "executor_finish_at": null,
+  "original_attempt": {
+    "run_id": "S03-candidate-r2",
+    "started_at": "2026-11-10T11:07:04.770270+00:00",
+    "agent_id": "/root/m4_holdout_resume3/holdout_41",
+    "observed_completed_at": null,
+    "status": "running",
+    "model": null,
+    "token_usage": null
+  },
+  "action": "preserve empty first attempt; user explicitly resumed; permit fresh second attempt"
+}

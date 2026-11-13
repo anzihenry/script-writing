@@ -1,0 +1,19 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-episode/SKILL.md",
+    "input/checkpoint.md",
+    "input/season.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-writing/references/standards.md",
+    "input/skills/ai-short-drama-writing/assets/templates.md",
+    "input/skills/ai-short-drama-writing/assets/project-template/episode.md",
+    "input/skills/ai-short-drama-writing/assets/project-template/continuity.md",
+    "output/answer.md",
+    "output/execution.json"
+  ],
+  "tool_calls": 7,
+  "actual_token_usage": null,
+  "limitations": ["时长为文本估算，未实际朗读或配音实测。", "没有真实项目清单，未执行项目管线或审批操作。"]
+}

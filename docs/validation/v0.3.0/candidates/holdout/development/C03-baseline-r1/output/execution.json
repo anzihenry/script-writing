@@ -1,0 +1,15 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-continuity-audit/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-writing/references/season-review.md",
+    "input/season.md"
+  ],
+  "tool_calls": 4,
+  "actual_token_usage": null,
+  "limitations": [
+    "未提供独立实际台账、伏笔计划或项目清单；仅审核所给十二集正文中的人物知情来源，未执行结构化管线检查。"
+  ]
+}

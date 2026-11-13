@@ -1,0 +1,400 @@
+{
+  "case_id": "end_state",
+  "items": [
+    {
+      "artifact_id": "bible",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "道具与因果设定"
+      ],
+      "evidence": [
+        {
+          "path": "after/bible.md",
+          "quote": "关键证据是图形吻合与对话，不靠生成中文文字。"
+        }
+      ],
+      "reason": "变更是 EP001 末尾钥匙位置和手部状态；铜钥匙属性、撕口关联、报错试探、保留证据因果均未改变，设定也未规定必须右手持钥匙。无需据此扩展到角色知识或身份改写。"
+    },
+    {
+      "artifact_id": "brief",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "三集目标与回报"
+      ],
+      "evidence": [
+        {
+          "path": "after/brief.md",
+          "quote": "三集依次兑现发现关联、主动试探、守住证据。"
+        }
+      ],
+      "reason": "钥匙留托盘仍在室内，未改变不开门核实、保留缺页证据和三集回报；brief 不约定末尾手部或具体摆放。"
+    },
+    {
+      "artifact_id": "continuity_EP001",
+      "decision": "review",
+      "locations": [
+        "states：PROP001 holder／EP001-SC001-B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP001-v1.0.md",
+          "quote": "\"quote\": \"钥匙在林夏右手\""
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。"
+        }
+      ],
+      "reason": "旧记录以 CHAR001 为末态持有者且引用右手，与新源双手空着、钥匙在托盘直接冲突。应核对末态及来源引用；页角桌面和人物认知不因本改动自动变化。"
+    },
+    {
+      "artifact_id": "continuity_EP002",
+      "decision": "review",
+      "locations": [
+        "states：PROP001 holder before／EP002-SC001"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP002-v1.0.md",
+          "quote": "\"before\": \"CHAR001\",\n      \"after\": \"桌面\""
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。"
+        }
+      ],
+      "reason": "该转移将前态记为 CHAR001，沿用 EP001 旧持钥匙末态。新末态为托盘，须与 EP002 开场及放钥匙动作一起复核；当前末态仍明确是桌面，不能假设后续改写已经实施。"
+    },
+    {
+      "artifact_id": "continuity_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "states：PROP001 holder；PROP002 page"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP003-v1.0.md",
+          "quote": "\"before\": \"桌面\",\n      \"after\": \"登记簿封面\""
+        },
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "钥匙和纸片都在桌面登记簿旁。"
+        }
+      ],
+      "reason": "现有 EP002-B007 明写钥匙和纸片都在桌面，EP003 从桌面转移到封面的记录与其相容；本次只改 EP001 末态，没有改 EP002 末态。该判断不等于 EP001→EP002 冲突已修复；若未来修复改变 EP002 末态须重评。"
+    },
+    {
+      "artifact_id": "export_EP001",
+      "decision": "review",
+      "locations": [
+        "scenes[0].exit_state",
+        "EP001-SC001-B007 action"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.json",
+          "quote": "\"exit_state\": \"钥匙在林夏右手；登记簿和纸片在桌面。她问来源，门外沉默。\""
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。"
+        }
+      ],
+      "reason": "导出末态与 B007 动作均复写旧右手状态，直接违背新源；必须同时复核而非只对照对白字段。"
+    },
+    {
+      "artifact_id": "export_EP002",
+      "decision": "review",
+      "locations": [
+        "scenes[0].entry_state",
+        "EP002-SC001-B001、B002 action"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.json",
+          "quote": "\"entry_state\": \"承接沉默，门外终于回答来源。林夏仍拿着钥匙，盯着桌上纸片。\""
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。"
+        }
+      ],
+      "reason": "entry_state 与 B001 的“仍拿着”承接已失效的持物状态，B002 又从手中放到簿旁，须核对这一连续动作链；无证据要求改变报错对白。"
+    },
+    {
+      "artifact_id": "export_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001-B003、B007；exit_state"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.json",
+          "quote": "她将纸片夹进登记簿，合上封面，钥匙压在簿上。"
+        }
+      ],
+      "reason": "导出采用 EP002 已明写的桌面末态并将钥匙置于簿上；本次前集托盘改动尚未改变这一入口、对白或末态。不能据传递依赖直接推断 EP003 动作已变化；未来若 EP002 末态调整再重评。"
+    },
+    {
+      "artifact_id": "handoff_EP001",
+      "decision": "review",
+      "locations": [
+        "动作清单 EP001-SC001-B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.md",
+          "quote": "EP001-SC001-B007：钥匙在林夏右手；登记簿和纸片在桌面。她问来源，门外沉默。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。"
+        }
+      ],
+      "reason": "动作交接仍要求右手持钥匙，和新源托盘、空手状态相反；需针对末帧持物和前段取物衔接复核。"
+    },
+    {
+      "artifact_id": "handoff_EP002",
+      "decision": "review",
+      "locations": [
+        "动作清单 EP002-SC001-B001、B002"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.md",
+          "quote": "林夏仍拿着钥匙，盯着桌上纸片。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。"
+        }
+      ],
+      "reason": "交接把旧开场持钥匙状态复制给制作，并接续放到登记簿旁动作，与前集新末态不连贯，须定点复核。"
+    },
+    {
+      "artifact_id": "handoff_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "动作清单 EP003-SC001-B003、B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.md",
+          "quote": "钥匙压在闭合登记簿上，纸片留在簿内；呼叫仍在等待。"
+        }
+      ],
+      "reason": "交接的保留证据动作依赖 EP002 现有桌面末态，不依赖 EP001 右手状态；在当前实际文本下没有直接语义变化。EP002 开场矛盾仍待处理，此判断不假定已经补拍取钥匙。"
+    },
+    {
+      "artifact_id": "outline",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "三集结构表 EP001、EP002；F001、F002"
+      ],
+      "evidence": [
+        {
+          "path": "after/outline.md",
+          "quote": "隔门收物，纸片撕口吻合"
+        }
+      ],
+      "reason": "大纲约定收物、匹配、试探等剧情回报，未规定钥匙的末帧摆放。托盘位置变更不改变撕口、纠正编号或异常索纸伏笔的意义。"
+    },
+    {
+      "artifact_id": "review_EP001",
+      "decision": "review",
+      "locations": [
+        "连续性、叙事、交接结论"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP001-v1.0.md",
+          "quote": "| 连续性 | 通过；钥匙、页角都留在室内；知道登记信息没有被写成确定偷窃身份 |"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。"
+        }
+      ],
+      "reason": "留在室内这一窄事实仍成立，但旧通过结论没有覆盖新末态与旧连续性/交接的冲突，需针对 B005 取物至 B007 留托盘及末态证据重新审阅，不能沿用整体通过。"
+    },
+    {
+      "artifact_id": "review_EP002",
+      "decision": "review",
+      "locations": [
+        "连续性、叙事结论；EP002-SC001-B001、B002"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP002-v1.0.md",
+          "quote": "已读本集正文、既有前集和连续性、设定及大纲。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。"
+        },
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "林夏仍拿着钥匙，盯着桌上纸片。"
+        }
+      ],
+      "reason": "该报告声称读过前集和连续性并给出通过，如今前集双手空着与本集“仍拿着”发生直接衔接矛盾，需重审入口，不能只依两道具都在室内维持结论。"
+    },
+    {
+      "artifact_id": "review_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "连续性、人物和叙事结论"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP003-v1.0.md",
+          "quote": "知道登记信息没有被写成确定偷窃身份"
+        }
+      ],
+      "reason": "EP003 仍由既有 EP002 桌面末态进入，保留证据、不开门与身份待核查均未因 EP001 末帧摆放而改变。其语义结论没有直接新增反证；版本/依赖失效必须另行办理，不能把本分类视为旧审核重新有效。"
+    },
+    {
+      "artifact_id": "script_EP001",
+      "decision": "review",
+      "locations": [
+        "EP001-SC001-B004、B005、B006、B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。"
+        },
+        {
+          "path": "before/episodes/EP001-v1.0.md",
+          "quote": "钥匙在林夏右手；登记簿和纸片在桌面。她问来源，门外沉默。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "她取回物件并展开纸片，看向登记簿缺页。"
+        }
+      ],
+      "reason": "直接修改末态；B005“取回物件”之后钥匙是否始终留盘或曾放回，需核对动作含义及双手清空过程，不臆定具体修复。还必须对齐次集入口。"
+    },
+    {
+      "artifact_id": "script_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001-B001、B002"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "承接沉默，门外终于回答来源。林夏仍拿着钥匙，盯着桌上纸片。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。"
+        }
+      ],
+      "reason": "“仍拿着”与新前集空手矛盾，随后把钥匙放簿旁也需持物过渡。需定点复核入口两块；报错试探与本集末态目前均未被修改，不能假设已补取物动作。"
+    },
+    {
+      "artifact_id": "script_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001-B001、B003、B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP003-v1.0.md",
+          "quote": "她将纸片夹进登记簿，合上封面，钥匙压在簿上。"
+        },
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "钥匙和纸片都在桌面登记簿旁。"
+        }
+      ],
+      "reason": "EP002 实际末块依旧明确钥匙在桌面，EP003 因此有现成入口依据；没有文本证据把 EP001 托盘末态直接传至 EP003。当前不要求定点重写本集，前序冲突仍未修复，未来入口变更须重评。"
+    },
+    {
+      "artifact_id": "season_review",
+      "decision": "review",
+      "locations": [
+        "逐集正文和连续性审核方法；EP001→EP002 衔接"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/season-v1.0.md",
+          "quote": "作者自审；逐集阅读正文、连续性和设定；非独立审稿"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。"
+        },
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "林夏仍拿着钥匙，盯着桌上纸片。"
+        }
+      ],
+      "reason": "整季审核声称逐集读取连续性，需补审 EP001 托盘末态→EP002 仍持钥匙的断裂。人物弧、信息边界、伏笔回收本身未被本改动推翻，不必自动将六维结论全部改写。"
+    }
+  ],
+  "critical_locations": [
+    {
+      "artifact_id": "continuity_EP001",
+      "location": "states：PROP001 holder／EP001-SC001-B007",
+      "reason": "旧记录以 CHAR001 为末态持有者且引用右手，与新源双手空着、钥匙在托盘直接冲突。应核对末态及来源引用；页角桌面和人物认知不因本改动自动变化。"
+    },
+    {
+      "artifact_id": "continuity_EP002",
+      "location": "states：PROP001 holder before／EP002-SC001",
+      "reason": "该转移将前态记为 CHAR001，沿用 EP001 旧持钥匙末态。新末态为托盘，须与 EP002 开场及放钥匙动作一起复核；当前末态仍明确是桌面，不能假设后续改写已经实施。"
+    },
+    {
+      "artifact_id": "export_EP001",
+      "location": "scenes[0].exit_state；EP001-SC001-B007 action",
+      "reason": "导出末态与 B007 动作均复写旧右手状态，直接违背新源；必须同时复核而非只对照对白字段。"
+    },
+    {
+      "artifact_id": "export_EP002",
+      "location": "scenes[0].entry_state；EP002-SC001-B001、B002 action",
+      "reason": "entry_state 与 B001 的“仍拿着”承接已失效的持物状态，B002 又从手中放到簿旁，须核对这一连续动作链；无证据要求改变报错对白。"
+    },
+    {
+      "artifact_id": "handoff_EP001",
+      "location": "动作清单 EP001-SC001-B007",
+      "reason": "动作交接仍要求右手持钥匙，和新源托盘、空手状态相反；需针对末帧持物和前段取物衔接复核。"
+    },
+    {
+      "artifact_id": "handoff_EP002",
+      "location": "动作清单 EP002-SC001-B001、B002",
+      "reason": "交接把旧开场持钥匙状态复制给制作，并接续放到登记簿旁动作，与前集新末态不连贯，须定点复核。"
+    },
+    {
+      "artifact_id": "review_EP001",
+      "location": "连续性、叙事、交接结论",
+      "reason": "留在室内这一窄事实仍成立，但旧通过结论没有覆盖新末态与旧连续性/交接的冲突，需针对 B005 取物至 B007 留托盘及末态证据重新审阅，不能沿用整体通过。"
+    },
+    {
+      "artifact_id": "review_EP002",
+      "location": "连续性、叙事结论；EP002-SC001-B001、B002",
+      "reason": "该报告声称读过前集和连续性并给出通过，如今前集双手空着与本集“仍拿着”发生直接衔接矛盾，需重审入口，不能只依两道具都在室内维持结论。"
+    },
+    {
+      "artifact_id": "script_EP001",
+      "location": "EP001-SC001-B004、B005、B006、B007",
+      "reason": "直接修改末态；B005“取回物件”之后钥匙是否始终留盘或曾放回，需核对动作含义及双手清空过程，不臆定具体修复。还必须对齐次集入口。"
+    },
+    {
+      "artifact_id": "script_EP002",
+      "location": "EP002-SC001-B001、B002",
+      "reason": "“仍拿着”与新前集空手矛盾，随后把钥匙放簿旁也需持物过渡。需定点复核入口两块；报错试探与本集末态目前均未被修改，不能假设已补取物动作。"
+    },
+    {
+      "artifact_id": "season_review",
+      "location": "逐集正文和连续性审核方法；EP001→EP002 衔接",
+      "reason": "整季审核声称逐集读取连续性，需补审 EP001 托盘末态→EP002 仍持钥匙的断裂。人物弧、信息边界、伏笔回收本身未被本改动推翻，不必自动将六维结论全部改写。"
+    }
+  ],
+  "limitations": [
+    "仅依据本目录 task.json、before/、after/ 的文本；不推定任何下游修复已执行。",
+    "分类只用于阅读优先级，不豁免文件级 STALE、版本/依赖再登记或 gate；no_direct_semantic_change 不构成免检或批准。",
+    "EP003 范围基于当前 EP002 仍明确保留桌面末态；若后续修复改变该末态，应重新判断 EP003 各产物。",
+    "未实测配音、样片或复核耗时，不估算时间节省；不提供唯一改写答案。"
+  ]
+}

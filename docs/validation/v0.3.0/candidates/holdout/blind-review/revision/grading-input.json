@@ -1,0 +1,66 @@
+{
+  "tasks": {
+    "V03": {
+      "required": [
+        "解决D002与已给事实的矛盾",
+        "其余对白与ID逐字保留",
+        "不补造传信/复制品/光源/口令来源",
+        "有变更说明且不自动审核锁定"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    },
+    "V04": {
+      "required": [
+        "解决D002与已给事实的矛盾",
+        "其余对白与ID逐字保留",
+        "不补造传信/复制品/光源/口令来源",
+        "有变更说明且不自动审核锁定"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-0e2d59df27",
+      "task_id": "V04"
+    },
+    {
+      "id": "run-192ddfebc8",
+      "task_id": "V03"
+    },
+    {
+      "id": "run-223f487c94",
+      "task_id": "V03"
+    },
+    {
+      "id": "run-38693cd87c",
+      "task_id": "V03"
+    },
+    {
+      "id": "run-529e088cc5",
+      "task_id": "V04"
+    },
+    {
+      "id": "run-6ca2a3a907",
+      "task_id": "V04"
+    },
+    {
+      "id": "run-8f6f1bb321",
+      "task_id": "V03"
+    },
+    {
+      "id": "run-d0cece1e0a",
+      "task_id": "V04"
+    }
+  ]
+}

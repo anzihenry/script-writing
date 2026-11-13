@@ -1,0 +1,28 @@
+{
+  "case_id": "world",
+  "category": "世界规则",
+  "source": "bible",
+  "artifacts": [
+    "bible",
+    "brief",
+    "continuity_EP001",
+    "continuity_EP002",
+    "continuity_EP003",
+    "export_EP001",
+    "export_EP002",
+    "export_EP003",
+    "handoff_EP001",
+    "handoff_EP002",
+    "handoff_EP003",
+    "outline",
+    "review_EP001",
+    "review_EP002",
+    "review_EP003",
+    "script_EP001",
+    "script_EP002",
+    "script_EP003",
+    "season_review"
+  ],
+  "old_source": "bible.md",
+  "new_source": "bible-scope-v1.1.md"
+}

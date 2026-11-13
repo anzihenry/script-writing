@@ -1,0 +1,21 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-continuity-audit/SKILL.md",
+    "input/episode.md",
+    "input/summary.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-writing/references/season-review.md",
+    "output/answer.md",
+    "output/execution.json"
+  ],
+  "tool_calls": 5,
+  "actual_token_usage": null,
+  "model": null,
+  "limitations": [
+    "前五集正文缺失；第六集仅提供一个动作与一句对白。",
+    "摘要未经核实，输入版本未知。",
+    "没有实际台账、伏笔计划或真实项目清单；未执行管线操作、审批或全季验收。"
+  ]
+}

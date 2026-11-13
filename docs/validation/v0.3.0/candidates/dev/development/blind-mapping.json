@@ -1,0 +1,66 @@
+{
+  "run-4526fa11b5": {
+    "run": "W01-baseline-r1",
+    "category": "writing",
+    "task_id": "W01",
+    "condition": "baseline",
+    "replicate": 1,
+    "result_sha256": "e664a40341774fe5476e00f0b4c2364deeda7686c728d7d6d1c3265f302e7fd2"
+  },
+  "run-91faed4763": {
+    "run": "W01-candidate-r1",
+    "category": "writing",
+    "task_id": "W01",
+    "condition": "candidate",
+    "replicate": 1,
+    "result_sha256": "035065935b823e1512f7279d8ae8388e26a0c5ec49913757a3fb9f7c6d87f611"
+  },
+  "run-a6bea2c06b": {
+    "run": "S01-candidate-r1",
+    "category": "recovery",
+    "task_id": "S01",
+    "condition": "candidate",
+    "replicate": 1,
+    "result_sha256": "1b4a4ed19d4c2967ae1db5fe64b5fa0e6cc650b0ec090939cd40364b24bf0b54"
+  },
+  "run-4a0f8fd54e": {
+    "run": "S01-baseline-r1",
+    "category": "recovery",
+    "task_id": "S01",
+    "condition": "baseline",
+    "replicate": 1,
+    "result_sha256": "17252b337d2e5caa42c2af73c3af4cb309b11eb0235488fe120a579cf33ad456"
+  },
+  "run-bc2e05cab8": {
+    "run": "W01-candidate-r2",
+    "category": "writing",
+    "task_id": "W01",
+    "condition": "candidate",
+    "replicate": 2,
+    "result_sha256": "906a7f77146494f92f20a25f5553c1bd5be487cf2fc3a4f20fd9edccea7af0c1"
+  },
+  "run-a67fcb6a12": {
+    "run": "W01-baseline-r2",
+    "category": "writing",
+    "task_id": "W01",
+    "condition": "baseline",
+    "replicate": 2,
+    "result_sha256": "4c69c73087b5697a2b994f796d26026f10ee28dc04a1b26b9d5a09a3251f13e9"
+  },
+  "run-91f55e9157": {
+    "run": "S01-baseline-r2",
+    "category": "recovery",
+    "task_id": "S01",
+    "condition": "baseline",
+    "replicate": 2,
+    "result_sha256": "3d77ad080c8be346e4060ba6af19b09cec6cef9bf61449c77d94cf38fd29a34c"
+  },
+  "run-5ed89a29bf": {
+    "run": "S01-candidate-r2",
+    "category": "recovery",
+    "task_id": "S01",
+    "condition": "candidate",
+    "replicate": 2,
+    "result_sha256": "d35b46c863786b8e405a63060165760420ee3cd30eb2b420a286639c185d43c1"
+  }
+}

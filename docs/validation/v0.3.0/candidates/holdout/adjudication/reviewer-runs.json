@@ -1,0 +1,34 @@
+{
+  "runs": [
+    {
+      "category": "routing",
+      "attempt": 1,
+      "agent_id": "/root/m4_holdout_routing_adjudication",
+      "started_at": null,
+      "status": "interrupted_without_delivery",
+      "observed_at": "2026-11-11T04:25:22.145436+00:00",
+      "error": "explicit usage-limit error; no decisions.json delivered",
+      "executor_finish_at": null
+    },
+    {
+      "category": "routing",
+      "attempt": 2,
+      "agent_id": "/root/m4_routing_adjudication_retry",
+      "started_at": "2026-11-11T04:25:46.178427+00:00",
+      "status": "delivered",
+      "model": null,
+      "observed_complete_at": "2026-11-11T04:26:38.004987+00:00",
+      "decisions_sha256": "de84caa79bd7805632b3f8358c7e9d9ae5ba9edcd73fadc0b08e15d37bc8e211"
+    },
+    {
+      "category": "handoff",
+      "attempt": 1,
+      "agent_id": "/root/m4_handoff_adjudication",
+      "started_at": "2026-11-11T04:26:38.005273+00:00",
+      "model": null,
+      "status": "delivered",
+      "observed_complete_at": "2026-11-11T04:27:39.005873+00:00",
+      "decisions_sha256": "78243a658b377bca47fa7dcb8829b887b99c34e059e72cabacc0acd3332a065c"
+    }
+  ]
+}

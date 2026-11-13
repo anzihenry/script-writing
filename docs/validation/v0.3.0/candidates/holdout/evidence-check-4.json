@@ -1,0 +1,31 @@
+{
+  "verified_runs": 4,
+  "expected_runs": 48,
+  "matrix_complete": false,
+  "rows": [
+    {
+      "run_id": "R03-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R03-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R04-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R04-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    }
+  ]
+}

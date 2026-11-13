@@ -1,0 +1,2844 @@
+{
+  "cases": [
+    {
+      "case_id": "appearance",
+      "category": "角色外观",
+      "source": "bible",
+      "file_affected": 18,
+      "stale_artifacts": 17,
+      "candidate_location_count": 16,
+      "impact": {
+        "source": "bible",
+        "source_change": {
+          "status": "AVAILABLE",
+          "old": {
+            "kind": "bible",
+            "scope": "project",
+            "path": "bible.md",
+            "revision": "v1.0",
+            "status": "draft",
+            "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514",
+            "depends_on": [
+              {
+                "id": "brief",
+                "revision": "v1.0",
+                "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+              }
+            ],
+            "evidence": null
+          },
+          "new": {
+            "kind": "bible",
+            "scope": "project",
+            "path": "bible-scope-v1.1.md",
+            "revision": "v1.1",
+            "status": "draft",
+            "sha256": "7ed5d4c4fd03564a65ab9a4fe119485b930c2a0a43d718ef165dc9763b86febf",
+            "depends_on": [
+              {
+                "id": "brief",
+                "revision": "v1.0",
+                "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+              }
+            ],
+            "evidence": null
+          },
+          "scene_ids": [],
+          "object_ids": [
+            "CHAR001",
+            "CHAR002",
+            "LOC001",
+            "PROP001",
+            "PROP002"
+          ],
+          "changes": [
+            {
+              "operation": "replace",
+              "old_start": 1,
+              "old_count": 1,
+              "new_start": 1,
+              "new_count": 1
+            },
+            {
+              "operation": "replace",
+              "old_start": 7,
+              "old_count": 1,
+              "new_start": 7,
+              "new_count": 1
+            }
+          ],
+          "diff": "--- bible.md\n+++ bible-scope-v1.1.md\n@@ -1,10 +1,10 @@\n-# 设定与制作约束 v1.0\n+# 设定与制作约束 v1.1\n \n CHAR001 林夏：新任管理员，谨慎、措辞短，起初怕误会来访者，逐步选择主动试探并保留证据。她当班前见过完整登记页，记得“三号、第四行”；当班后发现该页被撕。此记忆是既有知识，不能改写为对来访者身份的了解。\n CHAR002 来访者：陌生人，仅画外声，礼貌掩饰焦急；知道缺页记录，希望取回页角，但不说明自己如何得到钥匙或是否参与偷窃。\n \n LOC001 值班室：不透明门、投递缝、桌面、固定墙面管理处呼叫器。呼叫键启动铃声不等于有人已接通，也不增加第三名说话角色。\n-PROP001 无刻字铜钥匙。PROP002 登记簿及其撕下页角，按同一道具的部件管理，独特撕口可对合。灰外套固定，无伤势变化。只有林夏在室内，对方无法看到桌面，不知道她已比对纸片。\n+PROP001 无刻字铜钥匙。PROP002 登记簿及其撕下页角，按同一道具的部件管理，独特撕口可对合。深蓝外套固定，无伤势变化。只有林夏在室内，对方无法看到桌面，不知道她已比对纸片。\n \n 因果：收到钥匙与纸片→纸片匹配缺页→故意报错编号→对方纠正并说出行号→确认其了解登记信息→对方直接索纸→林夏保留证据并呼叫管理处→对方离去。知道记录不等于证明偷窃，结局不冒认抓到窃贼。\n ",
+          "diff_truncated": false,
+          "reference_basis": "Candidate references near changed lines or in changed scenes; review before deciding actual impact"
+        },
+        "order": [
+          {
+            "id": "bible",
+            "scope": "project",
+            "kind": "bible",
+            "relation": "source",
+            "errors": [],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "outline",
+            "scope": "project",
+            "kind": "outline",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP001",
+            "scope": "EP001",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible",
+              "dependency unusable: outline"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP001",
+            "scope": "EP001",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙在林夏右手"
+              },
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "PROP002"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "登记簿和纸片在桌面"
+              },
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "两者吻合"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP001",
+            "scope": "EP001",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP001",
+            "scope": "EP001",
+            "kind": "handoff",
+            "relation": "direct",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: review_EP001",
+              "dependency snapshot outdated: bible",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP001",
+            "scope": "EP001",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: handoff_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP002",
+            "scope": "EP002",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible",
+              "dependency unusable: outline",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP002",
+            "scope": "EP002",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙和纸片都在桌面"
+              },
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "林夏确认对方知道登记信息，尚不能证明偷窃"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP002",
+            "scope": "EP002",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP002",
+            "scope": "EP002",
+            "kind": "handoff",
+            "relation": "direct",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: review_EP002",
+              "dependency snapshot outdated: bible",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP002",
+            "scope": "EP002",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: handoff_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP003",
+            "scope": "EP003",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible",
+              "dependency unusable: outline",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP003",
+            "scope": "EP003",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙压在闭合登记簿上"
+              },
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "PROP002"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "纸片留在簿内"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP003",
+            "scope": "EP003",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP003",
+            "scope": "EP003",
+            "kind": "handoff",
+            "relation": "direct",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: review_EP003",
+              "dependency snapshot outdated: bible",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP003",
+            "scope": "EP003",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: handoff_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "season_review",
+            "scope": "project",
+            "kind": "season_review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: continuity_EP001",
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002",
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          }
+        ],
+        "limitation": "File-level dependency impact remains authoritative; candidate locations require semantic review"
+      }
+    },
+    {
+      "case_id": "knowledge",
+      "category": "人物知情",
+      "source": "bible",
+      "file_affected": 18,
+      "stale_artifacts": 17,
+      "candidate_location_count": 11,
+      "impact": {
+        "source": "bible",
+        "source_change": {
+          "status": "AVAILABLE",
+          "old": {
+            "kind": "bible",
+            "scope": "project",
+            "path": "bible.md",
+            "revision": "v1.0",
+            "status": "draft",
+            "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514",
+            "depends_on": [
+              {
+                "id": "brief",
+                "revision": "v1.0",
+                "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+              }
+            ],
+            "evidence": null
+          },
+          "new": {
+            "kind": "bible",
+            "scope": "project",
+            "path": "bible-scope-v1.1.md",
+            "revision": "v1.1",
+            "status": "draft",
+            "sha256": "f26c68cb37f09cd1a3840397f40c001c50846ab122f6252fb234aa113342d626",
+            "depends_on": [
+              {
+                "id": "brief",
+                "revision": "v1.0",
+                "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+              }
+            ],
+            "evidence": null
+          },
+          "scene_ids": [],
+          "object_ids": [
+            "CHAR001",
+            "CHAR002",
+            "LOC001"
+          ],
+          "changes": [
+            {
+              "operation": "replace",
+              "old_start": 1,
+              "old_count": 1,
+              "new_start": 1,
+              "new_count": 1
+            },
+            {
+              "operation": "replace",
+              "old_start": 3,
+              "old_count": 1,
+              "new_start": 3,
+              "new_count": 1
+            }
+          ],
+          "diff": "--- bible.md\n+++ bible-scope-v1.1.md\n@@ -1,6 +1,6 @@\n-# 设定与制作约束 v1.0\n+# 设定与制作约束 v1.1\n \n-CHAR001 林夏：新任管理员，谨慎、措辞短，起初怕误会来访者，逐步选择主动试探并保留证据。她当班前见过完整登记页，记得“三号、第四行”；当班后发现该页被撕。此记忆是既有知识，不能改写为对来访者身份的了解。\n+CHAR001 林夏：新任管理员，谨慎、措辞短，起初怕误会来访者，逐步选择主动试探并保留证据。她当班前未见过完整登记页，不知道编号和行号；当班后发现该页被撕。此记忆是既有知识，不能改写为对来访者身份的了解。\n CHAR002 来访者：陌生人，仅画外声，礼貌掩饰焦急；知道缺页记录，希望取回页角，但不说明自己如何得到钥匙或是否参与偷窃。\n \n LOC001 值班室：不透明门、投递缝、桌面、固定墙面管理处呼叫器。呼叫键启动铃声不等于有人已接通，也不增加第三名说话角色。",
+          "diff_truncated": false,
+          "reference_basis": "Candidate references near changed lines or in changed scenes; review before deciding actual impact"
+        },
+        "order": [
+          {
+            "id": "bible",
+            "scope": "project",
+            "kind": "bible",
+            "relation": "source",
+            "errors": [],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "outline",
+            "scope": "project",
+            "kind": "outline",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP001",
+            "scope": "EP001",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible",
+              "dependency unusable: outline"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP001",
+            "scope": "EP001",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "两者吻合"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP001",
+            "scope": "EP001",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP001",
+            "scope": "EP001",
+            "kind": "handoff",
+            "relation": "direct",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: review_EP001",
+              "dependency snapshot outdated: bible",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP001",
+            "scope": "EP001",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: handoff_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP002",
+            "scope": "EP002",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible",
+              "dependency unusable: outline",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP002",
+            "scope": "EP002",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "林夏确认对方知道登记信息，尚不能证明偷窃"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP002",
+            "scope": "EP002",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP002",
+            "scope": "EP002",
+            "kind": "handoff",
+            "relation": "direct",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: review_EP002",
+              "dependency snapshot outdated: bible",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP002",
+            "scope": "EP002",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: handoff_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP003",
+            "scope": "EP003",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible",
+              "dependency unusable: outline",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP003",
+            "scope": "EP003",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP003",
+            "scope": "EP003",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP003",
+            "scope": "EP003",
+            "kind": "handoff",
+            "relation": "direct",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: review_EP003",
+              "dependency snapshot outdated: bible",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP003",
+            "scope": "EP003",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: handoff_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "season_review",
+            "scope": "project",
+            "kind": "season_review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: continuity_EP001",
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002",
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          }
+        ],
+        "limitation": "File-level dependency impact remains authoritative; candidate locations require semantic review"
+      }
+    },
+    {
+      "case_id": "world",
+      "category": "世界规则",
+      "source": "bible",
+      "file_affected": 18,
+      "stale_artifacts": 17,
+      "candidate_location_count": 16,
+      "impact": {
+        "source": "bible",
+        "source_change": {
+          "status": "AVAILABLE",
+          "old": {
+            "kind": "bible",
+            "scope": "project",
+            "path": "bible.md",
+            "revision": "v1.0",
+            "status": "draft",
+            "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514",
+            "depends_on": [
+              {
+                "id": "brief",
+                "revision": "v1.0",
+                "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+              }
+            ],
+            "evidence": null
+          },
+          "new": {
+            "kind": "bible",
+            "scope": "project",
+            "path": "bible-scope-v1.1.md",
+            "revision": "v1.1",
+            "status": "draft",
+            "sha256": "2796be27115d4f0720e56f07164696bfda078ba294e721f2f20f4e53c0f496a3",
+            "depends_on": [
+              {
+                "id": "brief",
+                "revision": "v1.0",
+                "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+              }
+            ],
+            "evidence": null
+          },
+          "scene_ids": [],
+          "object_ids": [
+            "CHAR001",
+            "CHAR002",
+            "LOC001",
+            "PROP001",
+            "PROP002"
+          ],
+          "changes": [
+            {
+              "operation": "replace",
+              "old_start": 1,
+              "old_count": 1,
+              "new_start": 1,
+              "new_count": 1
+            },
+            {
+              "operation": "replace",
+              "old_start": 6,
+              "old_count": 2,
+              "new_start": 6,
+              "new_count": 2
+            }
+          ],
+          "diff": "--- bible.md\n+++ bible-scope-v1.1.md\n@@ -1,10 +1,10 @@\n-# 设定与制作约束 v1.0\n+# 设定与制作约束 v1.1\n \n CHAR001 林夏：新任管理员，谨慎、措辞短，起初怕误会来访者，逐步选择主动试探并保留证据。她当班前见过完整登记页，记得“三号、第四行”；当班后发现该页被撕。此记忆是既有知识，不能改写为对来访者身份的了解。\n CHAR002 来访者：陌生人，仅画外声，礼貌掩饰焦急；知道缺页记录，希望取回页角，但不说明自己如何得到钥匙或是否参与偷窃。\n \n-LOC001 值班室：不透明门、投递缝、桌面、固定墙面管理处呼叫器。呼叫键启动铃声不等于有人已接通，也不增加第三名说话角色。\n-PROP001 无刻字铜钥匙。PROP002 登记簿及其撕下页角，按同一道具的部件管理，独特撕口可对合。灰外套固定，无伤势变化。只有林夏在室内，对方无法看到桌面，不知道她已比对纸片。\n+LOC001 值班室：带透明观察窗的门、投递缝、桌面、固定墙面管理处呼叫器。呼叫键启动铃声不等于有人已接通，也不增加第三名说话角色。\n+PROP001 无刻字铜钥匙。PROP002 登记簿及其撕下页角，按同一道具的部件管理，独特撕口可对合。灰外套固定，无伤势变化。只有林夏在室内，对方能够看见桌面，知道她已比对纸片。\n \n 因果：收到钥匙与纸片→纸片匹配缺页→故意报错编号→对方纠正并说出行号→确认其了解登记信息→对方直接索纸→林夏保留证据并呼叫管理处→对方离去。知道记录不等于证明偷窃，结局不冒认抓到窃贼。\n ",
+          "diff_truncated": false,
+          "reference_basis": "Candidate references near changed lines or in changed scenes; review before deciding actual impact"
+        },
+        "order": [
+          {
+            "id": "bible",
+            "scope": "project",
+            "kind": "bible",
+            "relation": "source",
+            "errors": [],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "outline",
+            "scope": "project",
+            "kind": "outline",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP001",
+            "scope": "EP001",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible",
+              "dependency unusable: outline"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP001",
+            "scope": "EP001",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙在林夏右手"
+              },
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "PROP002"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "登记簿和纸片在桌面"
+              },
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "两者吻合"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP001",
+            "scope": "EP001",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP001",
+            "scope": "EP001",
+            "kind": "handoff",
+            "relation": "direct",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: review_EP001",
+              "dependency snapshot outdated: bible",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP001",
+            "scope": "EP001",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: handoff_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP002",
+            "scope": "EP002",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible",
+              "dependency unusable: outline",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP002",
+            "scope": "EP002",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙和纸片都在桌面"
+              },
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "林夏确认对方知道登记信息，尚不能证明偷窃"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP002",
+            "scope": "EP002",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP002",
+            "scope": "EP002",
+            "kind": "handoff",
+            "relation": "direct",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: review_EP002",
+              "dependency snapshot outdated: bible",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP002",
+            "scope": "EP002",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: handoff_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP003",
+            "scope": "EP003",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: bible",
+              "dependency unusable: outline",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP003",
+            "scope": "EP003",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙压在闭合登记簿上"
+              },
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "PROP002"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "纸片留在簿内"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP003",
+            "scope": "EP003",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP003",
+            "scope": "EP003",
+            "kind": "handoff",
+            "relation": "direct",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: review_EP003",
+              "dependency snapshot outdated: bible",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP003",
+            "scope": "EP003",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: handoff_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "season_review",
+            "scope": "project",
+            "kind": "season_review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: continuity_EP001",
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002",
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          }
+        ],
+        "limitation": "File-level dependency impact remains authoritative; candidate locations require semantic review"
+      }
+    },
+    {
+      "case_id": "wording",
+      "category": "对白措辞",
+      "source": "script_EP001",
+      "file_affected": 16,
+      "stale_artifacts": 15,
+      "candidate_location_count": 17,
+      "impact": {
+        "source": "script_EP001",
+        "source_change": {
+          "status": "AVAILABLE",
+          "old": {
+            "kind": "script",
+            "scope": "EP001",
+            "path": "episodes/EP001-v1.0.md",
+            "revision": "v1.0",
+            "status": "reviewed",
+            "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9",
+            "depends_on": [
+              {
+                "id": "bible",
+                "revision": "v1.0",
+                "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+              },
+              {
+                "id": "outline",
+                "revision": "v1.0",
+                "sha256": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9"
+              }
+            ],
+            "evidence": "作者自审：reviews/EP001-v1.0.md，仅文字预制作范围。"
+          },
+          "new": {
+            "kind": "script",
+            "scope": "EP001",
+            "path": "episodes/EP001-v1.0-scope-v1.1.md",
+            "revision": "v1.1",
+            "status": "draft",
+            "sha256": "be4eeb81902850c392a31246ac7f4334c5a76c5489660d3d5d000963693082e5",
+            "depends_on": [
+              {
+                "id": "bible",
+                "revision": "v1.0",
+                "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+              },
+              {
+                "id": "outline",
+                "revision": "v1.0",
+                "sha256": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9"
+              }
+            ],
+            "evidence": null
+          },
+          "scene_ids": [
+            "EP001-SC001"
+          ],
+          "object_ids": [
+            "CHAR001",
+            "CHAR002",
+            "LOC001",
+            "PROP001",
+            "PROP002"
+          ],
+          "changes": [
+            {
+              "operation": "replace",
+              "old_start": 1,
+              "old_count": 1,
+              "new_start": 1,
+              "new_count": 1
+            },
+            {
+              "operation": "replace",
+              "old_start": 52,
+              "old_count": 1,
+              "new_start": 52,
+              "new_count": 1
+            }
+          ],
+          "diff": "--- episodes/EP001-v1.0.md\n+++ episodes/EP001-v1.0-scope-v1.1.md\n@@ -1,4 +1,4 @@\n-# EP001 页角 v1.0\n+# EP001 页角 v1.1\n \n 场景：LOC001 值班室，夜，内景。CHAR002 全程画外。\n \n@@ -49,7 +49,7 @@\n         {\n           \"id\": \"EP001-D006\",\n           \"speaker_id\": \"CHAR001\",\n-          \"text\": \"这钥匙，你在哪儿捡的？\"\n+          \"text\": \"钥匙，你在哪儿捡的？\"\n         }\n       ]\n     }",
+          "diff_truncated": false,
+          "reference_basis": "Candidate references near changed lines or in changed scenes; review before deciding actual impact"
+        },
+        "order": [
+          {
+            "id": "script_EP001",
+            "scope": "EP001",
+            "kind": "script",
+            "relation": "source",
+            "errors": [],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP001",
+            "scope": "EP001",
+            "kind": "continuity",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: script_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙在林夏右手"
+              },
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "PROP002"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "登记簿和纸片在桌面"
+              },
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "两者吻合"
+              },
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "AUDIENCE"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "纸也还我，别弄丢了。"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP001",
+            "scope": "EP001",
+            "kind": "review",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: script_EP001",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP001",
+            "scope": "EP001",
+            "kind": "handoff",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: script_EP001",
+              "dependency unusable: review_EP001",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP001",
+            "scope": "EP001",
+            "kind": "export",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: script_EP001",
+              "dependency unusable: handoff_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP002",
+            "scope": "EP002",
+            "kind": "script",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP002",
+            "scope": "EP002",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙和纸片都在桌面"
+              },
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "林夏确认对方知道登记信息，尚不能证明偷窃"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP002",
+            "scope": "EP002",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP002",
+            "scope": "EP002",
+            "kind": "handoff",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: review_EP002",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP002",
+            "scope": "EP002",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: handoff_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP003",
+            "scope": "EP003",
+            "kind": "script",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP003",
+            "scope": "EP003",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙压在闭合登记簿上"
+              },
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "PROP002"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "纸片留在簿内"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP003",
+            "scope": "EP003",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP003",
+            "scope": "EP003",
+            "kind": "handoff",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: review_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP003",
+            "scope": "EP003",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: handoff_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "season_review",
+            "scope": "project",
+            "kind": "season_review",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: script_EP001",
+              "dependency unusable: continuity_EP001",
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002",
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          }
+        ],
+        "limitation": "File-level dependency impact remains authoritative; candidate locations require semantic review"
+      }
+    },
+    {
+      "case_id": "foreshadow",
+      "category": "伏笔计划",
+      "source": "outline",
+      "file_affected": 17,
+      "stale_artifacts": 16,
+      "candidate_location_count": 0,
+      "impact": {
+        "source": "outline",
+        "source_change": {
+          "status": "AVAILABLE",
+          "old": {
+            "kind": "outline",
+            "scope": "project",
+            "path": "outline.md",
+            "revision": "v1.0",
+            "status": "draft",
+            "sha256": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9",
+            "depends_on": [
+              {
+                "id": "brief",
+                "revision": "v1.0",
+                "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+              },
+              {
+                "id": "bible",
+                "revision": "v1.0",
+                "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+              }
+            ],
+            "evidence": null
+          },
+          "new": {
+            "kind": "outline",
+            "scope": "project",
+            "path": "outline-scope-v1.1.md",
+            "revision": "v1.1",
+            "status": "draft",
+            "sha256": "a04aa29826ea97241d913a57378834814698b04be4acc4d60a80cce197be0392",
+            "depends_on": [
+              {
+                "id": "brief",
+                "revision": "v1.0",
+                "sha256": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea"
+              },
+              {
+                "id": "bible",
+                "revision": "v1.0",
+                "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+              }
+            ],
+            "evidence": null
+          },
+          "scene_ids": [],
+          "object_ids": [],
+          "changes": [
+            {
+              "operation": "replace",
+              "old_start": 1,
+              "old_count": 1,
+              "new_start": 1,
+              "new_count": 1
+            },
+            {
+              "operation": "replace",
+              "old_start": 9,
+              "old_count": 1,
+              "new_start": 9,
+              "new_count": 1
+            },
+            {
+              "operation": "replace",
+              "old_start": 17,
+              "old_count": 1,
+              "new_start": 17,
+              "new_count": 1
+            }
+          ],
+          "diff": "--- outline.md\n+++ outline-scope-v1.1.md\n@@ -1,4 +1,4 @@\n-# 三集结构 v1.0\n+# 三集结构 v1.1\n \n | 集 | 行动与变化 | 回报 | 入口/预算 |\n | --- | --- | --- | --- |\n@@ -6,7 +6,7 @@\n | EP002 | 故意报错编号，对方纠正并说出行号 | 对方了解缺页登记信息，不能证明其偷窃 | 对方直接索纸；60 秒预算 |\n | EP003 | 不交证据，按下呼叫键，对方放弃取纸离去 | 来意并非单纯还钥匙，林夏完成主动保护证据的选择 | 段落闭合，责任待核查；60 秒预算 |\n \n-F001：撕口关联在 EP002 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。\n+F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。\n \n ```outline-json\n {\n@@ -14,7 +14,7 @@\n     {\n       \"id\": \"F001\",\n       \"plant\": \"EP001\",\n-      \"payoff\": \"EP002\"\n+      \"payoff\": \"EP003\"\n     },\n     {\n       \"id\": \"F002\",",
+          "diff_truncated": false,
+          "reference_basis": "Candidate references near changed lines or in changed scenes; review before deciding actual impact"
+        },
+        "order": [
+          {
+            "id": "outline",
+            "scope": "project",
+            "kind": "outline",
+            "relation": "source",
+            "errors": [],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP001",
+            "scope": "EP001",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: outline"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP001",
+            "scope": "EP001",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP001",
+            "scope": "EP001",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP001",
+            "scope": "EP001",
+            "kind": "handoff",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: review_EP001",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP001",
+            "scope": "EP001",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: handoff_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP002",
+            "scope": "EP002",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: outline",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP002",
+            "scope": "EP002",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP002",
+            "scope": "EP002",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP002",
+            "scope": "EP002",
+            "kind": "handoff",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: review_EP002",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP002",
+            "scope": "EP002",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: handoff_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP003",
+            "scope": "EP003",
+            "kind": "script",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: outline",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP003",
+            "scope": "EP003",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP003",
+            "scope": "EP003",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP003",
+            "scope": "EP003",
+            "kind": "handoff",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: review_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP003",
+            "scope": "EP003",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: handoff_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "season_review",
+            "scope": "project",
+            "kind": "season_review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP001",
+              "dependency unusable: continuity_EP001",
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002",
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          }
+        ],
+        "limitation": "File-level dependency impact remains authoritative; candidate locations require semantic review"
+      }
+    },
+    {
+      "case_id": "end_state",
+      "category": "前集末状态",
+      "source": "script_EP001",
+      "file_affected": 16,
+      "stale_artifacts": 15,
+      "candidate_location_count": 17,
+      "impact": {
+        "source": "script_EP001",
+        "source_change": {
+          "status": "AVAILABLE",
+          "old": {
+            "kind": "script",
+            "scope": "EP001",
+            "path": "episodes/EP001-v1.0.md",
+            "revision": "v1.0",
+            "status": "reviewed",
+            "sha256": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9",
+            "depends_on": [
+              {
+                "id": "bible",
+                "revision": "v1.0",
+                "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+              },
+              {
+                "id": "outline",
+                "revision": "v1.0",
+                "sha256": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9"
+              }
+            ],
+            "evidence": "作者自审：reviews/EP001-v1.0.md，仅文字预制作范围。"
+          },
+          "new": {
+            "kind": "script",
+            "scope": "EP001",
+            "path": "episodes/EP001-v1.0-scope-v1.1.md",
+            "revision": "v1.1",
+            "status": "draft",
+            "sha256": "785e58cd0b48fac2b9a28392814c23c69096d42955bfa1fb45686efd3c71493c",
+            "depends_on": [
+              {
+                "id": "bible",
+                "revision": "v1.0",
+                "sha256": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514"
+              },
+              {
+                "id": "outline",
+                "revision": "v1.0",
+                "sha256": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9"
+              }
+            ],
+            "evidence": null
+          },
+          "scene_ids": [
+            "EP001-SC001"
+          ],
+          "object_ids": [
+            "CHAR001",
+            "CHAR002",
+            "LOC001",
+            "PROP001",
+            "PROP002"
+          ],
+          "changes": [
+            {
+              "operation": "replace",
+              "old_start": 1,
+              "old_count": 1,
+              "new_start": 1,
+              "new_count": 1
+            },
+            {
+              "operation": "replace",
+              "old_start": 68,
+              "old_count": 1,
+              "new_start": 68,
+              "new_count": 1
+            }
+          ],
+          "diff": "--- episodes/EP001-v1.0.md\n+++ episodes/EP001-v1.0-scope-v1.1.md\n@@ -1,4 +1,4 @@\n-# EP001 页角 v1.0\n+# EP001 页角 v1.1\n \n 场景：LOC001 值班室，夜，内景。CHAR002 全程画外。\n \n@@ -65,6 +65,6 @@\n | EP001-SC001-B004 | 8 | 她不动。钥匙裹着纸片滑入托盘，金属轻响。 | 无对白；对白轮流说，动作可与对白并行 |\n | EP001-SC001-B005 | 9 | 她取回物件并展开纸片，看向登记簿缺页。 | 无对白；对白轮流说，动作可与对白并行 |\n | EP001-SC001-B006 | 10 | 纸片靠近独特撕口，两者吻合。门外索纸，她停手。 | EP001-D005；对白轮流说，动作可与对白并行 |\n-| EP001-SC001-B007 | 10 | 钥匙在林夏右手；登记簿和纸片在桌面。她问来源，门外沉默。 | EP001-D006；对白轮流说，动作可与对白并行 |\n+| EP001-SC001-B007 | 10 | 钥匙留在托盘里；林夏双手空着；登记簿和纸片在桌面。她问来源，门外沉默。 | EP001-D006；对白轮流说，动作可与对白并行 |\n \n 预算总计 60 秒，目标 55–65 秒；对白按普通中文 3–4 字/秒起估，停顿/动作包含在块预算内，尚未实际朗读或制作样片。动作与对白的语义对应由作者自审，不由 JSON 核对证明。",
+          "diff_truncated": false,
+          "reference_basis": "Candidate references near changed lines or in changed scenes; review before deciding actual impact"
+        },
+        "order": [
+          {
+            "id": "script_EP001",
+            "scope": "EP001",
+            "kind": "script",
+            "relation": "source",
+            "errors": [],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP001",
+            "scope": "EP001",
+            "kind": "continuity",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: script_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙在林夏右手"
+              },
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "PROP002"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "登记簿和纸片在桌面"
+              },
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "两者吻合"
+              },
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "AUDIENCE"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "纸也还我，别弄丢了。"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP001",
+            "scope": "EP001",
+            "kind": "review",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: script_EP001",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP001",
+            "scope": "EP001",
+            "kind": "handoff",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: script_EP001",
+              "dependency unusable: review_EP001",
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP001",
+            "scope": "EP001",
+            "kind": "export",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: script_EP001",
+              "dependency unusable: handoff_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP001-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP002",
+            "scope": "EP002",
+            "kind": "script",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: continuity_EP001"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP002",
+            "scope": "EP002",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙和纸片都在桌面"
+              },
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "林夏确认对方知道登记信息，尚不能证明偷窃"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP002",
+            "scope": "EP002",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP002",
+            "scope": "EP002",
+            "kind": "handoff",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: review_EP002",
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP002",
+            "scope": "EP002",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP002",
+              "dependency unusable: handoff_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP002-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "script_EP003",
+            "scope": "EP003",
+            "kind": "script",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: continuity_EP002"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "continuity_EP003",
+            "scope": "EP003",
+            "kind": "continuity",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "PROP001"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "钥匙压在闭合登记簿上"
+              },
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "PROP002"
+                ],
+                "basis": "continuity evidence reference",
+                "quote": "纸片留在簿内"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "review_EP003",
+            "scope": "EP003",
+            "kind": "review",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "handoff_EP003",
+            "scope": "EP003",
+            "kind": "handoff",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: review_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "export_EP003",
+            "scope": "EP003",
+            "kind": "export",
+            "relation": "transitive",
+            "errors": [
+              "dependency unusable: script_EP003",
+              "dependency unusable: handoff_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [
+              {
+                "location": "EP003-SC001",
+                "objects": [
+                  "CHAR001",
+                  "CHAR002",
+                  "LOC001",
+                  "PROP001",
+                  "PROP002"
+                ],
+                "basis": "registered scene references"
+              }
+            ],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          },
+          {
+            "id": "season_review",
+            "scope": "project",
+            "kind": "season_review",
+            "relation": "direct",
+            "errors": [
+              "dependency snapshot outdated: script_EP001",
+              "dependency unusable: continuity_EP001",
+              "dependency unusable: script_EP002",
+              "dependency unusable: continuity_EP002",
+              "dependency unusable: script_EP003",
+              "dependency unusable: continuity_EP003"
+            ],
+            "disposition": {
+              "decision": "pending"
+            },
+            "candidate_locations": [],
+            "content_diff": "See source_change; candidates do not waive file-level revalidation"
+          }
+        ],
+        "limitation": "File-level dependency impact remains authoritative; candidate locations require semantic review"
+      }
+    }
+  ],
+  "limitation": "File-level impact measured; actual semantic scope awaits independent assessment; no state waived"
+}

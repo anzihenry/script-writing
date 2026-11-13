@@ -1,0 +1,415 @@
+{
+  "case_id": "appearance",
+  "items": [
+    {
+      "artifact_id": "bible",
+      "decision": "review",
+      "locations": [
+        "设定与制作约束：PROP001/PROP002 后的固定外套规定"
+      ],
+      "evidence": [
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        },
+        {
+          "path": "before/bible.md",
+          "quote": "灰外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "本次唯一实质设定变化为灰外套改为深蓝外套，需要复核外观定义及三集一致采用该定义；角色知识、因果和伤势规定没有随之改变。"
+    },
+    {
+      "artifact_id": "brief",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "三集连续一晚；创作目标与验证边界"
+      ],
+      "evidence": [
+        {
+          "path": "after/brief.md",
+          "quote": "林夏必须在不开门的情况下核实来访者的归还物，并保留与失窃页有关的证据。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "brief 规定类型、规模、时间、任务与兑现目标，没有颜色限定；换外套颜色不改变核实物品和保留证据的目标。"
+    },
+    {
+      "artifact_id": "continuity_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP001-SC001 states / foreshadows"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP001-v1.0.md",
+          "quote": "只确认撕口关联"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "该记录只登记道具位置、人物知识或观众对索纸意图的认识及伏笔状态，未登记服色。新源仍规定外套固定、无伤势变化，不产生场内换装事件，因此现有状态转移没有直接语义变化。"
+    },
+    {
+      "artifact_id": "continuity_EP002",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP002-SC001 states / foreshadows"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP002-v1.0.md",
+          "quote": "林夏确认对方知道登记信息，尚不能证明偷窃"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "该记录只登记道具位置、人物知识或观众对索纸意图的认识及伏笔状态，未登记服色。新源仍规定外套固定、无伤势变化，不产生场内换装事件，因此现有状态转移没有直接语义变化。"
+    },
+    {
+      "artifact_id": "continuity_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001 states / foreshadows"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP003-v1.0.md",
+          "quote": "索纸为首要目的"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "该记录只登记道具位置、人物知识或观众对索纸意图的认识及伏笔状态，未登记服色。新源仍规定外套固定、无伤势变化，不产生场内换装事件，因此现有状态转移没有直接语义变化。"
+    },
+    {
+      "artifact_id": "export_EP001",
+      "decision": "review",
+      "locations": [
+        "bible_revision；assets.characters / EP001-SC001"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.json",
+          "quote": "\"bible_revision\": \"v1.0\""
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        },
+        {
+          "path": "before/bible.md",
+          "quote": "灰外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "导出明确引用旧 bible v1.0，角色资产仅有 ID 和姓名，没有覆盖旧颜色的新外观字段。按该引用取设定会得到灰外套，与新源深蓝外套冲突；需复核导出的外观来源绑定及本场林夏的制作解释。动作、对白和时长不因换色自动变化。"
+    },
+    {
+      "artifact_id": "export_EP002",
+      "decision": "review",
+      "locations": [
+        "bible_revision；assets.characters / EP002-SC001"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.json",
+          "quote": "\"bible_revision\": \"v1.0\""
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        },
+        {
+          "path": "before/bible.md",
+          "quote": "灰外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "导出明确引用旧 bible v1.0，角色资产仅有 ID 和姓名，没有覆盖旧颜色的新外观字段。按该引用取设定会得到灰外套，与新源深蓝外套冲突；需复核导出的外观来源绑定及本场林夏的制作解释。动作、对白和时长不因换色自动变化。"
+    },
+    {
+      "artifact_id": "export_EP003",
+      "decision": "review",
+      "locations": [
+        "bible_revision；assets.characters / EP003-SC001"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.json",
+          "quote": "\"bible_revision\": \"v1.0\""
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        },
+        {
+          "path": "before/bible.md",
+          "quote": "灰外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "导出明确引用旧 bible v1.0，角色资产仅有 ID 和姓名，没有覆盖旧颜色的新外观字段。按该引用取设定会得到灰外套，与新源深蓝外套冲突；需复核导出的外观来源绑定及本场林夏的制作解释。动作、对白和时长不因换色自动变化。"
+    },
+    {
+      "artifact_id": "handoff_EP001",
+      "decision": "review",
+      "locations": [
+        "EP001-SC001：CHAR001 外观依据；动作清单 B001–B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.md",
+          "quote": "来源：episodes/EP001-v1.0.md。预制作；未锁定、未接收、未实测。CHAR002 画外，撕口用静帧对合；场次动作和声音按正文 B001–B007 提取。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        },
+        {
+          "path": "before/bible.md",
+          "quote": "灰外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "交接用于把场内林夏交给制作，但自身仅列动作与角色 ID、没有明确颜色，登记依赖仍指向 bible v1.0 的灰外套，与新源深蓝外套存在外观依据冲突。针对性复核应确保制作读取新外观并贯穿本场，不把动作清单未变当作外观已同步，也不需要因此重写全部对白。"
+    },
+    {
+      "artifact_id": "handoff_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001：CHAR001 外观依据；动作清单 B001–B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.md",
+          "quote": "来源：episodes/EP002-v1.0.md。预制作；未锁定、未接收、未实测。CHAR002 画外，撕口用静帧对合；场次动作和声音按正文 B001–B007 提取。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        },
+        {
+          "path": "before/bible.md",
+          "quote": "灰外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "交接用于把场内林夏交给制作，但自身仅列动作与角色 ID、没有明确颜色，登记依赖仍指向 bible v1.0 的灰外套，与新源深蓝外套存在外观依据冲突。针对性复核应确保制作读取新外观并贯穿本场，不把动作清单未变当作外观已同步，也不需要因此重写全部对白。"
+    },
+    {
+      "artifact_id": "handoff_EP003",
+      "decision": "review",
+      "locations": [
+        "EP003-SC001：CHAR001 外观依据；动作清单 B001–B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.md",
+          "quote": "来源：episodes/EP003-v1.0.md。预制作；未锁定、未接收、未实测。CHAR002 画外，撕口用静帧对合；场次动作和声音按正文 B001–B007 提取。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        },
+        {
+          "path": "before/bible.md",
+          "quote": "灰外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "交接用于把场内林夏交给制作，但自身仅列动作与角色 ID、没有明确颜色，登记依赖仍指向 bible v1.0 的灰外套，与新源深蓝外套存在外观依据冲突。针对性复核应确保制作读取新外观并贯穿本场，不把动作清单未变当作外观已同步，也不需要因此重写全部对白。"
+    },
+    {
+      "artifact_id": "outline",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "三集结构表；F001/F002"
+      ],
+      "evidence": [
+        {
+          "path": "after/outline.md",
+          "quote": "F001：撕口关联在 EP002 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "大纲推进由撕口、编号纠正、拒交与呼叫组成，伏笔不以外套颜色为识别或回收条件；本次没有直接改变其结构语义。"
+    },
+    {
+      "artifact_id": "review_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "叙事、人物、连续性、制作与交接维度"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP001-v1.0.md",
+          "quote": "| 制作 | 固定地点、两说话角色、两道具；撕口辨识和动作生成未验证 |"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "报告具体结论针对不开门、道具位置、知情不等于偷窃、预算和待验证撕口，并未宣称灰色外套已验证；换色不直接推翻这些判断。该分类不延续旧 reviewed 效力，仍需依赖再登记和必要的门禁复查。"
+    },
+    {
+      "artifact_id": "review_EP002",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "叙事、人物、连续性、制作与交接维度"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP002-v1.0.md",
+          "quote": "| 制作 | 固定地点、两说话角色、两道具；撕口辨识和动作生成未验证 |"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "报告具体结论针对不开门、道具位置、知情不等于偷窃、预算和待验证撕口，并未宣称灰色外套已验证；换色不直接推翻这些判断。该分类不延续旧 reviewed 效力，仍需依赖再登记和必要的门禁复查。"
+    },
+    {
+      "artifact_id": "review_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "叙事、人物、连续性、制作与交接维度"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP003-v1.0.md",
+          "quote": "| 制作 | 固定地点、两说话角色、两道具；撕口辨识和动作生成未验证 |"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "报告具体结论针对不开门、道具位置、知情不等于偷窃、预算和待验证撕口，并未宣称灰色外套已验证；换色不直接推翻这些判断。该分类不延续旧 reviewed 效力，仍需依赖再登记和必要的门禁复查。"
+    },
+    {
+      "artifact_id": "script_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP001-SC001 B001–B007；对白清单"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP001-v1.0.md",
+          "quote": "纸片靠近独特撕口，两者吻合。门外索纸，她停手。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "本集动作和对白没有指定灰外套，也没有依赖服色辨认人物；撕口对合仍是关联证据。深蓝外套影响后续视觉实现，不直接改写本集剧情文本。"
+    },
+    {
+      "artifact_id": "script_EP002",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP002-SC001 B001–B007；对白清单"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "钥匙和纸片都在桌面登记簿旁。林夏确认对方知道登记信息，尚不能证明偷窃。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "本集试探依赖故意报错七号与纠正三号、第四行；人物外套颜色不承担信息功能，动作对白没有旧颜色冲突。"
+    },
+    {
+      "artifact_id": "script_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001 B001–B007；对白清单"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP003-v1.0.md",
+          "quote": "钥匙压在闭合登记簿上，纸片留在簿内；呼叫仍在等待。林夏保留了证据，来访者身份待核查。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "本集拒交、收存纸片、按呼叫键和离去均不以外套颜色为条件，正文没有旧颜色限定；不能由颜色变更推断身份或结局改变。"
+    },
+    {
+      "artifact_id": "season_review",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "character_arc / escalation / repetition / information / foreshadows / ending"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/season-v1.0.md",
+          "quote": "已读三集。范围仅叙事文字，不包含制作/发行批准。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "深蓝外套固定，无伤势变化。"
+        }
+      ],
+      "reason": "全季审核明确限于叙事文字，各项判断依据选择升级、信息边界和伏笔回收，均不靠服色；换色不直接改变这些结论。跨集视觉服装一致性应在设定与制作交接复核，不能把旧全季叙事通过当成新外观或制作批准。"
+    }
+  ],
+  "critical_locations": [
+    {
+      "artifact_id": "bible",
+      "location": "设定与制作约束：固定外套规定",
+      "reason": "核对灰色改深蓝色的外观语义及适用范围。"
+    },
+    {
+      "artifact_id": "handoff_EP001",
+      "location": "EP001-SC001 CHAR001 外观来源；制作交接",
+      "reason": "确认仍绑定灰外套的旧设定不会被当作深蓝外套已同步；仅聚焦外观来源与整场一致性，不能假定修复完成。"
+    },
+    {
+      "artifact_id": "export_EP001",
+      "location": "EP001-SC001 CHAR001 外观来源；bible_revision",
+      "reason": "确认仍绑定灰外套的旧设定不会被当作深蓝外套已同步；仅聚焦外观来源与整场一致性，不能假定修复完成。"
+    },
+    {
+      "artifact_id": "handoff_EP002",
+      "location": "EP002-SC001 CHAR001 外观来源；制作交接",
+      "reason": "确认仍绑定灰外套的旧设定不会被当作深蓝外套已同步；仅聚焦外观来源与整场一致性，不能假定修复完成。"
+    },
+    {
+      "artifact_id": "export_EP002",
+      "location": "EP002-SC001 CHAR001 外观来源；bible_revision",
+      "reason": "确认仍绑定灰外套的旧设定不会被当作深蓝外套已同步；仅聚焦外观来源与整场一致性，不能假定修复完成。"
+    },
+    {
+      "artifact_id": "handoff_EP003",
+      "location": "EP003-SC001 CHAR001 外观来源；制作交接",
+      "reason": "确认仍绑定灰外套的旧设定不会被当作深蓝外套已同步；仅聚焦外观来源与整场一致性，不能假定修复完成。"
+    },
+    {
+      "artifact_id": "export_EP003",
+      "location": "EP003-SC001 CHAR001 外观来源；bible_revision",
+      "reason": "确认仍绑定灰外套的旧设定不会被当作深蓝外套已同步；仅聚焦外观来源与整场一致性，不能假定修复完成。"
+    }
+  ],
+  "limitations": [
+    "仅阅读本目录 request.md、task.json 及 before/、after/；没有访问其他评阅、测量或仓库。",
+    "分类仅安排语义阅读优先级；no_direct_semantic_change 不豁免文件级 STALE、版本/依赖再登记或 gate，也不是批准。",
+    "除 bible 标题版本与外套颜色外，登记产物前后内容相同；判断同时依据实际文本语义，不以字节相同代替影响分析。",
+    "交接正文和导出动作未明写灰外套，冲突在旧设定依赖及导出的 bible_revision；没有证据证明后续制作已采用新颜色。",
+    "没有生成资产、样片或真实接收证据；不判断深蓝色的实际视觉效果，不声称已修复或节省时间。"
+  ]
+}

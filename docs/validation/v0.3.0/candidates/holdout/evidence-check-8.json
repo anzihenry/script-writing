@@ -1,0 +1,55 @@
+{
+  "verified_runs": 8,
+  "expected_runs": 48,
+  "matrix_complete": false,
+  "rows": [
+    {
+      "run_id": "R03-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R03-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R04-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "R04-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W03-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W03-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W04-baseline-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    },
+    {
+      "run_id": "W04-candidate-r1",
+      "input_unchanged": true,
+      "request_unchanged": true,
+      "status": "completed"
+    }
+  ]
+}

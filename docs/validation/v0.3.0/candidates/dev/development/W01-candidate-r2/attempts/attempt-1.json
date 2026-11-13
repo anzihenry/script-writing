@@ -1,0 +1,13 @@
+{
+  "current_run": "W01-candidate-r2",
+  "attempt": 1,
+  "started_at": "2026-11-08T23:55:24.623958Z",
+  "agent_id": "/root/m3_serial_resume/m4_w01_candidate_r2",
+  "status": "interrupted",
+  "observed_at": "2026-11-09T05:22:59.813966Z",
+  "output_empty": true,
+  "coordinator_end_reason": "quota failure reported by previous coordinator",
+  "executor_end_status": "unknown",
+  "executor_live_tree": "absent as reported by parent",
+  "timing_excluded": true
+}

@@ -1,0 +1,531 @@
+{
+  "summary": {
+    "baseline": {
+      "successful": 4,
+      "runs": 4,
+      "execution_statuses": {
+        "completed": 4
+      },
+      "critical_violations": 0,
+      "median_self_reported_unique_read_bytes": 31614.0,
+      "median_self_reported_tool_calls": 6.0,
+      "median_wall_seconds_upper_bound": 121.24337700000001,
+      "wall_seconds_observed_runs": 4,
+      "actual_token_usage": null,
+      "categories": {
+        "recovery": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 43486.5
+        },
+        "writing": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 19899.0
+        }
+      }
+    },
+    "candidate": {
+      "successful": 4,
+      "runs": 4,
+      "execution_statuses": {
+        "completed": 4
+      },
+      "critical_violations": 0,
+      "median_self_reported_unique_read_bytes": 32377.0,
+      "median_self_reported_tool_calls": 5.5,
+      "median_wall_seconds_upper_bound": 122.570449,
+      "wall_seconds_observed_runs": 4,
+      "actual_token_usage": null,
+      "categories": {
+        "recovery": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 44447.0
+        },
+        "writing": {
+          "successful": 2,
+          "runs": 2,
+          "median_self_reported_unique_read_bytes": 20464.0
+        }
+      }
+    }
+  },
+  "by_task": {
+    "S01": {
+      "baseline": {
+        "successful": 2,
+        "runs": 2
+      },
+      "candidate": {
+        "successful": 2,
+        "runs": 2
+      }
+    },
+    "W01": {
+      "baseline": {
+        "successful": 2,
+        "runs": 2
+      },
+      "candidate": {
+        "successful": 2,
+        "runs": 2
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "run-4a0f8fd54e",
+      "task_id": "S01",
+      "category": "recovery",
+      "condition": "baseline",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "钥匙初始在商宁腰间",
+          "status": "pass",
+          "quote": "入场：商宁守在钟房，钥匙挂腰间；杜衡前来接班。",
+          "reason": "开场钥匙在商宁腰间，B001 从腰间解下；吻合 EP012-B003 与 D002 的最新状态。"
+        },
+        {
+          "criterion": "承接待明早复测，不能假称已测",
+          "status": "pass",
+          "quote": "昨天两声都响了，今天这次还没试。",
+          "reason": "D003 区分前次两声与今晨未做的复测，B004—B005 只握绳等待而无拉动或钟响，纸条保留；承接 EP012-D001。"
+        },
+        {
+          "criterion": "交接须有可见动作",
+          "status": "pass",
+          "quote": "商宁把钥匙放进杜衡掌心，杜衡握住、收进衣袋。",
+          "reason": "B002 明示递入掌心、握住、入袋，钥匙归属变化在镜头内完成。"
+        },
+        {
+          "criterion": "给状态原文定位和约60秒估算",
+          "status": "pass",
+          "quote": "计时：五块连续相加为60秒，不含片头片尾；对白约80个发音字，按每秒3—4字约20—27秒，其余留给取钥匙、锁箱、转交、读纸条及等待。计划成片约55—65秒，未朗读或配音实测。",
+          "reason": "前置状态表逐项给 EP006、EP009、EP012 等块号或对白号，已与源文核对；五块覆盖 0—60 秒并明确为估算。"
+        },
+        {
+          "criterion": "相对时间与原场日夜及新场时间不矛盾",
+          "status": "pass",
+          "quote": "本稿将开场安排在次日清晨，承接“明早再试一次”；这是本场新增的时间安排，不是第十二集已经发生的事件。",
+          "reason": "源 EP012 为日景并约明早复测；新场为次日清晨，D003 使用昨天／今天，与日夜及相对时间一致。"
+        },
+        {
+          "criterion": "本场持物与占手动作前后可衔接，无未展示的重新持有",
+          "status": "pass",
+          "quote": "商宁将纸条翘起的一角按平，松手；纸条仍留在罩上。",
+          "reason": "B002 锁箱拔钥匙后交给杜衡入袋；B003 空手指纸条并按平松手；B004 明示握绳，B005 持续握绳，无凭空重新持物或占手冲突。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 43329,
+      "limitations": [
+        "仅根据本目录提供的来源与原始交付进行文本评阅；时长为生产估算，未作实际配音或排练验证。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 100.79051,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "bfc1ea81706ecf16876cf5c5bbf51622e63bf42563e5807283549c9d98c98672",
+      "output_hashes": {
+        "answer.md": "6ab57e7b1d2e4e17e6090bf04c7b4717d95b19d13f2b491c486f901e9d16f94c",
+        "execution.json": "375743cf487cac7d8a978631079f726620665ca2fb40e64ce957733c6be3c11d"
+      }
+    },
+    {
+      "id": "run-5ed89a29bf",
+      "task_id": "S01",
+      "category": "recovery",
+      "condition": "candidate",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "钥匙初始在商宁腰间",
+          "status": "pass",
+          "quote": "商宁站在关合的工具箱旁，双手空着，钥匙仍挂腰间。",
+          "reason": "B001 的初始位置吻合 EP012-B003 与 D002，随后右手从腰间摘钥匙。"
+        },
+        {
+          "criterion": "承接待明早复测，不能假称已测",
+          "status": "pass",
+          "quote": "留着。说好的今早再试，还没试。",
+          "reason": "D006 明确今晨待测；B005 不握绳、不拉绳、不响钟，保持 EP012 的未完成约定。"
+        },
+        {
+          "criterion": "交接须有可见动作",
+          "status": "pass",
+          "quote": "商宁摊开右掌递出钥匙。杜衡伸右手接稳，商宁才松手、收回右手。杜衡将钥匙放进自己衣袋，再收回空手。",
+          "reason": "B003 清楚展示交接及入袋全过程。"
+        },
+        {
+          "criterion": "给状态原文定位和约60秒估算",
+          "status": "pass",
+          "quote": "时间预算共60秒，不含片头、回顾和片尾。对白约80个发音字，按每秒3—4字估约20—27秒，分布于动作块中；锁箱、交接、读字和反应留足独立时间。整体预估55—65秒，未实际朗读或配音实测。",
+          "reason": "状态表先给块号、对白号、场头依据，和源文对应；五块覆盖 0—60 秒且未宣称实测。"
+        },
+        {
+          "criterion": "相对时间与原场日夜及新场时间不矛盾",
+          "status": "pass",
+          "quote": "时间设定：接 EP012 的次日早晨；具体钟点未定。",
+          "reason": "新场明确次日早晨，D005 用上回，D006 用今早，与 EP012 日景及明早约定相容。"
+        },
+        {
+          "criterion": "本场持物与占手动作前后可衔接，无未展示的重新持有",
+          "status": "pass",
+          "quote": "商宁收回右手，走到新绳旁停住，没有握绳。杜衡走到钟架旁，双手仍垂着。",
+          "reason": "前面 B002 明分左右手锁箱与检查，B003 交接入袋空手，B004 空手指纸条，B005 收手且不握绳；全部持物可衔接。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 44290,
+      "limitations": [
+        "仅根据本目录提供的来源与原始交付进行文本评阅；时长为生产估算，未作实际配音或排练验证。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 7,
+      "wall_seconds_upper_bound": 125.988674,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "bfc1ea81706ecf16876cf5c5bbf51622e63bf42563e5807283549c9d98c98672",
+      "output_hashes": {
+        "answer.md": "ce5c12b2a6c71d239516031ba587c81fd75cf62a5f019ec5e23a567a15b32eba",
+        "execution.json": "ca86123d382cec6483725ac60c2b82a0415f89898c85cb107bac8d275575e0c6"
+      }
+    },
+    {
+      "id": "run-91f55e9157",
+      "task_id": "S01",
+      "category": "recovery",
+      "condition": "baseline",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "钥匙初始在商宁腰间",
+          "status": "pass",
+          "quote": "入场：商宁守在钟房，钥匙挂腰间；杜衡到门口来交班。",
+          "reason": "开场位置与 EP012-B003／D002 相同，B001 从商宁腰间解下。"
+        },
+        {
+          "criterion": "承接待明早复测，不能假称已测",
+          "status": "pass",
+          "quote": "没做。昨天两声都到了，今天还得再试。纸条先留着。",
+          "reason": "D005 区分前次和今日待测，B005 绳未拉动且无钟声；未把准备或分工写成完成。"
+        },
+        {
+          "criterion": "交接须有可见动作",
+          "status": "pass",
+          "quote": "把钥匙递进杜衡摊开的掌心。杜衡握住，她才松手。",
+          "reason": "B002 展示先握住再松手的可见交接，B003 接着收好钥匙。"
+        },
+        {
+          "criterion": "给状态原文定位和约60秒估算",
+          "status": "pass",
+          "quote": "五块串行预算合计60秒，动作与所在块对白并行；对白约67个发音字，按每秒3—4字估算约17—22秒，其余用于锁箱、交接、看纸条及等待。未实际朗读，成片时长待配音或排练校准。",
+          "reason": "前置状态表给具体块号、对白号并可核对，五块连续覆盖 0—60 秒，时长明示估算。"
+        },
+        {
+          "criterion": "相对时间与原场日夜及新场时间不矛盾",
+          "status": "pass",
+          "quote": "时间处理：依 EP012 的“明早”及本次“杜衡来交班”要求，将本场设为次日早晨，复测开始前；这是本次续写的时间安排。",
+          "reason": "新场次日早晨，D005 的昨天／今天与 EP012 日景相容；状态表中不补称昨晚已经完成是否定边界，并非剧情发生在昨晚的断言。"
+        },
+        {
+          "criterion": "本场持物与占手动作前后可衔接，无未展示的重新持有",
+          "status": "pass",
+          "quote": "杜衡收好钥匙，看向钟罩上的纸条，说 D004。",
+          "reason": "B002 由商宁拔钥匙、提箱盖、交掌心，B003 杜衡收好，商宁空手指纸条；B004 伸向绳子的手收回未构成重新持物，B005 绳垂着，整体无占手矛盾。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 43644,
+      "limitations": [
+        "仅根据本目录提供的来源与原始交付进行文本评阅；时长为生产估算，未作实际配音或排练验证。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 8,
+      "wall_seconds_upper_bound": 145.939612,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "bfc1ea81706ecf16876cf5c5bbf51622e63bf42563e5807283549c9d98c98672",
+      "output_hashes": {
+        "answer.md": "aebaf32877d341f2592ccaf36a37a6d195c551e8a14fb2291a7e1eb5f61ac9b8",
+        "execution.json": "ecc27d15063cd8f903e9d868c4a46d04518b7d988d7e60d9a6603db6e2d7fd4d"
+      }
+    },
+    {
+      "id": "run-a6bea2c06b",
+      "task_id": "S01",
+      "category": "recovery",
+      "condition": "candidate",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "钥匙初始在商宁腰间",
+          "status": "pass",
+          "quote": "入场：商宁守在钟房，钥匙挂在腰间。杜衡从门口进来。",
+          "reason": "开场吻合 EP012-B003／D002，B001 商宁右手从腰间摘钥匙。"
+        },
+        {
+          "criterion": "承接待明早复测，不能假称已测",
+          "status": "pass",
+          "quote": "昨天两声都响了。今天这次，还没试。",
+          "reason": "D003 区分旧结果和本次待测；D004 留纸条，B006 绳没有拉动，未宣称复测完成。"
+        },
+        {
+          "criterion": "交接须有可见动作",
+          "status": "pass",
+          "quote": "商宁把钥匙放入他掌心，松开右手；杜衡收拢手指，将钥匙放进自己的衣袋，左手退出衣袋。",
+          "reason": "B004 完整呈现递出、接取、入袋及空手，交接可见。"
+        },
+        {
+          "criterion": "给状态原文定位和约60秒估算",
+          "status": "pass",
+          "quote": "时间预算：六块串行合计60秒，包含现场对白、手部操作、阅读与停顿，不含片头尾。按普通中文约3—4字/秒估算，对白与同时发生的动作不重复相加；表演预计约55—65秒，尚未实际朗读或配音计时。",
+          "reason": "前置表逐项给 EP006、EP009—EP012 的块号或对白号，六块覆盖 0—60 秒，估算与实测有清楚区分。"
+        },
+        {
+          "criterion": "相对时间与原场日夜及新场时间不矛盾",
+          "status": "pass",
+          "quote": "### EP013-SC001 内景／日（次日清晨） 钟房",
+          "reason": "新场次日清晨与 EP012 日景及明早约定相容，D003 昨天／今天未把前场改为夜景。"
+        },
+        {
+          "criterion": "本场持物与占手动作前后可衔接，无未展示的重新持有",
+          "status": "pass",
+          "quote": "商宁右手仍拿钥匙，空出的左手指向钟罩上的纸条。",
+          "reason": "B002 左手压盖、右手锁箱拔钥匙后左手提盖并松开；B003 右手持钥匙左手指纸条；B004 右手交钥匙给杜衡左手入袋，B005 左手垂下，全程可衔接。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "状态表将 EP012-B001 概述为“钟响两声、两人数余音”，源文实际为商宁松手、杜衡数完余音；属于来源概述的小幅不准确，不影响本场钥匙、待复测状态或上述六项裁定。"
+      ],
+      "read_bytes": 44604,
+      "limitations": [
+        "仅根据本目录提供的来源与原始交付进行文本评阅；时长为生产估算，未作实际配音或排练验证。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 112.322045,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "bfc1ea81706ecf16876cf5c5bbf51622e63bf42563e5807283549c9d98c98672",
+      "output_hashes": {
+        "answer.md": "31b577df9cc42055125008a59672cddeec98595bc84727baae9c096000dffabb",
+        "execution.json": "6e5c931dc279750efcf7c5747ceae4aad6f008beb082b08fb4a6a3892a02468d"
+      }
+    },
+    {
+      "id": "run-4526fa11b5",
+      "task_id": "W01",
+      "category": "writing",
+      "condition": "baseline",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "人物：CHAR001 店主老周（主角）；CHAR002 顾客林岚。  \n常驻场景：LOC001 旧照相馆柜台，内景，傍晚；两场连续，无转场、无其他人声。  \n主要道具共三件：PROP001 已显影底片一条；PROP002 修复样照一张；PROP003 三百元修复账单一张。柜台为固定布景，无新增手持物。",
+          "reason": "核对全文实际出场只有老周和林岚；两场均在同一柜台连续发生。操作物只有底片、样照和账单；嘴角疤痕属于人物特征，柜台属于固定布景。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "他将账单从中撕开，把两半摊在柜台上。\n\n**EP001-D008｜老周｜现场：** 三百作废。是我修错了。",
+          "reason": "SC002-B001通过撕单并放弃三百元体现可见选择，随后让路且免收费用并不以返还底片为条件；SC002-B003顾客主动交还底片、店主接起，末态进入免费重修，选择、损失与新局面均实际写出。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "**EP001-SC002-B003｜66–82 秒**\n\n林岚走回柜台，将底片轻放在干净台面上，推向老周。她用食指按住样照被抹平的嘴角。\n\n**EP001-D011｜林岚｜现场：** 那就再修一次。疤，留着。",
+          "reason": "正文分EP001-SC001与SC002，时间块位于对应场内；D001至D012顺序唯一，示例D011直接置于SC002-B003内，能定位集、场、对白。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "六个串行时间块为 9＋14＋14＋16＋13＋16＝82 秒。块内对白与动作可并行；两人对白按轮次累加。对白按普通中文约 3–4 字/秒起算，余量留给推账单、退步、撕纸、让路、归还底片及反应停顿；预计成片约 76–88 秒，未实际朗读或制作实测。",
+          "reason": "逐块核算0–37与37–82连续，六块相加82秒，位于60–90秒范围；明确未实测。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 19899,
+      "limitations": [
+        "仅依据本目录提供的请求、brief与匿名原始交付进行文本评阅；未独立朗读、拍摄或验证输出所列来源文件的实际读取记录。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 6,
+      "wall_seconds_upper_bound": 117.552656,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "1cfa8482e4ffb731ccfd677b03fe978d322457993c7bb94cf354501a9cda866d",
+      "output_hashes": {
+        "answer.md": "d748bf98a0de7219e31d72b1cdac9e5c381a2e3f93da3e95f21efb1981bf7662",
+        "execution.json": "ce57f6f637337b611edb422ec8f3cc55719a791547a838b5dbcbd48ed03d0026"
+      }
+    },
+    {
+      "id": "run-91faed4763",
+      "task_id": "W01",
+      "category": "writing",
+      "condition": "candidate",
+      "replicate": 1,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "人物：CHAR001 店主、CHAR002 顾客，不另取姓名。地点：LOC001 旧照相馆柜台内，日，连续时间；两人便装不变。主要道具仅三件：PROP001 一条已显影底片、PROP002 一张冲印合照、PROP003 一张未付款账单。柜台为固定布景。无其他人物、画外人声或特殊场面。",
+          "reason": "逐块核对仅店主和顾客在同一柜台互动，实际使用底片、照片、账单三件；合照中的人物只是照片内容，没有第三个表演角色，纸和药水只是对白提到的重洗成本，没有作为现场道具出现。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "| EP001-SC002-B001 | 45–53秒，8秒 | 店主低头看半张脸，叫住顾客。他用双手拿起账单，停一下，沿中间撕成两半，平放在自己面前。顾客转回身。 | D009，现场 | 一声短促撕纸声；先叫住，后撕纸，串行。保留犹豫及顾客反应，不靠账单文字解释。 |",
+          "reason": "撕单是实际动作，D010和D012明确不收180元及重洗费用并承认裁坏。随后SC002-B003顾客推还底片、店主取回，形成从催款僵持到欠免费完整交付的新局面。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "| EP001-SC002-B003 | 66–75秒，9秒 | 顾客慢慢把底片平放到柜台上，从自己一侧推向店主，直到越过两人的中线。店主此时才伸手，捏住底片边缘取回。 | D013→D014，现场依次说 | 台词约3秒；放下、推过、接起依次进行约6秒。 |",
+          "reason": "两场ID均含EP001；对白表D001至D014唯一连续。时间块用D编号引用同集对白，且位于对应场次内，缩写可无歧义对应。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "按对白约3–4字/秒起算，两人依次发言累加；同块内动作与对白并行取较长项，辨认照片、犹豫、撕纸、交接及结尾停留另留时间。分场45＋35＝80秒，表演浮动约75–87秒；未实际朗读或拍摄验证。",
+          "reason": "第一场11+11+14+9=45秒，第二场8+13+9+5=35秒，总计80秒；标明估算及未朗读/拍摄验证。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 20464,
+      "limitations": [
+        "仅依据本目录提供的请求、brief与匿名原始交付进行文本评阅；未独立朗读、拍摄或验证输出所列来源文件的实际读取记录。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 119.152224,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "1cfa8482e4ffb731ccfd677b03fe978d322457993c7bb94cf354501a9cda866d",
+      "output_hashes": {
+        "answer.md": "d6ebab43cf86930ab38c4f4f37d650d3c6d3530d2535c72dcdb4f32c13d50f28",
+        "execution.json": "368b54216ed011b5b8349bbf1447a4eec80af0e4b68fb79fa9d031e2d34c7e45"
+      }
+    },
+    {
+      "id": "run-a67fcb6a12",
+      "task_id": "W01",
+      "category": "writing",
+      "condition": "baseline",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "唯一场景 LOC001：旧照相馆柜台内外，日，连续时间。两人各一套日常服装。\n主要道具仅三项：PROP001一条底片；PROP002一张带白色划痕的试印照片；PROP003两张百元现金（同一现金道具组）。柜台为固定布景，无其他可操作道具。无第三人、电话、旁白或外部解围。",
+          "reason": "全文只有店主陈旧与顾客林禾在同一柜台连续互动；实际使用底片、试印照片、赔款现金三项主要道具。两张纸币成组完成一次赔款作用，按主要道具项计为现金一项；未出现额外主要道具。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "| EP001-SC002-B002 | 50—67秒／17秒 | 陈旧说D011，将钱推过柜台中线。林禾不碰钱，举了举底片，说D012。他看看底片，压钱的手指收紧一下；随后彻底撤手，D013。林禾拿起两张现金，折好，收进自己衣袋。 | D011—D013顺说，推钱并行；撤手、收钱留足动作时间。现金实际转移，不用剪辑略过。 |",
+          "reason": "主角先承认失误，实际撤手并让顾客收走200元，顾客即使带走底片也能保留赔款；代价已发生。下一块顾客交回底片、店主接起，进入免费修复义务而非继续要求预付。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "| EP001-SC001-B001 | 0—12秒／12秒 | 陈旧伸手去接底片，说D001。林禾将底片撤到胸前，用另一只手压住照片上的白线，说D002。陈旧的手悬在柜台上。 | 两句顺说，撤手与说话并行；留2秒僵持。 |",
+          "reason": "EP001-SC001、SC002及各时间块唯一；D001至D015在对白表中有完整集ID，动作表的缩写编号能逐项对应，无重复或缺失。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "分场合计37＋43＝80秒。按现场对白约3—4字／秒、动作与沉默单列估算；各时间块串行，块内并行部分不重复计时。预计表演浮动约75—87秒，未实际录音或朗读。",
+          "reason": "第一场12+13+12=37秒，第二场13+17+13=43秒，总计80秒在范围内，并明确未实际录音或朗读。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [
+        "道具计数存在字面口径争议：现金为两张百元纸币，若把每张纸币都按独立物理件数计算，连同底片和照片共四件。本裁定按主要道具的戏剧功能和成组使用方式计算为三项；并非只接受道具表自报数量。"
+      ],
+      "read_bytes": 19899,
+      "limitations": [
+        "仅依据本目录提供的请求、brief与匿名原始交付进行文本评阅；未独立朗读、拍摄或验证输出所列来源文件的实际读取记录。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 124.934098,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "1cfa8482e4ffb731ccfd677b03fe978d322457993c7bb94cf354501a9cda866d",
+      "output_hashes": {
+        "answer.md": "f4e7aa622608b100f0b64cf972b3fd677e95f8150ef36a5683939458af83dcdc",
+        "execution.json": "223f1513fc6326e0288bd485452747381c20838791950cbd761e783e6b4226f4"
+      }
+    },
+    {
+      "id": "run-bc2e05cab8",
+      "task_id": "W01",
+      "category": "writing",
+      "condition": "candidate",
+      "replicate": 2,
+      "success": true,
+      "required": [
+        {
+          "criterion": "满足两人一场景及道具预算",
+          "status": "pass",
+          "quote": "常驻场景仅 LOC001 旧照相馆柜台，日，内；两场连续，无换装、无其他人声。主要道具三件：PROP001 一条底片、PROP002 一张重印照片、PROP003 本单收费单。柜台为固定布景，不另添手持物。",
+          "reason": "实际正文仅店主老周与顾客阿宁在同一柜台出场；底片、照片、收费单是全部操作物。重扫、修复、再印只是后续承诺，没有出现扫描仪等额外主要道具。"
+        },
+        {
+          "criterion": "有可见选择、代价及新局面",
+          "status": "pass",
+          "quote": "| EP001-SC002-B002 | 52–66／14 秒 | 老周双手拿起收费单，停一下，将它撕成两半，平放在自己这一侧。他越过碎单，向阿宁摊开空手。 | 撕纸声先单独留 2 秒；D009 随后说。摊手并行，结尾留 1 秒。 |",
+          "reason": "撕收费单与D009免单、免费重做承诺组成可见选择，代价为放弃200元收入及重做劳动。SC002-B003阿宁交底片、店主接住，顾客保留坏照片作证，结尾从预付僵持变为店主承担补救义务。"
+        },
+        {
+          "criterion": "集场和对白ID可对应",
+          "status": "pass",
+          "quote": "| EP001-SC002-B003 | 66–80／14 秒 | 阿宁看着摊开的手。老周不再伸近。阿宁说完，把底片的一端送到他指间；等他捏住空白边才松开。她用空出的手拿起照片，白痕朝外贴在胸前。老周低头看底片；两半收费单留在他面前。切黑。 | D010、D011、D012 顺说。交接与 D012 后半句并行，末留约 2 秒静止。 |",
+          "reason": "EP001下两场及时间块唯一，D001至D012对白表编号连续，各时间块引用同集D编号能定位到具体对白；不存在编号冲突。"
+        },
+        {
+          "criterion": "估时合计60–90秒且标未实测",
+          "status": "pass",
+          "quote": "目标 60–90 秒；本稿中心估算 80 秒，表演浮动约 76–86 秒。无独立片头片尾，末尾切黑计入最后时间块。对白按约每秒 3–4 个汉字起算，轮流发言累加；并行动作不重复加时，检查底片、撕纸和停顿已单列预算。未实际朗读或试拍。",
+          "reason": "时间块10+13+16=39秒，13+14+14=41秒，共80秒；给出分段预算并明确未实际朗读或试拍。"
+        }
+      ],
+      "critical_violations": [],
+      "additional_findings": [],
+      "read_bytes": 20464,
+      "limitations": [
+        "仅依据本目录提供的请求、brief与匿名原始交付进行文本评阅；未独立朗读、拍摄或验证输出所列来源文件的实际读取记录。"
+      ],
+      "execution_status": "completed",
+      "self_reported_tool_calls": 5,
+      "wall_seconds_upper_bound": 126.516514,
+      "actual_token_usage": null,
+      "timing_excluded_reason": null,
+      "grade_sha256": "1cfa8482e4ffb731ccfd677b03fe978d322457993c7bb94cf354501a9cda866d",
+      "output_hashes": {
+        "answer.md": "39d5e6ccbbe5298591a58754921dcc0f4a30a0f88d5ef7c6a59cd73e440fd821",
+        "execution.json": "5fbfee201f01fd00e6b24c45839ad7500a2589d68bba320f4ffa2385057c51d7"
+      }
+    }
+  ],
+  "limitation": "AI semantic grades; literal quote checks only; repeated fixed tasks, not independent story samples"
+}

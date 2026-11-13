@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "project_id": "DEMO-RETURN-SEASON",
+  "episode_id": "EP002",
+  "revision": "v1.0",
+  "status": "reviewed",
+  "source_script": "episodes/EP002-v1.0.md",
+  "bible_revision": "v1.0",
+  "timing_basis": "未实测；7 块顺序预算共 60 秒，块内动作对白并行",
+  "lock_evidence": null,
+  "target_duration_seconds": {
+    "min": 55,
+    "max": 65
+  },
+  "assets": {
+    "characters": [
+      {
+        "id": "CHAR001",
+        "name": "林夏"
+      },
+      {
+        "id": "CHAR002",
+        "name": "来访者"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC001",
+        "name": "值班室"
+      }
+    ],
+    "props": [
+      {
+        "id": "PROP001",
+        "name": "铜钥匙"
+      },
+      {
+        "id": "PROP002",
+        "name": "登记簿及页角"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "id": "EP002-SC001",
+      "location_id": "LOC001",
+      "character_ids": [
+        "CHAR001",
+        "CHAR002"
+      ],
+      "prop_ids": [
+        "PROP001",
+        "PROP002"
+      ],
+      "time": "夜",
+      "entry_state": "承接沉默，门外终于回答来源。林夏仍拿着钥匙，盯着桌上纸片。",
+      "exit_state": "钥匙和纸片都在桌面登记簿旁。林夏确认对方知道登记信息，尚不能证明偷窃。",
+      "production_notes": [
+        "文字预制作；动作可切镜；未验证样片"
+      ],
+      "blocks": [
+        {
+          "id": "EP002-SC001-B001",
+          "duration_seconds": 6,
+          "action": "承接沉默，门外终于回答来源。林夏仍拿着钥匙，盯着桌上纸片。",
+          "dialogue": [
+            {
+              "id": "EP002-D001",
+              "speaker_id": "CHAR002",
+              "text": "楼梯口。都还你了，开门吧。",
+              "mode": "off_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B002",
+          "duration_seconds": 8,
+          "action": "她把无刻字钥匙放在登记簿旁，报出故意说错的七号。",
+          "dialogue": [
+            {
+              "id": "EP002-D002",
+              "speaker_id": "CHAR001",
+              "text": "七号库的？",
+              "mode": "on_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B003",
+          "duration_seconds": 9,
+          "action": "对方立即纠正三号与第四行。林夏的手停在缺页处。",
+          "dialogue": [
+            {
+              "id": "EP002-D003",
+              "speaker_id": "CHAR002",
+              "text": "三号，登记在第四行。",
+              "mode": "off_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B004",
+          "duration_seconds": 8,
+          "action": "她抬眼看不透明门，没有开门，也没有说出对方身份。",
+          "dialogue": [],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B005",
+          "duration_seconds": 9,
+          "action": "她点破对方记得行号，留出四秒等待。",
+          "dialogue": [
+            {
+              "id": "EP002-D004",
+              "speaker_id": "CHAR001",
+              "text": "你连第几行都记得。",
+              "mode": "on_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B006",
+          "duration_seconds": 10,
+          "action": "对方改口说猜的，紧接着索纸；林夏收拢纸片。",
+          "dialogue": [
+            {
+              "id": "EP002-D005",
+              "speaker_id": "CHAR002",
+              "text": "我猜的。纸先给我。",
+              "mode": "off_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP002-SC001-B007",
+          "duration_seconds": 10,
+          "action": "钥匙和纸片都在桌面登记簿旁。林夏确认对方知道登记信息，尚不能证明偷窃。",
+          "dialogue": [],
+          "sound": [],
+          "screen_text": []
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "配音时长未实测",
+    "撕口辨识与动作未做样片"
+  ]
+}

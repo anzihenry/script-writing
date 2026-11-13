@@ -1,0 +1,121 @@
+{
+  "protocol": "serial fresh-context anonymous review; mechanical validation only",
+  "runs": [
+    {
+      "category": "routing",
+      "agent_id": "/root/m4_holdout_grading/routing_reviewer",
+      "model": null,
+      "started_at_utc": "2026-11-10T22:41:37Z",
+      "observed_end_at_utc": "2026-11-10T22:43:26.110974+00:00",
+      "status": "complete",
+      "technical_validation": {
+        "checked_at_utc": "2026-11-10T22:43:26.110974+00:00",
+        "passed": true,
+        "errors": [],
+        "output_count": 8,
+        "required_count": 24,
+        "grades_sha256": "2f1c4ee7648fdf15aa7f21dbfb311c4e9dc927cd4468ed28299170d5143e6422"
+      },
+      "corrections": []
+    },
+    {
+      "category": "writing",
+      "agent_id": "/root/m4_holdout_grading/writing_reviewer",
+      "model": null,
+      "started_at_utc": "2026-11-10T22:43:43.093654+00:00",
+      "observed_end_at_utc": "2026-11-10T22:45:52.670942+00:00",
+      "status": "complete",
+      "technical_validation": {
+        "checked_at_utc": "2026-11-10T22:45:52.670942+00:00",
+        "passed": true,
+        "errors": [],
+        "output_count": 8,
+        "required_count": 32,
+        "grades_sha256": "8e7513d2560d628eed465189575fc5d80aafd9b85a7dce5f419a991293a77046"
+      },
+      "corrections": []
+    },
+    {
+      "category": "continuity",
+      "agent_id": "/root/m4_holdout_grading/continuity_reviewer",
+      "model": null,
+      "started_at_utc": "2026-11-10T22:45:58.791529+00:00",
+      "observed_end_at_utc": "2026-11-10T22:47:21.042863+00:00",
+      "status": "complete",
+      "technical_validation": {
+        "checked_at_utc": "2026-11-10T22:47:21.042863+00:00",
+        "passed": true,
+        "errors": [],
+        "output_count": 8,
+        "required_count": 28,
+        "grades_sha256": "4f581c62d68df26026c41b260bc24ef0f7c62e2100c04ed76969476f45c0d807"
+      },
+      "corrections": []
+    },
+    {
+      "category": "revision",
+      "agent_id": "/root/m4_holdout_grading/revision_reviewer",
+      "model": null,
+      "started_at_utc": "2026-11-10T22:47:29.133633+00:00",
+      "observed_end_at_utc": "2026-11-10T22:49:07.981782+00:00",
+      "status": "complete",
+      "technical_validation": {
+        "checked_at_utc": "2026-11-10T22:49:07.981782+00:00",
+        "passed": true,
+        "errors": [],
+        "output_count": 8,
+        "required_count": 32,
+        "grades_sha256": "1a0b84608968be6b53894eb190a81418548b2f43ad711dc3179f91fb99bc539b"
+      },
+      "corrections": []
+    },
+    {
+      "category": "recovery",
+      "agent_id": "/root/m4_holdout_grading/recovery_reviewer",
+      "model": null,
+      "started_at_utc": "2026-11-10T22:49:14.743125+00:00",
+      "observed_end_at_utc": "2026-11-10T22:51:00.135802+00:00",
+      "status": "complete",
+      "technical_validation": {
+        "checked_at_utc": "2026-11-10T22:51:00.135802+00:00",
+        "passed": true,
+        "errors": [],
+        "output_count": 8,
+        "required_count": 32,
+        "grades_sha256": "1a743fdc30d808d0305b8d6c4babb3ddbc29e23f0b484a3fe7e239e1af1ebe57"
+      },
+      "corrections": []
+    },
+    {
+      "category": "handoff",
+      "agent_id": "/root/m4_holdout_grading/handoff_reviewer",
+      "model": null,
+      "started_at_utc": "2026-11-10T22:51:05.884737+00:00",
+      "observed_end_at_utc": "2026-11-10T22:53:12.702566+00:00",
+      "status": "complete",
+      "technical_validation": {
+        "checked_at_utc": "2026-11-10T22:53:12.702566+00:00",
+        "passed": true,
+        "errors": [],
+        "output_count": 8,
+        "required_count": 32,
+        "grades_sha256": "4777cc0462bc397e12e4e9c442c8a1c4d7643b767e290be0bf2e4fc936816352"
+      },
+      "corrections": []
+    }
+  ],
+  "coordinator_notes": [
+    "All six reviewers used fork_turns:none without model or reasoning overrides; model null means unreported, not inferred.",
+    "Only mechanical schema, rubric-order and verbatim quote checks were performed by coordinator.",
+    "Initial routing validator attempted outputs/<id> filename matching and could not resolve files. Validator path resolution was corrected to outputs/<id>/answer.md; grades file was not changed. All subsequent technical checks passed.",
+    "No grader corrections, retries or quota interruptions occurred.",
+    "Handoff reviewer reported possible on_screen encoding ambiguity; forwarded to root without semantic adjudication."
+  ],
+  "completed_at_utc": "2026-11-10T22:53:27.219725+00:00",
+  "totals": {
+    "categories": 6,
+    "outputs": 48,
+    "required": 180,
+    "technical_checks_passed": true
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "case_id": "wording",
+  "items": [
+    {
+      "artifact_id": "bible",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "CHAR001 人物设定与因果"
+      ],
+      "evidence": [
+        {
+          "path": "after/bible.md",
+          "quote": "新任管理员，谨慎、措辞短"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "删去指示词“这”不改变询问钥匙来源的意图，与简短措辞相容；未增加人物知识、改变道具或因果。"
+    },
+    {
+      "artifact_id": "brief",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "三集目标"
+      ],
+      "evidence": [
+        {
+          "path": "after/brief.md",
+          "quote": "三集依次兑现发现关联、主动试探、守住证据。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "局部问句仍服务核实归还物，不改变三集目标、受众和制作边界。"
+    },
+    {
+      "artifact_id": "continuity_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP001-SC001 states/foreshadows"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP001-v1.0.md",
+          "quote": "只确认撕口关联"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "本记录保存钥匙持有、纸片位置、撕口关联和异常索纸，没有复制 D006；新问句不改变这些事实，B007 仍为问来源后沉默。旧来源登记仍需处理。"
+    },
+    {
+      "artifact_id": "continuity_EP002",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP002-SC001 knows_record/F001"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP002-v1.0.md",
+          "quote": "林夏确认对方知道登记信息，尚不能证明偷窃"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "去掉“这”未改变前集问题的对象与信息缺口，不影响后集纠正三号第四行带来的知识更新及钥匙移至桌面。"
+    },
+    {
+      "artifact_id": "continuity_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001 visitor_intent/F002"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP003-v1.0.md",
+          "quote": "钥匙你留着，纸给我就走。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "索纸目的及保留证据的结果依靠未改的索纸、夹纸、呼叫动作；与 D006 的指示词无直接语义依赖。"
+    },
+    {
+      "artifact_id": "export_EP001",
+      "decision": "review",
+      "locations": [
+        "EP001-SC001-B007 / EP001-D006"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.json",
+          "quote": "这钥匙，你在哪儿捡的？"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "仍复制旧对白，比新源多“这”字，存在实际文本冲突；必须针对 D006 核对同步及来源版本，不能因剧情事实相同就视作已修复。"
+    },
+    {
+      "artifact_id": "export_EP002",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP002-SC001-B001 / EP002-D001"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.json",
+          "quote": "楼梯口。都还你了，开门吧。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "开场仍回答钥匙捡拾地点；新源问句保留同一问题，承接沉默、持物状态和后续试探均相容。本产物未复制 EP001-D006，没有本次措辞导致的直接文本冲突。"
+    },
+    {
+      "artifact_id": "export_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001-B002–B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.json",
+          "quote": "钥匙你留着，纸给我就走。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "交接/导出呈现索纸、留证与呼叫，未复制 EP001-D006；删去该问句的指示词不改变第三集动作、对白或出场状态。"
+    },
+    {
+      "artifact_id": "handoff_EP001",
+      "decision": "review",
+      "locations": [
+        "EP001-SC001-B007 / EP001-D006"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.md",
+          "quote": "这钥匙，你在哪儿捡的？"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "仍复制旧对白，比新源多“这”字，存在实际文本冲突；必须针对 D006 核对同步及来源版本，不能因剧情事实相同就视作已修复。"
+    },
+    {
+      "artifact_id": "handoff_EP002",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP002-SC001-B001 / EP002-D001"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.md",
+          "quote": "楼梯口。都还你了，开门吧。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "开场仍回答钥匙捡拾地点；新源问句保留同一问题，承接沉默、持物状态和后续试探均相容。本产物未复制 EP001-D006，没有本次措辞导致的直接文本冲突。"
+    },
+    {
+      "artifact_id": "handoff_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001-B002–B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.md",
+          "quote": "钥匙你留着，纸给我就走。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "交接/导出呈现索纸、留证与呼叫，未复制 EP001-D006；删去该问句的指示词不改变第三集动作、对白或出场状态。"
+    },
+    {
+      "artifact_id": "outline",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP001 行动与变化、EP002 入口"
+      ],
+      "evidence": [
+        {
+          "path": "after/outline.md",
+          "quote": "隔门收物，纸片撕口吻合"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "改后仍是来源追问，没有改变撕口关联、试探入口及两条伏笔的种下和回收安排。"
+    },
+    {
+      "artifact_id": "review_EP001",
+      "decision": "review",
+      "locations": [
+        "EP001-SC001-B007 / EP001-D006；交接、人物、时长维度"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP001-v1.0.md",
+          "quote": "字段核对使用 parity；动作语义仍需下游审查"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        },
+        {
+          "path": "after/handoff/EP001-v1.0.md",
+          "quote": "这钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "本集自审尚基于旧正文；针对变动问句核对语气、动作对应及交接文本差异，不能把旧字段核对结论移用于新源。无需因此重判未变剧情；预算仍非实测。"
+    },
+    {
+      "artifact_id": "review_EP002",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP002-SC001 叙事与连续性维度"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP002-v1.0.md",
+          "quote": "钥匙、页角都留在室内；知道登记信息没有被写成确定偷窃身份"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "旧审查中的物件留室、知识边界和人物行为不受 D006 删除指示词影响；后续集正文的问答承接和结局仍成立。此分类不代表旧版本审查可自动覆盖新依赖。"
+    },
+    {
+      "artifact_id": "review_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001 叙事与连续性维度"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP003-v1.0.md",
+          "quote": "钥匙、页角都留在室内；知道登记信息没有被写成确定偷窃身份"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "旧审查中的物件留室、知识边界和人物行为不受 D006 删除指示词影响；后续集正文的问答承接和结局仍成立。此分类不代表旧版本审查可自动覆盖新依赖。"
+    },
+    {
+      "artifact_id": "script_EP001",
+      "decision": "review",
+      "locations": [
+        "EP001-SC001-B007 / EP001-D006"
+      ],
+      "evidence": [
+        {
+          "path": "before/episodes/EP001-v1.0.md",
+          "quote": "这钥匙，你在哪儿捡的？"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙在林夏右手；登记簿和纸片在桌面。她问来源，门外沉默。"
+        }
+      ],
+      "reason": "实际删去“这”字，需局部阅读确认口语节奏、指代清晰度及问来源动作对应；问题对象、人物知识和物件状态未变，没有依据扩大为剧情重写。"
+    },
+    {
+      "artifact_id": "script_EP002",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP002-SC001-B001 / EP002-D001"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "承接沉默，门外终于回答来源。林夏仍拿着钥匙，盯着桌上纸片。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "新版仍问捡钥匙地点，回答“楼梯口”及沉默后的接续成立；未改变错号试探所需的状态、知识与动机。"
+    },
+    {
+      "artifact_id": "script_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001-B002–B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP003-v1.0.md",
+          "quote": "林夏保留了证据，来访者身份待核查。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "该集结果来自保留纸片、呼叫及来访者离去，来源问句去掉“这”不影响这些行动和身份未明的边界。"
+    },
+    {
+      "artifact_id": "season_review",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "character_arc / escalation / information / foreshadows / ending"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/season-v1.0.md",
+          "quote": "三集分别比对、试探、拒交并呼叫；场景重复但选择和结果不同。"
+        },
+        {
+          "path": "after/episodes/EP001-v1.0-scope-v1.1.md",
+          "quote": "钥匙，你在哪儿捡的？"
+        }
+      ],
+      "reason": "全季审核关注弧线、升级、知识、伏笔和收束；D006 仍为同一来源问题，未改变这些论据。旧依赖须再登记，但无须据此认定整季发生直接语义变化。"
+    }
+  ],
+  "critical_locations": [
+    {
+      "artifact_id": "script_EP001",
+      "location": "EP001-SC001-B007 / EP001-D006",
+      "reason": "实际删去“这”字，需局部阅读确认口语节奏、指代清晰度及问来源动作对应；问题对象、人物知识和物件状态未变，没有依据扩大为剧情重写。"
+    },
+    {
+      "artifact_id": "handoff_EP001",
+      "location": "EP001-SC001-B007 / EP001-D006",
+      "reason": "仍复制旧对白，比新源多“这”字，存在实际文本冲突；必须针对 D006 核对同步及来源版本，不能因剧情事实相同就视作已修复。"
+    },
+    {
+      "artifact_id": "export_EP001",
+      "location": "EP001-SC001-B007 / EP001-D006",
+      "reason": "仍复制旧对白，比新源多“这”字，存在实际文本冲突；必须针对 D006 核对同步及来源版本，不能因剧情事实相同就视作已修复。"
+    },
+    {
+      "artifact_id": "review_EP001",
+      "location": "EP001-SC001-B007 / EP001-D006",
+      "reason": "本集自审尚基于旧正文；针对变动问句核对语气、动作对应及交接文本差异，不能把旧字段核对结论移用于新源。无需因此重判未变剧情；预算仍非实测。"
+    }
+  ],
+  "limitations": [
+    "分类只用于本次变更的阅读优先级，不豁免文件级 STALE、版本和依赖再登记或 gate；no_direct_semantic_change 不构成免检或批准。",
+    "仅据给定 before/after 静态文本判断，未执行同步修复或实测配音、样片、时间节省。",
+    "新源仅标题版本与 D006 删除“这”不同；after 下游仍保存旧字节与旧依赖，EP001 交接和导出的旧句冲突尚存在。"
+  ]
+}

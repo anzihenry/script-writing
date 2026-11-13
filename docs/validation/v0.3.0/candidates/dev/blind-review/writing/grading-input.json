@@ -1,0 +1,36 @@
+{
+  "tasks": {
+    "W01": {
+      "required": [
+        "满足两人一场景及道具预算",
+        "有可见选择、代价及新局面",
+        "集场和对白ID可对应",
+        "估时合计60–90秒且标未实测"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-4526fa11b5",
+      "task_id": "W01"
+    },
+    {
+      "id": "run-91faed4763",
+      "task_id": "W01"
+    },
+    {
+      "id": "run-a67fcb6a12",
+      "task_id": "W01"
+    },
+    {
+      "id": "run-bc2e05cab8",
+      "task_id": "W01"
+    }
+  ]
+}

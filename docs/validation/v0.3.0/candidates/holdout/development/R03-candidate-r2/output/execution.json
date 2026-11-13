@@ -1,0 +1,17 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-writing/SKILL.md",
+    "input/source.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-asset-handoff/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/standards.md",
+    "input/skills/ai-short-drama-writing/references/workflow.md",
+    "input/skills/ai-short-drama-writing/assets/templates.md"
+  ],
+  "tool_calls": 5,
+  "actual_token_usage": null,
+  "model": null,
+  "limitations": ["未提供现有资产库或美术参考，无法确认采购与复用项。", "外观规格及样片效果未验证；源稿未提供审核或锁定记录。"]
+}

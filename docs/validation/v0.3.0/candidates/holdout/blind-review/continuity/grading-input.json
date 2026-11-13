@@ -1,0 +1,65 @@
+{
+  "tasks": {
+    "C03": {
+      "required": [
+        "以EP010当面读信支持EP011知情",
+        "区分EP005独自读信与EP010共享",
+        "不将早期隐瞒自动判为后期穿帮",
+        "限定审核维度"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    },
+    "C04": {
+      "required": [
+        "定位EP001与EP003客观矛盾",
+        "EP002说法不能当保存实物证据",
+        "建议修改后场道具/前设并列影响"
+      ],
+      "major_issue": "唯一铜锁熔毁后原物再次出现",
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-069ee5ef79",
+      "task_id": "C04"
+    },
+    {
+      "id": "run-0ce08b543b",
+      "task_id": "C04"
+    },
+    {
+      "id": "run-48a98b4ebd",
+      "task_id": "C04"
+    },
+    {
+      "id": "run-77a1ab3966",
+      "task_id": "C04"
+    },
+    {
+      "id": "run-939ea90bae",
+      "task_id": "C03"
+    },
+    {
+      "id": "run-9ced2abdeb",
+      "task_id": "C03"
+    },
+    {
+      "id": "run-a39c00fd1f",
+      "task_id": "C03"
+    },
+    {
+      "id": "run-e65294e556",
+      "task_id": "C03"
+    }
+  ]
+}

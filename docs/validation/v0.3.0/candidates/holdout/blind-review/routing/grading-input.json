@@ -1,0 +1,64 @@
+{
+  "tasks": {
+    "R03": {
+      "required": [
+        "仅提取已出现道具",
+        "缺失规格标未知",
+        "不新增情节"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    },
+    "R04": {
+      "required": [
+        "一句概念含目标阻力代价",
+        "恰好三条显式假设",
+        "没有全季大纲或正文"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-50017855ee",
+      "task_id": "R03"
+    },
+    {
+      "id": "run-6507b4f509",
+      "task_id": "R03"
+    },
+    {
+      "id": "run-a2cb62bfab",
+      "task_id": "R04"
+    },
+    {
+      "id": "run-aaf4ac3fb8",
+      "task_id": "R04"
+    },
+    {
+      "id": "run-ad12183f05",
+      "task_id": "R03"
+    },
+    {
+      "id": "run-cbbb8ecf27",
+      "task_id": "R03"
+    },
+    {
+      "id": "run-f0ff055a6b",
+      "task_id": "R04"
+    },
+    {
+      "id": "run-fcf76847db",
+      "task_id": "R04"
+    }
+  ]
+}

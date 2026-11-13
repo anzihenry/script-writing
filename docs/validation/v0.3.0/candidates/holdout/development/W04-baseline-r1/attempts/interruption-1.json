@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-11-10T00:00:51.662535+00:00",
+  "coordinator_error": "usage limit explicitly reported",
+  "executor_finish_at": null,
+  "executor_status": "absent from live tree on resume; answer.md and execution.json both present",
+  "output_mtimes": {
+    "answer.md": "2026-11-09T13:14:25.310497+00:00",
+    "execution.json": "2026-11-09T13:14:25.312768+00:00"
+  },
+  "original_attempt": {
+    "run_id": "W04-baseline-r1",
+    "started_at": "2026-11-09T13:12:17.696884+00:00",
+    "agent_id": "/root/m4_holdout_serial/holdout_08",
+    "observed_completed_at": null,
+    "status": "running",
+    "model": null,
+    "token_usage": null
+  },
+  "action": "collect existing delivery without retry; exclude elapsed timing"
+}

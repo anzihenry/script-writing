@@ -1,0 +1,402 @@
+{
+  "case_id": "foreshadow",
+  "items": [
+    {
+      "artifact_id": "bible",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "因果；CHAR001 既有知识"
+      ],
+      "evidence": [
+        {
+          "path": "after/bible.md",
+          "quote": "因果：收到钥匙与纸片→纸片匹配缺页→故意报错编号→对方纠正并说出行号→确认其了解登记信息→对方直接索纸→林夏保留证据并呼叫管理处→对方离去。"
+        }
+      ],
+      "reason": "设定规定因果顺序和知识边界，未指定纠正发生在哪一集。仅将计划回收集后移没有直接改动这些约束；若后续改写改变顺序则应重新核对。"
+    },
+    {
+      "artifact_id": "brief",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "三集任务与闭合目标"
+      ],
+      "evidence": [
+        {
+          "path": "after/brief.md",
+          "quote": "三集依次兑现发现关联、主动试探、守住证据。"
+        }
+      ],
+      "reason": "brief 要求第二集主动试探但未限定知情确认必须同集完成；F001 后移未直接改变题材、集数、人物目标和结尾边界。"
+    },
+    {
+      "artifact_id": "continuity_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP001-SC001 knows_record 与 F001 planted"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP001-v1.0.md",
+          "quote": "\"after\": \"只确认撕口关联\""
+        }
+      ],
+      "reason": "本记录实际状态只到撕口关联，F001 为 planted；新计划仍在 EP001 埋设，无回收集冲突。"
+    },
+    {
+      "artifact_id": "continuity_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001 knows_record",
+        "foreshadows F001 paid"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP002-v1.0.md",
+          "quote": "\"id\": \"F001\",\n      \"status\": \"paid\",\n      \"location\": \"EP002-SC001\",\n      \"quote\": \"三号，登记在第四行。\""
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        }
+      ],
+      "reason": "实际记录在 EP002 标记 paid，并把知识推进为确认知情，与新计划直接冲突；当前记录忠于旧正文，不可在正文未改时先改成未回收。"
+    },
+    {
+      "artifact_id": "continuity_EP003",
+      "decision": "review",
+      "locations": [
+        "EP003-SC001 states 与 foreshadows"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP003-v1.0.md",
+          "quote": "\"id\": \"F002\",\n      \"status\": \"paid\",\n      \"location\": \"EP003-SC001\",\n      \"quote\": \"钥匙你留着，纸给我就走。\""
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        }
+      ],
+      "reason": "本集实际只登记 F002 回收，未登记 F001 或知情确认变化；新计划要求在本集确认，须与最终正文及 EP002 出场知识共同复核，不能直接补写不存在的实际事件。"
+    },
+    {
+      "artifact_id": "export_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP001-SC001-B006/B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.json",
+          "quote": "纸片靠近独特撕口，两者吻合。门外索纸，她停手。"
+        }
+      ],
+      "reason": "交接内容仍只呈现 EP001 撕口埋设与问来源，没有后续纠正或回收时间承诺；F001 的 plant 不变，故无直接语义改动需求。"
+    },
+    {
+      "artifact_id": "export_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001-B002/B003/B005/B006/B007",
+        "EP002-D002/D003/D004/D005"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.json",
+          "quote": "对方立即纠正三号与第四行。林夏的手停在缺页处。"
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        }
+      ],
+      "reason": "交接仍将纠正对白、点破反应和知情结尾安排在 EP002，与新回收集冲突；需随实际确定的正文方案复核动作对白语义及出场状态。"
+    },
+    {
+      "artifact_id": "export_EP003",
+      "decision": "review",
+      "locations": [
+        "EP003-SC001 entry_state/B001 至 B007",
+        "EP003-D001 至 D005"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.json",
+          "quote": "承接索纸，林夏看向墙面呼叫器，说明要找管理处核对。"
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        }
+      ],
+      "reason": "当前交接完整呈现拒交与呼叫流程，缺少新计划所要求的知情纠正回收。需复核实际选定落点、动作对白及入口状态；不能假定旧交接已包含新回收。"
+    },
+    {
+      "artifact_id": "handoff_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP001-SC001-B006/B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.md",
+          "quote": "EP001-SC001-B006：纸片靠近独特撕口，两者吻合。门外索纸，她停手。"
+        }
+      ],
+      "reason": "交接内容仍只呈现 EP001 撕口埋设与问来源，没有后续纠正或回收时间承诺；F001 的 plant 不变，故无直接语义改动需求。"
+    },
+    {
+      "artifact_id": "handoff_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001-B002/B003/B005/B006/B007",
+        "EP002-D002/D003/D004/D005"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.md",
+          "quote": "EP002-SC001-B003：对方立即纠正三号与第四行。林夏的手停在缺页处。"
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        }
+      ],
+      "reason": "交接仍将纠正对白、点破反应和知情结尾安排在 EP002，与新回收集冲突；需随实际确定的正文方案复核动作对白语义及出场状态。"
+    },
+    {
+      "artifact_id": "handoff_EP003",
+      "decision": "review",
+      "locations": [
+        "EP003-SC001 entry_state/B001 至 B007",
+        "EP003-D001 至 D005"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.md",
+          "quote": "EP003-SC001-B001：承接索纸，林夏看向墙面呼叫器，说明要找管理处核对。"
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        }
+      ],
+      "reason": "当前交接完整呈现拒交与呼叫流程，缺少新计划所要求的知情纠正回收。需复核实际选定落点、动作对白及入口状态；不能假定旧交接已包含新回收。"
+    },
+    {
+      "artifact_id": "outline",
+      "decision": "review",
+      "locations": [
+        "三集结构表 EP002/EP003 行",
+        "F001 文字计划与 outline-json payoff"
+      ],
+      "evidence": [
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        },
+        {
+          "path": "before/outline.md",
+          "quote": "F001：撕口关联在 EP002 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "| EP002 | 故意报错编号，对方纠正并说出行号 | 对方了解缺页登记信息，不能证明其偷窃 | 对方直接索纸；60 秒预算 |"
+        }
+      ],
+      "reason": "新计划指定 EP003 知情纠正，但本文件 EP002 行仍写故意报错、纠正并说出行号及确认知情，EP003 行只有保留证据与呼叫；来源内部及其与旧正文均需协调，不能假定已搬移情节。"
+    },
+    {
+      "artifact_id": "review_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "叙事、连续性审查"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP001-v1.0.md",
+          "quote": "通过；EP001-SC001 的选择产生下一局面，见动作块 B001–B007"
+        }
+      ],
+      "reason": "本集审核所支持的是收物、不开门及关联埋设，不承诺 F001 在 EP002 回收；这些局部论据不因回收计划后移直接失效，依赖版本仍需再登记。"
+    },
+    {
+      "artifact_id": "review_EP002",
+      "decision": "review",
+      "locations": [
+        "叙事、连续性结论；EP002-SC001-B002 至 B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP002-v1.0.md",
+          "quote": "通过；EP002-SC001 的选择产生下一局面，见动作块 B001–B007"
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        }
+      ],
+      "reason": "通过结论基于旧的试探并确认知情链条。新计划推迟回收后，本集选择的回报和下一集入口需重新审核。"
+    },
+    {
+      "artifact_id": "review_EP003",
+      "decision": "review",
+      "locations": [
+        "叙事、连续性及时长结论；EP003-SC001"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP003-v1.0.md",
+          "quote": "通过；EP003-SC001 的选择产生下一局面，见动作块 B001–B007"
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        }
+      ],
+      "reason": "既有通过结论只覆盖旧的拒交并呼叫场景，没有验证计划新增至本集的 F001 知情确认；须复核信息顺序、两个回收的关系和场次预算。"
+    },
+    {
+      "artifact_id": "script_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP001-SC001-B006/B007",
+        "EP001-D005/D006"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP001-v1.0.md",
+          "quote": "纸片靠近独特撕口，两者吻合。门外索纸，她停手。"
+        }
+      ],
+      "reason": "F001 埋设集仍为 EP001。这里仅建立撕口关联并引出询问，不包含三号/第四行纠正或确认来访者知情，因此回收集后移未直接要求改本集。"
+    },
+    {
+      "artifact_id": "script_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-D002/D003/D004/D005",
+        "EP002-SC001-B002/B003/B005/B006/B007"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "林夏确认对方知道登记信息，尚不能证明偷窃。"
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        }
+      ],
+      "reason": "正文 D003 的三号/第四行纠正及后续点破、改口和结尾知情确认已在本集兑现 F001，直接冲突于新 EP003 回收计划。须复核整段试探与承接，不能仅改计划标签。"
+    },
+    {
+      "artifact_id": "script_EP003",
+      "decision": "review",
+      "locations": [
+        "EP003-SC001-B001 至 B007",
+        "EP003-D001 至 D005"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP003-v1.0.md",
+          "quote": "承接索纸，林夏看向墙面呼叫器，说明要找管理处核对。"
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        }
+      ],
+      "reason": "新计划指定本集知情纠正确认；现有全场对白与动作仅承接索纸、拒交、呼叫、离去，没有三号/第四行纠正。必须复核新回收的落点和保留证据选择的依据、预算及 F002 回收衔接，不预设具体改写。"
+    },
+    {
+      "artifact_id": "season_review",
+      "decision": "review",
+      "locations": [
+        "information",
+        "foreshadows",
+        "character_arc/repetition"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/season-v1.0.md",
+          "quote": "F001 在 EP002 由三号/第四行回收；F002 在 EP003-D002 放弃钥匙但索纸回收。"
+        },
+        {
+          "path": "after/outline-scope-v1.1.md",
+          "quote": "F001：撕口关联在 EP003 由知情纠正确认；F002：异常索纸在 EP003 通过放弃钥匙也要纸片兑现。计划与实际记录分开。"
+        }
+      ],
+      "reason": "文字和 review-json 均明确以 EP002 回收支持 pass，与新计划相反；须重新核对跨集信息释放、分工与回收结论。"
+    }
+  ],
+  "critical_locations": [
+    {
+      "artifact_id": "continuity_EP002",
+      "location": "EP002-SC001 knows_record；foreshadows F001 paid",
+      "reason": "实际记录在 EP002 标记 paid，并把知识推进为确认知情，与新计划直接冲突；当前记录忠于旧正文，不可在正文未改时先改成未回收。"
+    },
+    {
+      "artifact_id": "continuity_EP003",
+      "location": "EP003-SC001 states 与 foreshadows",
+      "reason": "本集实际只登记 F002 回收，未登记 F001 或知情确认变化；新计划要求在本集确认，须与最终正文及 EP002 出场知识共同复核，不能直接补写不存在的实际事件。"
+    },
+    {
+      "artifact_id": "export_EP002",
+      "location": "EP002-SC001-B002/B003/B005/B006/B007；EP002-D002/D003/D004/D005",
+      "reason": "交接仍将纠正对白、点破反应和知情结尾安排在 EP002，与新回收集冲突；需随实际确定的正文方案复核动作对白语义及出场状态。"
+    },
+    {
+      "artifact_id": "export_EP003",
+      "location": "EP003-SC001 entry_state/B001 至 B007；EP003-D001 至 D005",
+      "reason": "当前交接完整呈现拒交与呼叫流程，缺少新计划所要求的知情纠正回收。需复核实际选定落点、动作对白及入口状态；不能假定旧交接已包含新回收。"
+    },
+    {
+      "artifact_id": "handoff_EP002",
+      "location": "EP002-SC001-B002/B003/B005/B006/B007；EP002-D002/D003/D004/D005",
+      "reason": "交接仍将纠正对白、点破反应和知情结尾安排在 EP002，与新回收集冲突；需随实际确定的正文方案复核动作对白语义及出场状态。"
+    },
+    {
+      "artifact_id": "handoff_EP003",
+      "location": "EP003-SC001 entry_state/B001 至 B007；EP003-D001 至 D005",
+      "reason": "当前交接完整呈现拒交与呼叫流程，缺少新计划所要求的知情纠正回收。需复核实际选定落点、动作对白及入口状态；不能假定旧交接已包含新回收。"
+    },
+    {
+      "artifact_id": "outline",
+      "location": "三集结构表 EP002/EP003 行；F001 文字计划与 outline-json payoff",
+      "reason": "新计划指定 EP003 知情纠正，但本文件 EP002 行仍写故意报错、纠正并说出行号及确认知情，EP003 行只有保留证据与呼叫；来源内部及其与旧正文均需协调，不能假定已搬移情节。"
+    },
+    {
+      "artifact_id": "review_EP002",
+      "location": "叙事、连续性结论；EP002-SC001-B002 至 B007",
+      "reason": "通过结论基于旧的试探并确认知情链条。新计划推迟回收后，本集选择的回报和下一集入口需重新审核。"
+    },
+    {
+      "artifact_id": "review_EP003",
+      "location": "叙事、连续性及时长结论；EP003-SC001",
+      "reason": "既有通过结论只覆盖旧的拒交并呼叫场景，没有验证计划新增至本集的 F001 知情确认；须复核信息顺序、两个回收的关系和场次预算。"
+    },
+    {
+      "artifact_id": "script_EP002",
+      "location": "EP002-D002/D003/D004/D005；EP002-SC001-B002/B003/B005/B006/B007",
+      "reason": "正文 D003 的三号/第四行纠正及后续点破、改口和结尾知情确认已在本集兑现 F001，直接冲突于新 EP003 回收计划。须复核整段试探与承接，不能仅改计划标签。"
+    },
+    {
+      "artifact_id": "script_EP003",
+      "location": "EP003-SC001-B001 至 B007；EP003-D001 至 D005",
+      "reason": "新计划指定本集知情纠正确认；现有全场对白与动作仅承接索纸、拒交、呼叫、离去，没有三号/第四行纠正。必须复核新回收的落点和保留证据选择的依据、预算及 F002 回收衔接，不预设具体改写。"
+    },
+    {
+      "artifact_id": "season_review",
+      "location": "information；foreshadows；character_arc/repetition",
+      "reason": "文字和 review-json 均明确以 EP002 回收支持 pass，与新计划相反；须重新核对跨集信息释放、分工与回收结论。"
+    }
+  ],
+  "limitations": [
+    "仅阅读本目录 request.md、task.json、before/、after/；未访问其他评阅或外部资料。",
+    "判断只用于针对性语义阅读优先级；no_direct_semantic_change 不豁免文件级 STALE、依赖/版本再登记、既有检查或 gate，也不是批准。",
+    "新来源只改 F001 回收计划；旧下游保持原文。尚无确定的剧情搬移方案，本评阅不预设修复已完成，也不指定唯一改写。",
+    "未测量时间节省，未验证配音、样片或生产表现。"
+  ]
+}

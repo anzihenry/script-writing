@@ -1,0 +1,388 @@
+{
+  "case_id": "knowledge",
+  "items": [
+    {
+      "artifact_id": "bible",
+      "decision": "review",
+      "locations": [
+        "CHAR001 知情设定",
+        "因果链"
+      ],
+      "evidence": [
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "她当班前未见过完整登记页，不知道编号和行号；当班后发现该页被撕。"
+        },
+        {
+          "path": "before/bible.md",
+          "quote": "她当班前见过完整登记页，记得“三号、第四行”；当班后发现该页被撕。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "纸片匹配缺页→故意报错编号→对方纠正并说出行号→确认其了解登记信息"
+        }
+      ],
+      "reason": "既有知识从记得三号第四行改为不知道编号行号；残留的“此记忆”指代与“故意报错→纠正→确认”的验证依据均需重审。"
+    },
+    {
+      "artifact_id": "brief",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "故事目标与三集回报"
+      ],
+      "evidence": [
+        {
+          "path": "after/brief.md",
+          "quote": "林夏必须在不开门的情况下核实来访者的归还物，并保留与失窃页有关的证据。"
+        }
+      ],
+      "reason": "目标和核查边界不要求林夏事先知道编号；主动试探可有不同实施方式，brief未承诺依赖记忆的具体方法。"
+    },
+    {
+      "artifact_id": "continuity_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "CHAR001.knows_record",
+        "F001 planted"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP001-v1.0.md",
+          "quote": "只确认撕口关联"
+        }
+      ],
+      "reason": "记录仅把撕口关联作为本集新知，不记录编号或行号记忆；新设定未否定图形比对和索纸伏笔。"
+    },
+    {
+      "artifact_id": "continuity_EP002",
+      "decision": "review",
+      "locations": [
+        "CHAR001.knows_record before/after",
+        "F001 paid"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP002-v1.0.md",
+          "quote": "林夏确认对方知道登记信息，尚不能证明偷窃"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "她当班前未见过完整登记页，不知道编号和行号；当班后发现该页被撕。"
+        }
+      ],
+      "reason": "知情状态跃迁和F001已回收以EP002纠正为证；新源使林夏核实对方所说真实性的依据缺失，不能继续把该状态视为已成立。"
+    },
+    {
+      "artifact_id": "continuity_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "道具末态",
+        "AUDIENCE.visitor_intent",
+        "F002 paid"
+      ],
+      "evidence": [
+        {
+          "path": "after/continuity/EP003-v1.0.md",
+          "quote": "索纸为首要目的"
+        }
+      ],
+      "reason": "只登记道具位置及来访者放弃钥匙要纸的明确意图；F002回收依据是本集索纸对白，不依赖林夏预知编号，未登记第二集知情推断。"
+    },
+    {
+      "artifact_id": "export_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP001-SC001-B005–B007",
+        "EP001-D005、EP001-D006"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.json",
+          "quote": "纸片靠近独特撕口，两者吻合。门外索纸，她停手。"
+        }
+      ],
+      "reason": "本集通过可见撕口吻合发现关联，再问钥匙来源；没有报编号、行号或宣称记得完整登记页。这些实际动作和对白不依赖被取消的知识。"
+    },
+    {
+      "artifact_id": "export_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001-B002、B003、B005、B007",
+        "EP002-D002–D004"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.json",
+          "quote": "她把无刻字钥匙放在登记簿旁，报出故意说错的七号。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "她当班前未见过完整登记页，不知道编号和行号；当班后发现该页被撕。"
+        },
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "林夏确认对方知道登记信息，尚不能证明偷窃。"
+        }
+      ],
+      "reason": "不知道真实编号却仍称故意说错，且把对方报出的编号行号当作已验证的记忆；需复核试探、纠正、点破记得行号和最终确认知情的证据链。不得假设已补充新的知识来源。"
+    },
+    {
+      "artifact_id": "export_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001-B001–B007",
+        "EP003-D001–D003"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.json",
+          "quote": "钥匙你留着，纸给我就走。"
+        }
+      ],
+      "reason": "本集以明确索纸、撕口关联为保留证据并找管理处核对的依据；不声称林夏记得编号行号，也不复述第二集的验证过程。身份待核查及未接通呼叫不受此知识删除直接改变；不能据此认为第二集已修复。"
+    },
+    {
+      "artifact_id": "handoff_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP001-SC001-B005–B007",
+        "EP001-D005、EP001-D006"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP001-v1.0.md",
+          "quote": "纸片靠近独特撕口，两者吻合。门外索纸，她停手。"
+        }
+      ],
+      "reason": "本集通过可见撕口吻合发现关联，再问钥匙来源；没有报编号、行号或宣称记得完整登记页。这些实际动作和对白不依赖被取消的知识。"
+    },
+    {
+      "artifact_id": "handoff_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001-B002、B003、B005、B007",
+        "EP002-D002–D004"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP002-v1.0.md",
+          "quote": "她把无刻字钥匙放在登记簿旁，报出故意说错的七号。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "她当班前未见过完整登记页，不知道编号和行号；当班后发现该页被撕。"
+        },
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "林夏确认对方知道登记信息，尚不能证明偷窃。"
+        }
+      ],
+      "reason": "不知道真实编号却仍称故意说错，且把对方报出的编号行号当作已验证的记忆；需复核试探、纠正、点破记得行号和最终确认知情的证据链。不得假设已补充新的知识来源。"
+    },
+    {
+      "artifact_id": "handoff_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001-B001–B007",
+        "EP003-D001–D003"
+      ],
+      "evidence": [
+        {
+          "path": "after/handoff/EP003-v1.0.md",
+          "quote": "钥匙你留着，纸给我就走。"
+        }
+      ],
+      "reason": "本集以明确索纸、撕口关联为保留证据并找管理处核对的依据；不声称林夏记得编号行号，也不复述第二集的验证过程。身份待核查及未接通呼叫不受此知识删除直接改变；不能据此认为第二集已修复。"
+    },
+    {
+      "artifact_id": "outline",
+      "decision": "review",
+      "locations": [
+        "EP002 行动与变化及回报",
+        "F001 回收"
+      ],
+      "evidence": [
+        {
+          "path": "after/outline.md",
+          "quote": "故意报错编号，对方纠正并说出行号"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "她当班前未见过完整登记页，不知道编号和行号；当班后发现该页被撕。"
+        }
+      ],
+      "reason": "大纲明确依赖故意报错及纠正确认知情；新源取消识别正确答案的前提，F001回收逻辑需复核。"
+    },
+    {
+      "artifact_id": "review_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "叙事、人物及连续性结论"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP001-v1.0.md",
+          "quote": "林夏始终不开门，来访者从催开门逐步转向索纸"
+        }
+      ],
+      "reason": "本集审核的不开门、收物、索纸和道具留在室内均仍有正文支持；未以事先记得编号作为本集通过理由。旧版本审核仍需依流程重新登记，不构成当前批准。"
+    },
+    {
+      "artifact_id": "review_EP002",
+      "decision": "review",
+      "locations": [
+        "叙事、连续性通过结论",
+        "末段已有文字矛盾判断"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP002-v1.0.md",
+          "quote": "通过；EP002-SC001 的选择产生下一局面，见动作块 B001–B007"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "她当班前未见过完整登记页，不知道编号和行号；当班后发现该页被撕。"
+        },
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "报出故意说错的七号。"
+        }
+      ],
+      "reason": "本集核心选择和知情推断受新设定直接冲击；叙事通过及不存在已有文字矛盾的旧自审结论需重新检查。"
+    },
+    {
+      "artifact_id": "review_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "叙事、人物及连续性结论"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/EP003-v1.0.md",
+          "quote": "知道登记信息没有被写成确定偷窃身份"
+        }
+      ],
+      "reason": "该结论限定不将知情升级为确定偷窃；本集正文仍只请求核对并保留身份待核查。其拒交、呼叫及离去叙事无需预知编号，未直接认证第二集如何证明知情。整季信息链另需复核，旧审核不自动适用于新依赖。"
+    },
+    {
+      "artifact_id": "script_EP001",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP001-SC001-B005–B007",
+        "EP001-D005、EP001-D006"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP001-v1.0.md",
+          "quote": "纸片靠近独特撕口，两者吻合。门外索纸，她停手。"
+        }
+      ],
+      "reason": "本集通过可见撕口吻合发现关联，再问钥匙来源；没有报编号、行号或宣称记得完整登记页。这些实际动作和对白不依赖被取消的知识。"
+    },
+    {
+      "artifact_id": "script_EP002",
+      "decision": "review",
+      "locations": [
+        "EP002-SC001-B002、B003、B005、B007",
+        "EP002-D002–D004"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "她把无刻字钥匙放在登记簿旁，报出故意说错的七号。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "她当班前未见过完整登记页，不知道编号和行号；当班后发现该页被撕。"
+        },
+        {
+          "path": "after/episodes/EP002-v1.0.md",
+          "quote": "林夏确认对方知道登记信息，尚不能证明偷窃。"
+        }
+      ],
+      "reason": "不知道真实编号却仍称故意说错，且把对方报出的编号行号当作已验证的记忆；需复核试探、纠正、点破记得行号和最终确认知情的证据链。不得假设已补充新的知识来源。"
+    },
+    {
+      "artifact_id": "script_EP003",
+      "decision": "no_direct_semantic_change",
+      "locations": [
+        "EP003-SC001-B001–B007",
+        "EP003-D001–D003"
+      ],
+      "evidence": [
+        {
+          "path": "after/episodes/EP003-v1.0.md",
+          "quote": "钥匙你留着，纸给我就走。"
+        }
+      ],
+      "reason": "本集以明确索纸、撕口关联为保留证据并找管理处核对的依据；不声称林夏记得编号行号，也不复述第二集的验证过程。身份待核查及未接通呼叫不受此知识删除直接改变；不能据此认为第二集已修复。"
+    },
+    {
+      "artifact_id": "season_review",
+      "decision": "review",
+      "locations": [
+        "information（正文及review-json）",
+        "character_arc",
+        "foreshadows/F001"
+      ],
+      "evidence": [
+        {
+          "path": "after/reviews/season-v1.0.md",
+          "quote": "林夏事先记得三号第四行；EP002-D003 对方纠正。只确认知情，EP003 保留身份待核查。"
+        },
+        {
+          "path": "after/bible-scope-v1.1.md",
+          "quote": "她当班前未见过完整登记页，不知道编号和行号；当班后发现该页被撕。"
+        }
+      ],
+      "reason": "全季审核直接断言林夏事先记得，与新源正面矛盾；主动报错试探的人物弧线和F001回收的通过依据亦需重新核查。"
+    }
+  ],
+  "critical_locations": [
+    {
+      "artifact_id": "bible",
+      "location": "CHAR001 知情设定；因果链",
+      "reason": "既有知识从记得三号第四行改为不知道编号行号；残留的“此记忆”指代与“故意报错→纠正→确认”的验证依据均需重审。"
+    },
+    {
+      "artifact_id": "outline",
+      "location": "EP002 行动与变化及回报；F001 回收",
+      "reason": "大纲明确依赖故意报错及纠正确认知情；新源取消识别正确答案的前提，F001回收逻辑需复核。"
+    },
+    {
+      "artifact_id": "script_EP002",
+      "location": "EP002-SC001-B002、B003、B005、B007；EP002-D002–D004",
+      "reason": "不知道真实编号却仍称故意说错，且把对方报出的编号行号当作已验证的记忆；需复核试探、纠正、点破记得行号和最终确认知情的证据链。不得假设已补充新的知识来源。"
+    },
+    {
+      "artifact_id": "handoff_EP002",
+      "location": "EP002-SC001-B002、B003、B005、B007；EP002-D002–D004",
+      "reason": "不知道真实编号却仍称故意说错，且把对方报出的编号行号当作已验证的记忆；需复核试探、纠正、点破记得行号和最终确认知情的证据链。不得假设已补充新的知识来源。"
+    },
+    {
+      "artifact_id": "export_EP002",
+      "location": "EP002-SC001-B002、B003、B005、B007；EP002-D002–D004",
+      "reason": "不知道真实编号却仍称故意说错，且把对方报出的编号行号当作已验证的记忆；需复核试探、纠正、点破记得行号和最终确认知情的证据链。不得假设已补充新的知识来源。"
+    },
+    {
+      "artifact_id": "continuity_EP002",
+      "location": "CHAR001.knows_record before/after；F001 paid",
+      "reason": "知情状态跃迁和F001已回收以EP002纠正为证；新源使林夏核实对方所说真实性的依据缺失，不能继续把该状态视为已成立。"
+    },
+    {
+      "artifact_id": "review_EP002",
+      "location": "叙事、连续性通过结论；末段已有文字矛盾判断",
+      "reason": "本集核心选择和知情推断受新设定直接冲击；叙事通过及不存在已有文字矛盾的旧自审结论需重新检查。"
+    },
+    {
+      "artifact_id": "season_review",
+      "location": "information（正文及review-json）；character_arc；foreshadows/F001",
+      "reason": "全季审核直接断言林夏事先记得，与新源正面矛盾；主动报错试探的人物弧线和F001回收的通过依据亦需重新核查。"
+    }
+  ],
+  "limitations": [
+    "只基于提供的before/after内容判断本次知识变更的阅读优先级；没有实际改写正文，也未假定任何修复已完成。",
+    "no_direct_semantic_change不豁免文件级STALE、版本/依赖再登记或gate，不代表批准。若后续选择改写第一集补知识或调整第三集承接，应按该实际修订重新判断范围。",
+    "未测量时间节省；未验证配音、样片或制作表现。"
+  ]
+}

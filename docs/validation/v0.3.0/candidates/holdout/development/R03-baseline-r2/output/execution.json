@@ -1,0 +1,16 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/source.md",
+    "input/skills/ai-short-drama-writing/SKILL.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-asset-handoff/SKILL.md"
+  ],
+  "tool_calls": null,
+  "actual_token_usage": null,
+  "limitations": [
+    "未提供实物、库存或图片引用，无法核实资产可用性。",
+    "外观细节、具体数量与动作实测待制作环节确认。"
+  ]
+}

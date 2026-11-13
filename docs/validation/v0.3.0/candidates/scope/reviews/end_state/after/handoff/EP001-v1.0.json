@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "project_id": "DEMO-RETURN-SEASON",
+  "episode_id": "EP001",
+  "revision": "v1.0",
+  "status": "reviewed",
+  "source_script": "episodes/EP001-v1.0.md",
+  "bible_revision": "v1.0",
+  "timing_basis": "未实测；7 块顺序预算共 60 秒，块内动作对白并行",
+  "lock_evidence": null,
+  "target_duration_seconds": {
+    "min": 55,
+    "max": 65
+  },
+  "assets": {
+    "characters": [
+      {
+        "id": "CHAR001",
+        "name": "林夏"
+      },
+      {
+        "id": "CHAR002",
+        "name": "来访者"
+      }
+    ],
+    "locations": [
+      {
+        "id": "LOC001",
+        "name": "值班室"
+      }
+    ],
+    "props": [
+      {
+        "id": "PROP001",
+        "name": "铜钥匙"
+      },
+      {
+        "id": "PROP002",
+        "name": "登记簿及页角"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "id": "EP001-SC001",
+      "location_id": "LOC001",
+      "character_ids": [
+        "CHAR001",
+        "CHAR002"
+      ],
+      "prop_ids": [
+        "PROP001",
+        "PROP002"
+      ],
+      "time": "夜",
+      "entry_state": "林夏翻开缺页登记簿，手停在撕口。门外两声敲门，她转头。",
+      "exit_state": "钥匙在林夏右手；登记簿和纸片在桌面。她问来源，门外沉默。",
+      "production_notes": [
+        "文字预制作；动作可切镜；未验证样片"
+      ],
+      "blocks": [
+        {
+          "id": "EP001-SC001-B001",
+          "duration_seconds": 6,
+          "action": "林夏翻开缺页登记簿，手停在撕口。门外两声敲门，她转头。",
+          "dialogue": [],
+          "sound": [
+            "两声敲门"
+          ],
+          "screen_text": []
+        },
+        {
+          "id": "EP001-SC001-B002",
+          "duration_seconds": 8,
+          "action": "林夏问话，来访者隔门回答；门保持关闭。",
+          "dialogue": [
+            {
+              "id": "EP001-D001",
+              "speaker_id": "CHAR001",
+              "text": "谁？",
+              "mode": "on_screen"
+            },
+            {
+              "id": "EP001-D002",
+              "speaker_id": "CHAR002",
+              "text": "捡到你们的钥匙，来还。",
+              "mode": "off_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP001-SC001-B003",
+          "duration_seconds": 9,
+          "action": "林夏站到门侧，要求从投递缝归还；对方催开门。",
+          "dialogue": [
+            {
+              "id": "EP001-D003",
+              "speaker_id": "CHAR001",
+              "text": "放门缝里就行。",
+              "mode": "on_screen"
+            },
+            {
+              "id": "EP001-D004",
+              "speaker_id": "CHAR002",
+              "text": "你先开一下门。",
+              "mode": "off_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP001-SC001-B004",
+          "duration_seconds": 8,
+          "action": "她不动。钥匙裹着纸片滑入托盘，金属轻响。",
+          "dialogue": [],
+          "sound": [
+            "金属落盘"
+          ],
+          "screen_text": []
+        },
+        {
+          "id": "EP001-SC001-B005",
+          "duration_seconds": 9,
+          "action": "她取回物件并展开纸片，看向登记簿缺页。",
+          "dialogue": [],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP001-SC001-B006",
+          "duration_seconds": 10,
+          "action": "纸片靠近独特撕口，两者吻合。门外索纸，她停手。",
+          "dialogue": [
+            {
+              "id": "EP001-D005",
+              "speaker_id": "CHAR002",
+              "text": "纸也还我，别弄丢了。",
+              "mode": "off_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        },
+        {
+          "id": "EP001-SC001-B007",
+          "duration_seconds": 10,
+          "action": "钥匙在林夏右手；登记簿和纸片在桌面。她问来源，门外沉默。",
+          "dialogue": [
+            {
+              "id": "EP001-D006",
+              "speaker_id": "CHAR001",
+              "text": "这钥匙，你在哪儿捡的？",
+              "mode": "on_screen"
+            }
+          ],
+          "sound": [],
+          "screen_text": []
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "配音时长未实测",
+    "撕口辨识与动作未做样片"
+  ]
+}

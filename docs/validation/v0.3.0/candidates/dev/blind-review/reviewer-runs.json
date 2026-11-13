@@ -1,0 +1,43 @@
+{
+  "runs": [
+    {
+      "category": "recovery",
+      "started_at": "2026-11-09T05:32:40.680479Z",
+      "agent_id": "/root/m4_serial_resume/m4_review_recovery",
+      "model": "unknown",
+      "status": "interrupted_without_delivery",
+      "interruptions": [
+        {
+          "observed_at": "2026-11-09T11:08:01.023931+00:00",
+          "coordinator_error": "usage limit explicitly reported",
+          "executor_finish_at": null,
+          "executor_status": "absent from live tree on resume; no grades.json delivered"
+        }
+      ],
+      "corrections": [],
+      "platform_check_at": "2026-11-09T05:37:59.603017Z"
+    },
+    {
+      "category": "recovery",
+      "attempt": 2,
+      "agent_id": "/root/m4_recovery_review_retry",
+      "started_at": "2026-11-09T11:08:16.694743+00:00",
+      "model": null,
+      "status": "delivered",
+      "interruptions": [],
+      "corrections": [],
+      "observed_complete_at": "2026-11-09T11:09:44.321897+00:00"
+    },
+    {
+      "category": "writing",
+      "attempt": 1,
+      "agent_id": "/root/m4_writing_review",
+      "started_at": "2026-11-09T11:10:09.942336+00:00",
+      "model": null,
+      "status": "delivered",
+      "interruptions": [],
+      "corrections": [],
+      "observed_complete_at": "2026-11-09T11:12:00.556862+00:00"
+    }
+  ]
+}

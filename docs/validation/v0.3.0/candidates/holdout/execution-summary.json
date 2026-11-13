@@ -1,0 +1,455 @@
+{
+  "runs": 48,
+  "completed": 48,
+  "delivery_errors": [],
+  "unknown_tool_calls": [
+    "R03-baseline-r2"
+  ],
+  "self_reported_calls_above_12": [],
+  "timing_excluded_runs": [
+    "S04-baseline-r1",
+    "W04-baseline-r1"
+  ],
+  "empty_interrupted_attempts": [
+    "W04-candidate-r2",
+    "S03-candidate-r2"
+  ],
+  "actual_model": null,
+  "actual_token_usage": null,
+  "actual_cost": null,
+  "rows": [
+    {
+      "run_id": "C03-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 28917,
+      "timing_excluded_reason": null,
+      "result_sha256": "7f2066801c8a7c521c63e540bc8cdae81c09e3efe709f2034d82a943ca2c29b6"
+    },
+    {
+      "run_id": "C03-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 28917,
+      "timing_excluded_reason": null,
+      "result_sha256": "ab76b84a4e890ce5985d6dcfa77358587b732ae2159d659b9d74605f6044fad4"
+    },
+    {
+      "run_id": "C03-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 28917,
+      "timing_excluded_reason": null,
+      "result_sha256": "0e7184d25cd5d35a65360b187ee481f24c3a09912ac05946b1ed12cd4721cf99"
+    },
+    {
+      "run_id": "C03-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 28917,
+      "timing_excluded_reason": null,
+      "result_sha256": "d76b8ef8ecb3478af9858d07bc63bb466181b399731e95c6c84a953957ff7e25"
+    },
+    {
+      "run_id": "C04-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 8044,
+      "timing_excluded_reason": null,
+      "result_sha256": "b011fddfd4c847459296f99aabac662136e38c48a7800af3ef2a241dc61174b6"
+    },
+    {
+      "run_id": "C04-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 8044,
+      "timing_excluded_reason": null,
+      "result_sha256": "20629d3ab2f5536038d935e3916be60ed7c2fc03ab43b1a3ccf4cc25a63cd0f3"
+    },
+    {
+      "run_id": "C04-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 8044,
+      "timing_excluded_reason": null,
+      "result_sha256": "f647138d378f035eccf0e97f624bb3d1305255d1562e2fd088dbe7e9fd83df91"
+    },
+    {
+      "run_id": "C04-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 12796,
+      "timing_excluded_reason": null,
+      "result_sha256": "6e45f7b120d4beba7d55faa9c2ba5bce36e365222784ceb2737320b2e67546a3"
+    },
+    {
+      "run_id": "H03-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 31576,
+      "timing_excluded_reason": null,
+      "result_sha256": "697cb5666e579f8f26ea12822ad9cc90f11d397257ef5793da0c322b076c634a"
+    },
+    {
+      "run_id": "H03-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 6,
+      "read_bytes": 37139,
+      "timing_excluded_reason": null,
+      "result_sha256": "d92e2a1e365e36d0d41afb61285c05b40d3388a91fdd4eb3977357e5522abee7"
+    },
+    {
+      "run_id": "H03-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 31576,
+      "timing_excluded_reason": null,
+      "result_sha256": "d0594085af49f198bf29cfeb6e6294ee92adaa9a2049eff545b58dfb8a9c1a2b"
+    },
+    {
+      "run_id": "H03-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 31486,
+      "timing_excluded_reason": null,
+      "result_sha256": "d98f1795245594f53c06b3d1977db5dc8527aac63b837da0680727c41e0afb0b"
+    },
+    {
+      "run_id": "H04-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 31531,
+      "timing_excluded_reason": null,
+      "result_sha256": "98fef629a81a4547af963cafc417189cb9470f72fa1f2f01dc80e9a4c2e5480f"
+    },
+    {
+      "run_id": "H04-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 31531,
+      "timing_excluded_reason": null,
+      "result_sha256": "ad822006973c9fcad323f2507baeec699187ce9a8995e2c8742e23c69ddf6fb7"
+    },
+    {
+      "run_id": "H04-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 31621,
+      "timing_excluded_reason": null,
+      "result_sha256": "ef361bce93bc981de8aca9af740f4ab33692eca2d7101fb39ac755413889a563"
+    },
+    {
+      "run_id": "H04-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 31531,
+      "timing_excluded_reason": null,
+      "result_sha256": "662d76954cb577b57cade37c3aa0c8c11ec41b02367d4ed94a23f2b8993a4a59"
+    },
+    {
+      "run_id": "R03-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 25364,
+      "timing_excluded_reason": null,
+      "result_sha256": "a54ba912a4dce06dc3a3aa96732a167bda45612f21a0ccb2e433655cded11d4b"
+    },
+    {
+      "run_id": "R03-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": null,
+      "read_bytes": 12517,
+      "timing_excluded_reason": null,
+      "result_sha256": "0086a00da72e42bb1a3400ad4c180896cb692214766ce69603c9f8f4e92bcc86"
+    },
+    {
+      "run_id": "R03-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 6,
+      "read_bytes": 17362,
+      "timing_excluded_reason": null,
+      "result_sha256": "d2a2ac461e6d181d1e9ed0636f62af34a2b36f5906330cee0422654cdcbaf840"
+    },
+    {
+      "run_id": "R03-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 25364,
+      "timing_excluded_reason": null,
+      "result_sha256": "d98972d8a3dd51e41164a0051e2045435e44dc745d2853489b3f912fd11d3f89"
+    },
+    {
+      "run_id": "R04-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 14974,
+      "timing_excluded_reason": null,
+      "result_sha256": "6ba8a09229d67e1a6be08bed5d8eab2d91f7cf9fd61ed90cef0f81b9c072f654"
+    },
+    {
+      "run_id": "R04-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 12547,
+      "timing_excluded_reason": null,
+      "result_sha256": "5c4050b4b7d9a0d81ddc85570b93a32ce1bb6a1d2850c1704b6f572a88cd5871"
+    },
+    {
+      "run_id": "R04-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 6,
+      "read_bytes": 14687,
+      "timing_excluded_reason": null,
+      "result_sha256": "4c7e860b90dab151302e39b14f04237305e9bf5103d854a2aad234d246ac346e"
+    },
+    {
+      "run_id": "R04-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 14974,
+      "timing_excluded_reason": null,
+      "result_sha256": "7d49c5d7ecfc8c48857187a7fd0a03a9f63ca397380742e3beab10e4d6c5d49f"
+    },
+    {
+      "run_id": "S03-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 6,
+      "read_bytes": 36738,
+      "timing_excluded_reason": null,
+      "result_sha256": "e036968dd8d805fe1a8b93a966729304592bca72a5189723b9eaa50ab3e5ff5d"
+    },
+    {
+      "run_id": "S03-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 6,
+      "read_bytes": 38857,
+      "timing_excluded_reason": null,
+      "result_sha256": "5caf9e596c0f6885c0728269cdd7d2ef39ad6323955773ea9c411aa317a2ea69"
+    },
+    {
+      "run_id": "S03-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 6,
+      "read_bytes": 43521,
+      "timing_excluded_reason": null,
+      "result_sha256": "ed3bca314ac529aed78f49a01fa444cd9a1de1a7ce2d21c2ebc1b49ed0271dde"
+    },
+    {
+      "run_id": "S03-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 40713,
+      "timing_excluded_reason": null,
+      "result_sha256": "0cc0ae011ac2f4924cd9d063e70c71a099cbe82ee8ac883681f9fe8270467661"
+    },
+    {
+      "run_id": "S04-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 17673,
+      "timing_excluded_reason": "Coordinator and executor quota interruption; precise completion unknown; collected on user resume",
+      "result_sha256": "76d81a294b6e400f1af53a2e016b0b3b0d645b99cf277f3c78580f2d261589c0"
+    },
+    {
+      "run_id": "S04-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 11843,
+      "timing_excluded_reason": null,
+      "result_sha256": "f4bb90ae20a40884f826cfc3abbe6f002459323d1296d8348fb56f0a7b3c31a6"
+    },
+    {
+      "run_id": "S04-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 17326,
+      "timing_excluded_reason": null,
+      "result_sha256": "892f3a3cd4f1be592ab0758cded520a162c64c52b849c62aedd2f76b71870d4c"
+    },
+    {
+      "run_id": "S04-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 11843,
+      "timing_excluded_reason": null,
+      "result_sha256": "fa05d28db04ae1c323b90a0a7e7a1c7dface58a185ea564df19d7e7546ca307c"
+    },
+    {
+      "run_id": "V03-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 8387,
+      "timing_excluded_reason": null,
+      "result_sha256": "92e9dc6b5e756d3bb6428b6bc66f970fcb9848ca874c01ffb081afe466ce5046"
+    },
+    {
+      "run_id": "V03-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 6,
+      "read_bytes": 8387,
+      "timing_excluded_reason": null,
+      "result_sha256": "77d858bc5204269a2a14b022f594dc31338122af239231c5ed2b2543c0731b89"
+    },
+    {
+      "run_id": "V03-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 8387,
+      "timing_excluded_reason": null,
+      "result_sha256": "4978ffd79c98bb706421dee5a3e2538cc9c3c2cc655bfddc7f37f0755abbbf45"
+    },
+    {
+      "run_id": "V03-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 8387,
+      "timing_excluded_reason": null,
+      "result_sha256": "585b7562e1670a22befc2c5b0765d41915fde8cda6d4267a936f33a0ea84a159"
+    },
+    {
+      "run_id": "V04-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 8381,
+      "timing_excluded_reason": null,
+      "result_sha256": "93b62c7999600178127d041bc85cdcaf623652c248f437c0bcd8a017f7ad47fb"
+    },
+    {
+      "run_id": "V04-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 13328,
+      "timing_excluded_reason": null,
+      "result_sha256": "d5bbace28cdcf058228d43d6cb1776f2921d4da18bbb14230fcaf0ec01534565"
+    },
+    {
+      "run_id": "V04-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 8381,
+      "timing_excluded_reason": null,
+      "result_sha256": "8226208be8dc6efd48a398a2db4ea3352e3741cf159612c53f400fb32dbad70e"
+    },
+    {
+      "run_id": "V04-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 4,
+      "read_bytes": 8381,
+      "timing_excluded_reason": null,
+      "result_sha256": "79a368d021d0ffa8cd6bd26e83bd56ee82fd7dfa5b654ab89506874779657104"
+    },
+    {
+      "run_id": "W03-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 19923,
+      "timing_excluded_reason": null,
+      "result_sha256": "6d9b84a848a785e7e82aaf1930642e030b2ee852e9d24c55f86eda154ed9e3d8"
+    },
+    {
+      "run_id": "W03-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 19923,
+      "timing_excluded_reason": null,
+      "result_sha256": "da9307fe28d15436a3819fa64e403328852c9226aca4945792d403e340e647ac"
+    },
+    {
+      "run_id": "W03-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 19923,
+      "timing_excluded_reason": null,
+      "result_sha256": "e8dbf56d6333d187322029b94ce11802becc0438f73e341e71d9214828fd61ab"
+    },
+    {
+      "run_id": "W03-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 19923,
+      "timing_excluded_reason": null,
+      "result_sha256": "edbc63509a3f4cf6b2efebb9a476919b0adfba72e535ca222d0af6ebaecda2ee"
+    },
+    {
+      "run_id": "W04-baseline-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 6,
+      "read_bytes": 19920,
+      "timing_excluded_reason": "Coordinator quota interruption; exact executor completion unknown; collected on user resume",
+      "result_sha256": "cc41cb04184b4dc9326792d1944516715002ff09e4a321ed4a078e13d09336d1"
+    },
+    {
+      "run_id": "W04-baseline-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 6,
+      "read_bytes": 19920,
+      "timing_excluded_reason": null,
+      "result_sha256": "5e817ad65e7bf7dd2fc4f22b16536cac8e349a8dcb23d9135b8c92939b6af003"
+    },
+    {
+      "run_id": "W04-candidate-r1",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 19920,
+      "timing_excluded_reason": null,
+      "result_sha256": "0f1b17a2221ff058c82916325cb3b6a8bf6cc6d68bce89febb8f25c8b7acfc45"
+    },
+    {
+      "run_id": "W04-candidate-r2",
+      "status": "completed",
+      "errors": [],
+      "tool_calls": 5,
+      "read_bytes": 23584,
+      "timing_excluded_reason": null,
+      "result_sha256": "ad5717d833b0576521913ff9d8bb85d2f0480f0464068b04768c9ad4d2845c50"
+    }
+  ],
+  "limitation": "Delivery checks only; self-reported calls/whole-file bytes, not instrumented model input or semantic success. Two complete outputs collected after quota interruption have excluded elapsed timing; empty attempts retained separately."
+}

@@ -1,0 +1,588 @@
+{
+  "completed": [
+    "R03-baseline-r1",
+    "R03-candidate-r1",
+    "R04-candidate-r1",
+    "R04-baseline-r1",
+    "W03-baseline-r1",
+    "W03-candidate-r1",
+    "W04-candidate-r1",
+    "W04-baseline-r1",
+    "C03-baseline-r1",
+    "C03-candidate-r1",
+    "C04-candidate-r1",
+    "C04-baseline-r1",
+    "V03-baseline-r1",
+    "V03-candidate-r1",
+    "V04-candidate-r1",
+    "V04-baseline-r1",
+    "S03-baseline-r1",
+    "S03-candidate-r1",
+    "S04-candidate-r1",
+    "S04-baseline-r1",
+    "H03-baseline-r1",
+    "H03-candidate-r1",
+    "H04-candidate-r1",
+    "H04-baseline-r1",
+    "R03-candidate-r2",
+    "R03-baseline-r2",
+    "R04-baseline-r2",
+    "R04-candidate-r2",
+    "W03-candidate-r2",
+    "W03-baseline-r2",
+    "W04-baseline-r2",
+    "W04-candidate-r2",
+    "C03-candidate-r2",
+    "C03-baseline-r2",
+    "C04-baseline-r2",
+    "C04-candidate-r2",
+    "V03-candidate-r2",
+    "V03-baseline-r2",
+    "V04-baseline-r2",
+    "V04-candidate-r2",
+    "S03-candidate-r2",
+    "S03-baseline-r2",
+    "S04-baseline-r2",
+    "S04-candidate-r2",
+    "H03-candidate-r2",
+    "H03-baseline-r2",
+    "H04-baseline-r2",
+    "H04-candidate-r2"
+  ],
+  "current_run": null,
+  "attempts": [
+    {
+      "run_id": "R03-baseline-r1",
+      "started_at": "2026-11-09T12:56:12.809087+00:00",
+      "agent_id": "/root/m4_holdout_serial/holdout_01",
+      "observed_completed_at": "2026-11-09T12:58:06.023440+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "R03-candidate-r1",
+      "started_at": "2026-11-09T12:58:13.854897+00:00",
+      "agent_id": "/root/m4_holdout_serial/holdout_02",
+      "observed_completed_at": "2026-11-09T13:00:45.401307+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "R04-candidate-r1",
+      "started_at": "2026-11-09T13:00:45.633632+00:00",
+      "agent_id": "/root/m4_holdout_serial/holdout_03",
+      "observed_completed_at": "2026-11-09T13:02:19.231064+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "R04-baseline-r1",
+      "started_at": "2026-11-09T13:02:19.406479+00:00",
+      "agent_id": "/root/m4_holdout_serial/holdout_04",
+      "observed_completed_at": "2026-11-09T13:03:55.709706+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "W03-baseline-r1",
+      "started_at": "2026-11-09T13:04:10.864849+00:00",
+      "agent_id": "/root/m4_holdout_serial/holdout_05",
+      "observed_completed_at": "2026-11-09T13:06:50.378943+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "W03-candidate-r1",
+      "started_at": "2026-11-09T13:06:50.617036+00:00",
+      "agent_id": "/root/m4_holdout_serial/holdout_06",
+      "observed_completed_at": "2026-11-09T13:09:28.643257+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "W04-candidate-r1",
+      "started_at": "2026-11-09T13:09:28.878969+00:00",
+      "agent_id": "/root/m4_holdout_serial/holdout_07",
+      "observed_completed_at": "2026-11-09T13:12:17.457320+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "W04-baseline-r1",
+      "started_at": "2026-11-09T13:12:17.696884+00:00",
+      "agent_id": "/root/m4_holdout_serial/holdout_08",
+      "observed_completed_at": "2026-11-10T00:00:51.689425+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null,
+      "execution_interruption": {
+        "observed_at": "2026-11-10T00:00:51.662535+00:00",
+        "coordinator_error": "usage limit explicitly reported",
+        "executor_finish_at": null,
+        "executor_status": "absent from live tree on resume; answer.md and execution.json both present",
+        "output_mtimes": {
+          "answer.md": "2026-11-09T13:14:25.310497+00:00",
+          "execution.json": "2026-11-09T13:14:25.312768+00:00"
+        },
+        "original_attempt": {
+          "run_id": "W04-baseline-r1",
+          "started_at": "2026-11-09T13:12:17.696884+00:00",
+          "agent_id": "/root/m4_holdout_serial/holdout_08",
+          "observed_completed_at": null,
+          "status": "running",
+          "model": null,
+          "token_usage": null
+        },
+        "action": "collect existing delivery without retry; exclude elapsed timing"
+      }
+    },
+    {
+      "run_id": "C03-baseline-r1",
+      "started_at": "2026-11-10T00:01:29.922422+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_09",
+      "observed_completed_at": "2026-11-10T00:03:00.745805+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "C03-candidate-r1",
+      "started_at": "2026-11-10T00:03:00.897335+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_10",
+      "observed_completed_at": "2026-11-10T00:04:29.661667+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "C04-candidate-r1",
+      "started_at": "2026-11-10T00:04:29.889890+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_11",
+      "observed_completed_at": "2026-11-10T00:06:07.077786+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "C04-baseline-r1",
+      "started_at": "2026-11-10T00:06:07.231388+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_12",
+      "observed_completed_at": "2026-11-10T00:07:34.581237+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "V03-baseline-r1",
+      "started_at": "2026-11-10T00:07:41.421449+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_13",
+      "observed_completed_at": "2026-11-10T00:08:52.215359+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "V03-candidate-r1",
+      "started_at": "2026-11-10T00:08:52.360758+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_14",
+      "observed_completed_at": "2026-11-10T00:09:49.379518+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "V04-candidate-r1",
+      "started_at": "2026-11-10T00:09:49.525379+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_15",
+      "observed_completed_at": "2026-11-10T00:10:45.568562+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "V04-baseline-r1",
+      "started_at": "2026-11-10T00:10:45.714693+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_16",
+      "observed_completed_at": "2026-11-10T00:11:43.716785+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "S03-baseline-r1",
+      "started_at": "2026-11-10T00:11:52.071664+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_17",
+      "observed_completed_at": "2026-11-10T00:13:41.658600+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "S03-candidate-r1",
+      "started_at": "2026-11-10T00:13:41.796299+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_18",
+      "observed_completed_at": "2026-11-10T00:15:46.278924+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "S04-candidate-r1",
+      "started_at": "2026-11-10T00:15:46.433780+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_19",
+      "observed_completed_at": "2026-11-10T00:17:10.162365+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "S04-baseline-r1",
+      "started_at": "2026-11-10T00:17:10.329108+00:00",
+      "agent_id": "/root/m4_holdout_resume/holdout_20",
+      "observed_completed_at": "2026-11-10T05:46:24.649523+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null,
+      "execution_interruption": {
+        "observed_at": "2026-11-10T05:46:24.608607+00:00",
+        "coordinator_error": "usage limit explicitly reported",
+        "executor_error": "usage limit explicitly reported in live agent status",
+        "executor_finish_at": null,
+        "output_mtimes": {
+          "answer.md": "2026-11-10T00:18:18.235435+00:00",
+          "execution.json": "2026-11-10T00:18:18.237983+00:00"
+        },
+        "original_attempt": {
+          "run_id": "S04-baseline-r1",
+          "started_at": "2026-11-10T00:17:10.329108+00:00",
+          "agent_id": "/root/m4_holdout_resume/holdout_20",
+          "observed_completed_at": null,
+          "status": "running",
+          "model": null,
+          "token_usage": null
+        },
+        "action": "collect existing answer and execution report without retry; exclude elapsed timing"
+      }
+    },
+    {
+      "run_id": "H03-baseline-r1",
+      "started_at": "2026-11-10T05:46:58.171490+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_21",
+      "observed_completed_at": "2026-11-10T05:48:29.554258+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "H03-candidate-r1",
+      "started_at": "2026-11-10T05:48:29.772034+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_22",
+      "observed_completed_at": "2026-11-10T05:50:04.116281+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "H04-candidate-r1",
+      "started_at": "2026-11-10T05:50:04.316137+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_23",
+      "observed_completed_at": "2026-11-10T05:51:40.249433+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "H04-baseline-r1",
+      "started_at": "2026-11-10T05:51:40.401388+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_24",
+      "observed_completed_at": "2026-11-10T05:53:08.680091+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "R03-candidate-r2",
+      "started_at": "2026-11-10T05:53:17.038008+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_25",
+      "observed_completed_at": "2026-11-10T05:55:00.538797+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "R03-baseline-r2",
+      "started_at": "2026-11-10T05:55:00.746905+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_26",
+      "observed_completed_at": "2026-11-10T05:56:37.654636+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "R04-baseline-r2",
+      "started_at": "2026-11-10T05:56:37.847200+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_27",
+      "observed_completed_at": "2026-11-10T05:57:50.568186+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "R04-candidate-r2",
+      "started_at": "2026-11-10T05:57:50.712166+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_28",
+      "observed_completed_at": "2026-11-10T05:58:54.365713+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "W03-candidate-r2",
+      "started_at": "2026-11-10T05:59:01.657025+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_29",
+      "observed_completed_at": "2026-11-10T06:01:18.152816+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "W03-baseline-r2",
+      "started_at": "2026-11-10T06:01:18.301488+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_30",
+      "observed_completed_at": "2026-11-10T06:03:31.944214+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "W04-baseline-r2",
+      "started_at": "2026-11-10T06:03:32.138183+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_31",
+      "observed_completed_at": "2026-11-10T06:06:06.089209+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "W04-candidate-r2",
+      "started_at": "2026-11-10T06:06:06.266097+00:00",
+      "agent_id": "/root/m4_holdout_resume2/holdout_32",
+      "observed_completed_at": null,
+      "status": "interrupted_without_delivery",
+      "model": null,
+      "token_usage": null,
+      "execution_interruption": {
+        "observed_at": "2026-11-10T10:47:00.436033+00:00",
+        "coordinator_error": "usage limit explicitly reported",
+        "executor_finish_at": null,
+        "executor_status": "absent from live tree on resume; output empty",
+        "original_attempt": {
+          "run_id": "W04-candidate-r2",
+          "started_at": "2026-11-10T06:06:06.266097+00:00",
+          "agent_id": "/root/m4_holdout_resume2/holdout_32",
+          "observed_completed_at": null,
+          "status": "running",
+          "model": null,
+          "token_usage": null
+        },
+        "action": "preserve empty first attempt; user explicitly resumed; permit fresh second attempt"
+      }
+    },
+    {
+      "run_id": "W04-candidate-r2",
+      "attempt": 2,
+      "started_at": "2026-11-10T10:47:30.325799+00:00",
+      "agent_id": "/root/m4_holdout_resume3/holdout_32_attempt2",
+      "observed_completed_at": "2026-11-10T10:50:03.952640+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "C03-candidate-r2",
+      "started_at": "2026-11-10T10:50:05.254665+00:00",
+      "agent_id": "/root/m4_holdout_resume3/holdout_33",
+      "observed_completed_at": "2026-11-10T10:51:44.133839+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "C03-baseline-r2",
+      "started_at": "2026-11-10T10:51:44.288691+00:00",
+      "agent_id": "/root/m4_holdout_resume3/holdout_34",
+      "observed_completed_at": "2026-11-10T10:59:12.374174+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null,
+      "status_check": {
+        "observed_at": "2026-11-10T10:56:33.601412+00:00",
+        "action": "asked once whether tool/platform blocked; no change to task requested"
+      }
+    },
+    {
+      "run_id": "C04-baseline-r2",
+      "started_at": "2026-11-10T10:59:12.568042+00:00",
+      "agent_id": "/root/m4_holdout_resume3/holdout_35",
+      "observed_completed_at": "2026-11-10T11:00:27.382359+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "C04-candidate-r2",
+      "started_at": "2026-11-10T11:00:27.528660+00:00",
+      "agent_id": "/root/m4_holdout_resume3/holdout_36",
+      "observed_completed_at": "2026-11-10T11:02:03.381077+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "V03-candidate-r2",
+      "started_at": "2026-11-10T11:02:04.719522+00:00",
+      "agent_id": "/root/m4_holdout_resume3/holdout_37",
+      "observed_completed_at": "2026-11-10T11:03:22.193499+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "V03-baseline-r2",
+      "started_at": "2026-11-10T11:03:22.343627+00:00",
+      "agent_id": "/root/m4_holdout_resume3/holdout_38",
+      "observed_completed_at": "2026-11-10T11:04:41.500120+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "V04-baseline-r2",
+      "started_at": "2026-11-10T11:04:41.653576+00:00",
+      "agent_id": "/root/m4_holdout_resume3/holdout_39",
+      "observed_completed_at": "2026-11-10T11:05:57.160426+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "V04-candidate-r2",
+      "started_at": "2026-11-10T11:05:57.324497+00:00",
+      "agent_id": "/root/m4_holdout_resume3/holdout_40",
+      "observed_completed_at": "2026-11-10T11:07:03.316776+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "S03-candidate-r2",
+      "started_at": "2026-11-10T11:07:04.770270+00:00",
+      "agent_id": "/root/m4_holdout_resume3/holdout_41",
+      "observed_completed_at": null,
+      "status": "interrupted_without_delivery",
+      "model": null,
+      "token_usage": null,
+      "execution_interruption": {
+        "observed_at": "2026-11-10T16:38:47.099694+00:00",
+        "coordinator_error": "usage limit explicitly reported",
+        "executor_error": "usage limit explicitly reported in live agent status",
+        "executor_finish_at": null,
+        "original_attempt": {
+          "run_id": "S03-candidate-r2",
+          "started_at": "2026-11-10T11:07:04.770270+00:00",
+          "agent_id": "/root/m4_holdout_resume3/holdout_41",
+          "observed_completed_at": null,
+          "status": "running",
+          "model": null,
+          "token_usage": null
+        },
+        "action": "preserve empty first attempt; user explicitly resumed; permit fresh second attempt"
+      }
+    },
+    {
+      "run_id": "S03-candidate-r2",
+      "attempt": 2,
+      "started_at": "2026-11-10T16:39:17.079843+00:00",
+      "agent_id": "/root/m4_holdout_resume4/holdout_41_attempt2",
+      "observed_completed_at": "2026-11-10T16:41:15.973005+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "S03-baseline-r2",
+      "started_at": "2026-11-10T16:41:21.598939+00:00",
+      "agent_id": "/root/m4_holdout_resume4/holdout_42",
+      "observed_completed_at": "2026-11-10T16:43:17.426995+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "S04-baseline-r2",
+      "started_at": "2026-11-10T16:43:25.076637+00:00",
+      "agent_id": "/root/m4_holdout_resume4/holdout_43",
+      "observed_completed_at": "2026-11-10T16:44:54.612612+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "S04-candidate-r2",
+      "started_at": "2026-11-10T16:45:00.213264+00:00",
+      "agent_id": "/root/m4_holdout_resume4/holdout_44",
+      "observed_completed_at": "2026-11-10T16:46:33.970174+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "H03-candidate-r2",
+      "started_at": "2026-11-10T16:46:45.264411+00:00",
+      "agent_id": "/root/m4_holdout_resume4/holdout_45",
+      "observed_completed_at": "2026-11-10T16:48:15.338322+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "H03-baseline-r2",
+      "started_at": "2026-11-10T16:48:15.646647+00:00",
+      "agent_id": "/root/m4_holdout_resume4/holdout_46",
+      "observed_completed_at": "2026-11-10T16:56:00.515541+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null,
+      "status_check": {
+        "observed_at": "2026-11-10T16:54:05.450955+00:00",
+        "action": "asked once whether tool/platform blocked; no change to task requested"
+      }
+    },
+    {
+      "run_id": "H04-baseline-r2",
+      "started_at": "2026-11-10T16:56:00.827103+00:00",
+      "agent_id": "/root/m4_holdout_resume4/holdout_47",
+      "observed_completed_at": "2026-11-10T16:57:32.573470+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    },
+    {
+      "run_id": "H04-candidate-r2",
+      "started_at": "2026-11-10T16:57:32.867433+00:00",
+      "agent_id": "/root/m4_holdout_resume4/holdout_48",
+      "observed_completed_at": "2026-11-10T16:59:11.744916+00:00",
+      "status": "completed",
+      "model": null,
+      "token_usage": null
+    }
+  ],
+  "archived_count": 48
+}

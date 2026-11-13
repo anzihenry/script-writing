@@ -1,0 +1,16 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-episode/SKILL.md",
+    "input/brief.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-writing/assets/templates.md",
+    "input/skills/ai-short-drama-writing/references/standards.md",
+    "input/skills/ai-short-drama-writing/assets/project-template/episode.md",
+    "input/skills/ai-short-drama-writing/assets/project-template/continuity.md"
+  ],
+  "tool_calls": 5,
+  "actual_token_usage": null,
+  "limitations": ["时长仅为估算，未实际录音或朗读。", "仅对本集进行文本自检，未进行实拍或跨集验证。"]
+}

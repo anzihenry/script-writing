@@ -1,0 +1,4 @@
+interface:
+  display_name: "G5 制作交接与结构化导出"
+  short_description: "将指定版本的 AI 短剧剧本整理为分镜、美术与声音交接包，提取场次、对白、资产、状态及按需 JSON"
+  default_prompt: "使用 $ai-short-drama-handoff，根据现有材料完成制作交接与结构化导出，按规范交付并列明未决项。"

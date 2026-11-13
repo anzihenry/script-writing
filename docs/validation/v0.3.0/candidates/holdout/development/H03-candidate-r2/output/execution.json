@@ -1,0 +1,23 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-handoff/SKILL.md",
+    "input/script.md",
+    "input/skills/ai-short-drama-writing/references/common.md",
+    "input/skills/ai-short-drama-writing/references/handoff.md",
+    "input/skills/ai-short-drama-writing/references/workflow.md",
+    "input/skills/ai-short-drama-writing/assets/templates.md",
+    "input/skills/ai-short-drama-delivery-baseline/SKILL.md",
+    "input/skills/ai-short-drama-scene-handoff/SKILL.md",
+    "input/skills/ai-short-drama-audio-handoff/SKILL.md",
+    "input/skills/ai-short-drama-asset-handoff/SKILL.md",
+    "input/skills/ai-short-drama-writing/assets/project-template/handoff.md"
+  ],
+  "tool_calls": 5,
+  "actual_token_usage": null,
+  "limitations": [
+    "无设定、资产成品、连续性台账与审核接收依据；仅完成指定 v1.2 草稿提取。",
+    "35秒为原文估算，未有录音或样片实测。"
+  ]
+}

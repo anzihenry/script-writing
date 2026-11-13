@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-09T12:54:24.651225+00:00",
+  "runs": 48,
+  "tasks": 12,
+  "identical_rule_snapshots": true,
+  "identical_paired_inputs_and_requests": true,
+  "all_prepared_hashes_verified": true,
+  "freeze_sha256": "0f5bb35dfddcdf7addea0249c0853b6a159372cd4498312abaa3bae5ac413fc1",
+  "dev_decision_sha256": "01607fe2c4f7fb148857eb34671aafc282f8c1bc03a702a884ef4fe6cf1d9bb7",
+  "scope_decision_sha256": "2adde91ca0e022b805a9e5d614982356e5b1605da55ff6a273eac646c98a7896",
+  "interpretation": "Repeated final-quality observation with identical treatment bytes; no causal improvement claim"
+}

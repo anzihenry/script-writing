@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-09T11:12:00.557782+00:00",
+  "decision": "retain_baseline",
+  "candidate_merged": false,
+  "reason": "S01 target criteria pass in both baseline replicates and both candidate replicates; frozen acceptance explicitly rejects benefit claims/merge when no target errors in either group. W01 all initial required pass; one cash-prop counting ambiguity remains recorded and cannot reverse this no-benefit decision.",
+  "grade_sha256": "2bf793f8892d45a7922a9ed0b9c85e1a40bb6b54c8e0546956ff73f4a2ad49a9",
+  "holdout_started": false,
+  "next": "Finish independent scope assessment, then freeze final assets and run 48 holdout observations. If baseline/final bytes identical, no causal skill-effect claim."
+}

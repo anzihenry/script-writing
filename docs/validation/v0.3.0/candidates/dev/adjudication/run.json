@@ -1,0 +1,16 @@
+{
+  "agent_id": "/root/m4_dev_adjudication",
+  "started_at": "2026-11-09T12:52:03.894095+00:00",
+  "model": null,
+  "status": "delivered",
+  "observed_complete_at": "2026-11-09T12:54:42.816998+00:00",
+  "input_hashes_verified": true,
+  "decisions_sha256": "b17db0aed46f130538055b438bebc26c901f9444f351c849e322323c10911f0c",
+  "corrections": [
+    {
+      "at": "2026-11-09T12:55:24.709482+00:00",
+      "change": "Added missing category writing only; all judgments/reasons/quotes unchanged",
+      "original": "decisions-attempt-1.json"
+    }
+  ]
+}

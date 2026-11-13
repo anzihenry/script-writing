@@ -1,0 +1,52 @@
+{
+  "runs": [
+    {
+      "case_id": "appearance",
+      "agent_id": "/root/m4_scope_appearance",
+      "started_at": "2026-11-09T11:12:20.475054+00:00",
+      "model": null,
+      "status": "delivered",
+      "observed_complete_at": "2026-11-09T11:14:25.777328+00:00"
+    },
+    {
+      "case_id": "knowledge",
+      "agent_id": "/root/m4_scope_knowledge",
+      "started_at": "2026-11-09T11:14:25.777445+00:00",
+      "model": null,
+      "status": "delivered",
+      "observed_complete_at": "2026-11-09T11:16:10.629435+00:00"
+    },
+    {
+      "case_id": "world",
+      "agent_id": "/root/m4_scope_world",
+      "started_at": "2026-11-09T11:16:10.629538+00:00",
+      "model": null,
+      "status": "delivered",
+      "observed_complete_at": "2026-11-09T11:18:15.475546+00:00"
+    },
+    {
+      "case_id": "wording",
+      "agent_id": "/root/m4_scope_wording",
+      "started_at": "2026-11-09T11:18:15.475917+00:00",
+      "model": null,
+      "status": "delivered",
+      "observed_complete_at": "2026-11-09T11:20:09.248980+00:00"
+    },
+    {
+      "case_id": "foreshadow",
+      "agent_id": "/root/m4_scope_foreshadow",
+      "started_at": "2026-11-09T11:20:09.249406+00:00",
+      "model": null,
+      "status": "delivered",
+      "observed_complete_at": "2026-11-09T11:21:56.121164+00:00"
+    },
+    {
+      "case_id": "end_state",
+      "agent_id": "/root/m4_scope_end_state",
+      "started_at": "2026-11-09T11:21:56.121531+00:00",
+      "model": null,
+      "status": "delivered",
+      "observed_complete_at": "2026-11-09T12:52:03.872589+00:00"
+    }
+  ]
+}

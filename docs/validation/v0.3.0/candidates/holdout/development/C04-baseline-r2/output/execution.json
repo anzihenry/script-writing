@@ -1,0 +1,13 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-continuity-audit/SKILL.md",
+    "input/source.md",
+    "input/skills/ai-short-drama-writing/references/common.md"
+  ],
+  "tool_calls": 4,
+  "actual_token_usage": null,
+  "model": null,
+  "limitations": ["仅审核提供的三场材料；角色甲第二场台词的真实意图未提供。", "交付局部修改建议，未改写原稿或执行项目管线。"]
+}

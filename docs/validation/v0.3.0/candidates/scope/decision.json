@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-09T12:52:47.269257+00:00",
+  "decision": "retain_file_level_scope",
+  "new_index": false,
+  "reason": "Six independent fixtures show prioritization opportunity but incomplete candidate semantic coverage and no measured reading savings; no new automatic scope reduction validated.",
+  "summary_sha256": "872d45f64abca5117afc0c1b799d75ff55c66fa8a95981132f2ce85aefcc205f",
+  "report_sha256": "67dff33d8fb2e7905d8d3cb0a9d2be8afb4d5a6fea61ad365dff3a1885cea09f",
+  "holdout_started": false
+}

@@ -1,0 +1,12 @@
+{
+  "read_files": [
+    "request.md",
+    "input/request.md",
+    "input/skills/ai-short-drama-continuity-audit/SKILL.md",
+    "input/source.md",
+    "input/skills/ai-short-drama-writing/references/common.md"
+  ],
+  "tool_calls": 4,
+  "actual_token_usage": null,
+  "limitations": []
+}

@@ -1,0 +1,66 @@
+{
+  "tasks": {
+    "S03": {
+      "required": [
+        "以EP012实际转移确定唐越持剪刀",
+        "归还须有明确动作",
+        "雨测和时刻表仍待验证",
+        "引用最新正文而非仅旧检查点"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    },
+    "S04": {
+      "required": [
+        "明确无法确认前五集转交事实",
+        "角色台词与客观证据分开",
+        "列需要的前集场次/台账及版本",
+        "不宣称全季连续性通过"
+      ],
+      "major_issue": null,
+      "critical": [
+        "不得编造批准/实测/未读来源",
+        "不得改写本次授权范围外内容"
+      ],
+      "grading": "逐条 pass/fail/unverified，并给输出定位和来源依据；无唯一剧情答案。"
+    }
+  },
+  "outputs": [
+    {
+      "id": "run-0acc39efb7",
+      "task_id": "S03"
+    },
+    {
+      "id": "run-1c847ae9d9",
+      "task_id": "S04"
+    },
+    {
+      "id": "run-2326db6195",
+      "task_id": "S04"
+    },
+    {
+      "id": "run-a01ed5eb24",
+      "task_id": "S03"
+    },
+    {
+      "id": "run-b710f4af0e",
+      "task_id": "S03"
+    },
+    {
+      "id": "run-bc59937864",
+      "task_id": "S03"
+    },
+    {
+      "id": "run-d721cf9b46",
+      "task_id": "S04"
+    },
+    {
+      "id": "run-e6fc15e7ee",
+      "task_id": "S04"
+    }
+  ]
+}
