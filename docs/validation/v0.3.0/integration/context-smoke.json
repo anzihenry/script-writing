@@ -1,0 +1,73 @@
+{
+  "at": "2026-11-13T07:52:16.609179+00:00",
+  "python": "3.15.2 (main, Oct 25 2026, 16:57:51) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "generated": {
+    "arguments": [
+      "context",
+      "/var/folders/6m/pczfhtmn07s6xbrnz8_hk3f40000gn/T/tmprmeg0agk/project",
+      "--scope",
+      "EP003",
+      "--stage",
+      "G3",
+      "--output",
+      "/var/folders/6m/pczfhtmn07s6xbrnz8_hk3f40000gn/T/tmprmeg0agk/context",
+      "--task",
+      "仅检查恢复材料，不登记或批准"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"output\": \"/var/folders/6m/pczfhtmn07s6xbrnz8_hk3f40000gn/T/tmprmeg0agk/context\",\n  \"blockers\": [],\n  \"warnings\": []\n}\n",
+    "stderr": ""
+  },
+  "fresh": {
+    "arguments": [
+      "verify-context",
+      "/var/folders/6m/pczfhtmn07s6xbrnz8_hk3f40000gn/T/tmprmeg0agk/project",
+      "--file",
+      "/var/folders/6m/pczfhtmn07s6xbrnz8_hk3f40000gn/T/tmprmeg0agk/context"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"VERIFIED\",\n  \"errors\": [],\n  \"limitation\": \"Freshness and copy integrity only; not authorization or semantic approval\"\n}\n",
+    "stderr": ""
+  },
+  "changed": {
+    "arguments": [
+      "verify-context",
+      "/var/folders/6m/pczfhtmn07s6xbrnz8_hk3f40000gn/T/tmprmeg0agk/project",
+      "--file",
+      "/var/folders/6m/pczfhtmn07s6xbrnz8_hk3f40000gn/T/tmprmeg0agk/context"
+    ],
+    "exit_code": 1,
+    "stdout": "{\n  \"status\": \"CHANGED\",\n  \"errors\": [\n    \"brief: source changed\"\n  ],\n  \"limitation\": \"Freshness and copy integrity only; not authorization or semantic approval\"\n}\n",
+    "stderr": ""
+  },
+  "project_unchanged_by_context_and_verify": true,
+  "repository_example_unchanged": true,
+  "project_before": {
+    "bible.md": "fcefa3eed143e755b46c2af0137a3f5795d8ff3795c16386d46ff6b801e6a514",
+    "brief.md": "a66af702406ecf790a95e1dcdd982515dbd07e48c5ceacf12b84b3a3a56d23ea",
+    "changes.md": "89e31576db69afe7ed5e8d5e5a07306334a063740305da5dd0cba589135978e4",
+    "continuity/EP001-v1.0.md": "466587903d399aba44fea951515f9d11d8557da0411a2ab411230319449d7f99",
+    "continuity/EP002-v1.0.md": "43a64d61035b05dc1c6ea6d5891f5e62eee7f078fee124a28eceeb818c578b8d",
+    "continuity/EP003-v1.0.md": "26475d74923f762fc5a4df965bdd115d7af0d02ecded7bc945b5a1745e2a1bf5",
+    "decisions.md": "0af1b9ccf0191b22c83ce15d32b472ed01c9f032726f52a34fc9d1b0a31f6df2",
+    "episodes/EP001-v1.0.md": "574915167b2c1cb660bbbedcd541063eb5d7574f8d975aab37b2e560fb102da9",
+    "episodes/EP002-v1.0.md": "13c9acbb16b5f04a17801368aa20fabec3c794bcdd0e30ef672beeee63caec8e",
+    "episodes/EP003-v1.0.md": "17d0675ff0e6136594fedee791db06fea08a34732b26229f777b3f293eef6acd",
+    "feedback.md": "6028f059edc0d1ac28a9b8cdc3ee201d2fd48f019e570179c27f5face5c2e3c1",
+    "handoff/EP001-v1.0.json": "f33017387e0dd04398b290875271c77b12b0772966a93a19fecfe36975e04812",
+    "handoff/EP001-v1.0.md": "9a5553c75f1dac0d3d6b0ac215e0419a430e179360ec04194b85f401ce22c3ea",
+    "handoff/EP002-v1.0.json": "0bbf748ec43383cd264a5fec9207428cfc8b19dc7772feec075cc7cbd705980d",
+    "handoff/EP002-v1.0.md": "ec5e6079ab0bd31f0dfe6a4c7ac9038730a932765e08fbae4b60c525e022d841",
+    "handoff/EP003-v1.0.json": "b5f7345752718eb69e182fbc3c01ecc5fcd3d612c87c632d9ff617a5bc4aa339",
+    "handoff/EP003-v1.0.md": "46a6066d5fbf81164db4381e4cec7a75b105e7bdc9546fc8b8e80c558673ffd9",
+    "outline.md": "0461882c9a5890b9686387db5a4718a44b6381ed350240e988982e8702eea6b9",
+    "project.json": "78ab3ad0027a970a04d1b117b98ed69791b3193d166a28d3c96bd2bd0114123e",
+    "reviews/EP001-v1.0.md": "c71f7b1b0004646627f6a334b5e449eaae566d453c72bd6be8a6bd3ce568fee2",
+    "reviews/EP002-v1.0.md": "793009b0b8ec8ef4b9f15a01b1ab88ef2dbdfdbc585e8882ff0cc75484e6cf19",
+    "reviews/EP003-v1.0.md": "4e39da3d4f6bdfd3a302db9293820ef319877d39a5d35324cfc79854a9120354",
+    "reviews/season-v1.0.md": "7c1f6a5da0c2c95054ec7b246bc32dddcf95133e29fcfea90010164f5b0cc8ee",
+    "walkthrough.md": "00e2e7efc6b9edf09387986e321e6364a23ae98bd882db55afb05ab466aaad36"
+  },
+  "packet_manifest_sha256": "0e5a167c99708ea7dd2ca6e2f315e2b9b024afd27bf622af76cf8616fcae387a",
+  "note": "Temporary copied fixture; source deliberately changed only after read-only checks; full unit and example results reused from M4 same code"
+}

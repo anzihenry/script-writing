@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-13T07:53:43.171369+00:00",
+  "implementation_commit": "dc3ad0a90a5a06e0d52519f2f4b5c9971cfd950b",
+  "implementation_unchanged": true,
+  "live_rules_equal_final_holdout": true,
+  "rule_files": 97,
+  "version": "0.3.0",
+  "reused_engineering_checks": {
+    "path": "../candidates/checks.json",
+    "sha256": "fdb423281223f8de6767edfb595898230a322693fb848f8ecfc36bf75394523f",
+    "tests_per_python": 108,
+    "python_versions": [
+      "3.9",
+      "3.14",
+      "3.15"
+    ],
+    "reason": "Only release documentation/metadata changed since M4; no implementation, tests, examples or CI changes"
+  },
+  "context_smoke_sha256": "cf3fbd90e474654b05c0f7a3e62141b4dc40b3d95e5f282e032ec51de94a33a3",
+  "local_link_targets_checked": 62,
+  "link_documents": [
+    "README.md",
+    "CHANGELOG.md",
+    "docs/plans/0.3.0.md",
+    "docs/validation/v0.3.0/README.md",
+    "docs/validation/v0.3.0/integration/report.md"
+  ],
+  "link_limitation": "Local targets checked for existence; anchors and external sites not revalidated",
+  "remote_ci": "not run",
+  "publication": "not pushed, tagged or published"
+}

@@ -2,9 +2,9 @@
 
 将剧本创作组织成可重复执行、可审核、可交接的生产环节。适用于 AI 真人质感短剧、2D/3D 漫剧，以及已有小说/IP 的短剧改编。
 
-发布版本：0.2.1，见 [VERSION](VERSION) 与[版本记录](CHANGELOG.md)。资料核对日期：2026-10-24。本仓库提出的是可调整的内部生产规范，不代表行业统一标准，也不承诺播放量或商业表现。
+仓库版本：0.3.0（本地验收完成，尚未远端发布），见 [VERSION](VERSION) 与[版本记录](CHANGELOG.md)。资料核对日期：2026-10-24。本仓库提出的是可调整的内部生产规范，不代表行业统一标准，也不承诺播放量或商业表现。
 
-0.3.0 正在按[落实计划](docs/plans/0.3.0.md)分阶段实施，实际进度见[阶段验收](docs/validation/v0.3.0/README.md)。历史语义评测已独立保存规则快照；默认 `prepare_semantic_round.py` 复现历史输入，当前审稿候选使用 `--mode current --cases PATH --rule skills/.../SKILL.md`。当前包携带本地链接依赖以防缺文件，执行时只从 entry_rules 按需读取；携带依赖不表示要求读取全部文件。`validate_semantic_output.py --cases PATH` 可校验指定审稿数据集，不代替语义评分。
+0.3.0 已按[落实计划](docs/plans/0.3.0.md)完成分阶段实施，结果与限制见[阶段验收](docs/validation/v0.3.0/README.md)。新增显式可选的只读任务上下文包，支持来源新鲜度核验；不自动登记、批准或迁移项目。历史语义评测已独立保存规则快照；默认 `prepare_semantic_round.py` 复现历史输入，当前审稿候选使用 `--mode current --cases PATH --rule skills/.../SKILL.md`。当前包携带本地链接依赖以防缺文件，执行时只从 entry_rules 按需读取；携带依赖不表示要求读取全部文件。`validate_semantic_output.py --cases PATH` 可校验指定审稿数据集，不代替语义评分。
 
 0.2.1 加入场次/对白证据绑定、交付 ZIP 完整性核验及 next/status 单次检查复用；兼容边界和验证结果见 [0.2.1 验收记录](docs/validation/v0.2.1/README.md)。
 
@@ -32,6 +32,16 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py status projects/my-dra
 ```
 
 初始化不会通过任何关口；填好模板后按操作手册登记，继续相应 Skill。已有目录不覆盖。工具仅需 Python 3.9+ 标准库，不依赖 PyYAML。
+
+恢复任务时可生成独立上下文包，再核对来源：
+
+```bash
+python3 skills/ai-short-drama-writing/scripts/pipeline.py context projects/my-drama --scope EP001 --stage G3 --output /tmp/my-drama-EP001-context --task '仅续写本集'
+python3 skills/ai-short-drama-writing/scripts/pipeline.py verify-context projects/my-drama --file /tmp/my-drama-EP001-context
+```
+
+输出必须是项目外的新目录。`context` 退出1时仍可生成包含缺失/过期诊断的包；新鲜不等于无阻塞或获批。来源变化后应重建新包，包内任务文字不扩展写入授权。细节见[只读任务上下文](skills/ai-short-drama-writing/references/operations.md#只读任务上下文)。
+
 
 可以先查看并检查原 0.1.0 的[《归还》示例](examples/return-demo/brief.md)：
 
@@ -144,3 +154,9 @@ python3 skills/ai-short-drama-writing/scripts/pipeline.py verify-package project
 GitHub Actions 在 push/PR 时运行标准库测试、规模测量和新旧示例演练；无需模型服务或项目密钥。0.2.1 的 Linux/macOS 发布验证已通过，运行证据见[验收记录](docs/validation/v0.2.1/README.md)。
 
 2026-10-30 本地验证：Python 3.9、3.14、3.15 各通过 78 项测试。新增 12 个六集短文本案例已完成两轮串行隔离审读，每轮六个预置重大问题全部检出、六例正常对照无重大误报，原始输出和逐项评分见[评测汇总](docs/validation/v0.2.1/semantic/summary.md)。这是固定样本上的 AI 评测，不是真人审核或通用准确率保证。
+
+## 0.3.0 验证
+
+108项确定性测试在Python 3.9、3.14、3.15通过，规模测量和新旧示例演练通过。CI继续运行这些无需模型的检查，归档评分复算不等于重新执行模型评测；本版本远端CI尚未运行。
+
+独立上下文开发对照72次、恢复专项24次、针对性候选8次、保留集48次均已归档。恢复专项两组均12/12；自报阅读字节有下降，但不等于实际token或费用下降，context保持显式可选。候选未证明目标收益，未合入；六类依赖范围测量后保留文件级STALE与gate。保留集两组规则字节相同，最终47/48满足全部判据，1项因口径歧义未验证，不构成改动效果证据。详见[集成验收与未验证项](docs/validation/v0.3.0/integration/report.md)。
